@@ -289,13 +289,6 @@
   /* meals: dashed outline so they read as a slot to fill, not a fixed stop */
   .postcard-event.postcard-meal{border-style:dashed;border-left-style:solid}
   .postcard-meal-badge{display:inline-block;margin-bottom:5px;padding:2px 7px;border-radius:999px;background:var(--tod,var(--ink-2));color:#16161a;font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-  .meal-options{grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px;list-style:none}
-  .meal-options li{display:flex;flex-direction:column;gap:2px;padding:7px 9px;border:1px solid var(--ring);border-radius:9px;background:rgba(0,0,0,.22)}
-  .meal-option-name{color:var(--ink);font-size:12px;font-weight:700}
-  a.meal-option-name{color:var(--focus);text-decoration:none}
-  a.meal-option-name::after{content:' ↗'}
-  .meal-option-meta{color:var(--ink-2);font-size:11px}
-  .meal-option-facts{color:var(--muted);font-size:10.5px}
   .postcard-tip{grid-template-columns:32px minmax(0,1fr)}
   .postcard-marker{font-size:18px;text-align:center}
   .postcard-copy h3{font-size:13px;line-height:1.2}
@@ -684,29 +677,7 @@ const DAY_TEMPLATES = [
       },
       {
         time:'18:00', title:'Dinner: Asakusa or Akihabara', meal:'dinner',
-        note:'Eat in Asakusa, or ride to Akihabara first and eat there before the arcades. Hours are for Fridays.',
-        options:[
-          { name:'Asakusa Imahan (Kokusai-dori main store)', area:'Asakusa', food:'sukiyaki, since 1895',
-            hours:'11:30-21:30, last order 20:30', price:'dinner ~¥15,000+ pp', booking:'reserve ahead',
-            note:'Next to the Tsukuba Express station for Akihabara.',
-            url:'https://tabelog.com/en/tokyo/A1311/A131102/13003649/' },
-          { name:'Daikokuya Tempura', area:'Asakusa', food:'tendon, since 1887',
-            hours:'11:00-20:00', price:'~¥2,000-3,000', booking:'walk-in, cash only',
-            note:'Queues are common.',
-            url:'https://tabelog.com/en/tokyo/A1311/A131102/13003696/' },
-          { name:'Hoppy Street izakayas', area:'Asakusa', food:'stew, yakitori, Hoppy and beer',
-            hours:'open late', price:'~¥2,000-4,000', booking:'walk-in',
-            note:'Open-air stalls by Sensō-ji; pick whichever has room.',
-            url:'https://www.google.com/maps/search/?api=1&query=Hoppy+Street+Asakusa' },
-          { name:'Tonkatsu Marugo', area:'Akihabara', food:'tonkatsu, Tabelog 100',
-            hours:'17:00-21:00, last order 20:00; closed Mon-Tue', price:'~¥2,000-4,000', booking:'walk-in, cash only',
-            note:'4 min from Akihabara Electric Town Exit. Expect a line.',
-            url:'https://tabelog.com/en/tokyo/A1310/A131001/13000379/' },
-          { name:'Kanda Matsuya', area:'Akihabara (Awajicho)', food:'soba, since 1884',
-            hours:'weekdays to ~20:00; sources disagree on last order', price:'~¥1,500-2,500', booking:'walk-in',
-            note:'About 10 min walk from Akihabara Station. Go early.',
-            url:'https://tabelog.com/en/tokyo/A1310/A131002/13000340/' },
-        ],
+        note:'Eat in Asakusa, or ride to Akihabara first and eat there before the arcades.',
       },
       {
         time:'19:30', title:'Akihabara arcades',
@@ -787,8 +758,8 @@ const DAY_TEMPLATES = [
         source:'https://shinjuku-toho-bldg.toho.co.jp/gim/en.html'
       },
       {
-        time:'19:00', title:'Shinjuku dinner + izakayas', meal:'dinner',
-        note:'Choose dinner flexibly around Shinjuku. Try Omoide Yokocho for yakitori and a drink if the tiny counters have room.',
+        time:'19:00', title:'Dinner: Shinjuku', meal:'dinner',
+        note:'Eat around Shinjuku. Omoide Yokocho has tiny yakitori counters if they have room.',
         image:'img/shinjuku-dinner-izakayas.jpg',
         source:'https://www.gotokyo.org/en/spot/63/index.html'
       },
@@ -808,8 +779,12 @@ const DAY_TEMPLATES = [
         source:'https://www.gotokyo.org/en/spot/76/index.html'
       },
       {
-        time:'12:00', title:'Harajuku shopping + flexible lunch',
-        note:'Browse Takeshita Street and the quieter surrounding lanes, stopping for a casual lunch whenever everyone is ready.',
+        time:'12:00', title:'Lunch: Harajuku', meal:'lunch',
+        note:'Something casual around Harajuku.',
+      },
+      {
+        time:'13:00', title:'Harajuku shopping',
+        note:'Browse Takeshita Street and the quieter surrounding lanes.',
         image:'img/harajuku-shopping-flexible-lunch.jpg',
         source:'https://www.gotokyo.org/en/destinations/western-tokyo/harajuku/index.html'
       },
@@ -832,8 +807,8 @@ const DAY_TEMPLATES = [
         source:'https://shibuya-aonodokutsu.jp/'
       },
       {
-        time:'', title:'Flexible Shibuya dinner', meal:'dinner',
-        note:'Choose somewhere nearby when everyone is ready, then head back.',
+        time:'', title:'Dinner: Shibuya', meal:'dinner',
+        note:'Eat around Shibuya when everyone is ready, then head back.',
         image:'img/flexible-dinner.jpg',
         source:'https://www.gotokyo.org/en/see-and-do/drinking-and-dining/index.html'
       },
@@ -847,7 +822,7 @@ const DAY_TEMPLATES = [
     map:'https://www.google.com/maps/dir/?api=1&origin=Tsukiji+Outer+Market&destination=Tokyo+Tower&waypoints=Kabukiza+Theatre%7CGINZA+SIX%7CHIRAKUZA+GINZA+TOKYO',
     events:[
       {
-        time:'09:30', title:'Tsukiji Outer Market brunch', meal:'brunch',
+        time:'09:30', title:'Brunch: Tsukiji Outer Market', meal:'brunch',
         note:'Graze through tamagoyaki, grilled seafood skewers, and a sushi or kaisen-don stop. Public hours are 9:00-14:00 and Saturdays get crowded, so go early. Eat at the stalls, not while walking. Walk 10-15 min into Ginza when you are done.',
         image:'img/tsukiji-outer-market.jpg',
         source:'https://www.tsukiji.or.jp/english/'
@@ -898,10 +873,14 @@ const DAY_TEMPLATES = [
         source:'https://narashikanko.or.jp/en/spot/detail_10001.html'
       },
       {
-        time:'12:30', title:'Kōfuku-ji + lunch',
-        note:'See the five-story pagoda on the way toward Naramachi, then find lunch \u2014 Nara-style somen or a casual set meal both work well.',
+        time:'12:30', title:'Kōfuku-ji',
+        note:'See the five-story pagoda on the way toward Naramachi.',
         image:'img/kofuku-ji-lunch.jpg',
         source:'https://narashikanko.or.jp/en/feature/daibutsu'
+      },
+      {
+        time:'13:00', title:'Lunch: Nara', meal:'lunch',
+        note:'Nara-style somen or a casual set meal both work well.',
       },
       {
         time:'14:00', title:'Naramachi',
@@ -1493,7 +1472,7 @@ function renderOutline(items, showTips = false) {
       card.classList.add('postcard-meal');
       const badge = document.createElement('span');
       badge.className = 'postcard-meal-badge';
-      badge.textContent = `🍽️ ${item.meal}${item.options?.length ? ' · pick one' : ''}`;
+      badge.textContent = `🍽️ ${item.meal}`;
       copy.prepend(badge);
     }
 
@@ -1525,30 +1504,6 @@ function renderOutline(items, showTips = false) {
       image.addEventListener('error', () => { link.hidden = true; });
       link.append(image);
       card.append(link);
-    }
-    if (!showTips && item.options?.length) {
-      const list = document.createElement('ul');
-      list.className = 'meal-options';
-      item.options.forEach(option => {
-        const row = document.createElement('li');
-        const name = document.createElement(/^https:\/\//.test(option.url || '') ? 'a' : 'b');
-        name.className = 'meal-option-name';
-        name.textContent = option.name;
-        if (name.tagName === 'A') {
-          name.href = option.url;
-          name.target = '_blank';
-          name.rel = 'noopener noreferrer';
-        }
-        const meta = document.createElement('span');
-        meta.className = 'meal-option-meta';
-        meta.textContent = [option.area, option.food].filter(Boolean).join(' · ');
-        const facts = document.createElement('span');
-        facts.className = 'meal-option-facts';
-        facts.textContent = [option.hours, option.price, option.booking, option.note].filter(Boolean).join(' · ');
-        row.append(name, meta, facts);
-        list.append(row);
-      });
-      card.append(list);
     }
     eventList.append(card);
   });
