@@ -620,38 +620,7 @@ const BOOKINGS = [
 // Unscheduled day-level itineraries. Drag a card onto the calendar to place it.
 const DAY_TEMPLATES = [
   {
-    id:'asakusa-akihabara', icon:'🏮', title:'Asakusa + Akihabara', city:'tokyo',
-    summary:'Sumo lunch, Sensō-ji, then Akihabara shops and light arcade games.',
-    pois:['Sumo Club', 'Sensō-ji', 'Akihabara'],
-    note:'Start with lunch and a live sumo show at Asakusa Sumo Club Annex, then spend a relaxed afternoon around Sensō-ji before browsing Akihabara and playing a few arcade games. Choose dinner nearby, then head back.',
-    map:'https://www.google.com/maps/dir/?api=1&origin=Asakusa+Sumo+Club+Annex&destination=Akihabara+Electric+Town&waypoints=Senso-ji+Temple&travelmode=walking',
-    events:[
-      {
-        time:'12:00', title:'Asakusa Sumo Club Annex', note:'Lunch and live sumo show.',
-        image:'img/asakusa-sumo-club-annex.jpg',
-        source:'https://asakusasumo-annex.com/'
-      },
-      {
-        time:'14:00', title:'Sensō-ji and Asakusa',
-        note:'Nakamise, the temple grounds, Asakusa Shrine, and surrounding streets.',
-        image:'img/senso-ji-and-asakusa.jpg',
-        source:'https://www.gotokyo.org/en/spot/15/index.html'
-      },
-      {
-        time:'16:30', title:'Akihabara',
-        note:'Browse Electric Town and play a few casual arcade games.',
-        image:'img/akihabara.jpg',
-        source:'https://www.gotokyo.org/en/destinations/central-tokyo/akihabara/index.html'
-      },
-      {
-        time:'', title:'Flexible dinner', note:'Choose somewhere nearby, then head back.',
-        image:'img/flexible-dinner.jpg',
-        source:'https://www.gotokyo.org/en/see-and-do/drinking-and-dining/index.html'
-      },
-    ],
-  },
-  {
-    id:'kyoto-to-asakusa-akihabara', icon:'🏮', title:'Kyoto → Asakusa + Akihabara (half day)', city:'tokyo',
+    id:'kyoto-to-asakusa-akihabara', icon:'🏮', title:'Kyoto → Asakusa + Akihabara (half day)', city:'tokyo', date:'2026-12-18',
     summary:'Travel day: noon Shinkansen from Kyoto, Sensō-ji before it closes, Asakusa dinner, then Akihabara arcades.',
     pois:['Kyoto Station', 'Sensō-ji', 'Asakusa', 'Akihabara'],
     note:'Built for Fri December 18, checking out of Saka Hotel Kyoto and into a Ginza hotel. Nozomi seats do not need to be reserved this early in the holidays, but reserving is easy. To add teamLab instead of Akihabara, book a 19:00 entry (last entry 21:00); tickets are date-changeable but not refundable.',
@@ -690,7 +659,7 @@ const DAY_TEMPLATES = [
     ],
   },
   {
-    id:'tokyo-disneysea', icon:'🌊', title:'Tokyo DisneySea', city:'tokyo',
+    id:'tokyo-disneysea', icon:'🌊', title:'Tokyo DisneySea', city:'tokyo', date:'2026-12-20',
     summary:'A full park day focused on Fantasy Springs and the biggest rides.',
     pois:['Fantasy Springs', 'Frozen Journey', 'Soaring', 'Toy Story Mania!'],
     note:'Set up the Tokyo Disney Resort App before the visit, then use the first minutes after entering to secure the most important ride access. Keep the rest of the day flexible around live wait times and return windows.',
@@ -976,6 +945,20 @@ Object.values(state.cells).forEach(data => {
   migrated = true;
 });
 if (migrated) save();
+
+// Drop placements of deleted cards; pin fixed-date cards to their day.
+let seeded = false;
+Object.entries(state.cells).forEach(([key, data]) => {
+  if (data.templateId && !templateById(data.templateId)) { delete state.cells[key]; seeded = true; }
+});
+DAY_TEMPLATES.forEach(template => {
+  const oldKey = assignedKeyFor(template.id);
+  if (!template.date || oldKey === template.date) return;
+  if (oldKey) delete state.cells[oldKey];
+  state.cells[template.date] = templateData(template);
+  seeded = true;
+});
+if (seeded) save();
 
 function clearTemplateSelection() {
   selectedTemplateId = null;
