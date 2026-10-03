@@ -821,7 +821,7 @@ const DAY_TEMPLATES = [
     ],
   },
   {
-    id:'nara-deer-park', icon:'🦌', title:'Nara Day Trip', city:'kyoto',
+    id:'nara-deer-park', icon:'🦌', title:'Nara Day Trip', city:'kyoto', date:'2026-12-15',
     summary:'Feed the deer in Nara Park, then Tōdai-ji, Kōfuku-ji, and Naramachi.',
     pois:['Nara Park', 'Tōdai-ji', 'Kōfuku-ji', 'Naramachi'],
     note:'Nara is a straightforward day trip on the Kintetsu line: about 35 minutes direct from Kyoto Station, or about 39 minutes from Osaka-Namba. Deer cracker (shika senbei) stalls run roughly 9:00-16:30, shorter in winter, so arrive well before mid-afternoon. Tōdai-ji keeps winter hours of 8:00-17:00. The deer roam freely and will bow for a cracker, but they can nip or headbutt if you tease them with food, so keep crackers visible and hand them over without hesitation.',
@@ -912,7 +912,8 @@ const BOOKING_BANDS = BOOKINGS.map(b => ({
 
 let saved = {};
 try { saved = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) {}
-const state = { cells: saved.cells || {}, showCrewSide: saved.showCrewSide !== false };
+// Crew side always starts hidden; the toggle only lasts for the visit.
+const state = { cells: saved.cells || {}, showCrewSide: false };
 const save = () => localStorage.setItem(KEY, JSON.stringify(state));
 
 const CREW_SIDE_START = '2026-11-25', CREW_SIDE_END = '2026-12-12';
