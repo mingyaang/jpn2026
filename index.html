@@ -276,6 +276,16 @@
     padding:9px;border:1px solid var(--ring);border-radius:13px;background:#202027
   }
   .postcard-time{font-size:11px;font-weight:800;color:var(--focus);font-variant-numeric:tabular-nums}
+  /* time-of-day tint: morning < 12:30 <= afternoon < 18:00 <= evening */
+  .postcard-event.tod-morning{--tod:#e9c46a}
+  .postcard-event.tod-afternoon{--tod:#ee8c4c}
+  .postcard-event.tod-evening{--tod:#8f84f0}
+  .postcard-event[class*=tod-]{
+    border-left:3px solid var(--tod);
+    background:linear-gradient(90deg,color-mix(in srgb,var(--tod) 18%,#202027),#202027 70%)
+  }
+  .postcard-event[class*=tod-] .postcard-time{color:var(--tod)}
+  .postcard-period{display:block;margin-top:2px;font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.8}
   .postcard-tip{grid-template-columns:32px minmax(0,1fr)}
   .postcard-marker{font-size:18px;text-align:center}
   .postcard-copy h3{font-size:13px;line-height:1.2}
@@ -1409,6 +1419,15 @@ function renderOutline(items, showTips = false) {
     const marker = document.createElement(showTips ? 'span' : 'time');
     marker.className = showTips ? 'postcard-marker' : 'postcard-time';
     marker.textContent = showTips ? item.icon : item.time || 'later';
+    const period = !showTips && item.time &&
+      (item.time < '12:30' ? 'morning' : item.time < '18:00' ? 'afternoon' : 'evening');
+    if (period) {
+      card.classList.add(`tod-${period}`);
+      const label = document.createElement('span');
+      label.className = 'postcard-period';
+      label.textContent = { morning:'☀️ am', afternoon:'🌤️ pm', evening:'🌙 eve' }[period];
+      marker.append(label);
+    }
 
     const copy = document.createElement('div');
     copy.className = 'postcard-copy';
