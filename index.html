@@ -579,18 +579,19 @@ const BOOKINGS = [
     },
   },
   {
-    icon:'🏨', title:'the b ginza', label:'the b ginza',
+    icon:'🏨', title:'the square hotel GINZA', label:'the square hotel GINZA',
     date:'2026-12-18', checkout:'2026-12-21', checkinTime:'from 15:00', checkoutTime:'by 11:00',
     ref:'redacted',
-    image:'img/the-b-ginza-lobby.jpg',
-    map:'https://www.google.com/maps/search/?api=1&query=the+b+ginza+8-12-13+Ginza+Chuo-ku+Tokyo',
+    image:'img/the-square-hotel-ginza-cafe.jpg',
+    map:'https://www.google.com/maps/search/?api=1&query=the+square+hotel+GINZA+2-11-6+Ginza+Chuo-ku+Tokyo',
     info:{
-      room:'Classic Room · 2 guests',
-      meals:'room only',
-      cancellation:'free until Dec 13',
-      address:'8-12-13 Ginza, Chuo-ku, Tokyo',
-      'getting there':'6 min walk from the Ginza exit of Shimbashi Station (JR and Ginza line); 7 min from Ginza Station Exit A3',
-      phone:'+81-50-5538-5166',
+      'late arrival':'after 21:00, contact the hotel or the booking may be cancelled',
+      paid:'CA$602.47 (¥66,740) incl. taxes; the hotel charges in JPY · Tokyo lodging tax due at the hotel',
+      cancellation:'free until Wed Dec 16, 23:59; non-refundable after',
+      address:'2-11-6 Ginza, Chuo-ku, Tokyo',
+      'getting there':'1 min from Ginza-itchome Exit 11 (Yurakucho line; exit open 7:00-22:00); 5 min from Higashi-ginza Exit A2 (Hibiya and Toei Asakusa lines); 8 min from JR Yurakucho Kyobashi Exit',
+      facilities:'large public bath and gym on 2F; BUNDOZA cafe and bar on 1F',
+      phone:'+81-3-3544-6811',
     },
   },
   {
@@ -654,20 +655,20 @@ const DAY_TEMPLATES = [
     id:'kyoto-to-asakusa-akihabara', icon:'🏮', title:'Kyoto → Asakusa + Akihabara (half day)', city:'tokyo', date:'2026-12-18',
     summary:'Travel day: noon Shinkansen from Kyoto, Sensō-ji before it closes, Asakusa dinner, then Akihabara arcades.',
     pois:['Kyoto Station', 'Sensō-ji', 'Asakusa', 'Akihabara'],
-    note:'Built for Fri December 18, checking out of Saka Hotel Kyoto and into the b ginza. A Shinkansen ticket to Tokyo is valid to any JR station in the 23 wards, so Shimbashi costs nothing extra. Nozomi seats do not need to be reserved this early in the holidays, but reserving is easy. To add teamLab instead of Akihabara, book a 19:00 entry (last entry 21:00); tickets are date-changeable but not refundable.',
-    map:'https://www.google.com/maps/dir/?api=1&origin=Kyoto+Station&destination=Akihabara+Electric+Town&waypoints=Shinagawa+Station%7Cthe+b+ginza%7CSenso-ji+Temple&travelmode=transit',
+    note:'Built for Fri December 18, checking out of Saka Hotel Kyoto and into the square hotel GINZA. A Shinkansen ticket to Tokyo is valid to any JR station in the 23 wards, so Yurakucho costs nothing extra. Nozomi seats do not need to be reserved this early in the holidays, but reserving is easy. To add teamLab instead of Akihabara, book a 19:00 entry (last entry 21:00); tickets are date-changeable but not refundable.',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Kyoto+Station&destination=Akihabara+Electric+Town&waypoints=Tokyo+Station%7Cthe+square+hotel+GINZA%7CSenso-ji+Temple&travelmode=transit',
     events:[
       {
         time:'12:00', title:'Leave Kiyomizu-dera for Kyoto Station',
         note:'Collect bags at Saka Hotel. A taxi is about 20 min; buses 206 and 86 from Gojozaka are slower and crowded with luggage.',
       },
       {
-        time:'12:30', title:'Nozomi to Shinagawa',
-        note:'About 2h10m; trains leave every ~10 min. At Shinagawa, change to the JR Tokaido, Yokosuka, Yamanote or Keihin-Tohoku line for Shimbashi, 2 stops, about 10 min. Arrive Shimbashi around 15:00.',
+        time:'12:30', title:'Nozomi to Tokyo',
+        note:'About 2h15m; trains leave every ~10 min. At Tokyo Station, take the JR Yamanote or Keihin-Tohoku line 1 stop to Yurakucho, then walk 8 min from the Kyobashi Exit. Arrive at the hotel around 15:00.',
       },
       {
-        time:'15:00', title:'Check in at the b ginza',
-        note:'6 min walk from the Ginza exit of Shimbashi Station. Check-in opens at 15:00. Drop bags, then walk back to Shimbashi for the Ginza line straight to Asakusa, about 20 min, no transfer.',
+        time:'15:00', title:'Check in at the square hotel GINZA',
+        note:'Check-in opens at 15:00. Drop bags, then walk 5 min to Higashi-ginza Exit A2 for the Toei Asakusa line straight to Asakusa, about 15 min, no transfer.',
       },
       {
         time:'16:00', title:'Sensō-ji and Asakusa',
@@ -681,7 +682,7 @@ const DAY_TEMPLATES = [
       },
       {
         time:'19:30', title:'Akihabara arcades',
-        note:'Tsukuba Express from Asakusa, about 5 min. Most shops close around 20:00-21:00, but the big arcades (GiGO, Taito Station) run to about 23:00. Back to the hotel: JR Yamanote or Keihin-Tohoku from Akihabara to Shimbashi, about 10 min, then a 6 min walk.',
+        note:'Tsukuba Express from Asakusa, about 5 min. Most shops close around 20:00-21:00, but the big arcades (GiGO, Taito Station) run to about 23:00. Back to the hotel: Hibiya line from Akihabara straight to Higashi-ginza, about 12 min, then a 5 min walk.',
         image:'img/akihabara.jpg',
         source:'https://www.gotokyo.org/en/destinations/central-tokyo/akihabara/index.html'
       },
