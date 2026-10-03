@@ -818,10 +818,10 @@ const DAY_TEMPLATES = [
   },
   {
     id:'toyosu-teamlab-ginza-tokyo-tower', icon:'🐟', title:'Tsukiji + Ginza + Tokyo Tower', city:'tokyo',
-    summary:'Tsukiji street-food brunch, an afternoon in Ginza, a sumo kaiseki dinner show, then Tokyo Tower at night.',
-    pois:['Tsukiji Outer Market', 'Ginza', 'Hirakuza', 'Tokyo Tower'],
+    summary:'Tsukiji street-food brunch, an afternoon in Ginza, a sumo kaiseki dinner show, then Roppongi Hills lights and Tokyo Tower at night.',
+    pois:['Tsukiji Outer Market', 'Ginza', 'Hirakuza', 'Roppongi Hills', 'Tokyo Tower'],
     note:'Use this on Sat December 19 while staying in Ginza. Tsukiji follows the wholesale-market calendar, so many shops close December 20 and 23. Hirakuza has only its 17:00 show that day. Book Hirakuza early: full refund only until 21 days before (Nov 28).',
-    map:'https://www.google.com/maps/dir/?api=1&origin=Tsukiji+Outer+Market&destination=Tokyo+Tower&waypoints=Kabukiza+Theatre%7CGINZA+SIX%7CHIRAKUZA+GINZA+TOKYO',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Tsukiji+Outer+Market&destination=Tokyo+Tower&waypoints=Kabukiza+Theatre%7CGINZA+SIX%7CHIRAKUZA+GINZA+TOKYO%7CRoppongi+Hills',
     events:[
       {
         time:'09:30', title:'Brunch: Tsukiji Outer Market', meal:'brunch',
@@ -842,16 +842,21 @@ const DAY_TEMPLATES = [
         source:'https://en.hirakuza.net/sumolp2/'
       },
       {
-        time:'19:30', title:'Tokyo Tower at night',
-        note:'About 15 min by taxi from Hirakuza. See the tower lit from outside, then choose the 150-meter Main Deck or the timed 250-meter Top Deck if everyone still wants another view.',
-        image:'img/tokyo-tower-at-night.jpg',
-        source:'https://en.tokyotower.co.jp/fee/'
-      },
-      {
-        time:'21:00', title:'Roppongi Hills + Keyakizaka', optional:true,
-        note:'Keep this to a short outdoor stop around Mori Garden and Keyakizaka for the Tokyo Tower view. The 2026 Christmas illumination has not been announced yet; if it returns, stay for the lights.',
+        time:'19:30', title:'Roppongi Hills: Keyakizaka lights + Christmas market',
+        note:'From Hirakuza walk 5 min to Higashi-ginza, then Hibiya line to Roppongi (~10 min, no transfer). Walk the lit Keyakizaka street for the photo with Tokyo Tower at the end, and the German-style Christmas market in Roppongi Hills Arena. Skip the shops. The 2026 illumination and market dates are not announced yet; in past years both ran until Dec 25.',
         image:'img/roppongi-hills-keyakizaka.jpg',
         source:'https://www.gotokyo.org/en/spot/81/index.html'
+      },
+      {
+        time:'20:30', title:'Tokyo City View (52F)',
+        note:'Mori Tower observation deck, with Tokyo Tower right in front of you. Usually last entry around 21:30; confirm closer to the date.',
+        source:'https://tcv.roppongihills.com/en/'
+      },
+      {
+        time:'21:30', title:'Tokyo Tower from below',
+        note:'Walk ~15-20 min, mostly downhill, or a ~5 min taxi. See the tower lit up from its base and Shiba Park; no need to go up. Back to the hotel: Hibiya line from Kamiyacho to Higashi-ginza (~10 min), then 5 min on foot.',
+        image:'img/tokyo-tower-at-night.jpg',
+        source:'https://en.tokyotower.co.jp/'
       },
     ],
   },
