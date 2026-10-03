@@ -1,0 +1,1449 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>the big trip ✈️</title>
+<style>
+  :root{
+    /* surfaces + ink */
+    --plane:#0a0a0c;
+    --surface:#16161b;
+    --ink:#ffffff;
+    --ink-2:#c3c2b7;
+    --muted:#898781;
+    --ring:rgba(255,255,255,.10);
+    /* ordinal certainty ramp (one hue, validated monotone on --surface) */
+    --tbd:#184f95;      /* in a flexible window, not picked — the only non-country fill */
+    --travel:#d95926;   /* depart / return day, now a ring not a fill */
+    --alert:#f0a07d;
+    --focus:#86b6ef;    /* keyboard focus ring */
+    /* the three countries. dark ink on all three (6.30 / 4.99 / 6.41) */
+    --leg-1:#9085e9; --leg-2:#d55181; --leg-3:#c98500;
+    --leg-4:#3d9f8f; /* korea */
+    --city-tokyo:#aa9df0;
+    --city-kyoto:#e4a76b; --city-osaka:#68b6d6;
+    --city-chongqing:#63c5a1; /* major China stop; distinct from the country leg */
+    --city-suzhou:#d68fb8; --city-hangzhou:#9fcf5f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:
+      radial-gradient(80rem 40rem at 15% -10%, #1b2a4a 0%, transparent 60%),
+      radial-gradient(60rem 35rem at 90% 0%, #3a1e14 0%, transparent 55%),
+      var(--plane);
+    color:var(--ink);
+    font:400 16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;
+    -webkit-font-smoothing:antialiased;
+    padding:clamp(16px,3vw,40px);
+    min-height:100vh;
+  }
+  .wrap{max-width:1180px;margin:0 auto}
+
+  h1{font-size:clamp(30px,5.5vw,52px);font-weight:800;letter-spacing:-.03em;line-height:1.02}
+  h1 .grad{background:linear-gradient(92deg,#86b6ef,#d95926 70%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{color:var(--ink-2);margin-top:8px;font-size:clamp(14px,1.6vw,17px)}
+
+  /* ---- postcard summary ---- */
+  .bar{display:flex;flex-wrap:wrap;gap:12px;align-items:stretch;margin:22px 0 0}
+  .bar+.bar{margin-top:10px}
+  .barlab{
+    width:100%;font-size:11px;letter-spacing:.15em;text-transform:uppercase;
+    color:var(--muted);font-weight:700;margin-bottom:-2px
+  }
+  .stat{background:var(--surface);border:1px solid var(--ring);border-radius:16px;padding:12px 16px;min-width:112px}
+  .stat b{display:block;font-size:clamp(24px,3.2vw,32px);font-weight:800;letter-spacing:-.03em;line-height:1.15}
+  .stat span{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .toggle{
+    background:var(--surface);border:1px solid var(--ring);border-radius:16px;padding:12px 16px;
+    display:flex;align-items:center;gap:8px;cursor:pointer
+  }
+  .toggle input{width:16px;height:16px;flex:none;accent-color:var(--focus)}
+  .toggle span{font-size:12px;color:var(--ink-2);font-weight:600}
+
+  /* ---- route legs ---- */
+  .leg{background:var(--surface);border:1px solid var(--ring);border-radius:16px;padding:10px 14px;min-width:212px}
+  .leg .who{display:flex;align-items:center;gap:7px;font-weight:800;font-size:14px;letter-spacing:-.01em}
+  .leg .dot{width:9px;height:9px;border-radius:3px;flex:none}
+  .leg .when{display:flex;align-items:center;gap:5px;margin-top:5px;color:var(--muted);font-size:12px}
+  .leg .sub{display:flex;align-items:center;gap:5px;margin-top:3px;color:var(--muted);font-size:11px}
+
+  /* ---- route ribbon ---- */
+  .ribbon{display:flex;gap:4px;margin:14px 0 0;height:40px}
+  .ribbon div{
+    display:flex;align-items:center;justify-content:center;gap:6px;border-radius:10px;
+    font:800 12px system-ui,sans-serif;color:#0b0b0b;letter-spacing:-.01em;
+    overflow:hidden;white-space:nowrap;padding:0 6px;
+    min-width:104px   /* so a short leg still fits its own label */
+  }
+
+  /* ---- legend ---- */
+  .legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin:18px 0 0;padding:0;list-style:none}
+  .legend li{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-2)}
+  .sw{width:15px;height:15px;border-radius:5px;flex:none;border:1px solid var(--ring)}
+  /* neutral base — stripes mean "holiday" on whatever country colour the day already is */
+  .sw.hol{
+    background:#8b8b93;
+    background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.55) 0 4px,transparent 4px 8px);
+    box-shadow:inset 0 0 0 2px rgba(11,11,11,.62)
+  }
+  .swband{
+    width:28px;height:9px;border-radius:999px;flex:none;
+    background:rgba(255,255,255,.2);box-shadow:inset 0 0 0 1px rgba(255,255,255,.4)
+  }
+  .swchip{
+    flex:none;font-size:9px;font-weight:800;letter-spacing:.04em;padding:2px 6px;border-radius:999px;
+    text-transform:uppercase
+  }
+  .sw.crew{background:linear-gradient(to bottom right,var(--leg-1) 0 49.5%,var(--city-tokyo) 50% 100%)}
+  .swchip.wfh{background:#fff;color:#0b0b0b}
+
+  /* ---- calendar ---- */
+  table{border-collapse:separate;border-spacing:6px;width:100%;table-layout:fixed}
+  thead th{
+    font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+    font-weight:700;padding-bottom:2px;text-align:left
+  }
+  td{vertical-align:top;padding:0;height:124px}
+  td.ghost{background:none}
+  .day{
+    position:relative;height:100%;border-radius:14px;padding:7px 9px 8px;background:var(--surface);
+    border:1px solid var(--ring);display:flex;flex-direction:column;gap:1px;overflow:hidden;
+    transition:background .18s ease,color .18s ease;
+  }
+  /* crew stretch: one continuous bar spanning the days, like a multi-day event.
+     Neutral ink so it reads as an annotation and costs nothing in the palette. */
+  tr.bandrow td{height:25px;padding:0;vertical-align:bottom}
+  tr.bookingrow td{height:19px}  /* no headroom: sits snug under the city stripe */
+  .band{
+    display:flex;align-items:center;height:21px;padding:0 9px;border-radius:3px;
+    background:rgba(255,255,255,.16);box-shadow:inset 0 0 0 1px rgba(255,255,255,.34);
+    font:700 11px system-ui,sans-serif;color:var(--ink);letter-spacing:-.01em;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis
+  }
+  /* round only the true ends, so a week wrap reads as "continues" */
+  .band.s{border-top-left-radius:999px;border-bottom-left-radius:999px;padding-left:12px}
+  .band.e{border-top-right-radius:999px;border-bottom-right-radius:999px;padding-right:12px}
+  .band span{overflow:hidden;text-overflow:ellipsis}
+  /* a city stay: filled in its country's colour, so it reads as part of that leg */
+  .band.city{
+    background:var(--citybg,rgba(255,255,255,.16));color:#0b0b0b;box-shadow:none;
+    font-weight:800;height:19px
+  }
+  .num{display:flex;align-items:baseline;gap:6px;font-weight:800;font-size:19px;letter-spacing:-.02em}
+  .mo{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
+  .tag{margin-left:auto;font-size:13px;line-height:1;letter-spacing:-.5px}
+  .chiprow{display:flex;flex-wrap:wrap;gap:3px;min-height:17px;margin:1px 0 1px}
+  .chip{
+    font:800 9.5px/1.5 system-ui,sans-serif;letter-spacing:.05em;text-transform:uppercase;
+    padding:1px 7px;border-radius:999px;border:1px solid transparent;background:none;
+    color:inherit;cursor:default;font-family:inherit;
+  }
+  .chip.wfh{background:#fff;color:#0b0b0b;box-shadow:0 0 0 1px rgba(0,0,0,.28)}
+  .chip.hol{background:rgba(255,255,255,.96);color:#0b0b0b;cursor:default}
+  .chip.wknd{opacity:.42;cursor:default;padding-left:0}
+  .chip.crew{background:rgba(255,255,255,.95);color:#0b0b0b;cursor:default;text-transform:none;letter-spacing:0}
+  .chip:focus-visible{outline:2px solid var(--travel);outline-offset:2px}
+  .city,.note{border-radius:6px;padding:1px 3px;margin-left:-3px;outline:none;word-break:break-word}
+  .city{font-weight:700;font-size:13px;letter-spacing:-.01em}
+  .note{font-size:11.5px;font-style:italic;opacity:.82}
+
+  /* ---- day states ----
+     FILL = which country you're in. Everything else moved off the fill channel so
+     four competing hues don't collide: certainty -> border, travel -> ring,
+     holiday -> stripe texture. --fill is set per cell from the leg. */
+  .day.home{color:var(--muted)}
+  .day.away{background-color:var(--fill);color:#0b0b0b;border-color:transparent}
+  .day.away .note{opacity:.72}
+  .day.away.crew-location{
+    background-image:linear-gradient(to bottom right,var(--fill) 0 49.5%,var(--crew-fill) 50% 100%);
+  }
+  .day.away.commute-day{
+    background-image:linear-gradient(to bottom right,var(--fill) 0 49.5%,var(--commute-fill) 50% 100%);
+  }
+  .crew-label{
+    display:none;position:absolute;right:8px;bottom:7px;max-width:78%;overflow:hidden;
+    text-overflow:ellipsis;white-space:nowrap;color:rgba(11,11,11,.82);
+    font:800 9px/1.35 system-ui,sans-serif;letter-spacing:.02em;text-transform:uppercase
+  }
+  .day.crew-location .crew-label{display:block}
+  /* an away day with no leg assigned — hatched so a gap in the route is obvious */
+  .day.away.noleg{
+    background-color:var(--surface);color:var(--ink-2);
+    background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.07) 0 6px,transparent 6px 12px);
+    border-color:var(--ring)
+  }
+  /* in a flexible window but not currently picked */
+  .day.tbd{background-color:var(--tbd);border:1px dashed rgba(255,255,255,.5);color:#fff}
+  /* depart / return: orange ring instead of an orange fill, so the country still shows */
+  .day.travel{box-shadow:inset 0 0 0 3px var(--travel)}
+  .day.travel .num{font-size:20px}
+  /* corporate holiday: keeps the country colour, marked by stripes + ring + glow */
+  .day.holiday{
+    background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.2) 0 7px,transparent 7px 15px);
+    box-shadow:inset 0 0 0 2px rgba(11,11,11,.62),0 0 17px rgba(255,255,255,.17)
+  }
+  .day.travel.holiday{box-shadow:inset 0 0 0 3px var(--travel),0 0 17px rgba(255,255,255,.17)}
+  .day.today{outline:2px solid var(--alert);outline-offset:1px}
+
+  .poi-tags,.itinerary-card-pois{display:flex;flex-wrap:wrap;gap:3px;margin-top:4px}
+  .poi-tag{
+    max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+    padding:1px 6px;border:1px solid currentColor;border-radius:999px;
+    background:rgba(11,11,11,.1);
+    color:rgba(11,11,11,.92);font:800 9px/1.45 system-ui,sans-serif;letter-spacing:.02em
+  }
+  .day.away .poi-tag{color:rgba(11,11,11,.92)}
+  .itinerary-card-pois{margin-top:8px}
+  .itinerary-card-pois .poi-tag{background:rgba(255,255,255,.06);color:var(--ink);font-size:10px}
+
+  .day{cursor:pointer}
+  .day:hover{filter:brightness(1.08)}
+  .day:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+  .day.drop-target{outline:3px solid var(--focus);outline-offset:2px;filter:brightness(1.12)}
+  .chip.itinerary{
+    max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+    background:#0b0b0b;color:#fff;text-transform:none;letter-spacing:0
+  }
+
+  /* ---- available day cards ---- */
+  .day-bank{
+    margin:24px 0 8px;padding:16px;border:1px solid var(--ring);border-radius:18px;
+    background:rgba(22,22,27,.8)
+  }
+  .day-bank-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:12px}
+  .day-bank .barlab{display:block;width:auto;margin:0 0 3px}
+  .day-bank h2{font-size:20px;letter-spacing:-.02em}
+  .day-bank-head p{max-width:430px;color:var(--muted);font-size:12px;text-align:right}
+  .day-deck{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:10px}
+  .itinerary-card{
+    padding:14px;border:1px solid var(--ring);border-radius:15px;background:#202027;
+    cursor:grab;user-select:none
+  }
+  .itinerary-card:hover{border-color:rgba(255,255,255,.28)}
+  .itinerary-card:focus-visible,.itinerary-card.selected{outline:2px solid var(--focus);outline-offset:2px}
+  .itinerary-card-head{display:flex;align-items:flex-start;gap:10px}
+  .itinerary-card-icon{font-size:24px;line-height:1}
+  .itinerary-card-preview{
+    flex:none;width:30px;height:30px;border:1px solid var(--ring);border-radius:50%;
+    background:transparent;color:var(--ink-2);font-size:13px;cursor:pointer
+  }
+  .itinerary-card-preview:hover{border-color:var(--focus);color:var(--ink)}
+  .itinerary-card-title{font-size:16px;font-weight:800;line-height:1.15}
+  .day-deck-empty{color:var(--muted);font-size:12.5px}
+
+  /* ---- bookings: a dark stripe outlined in its country's colour, click for details ---- */
+  .band.booking{
+    background:#202027;box-shadow:inset 0 0 0 1.5px var(--bookline,rgba(255,255,255,.34));
+    height:19px;cursor:pointer
+  }
+  .band.booking:hover{filter:brightness(1.3)}
+  .band.booking:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
+  .booking-image{display:block;width:100%;height:200px;margin-top:14px;object-fit:cover;border-radius:13px;background:#202027}
+  #booking-dialog [hidden]{display:none}
+  .booking-info{display:grid;grid-template-columns:auto 1fr;gap:7px 14px;margin:14px 0 0;font-size:12.5px}
+  .booking-info:empty{display:none}
+  .booking-info dt{padding-top:2px;color:var(--muted);font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+  .booking-info dd{margin:0}
+  .booking-legs{list-style:none;display:grid;gap:7px;margin-top:14px}
+  .booking-legs li{display:grid;grid-template-columns:auto 1fr;gap:1px 10px;font-size:12.5px}
+  .booking-legs b{font-variant-numeric:tabular-nums}
+  .booking-legs span{grid-column:2;color:var(--muted);font-size:11px}
+
+  dialog{
+    width:min(720px,calc(100vw - 24px));max-height:calc(100vh - 24px);padding:0;
+    overflow:hidden;border:1px solid var(--ring);border-radius:22px;background:var(--surface);
+    color:var(--ink);box-shadow:0 24px 80px rgba(0,0,0,.65)
+  }
+  dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(5px)}
+  .day-detail{max-height:calc(100vh - 24px);overflow-y:auto;padding:18px}
+  .detail-head{display:flex;align-items:flex-start;gap:12px}
+  .detail-head>div{min-width:0;flex:1}
+  .detail-kicker{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .detail-head h2{margin:3px 0 0;font-size:clamp(20px,4.5vw,30px);line-height:1.05;letter-spacing:-.03em}
+  .detail-context{margin:6px 0 0;color:var(--ink-2);font-size:11.5px}
+  .iconbtn{
+    width:34px;height:34px;flex:none;border:1px solid var(--ring);border-radius:50%;
+    background:transparent;color:var(--ink);font:600 15px system-ui,sans-serif;cursor:pointer
+  }
+  .postcard-summary{margin-top:10px;color:var(--ink-2);font-size:13px}
+  .event-head{margin:16px 0 8px}
+  .event-head h3{margin:0;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .postcard-events{display:grid;gap:8px}
+  .postcard-event{
+    display:grid;grid-template-columns:48px minmax(0,1fr) 96px;gap:10px;align-items:center;
+    padding:9px;border:1px solid var(--ring);border-radius:13px;background:#202027
+  }
+  .postcard-time{font-size:11px;font-weight:800;color:var(--focus);font-variant-numeric:tabular-nums}
+  .postcard-tip{grid-template-columns:32px minmax(0,1fr)}
+  .postcard-marker{font-size:18px;text-align:center}
+  .postcard-copy h3{font-size:13px;line-height:1.2}
+  .postcard-copy p{margin-top:3px;color:var(--ink-2);font-size:11.5px}
+  .postcard-optional{display:inline-block;margin-bottom:5px;padding:2px 6px;border:1px solid var(--ring);border-radius:999px;color:var(--muted);font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+  .postcard-source,.postcard-map{display:inline-block;margin-top:6px;color:var(--focus);font-size:11px;font-weight:700}
+  .postcard-image-link{display:block}
+  .postcard-image{display:block;width:100%;height:96px;object-fit:cover;border-radius:9px;background:var(--surface)}
+  .event-empty{padding:22px;border:1px dashed var(--ring);border-radius:14px;color:var(--muted);font-size:13px;text-align:center}
+  .clear-day{
+    margin-top:18px;border:1px solid var(--ring);border-radius:999px;background:transparent;
+    color:var(--muted);padding:7px 12px;font:700 11px system-ui,sans-serif;cursor:pointer
+  }
+  .clear-day:hover{border-color:var(--travel);color:var(--travel)}
+
+  footer{margin-top:24px;color:var(--muted);font-size:12.5px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  button.clear{
+    background:transparent;border:1px solid var(--ring);color:var(--ink-2);
+    border-radius:999px;padding:6px 14px;font:600 12px system-ui,sans-serif;cursor:pointer
+  }
+  button.clear:hover{border-color:var(--travel);color:var(--travel)}
+  @media (max-width:640px){
+    td{height:106px}
+    .city{font-size:12px} .note{display:none}
+    thead th{font-size:9px;letter-spacing:.08em}
+    .day-bank-head{display:block}
+    .day-bank-head p{margin-top:5px;text-align:left}
+    .day-detail{padding:14px 12px}
+    .postcard-event{grid-template-columns:44px 1fr;gap:8px;padding:8px}
+    .postcard-tip{grid-template-columns:30px 1fr}
+    .postcard-image-link{grid-column:1/-1}
+    .postcard-image{height:96px}
+
+    /* phone: 7 columns leave ~45px per day, so shrink everything inside a day */
+    body{padding:12px}
+    .bar{gap:8px}
+    .stat{flex:1;min-width:0;padding:9px 12px}
+    .toggle{flex:1 1 100%;padding:9px 12px}
+    .leg{flex:1 1 calc(50% - 4px);min-width:0;padding:8px 10px}
+    .ribbon{height:32px;gap:3px}
+    .ribbon div{min-width:60px;font-size:10px;padding:0 4px;justify-content:flex-start;text-overflow:ellipsis}
+    .legend{gap:6px 12px;margin-top:12px}
+    .legend li{font-size:12px}
+    /* swipe through day cards instead of a long stack above the calendar */
+    .day-bank{padding:12px}
+    .day-deck{grid-auto-flow:column;grid-auto-columns:82%;grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:4px}
+    .itinerary-card{scroll-snap-align:start}
+    table{border-spacing:3px}
+    td{height:86px}
+    tr.bandrow td{height:21px}
+    tr.bookingrow td{height:18px}
+    .band,.band.city,.band.booking{height:17px;padding:0 5px;font-size:10px}
+    .band.s{padding-left:7px} .band.e{padding-right:7px}
+    .day{padding:4px 4px 5px;border-radius:9px}
+    .num{flex-wrap:wrap;gap:0 3px;font-size:14px}
+    .day.travel .num{font-size:15px}
+    .mo{font-size:8px;letter-spacing:.06em}
+    .tag{font-size:10px;letter-spacing:-1px}
+    .chip{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 4px;font-size:8px;letter-spacing:0}
+    .crew-label{right:4px;bottom:4px;max-width:calc(100% - 8px);font-size:7.5px;letter-spacing:0}
+    /* their icon is already in .tag and the name is in the day popup */
+    .chip.hol,.chip.crew{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>the big trip <span class="grad">✈️</span></h1>
+  <p class="sub">nov 25 → jan 7 · 43 nights · 🇯🇵 japan → 🇰🇷 korea → 🇨🇳 china → 🇹🇼 taiwan</p>
+
+  <div class="bar">
+    <span class="barlab">the plan</span>
+    <div class="stat"><b>17/20</b><span>pto days</span></div>
+    <div class="stat"><b>12</b><span>remote days</span></div>
+    <label class="toggle"><input type="checkbox" id="toggle-crew-side" checked><span>show crew's side of the trip<br>(nov 25 → dec 12)</span></label>
+  </div>
+
+  <div class="bar">
+    <span class="barlab">the route</span>
+    <div class="leg">
+      <div class="who"><i class="dot" style="background:var(--leg-1)"></i>🇯🇵 japan</div>
+      <div class="when">nov 25 → dec 24</div>
+      <div class="sub">👯 crew · nov 29 → dec 12</div>
+      <div class="sub">👋 yvonne · dec 12 → dec 24</div>
+    </div>
+    <div class="leg">
+      <div class="who"><i class="dot" style="background:var(--leg-4)"></i>🇰🇷 korea</div>
+      <div class="when">dec 25 → dec 26</div>
+    </div>
+    <div class="leg">
+      <div class="who"><i class="dot" style="background:var(--leg-2)"></i>🇨🇳 china</div>
+      <div class="when">dec 27 → jan 4</div>
+    </div>
+    <div class="leg">
+      <div class="who"><i class="dot" style="background:var(--leg-3)"></i>🇹🇼 taiwan</div>
+      <div class="when">jan 5 → jan 7</div>
+    </div>
+  </div>
+  <div class="ribbon" id="ribbon"></div>
+
+  <ul class="legend">
+    <li><i class="sw" style="background:var(--leg-1)"></i>🇯🇵 japan</li>
+    <li><i class="sw" style="background:var(--leg-4)"></i>🇰🇷 korea</li>
+    <li><i class="sw" style="background:var(--leg-2)"></i>🇨🇳 china</li>
+    <li><i class="sw" style="background:var(--leg-3)"></i>🇹🇼 taiwan</li>
+  </ul>
+  <ul class="legend">
+    <li><i class="sw" style="background:var(--leg-3);box-shadow:inset 0 0 0 3px var(--travel)"></i>🛫 travel day</li>
+    <li><i class="sw hol"></i>🏢 holiday — free, costs no pto</li>
+    <li><i class="swband" style="background:var(--leg-1);box-shadow:none"></i>🗼 city stay</li>
+    <li><i class="sw crew"></i>👯 crew city · lower half</li>
+    <li><i class="swchip wfh">💻 wfh</i>working remote</li>
+  </ul>
+
+  <section class="day-bank" aria-labelledby="day-bank-title">
+    <header class="day-bank-head">
+      <div>
+        <span class="barlab">build the trip</span>
+        <h2 id="day-bank-title">available days</h2>
+      </div>
+      <p id="day-bank-help">Drag a card onto a date, or select it and then select a date.</p>
+    </header>
+    <div class="day-deck" id="day-deck"></div>
+  </section>
+
+  <p id="js-status" class="sub" style="margin-top:16px;color:var(--alert)">Static preview: the calendar is visible, but interactive editing requires JavaScript.</p>
+  <table id="cal">
+    <caption class="sub" style="text-align:left;margin:14px 0 10px">
+      the bars show <strong>where you wake up</strong> that morning — a fly-out day stays
+      with the place you're leaving. tap any day to open its compact itinerary.
+    </caption>
+    <thead><tr id="dows"></tr></thead>
+    <tbody id="weeks">
+      <tr>
+        <td class="ghost"></td><td class="ghost"></td>
+        <td><div class="day tbd"><div class="num">24<span class="mo">nov</span></div><div class="city">home</div></div></td>
+        <td><div class="day travel away" style="--fill:var(--leg-1)"><div class="num">25<span class="tag">🇯🇵</span></div><div class="chiprow"><span class="chip wfh">💻 wfh</span></div><div class="city">japan</div></div></td>
+        <td><div class="day locked away holiday" style="--fill:var(--leg-1)"><div class="num">26<span class="tag">🦃🇯🇵</span></div><div class="chiprow"><span class="chip hol">🦃 thanksgiving</span></div><div class="city">japan</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--leg-1)"><div class="num">27<span class="tag">🇯🇵</span></div><div class="chiprow"><span class="chip wfh">💻 wfh</span></div><div class="city">japan</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--leg-1)"><div class="num">28<span class="tag">🇯🇵</span></div><div class="chiprow"><span class="chip wknd">wknd</span></div></div></td>
+      </tr>
+      <tr>
+        <td><div class="day locked away crew-location" style="--fill:var(--leg-1);--crew-fill:var(--city-tokyo)"><div class="num">29<span class="tag">🇯🇵</span></div><div class="chiprow"><span class="chip wknd">wknd</span></div><div class="crew-label">👯 tokyo</div></div></td>
+        <td><div class="day locked away crew-location" style="--fill:var(--leg-1);--crew-fill:var(--city-tokyo)"><div class="num">30<span class="tag">🇯🇵</span></div><div class="chiprow"><span class="chip wfh">💻 wfh</span></div><div class="crew-label"></div></div></td>
+        <td><div class="day locked away crew-location" style="--fill:var(--leg-1);--crew-fill:var(--city-tokyo)"><div class="num">1<span class="mo">dec</span><span class="tag">🇯🇵</span></div><div class="chiprow"><span class="chip wfh">💻 wfh</span></div><div class="crew-label"></div></div></td>
+        <td><div class="day locked away crew-location" style="--fill:var(--leg-1);--crew-fill:var(--city-tokyo)"><div class="num">2<span class="tag">🇯🇵</span></div><div class="chiprow"><span class="chip wfh">💻 wfh</span></div><div class="crew-label"></div></div></td>
+        <td><div class="day locked away crew-location" style="--fill:var(--leg-1);--crew-fill:var(--city-tokyo)"><div class="num">3<span class="tag">🇯🇵</span></div><div class="chiprow"><span class="chip wfh">💻 wfh</span></div><div class="crew-label"></div></div></td>
+        <td><div class="day locked away crew-location" style="--fill:var(--leg-1);--crew-fill:var(--city-tokyo)"><div class="num">4<span class="tag">🇯🇵</span></div><div class="chiprow"><span class="chip wfh">💻 wfh</span></div><div class="crew-label"></div></div></td>
+        <td><div class="day locked away crew-location" style="--fill:var(--leg-1);--crew-fill:var(--city-tokyo)"><div class="num">5<span class="tag">🇯🇵</span></div><div class="chiprow"><span class="chip wknd">wknd</span></div><div class="crew-label"></div></div></td>
+      </tr>
+      <tr>
+        <td><div class="day locked away crew-location" style="--fill:var(--leg-1);--crew-fill:var(--city-hakone)"><div class="num">6<span class="tag">🇯🇵</span></div><div class="chiprow"><span class="chip wknd">wknd</span></div><div class="crew-label">👯 hakone</div></div></td>
+        <td><div class="day locked away crew-location" style="--fill:var(--leg-1);--crew-fill:var(--city-osaka)"><div class="num">7<span class="tag">🇯🇵</span></div><div class="chiprow"><span class="chip wfh">💻 wfh</span></div><div class="crew-label">👯 osaka</div></div></td>
+        <td><div class="day locked away crew-location" style="--fill:var(--leg-1);--crew-fill:var(--city-osaka)"><div class="num">8<span class="tag">🇯🇵</span></div><div class="chiprow"><span class="chip wfh">💻 wfh</span></div><div class="crew-label"></div></div></td>
+        <td><div class="day locked away crew-location" style="--fill:var(--leg-1);--crew-fill:var(--city-kyoto)"><div class="num">9<span class="tag">🇯🇵</span></div><div class="chiprow"><span class="chip wfh">💻 wfh</span></div><div class="crew-label">👯 kyoto</div></div></td>
+        <td><div class="day locked away crew-location" style="--fill:var(--leg-1);--crew-fill:var(--city-kyoto)"><div class="num">10<span class="tag">🇯🇵</span></div><div class="chiprow"><span class="chip wfh">💻 wfh</span></div><div class="crew-label"></div></div></td>
+        <td><div class="day locked away crew-location" style="--fill:var(--leg-1);--crew-fill:var(--city-kyoto)"><div class="num">11<span class="tag">🇯🇵</span></div><div class="chiprow"><span class="chip wfh">💻 wfh</span></div><div class="crew-label"></div></div></td>
+        <td><div class="day locked away crew-location" style="--fill:var(--leg-1);--crew-fill:var(--city-tokyo)"><div class="num">12<span class="tag">🇯🇵</span></div><div class="chiprow"><span class="chip wknd">wknd</span></div><div class="city">tokyo</div><div class="crew-label">👯 tokyo</div></div></td>
+      </tr>
+      <tr>
+        <td><div class="day locked away" style="--fill:var(--leg-1)"><div class="num">13<span class="tag">🇯🇵</span></div><div class="chiprow"><span class="chip wknd">wknd</span></div><div class="city">tokyo</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--leg-1)"><div class="num">14<span class="tag">🇯🇵</span></div><div class="chiprow"></div><div class="city">tokyo</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--leg-1)"><div class="num">15<span class="tag">🇯🇵</span></div><div class="chiprow"></div><div class="city">tokyo</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--leg-1)"><div class="num">16<span class="tag">🇯🇵</span></div><div class="chiprow"></div><div class="city">tokyo</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--leg-1)"><div class="num">17<span class="tag">🇯🇵</span></div><div class="chiprow"></div><div class="city">tokyo</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--leg-1)"><div class="num">18<span class="tag">🇯🇵</span></div><div class="chiprow"></div><div class="city">tokyo</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--leg-1)"><div class="num">19<span class="tag">🇯🇵</span></div><div class="chiprow"><span class="chip wknd">wknd</span></div><div class="city">tokyo</div></div></td>
+      </tr>
+      <tr>
+        <td><div class="day locked away" style="--fill:var(--city-kyoto)"><div class="num">20<span class="tag">🇯🇵</span></div><div class="chiprow"><span class="chip wknd">wknd</span></div><div class="city">kyoto</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--city-kyoto)"><div class="num">21<span class="tag">🇯🇵</span></div><div class="chiprow"></div><div class="city">kyoto</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--city-osaka)"><div class="num">22<span class="tag">🇯🇵</span></div><div class="chiprow"></div><div class="city">osaka</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--city-osaka)"><div class="num">23<span class="tag">🇯🇵</span></div><div class="chiprow"></div><div class="city">osaka</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--leg-2)"><div class="num">24<span class="tag">🎁🇨🇳</span></div><div class="chiprow"></div><div class="city">shanghai</div></div></td>
+        <td><div class="day locked away holiday" style="--fill:var(--leg-2)"><div class="num">25<span class="tag">🎄🇨🇳</span></div><div class="chiprow"><span class="chip hol">🎄 christmas</span></div><div class="city">shanghai</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--leg-2)"><div class="num">26<span class="tag">🇨🇳</span></div><div class="chiprow"><span class="chip wknd">wknd</span></div><div class="city">shanghai</div></div></td>
+      </tr>
+      <tr>
+        <td><div class="day locked away" style="--fill:var(--leg-2)"><div class="num">27<span class="tag">🇨🇳</span></div><div class="chiprow"><span class="chip wknd">wknd</span></div><div class="city">shanghai</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--leg-2)"><div class="num">28<span class="tag">🇨🇳</span></div><div class="chiprow"></div><div class="city">shanghai</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--city-chongqing)"><div class="num">29<span class="tag">🇨🇳</span></div><div class="chiprow"></div><div class="city">chongqing</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--city-chongqing)"><div class="num">30<span class="tag">🇨🇳</span></div><div class="chiprow"></div><div class="city">chongqing</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--city-chongqing)"><div class="num">31<span class="tag">🥂🇨🇳</span></div><div class="chiprow"></div><div class="city">chongqing</div></div></td>
+        <td><div class="day locked away holiday" style="--fill:var(--city-chongqing)"><div class="num">1<span class="mo">jan</span><span class="tag">🎉🇨🇳</span></div><div class="chiprow"><span class="chip hol">🎉 new year's</span></div><div class="city">chongqing</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--city-chongqing)"><div class="num">2<span class="tag">🇨🇳</span></div><div class="chiprow"><span class="chip wknd">wknd</span></div><div class="city">chongqing</div></div></td>
+      </tr>
+      <tr>
+        <td><div class="day locked away" style="--fill:var(--leg-2)"><div class="num">3<span class="tag">🇨🇳</span></div><div class="chiprow"><span class="chip wknd">wknd</span></div><div class="city">shanghai</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--leg-2)"><div class="num">4<span class="tag">🇨🇳</span></div><div class="chiprow"></div><div class="city">shanghai</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--leg-2)"><div class="num">5<span class="tag">🇨🇳</span></div><div class="chiprow"></div><div class="city">shanghai</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--leg-3)"><div class="num">6<span class="tag">🇹🇼</span></div><div class="chiprow"></div><div class="city">taiwan</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--leg-3)"><div class="num">7<span class="tag">🇹🇼</span></div><div class="chiprow"></div><div class="city">taiwan</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--leg-3)"><div class="num">8<span class="tag">🇹🇼</span></div><div class="chiprow"></div><div class="city">taiwan</div></div></td>
+        <td><div class="day locked away" style="--fill:var(--leg-3)"><div class="num">9<span class="tag">🇹🇼</span></div><div class="chiprow"><span class="chip wknd">wknd</span></div><div class="city">taiwan</div></div></td>
+      </tr>
+      <tr>
+        <td><div class="day travel away" style="--fill:var(--leg-3)"><div class="num">10<span class="tag">🇹🇼</span></div><div class="chiprow"><span class="chip wknd">wknd</span></div><div class="city">fly home</div></div></td>
+        <td><div class="day tbd"><div class="num">11</div></div></td>
+        <td class="ghost"></td><td class="ghost"></td><td class="ghost"></td><td class="ghost"></td><td class="ghost"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <footer>
+    <span>saves right here in your browser — no account, no cloud 🫡</span>
+    <button class="clear" id="clear">clear all days</button>
+  </footer>
+</div>
+
+<dialog id="day-dialog">
+  <div class="day-detail">
+    <header class="detail-head">
+      <div>
+        <div class="detail-kicker" id="detail-country"></div>
+        <h2 id="detail-date"></h2>
+        <p class="detail-context" id="detail-context"></p>
+      </div>
+      <button class="iconbtn" id="close-detail" type="button" aria-label="Close">✕</button>
+    </header>
+    <p class="postcard-summary" id="detail-summary"></p>
+    <a class="postcard-map" id="detail-map" target="_blank" rel="noopener noreferrer" hidden>Open in Google Maps ↗</a>
+    <div class="event-head">
+      <h3 id="detail-section-title">day outline</h3>
+    </div>
+    <div class="postcard-events" id="event-list"></div>
+    <button class="clear-day" id="clear-day" type="button">clear this day</button>
+  </div>
+</dialog>
+
+<dialog id="booking-dialog">
+  <div class="day-detail">
+    <header class="detail-head">
+      <div>
+        <div class="detail-kicker" id="booking-kicker"></div>
+        <h2 id="booking-title"></h2>
+        <p class="detail-context" id="booking-ref"></p>
+      </div>
+      <button class="iconbtn" id="close-booking" type="button" aria-label="Close">✕</button>
+    </header>
+    <img class="booking-image" id="booking-image" alt="" hidden>
+    <dl class="booking-info" id="booking-info"></dl>
+    <a class="postcard-map" id="booking-map" target="_blank" rel="noopener noreferrer" hidden>Open in Google Maps ↗</a>
+    <ol class="booking-legs" id="booking-legs"></ol>
+    <div class="itinerary-card-pois" id="booking-tags"></div>
+  </div>
+</dialog>
+
+<script>
+document.getElementById('js-status').hidden = true;
+const DEPART = '2026-11-25', RETURN = '2027-01-07';
+const SPAN_START = DEPART, SPAN_END = RETURN;
+const PHONE = matchMedia('(max-width:640px)').matches;  // matches the CSS breakpoint
+
+// Company-paid days off. These fall inside the trip and cost no PTO.
+const CORP_HOLIDAYS = {
+  '2026-11-26': ['🦃', 'thanksgiving'],
+  '2026-12-25': ['🎄', 'christmas'],
+  '2027-01-01': ['🎉', "new year's"],
+};
+// Not company holidays — still workdays, just noting them.
+const FUN_DAYS = { '2026-12-24': '🎁', '2026-12-31': '🥂' };
+const MILESTONES = {
+  '2026-12-12': { icon:'👋', label:'yvonne arrives (night)' },
+  '2027-01-07': { icon:'✈️', label:'departing taipei' },
+};
+
+// Booked flights and hotels, drawn as clickable stripes under the city bands. Add rows here;
+// label is the short stripe text. Flights: date, legs, tags. Hotels: date is check-in, checkout
+// is the check-out date, and the stripe covers only the nights slept there (date .. checkout-1);
+// info is an ordered label → value list shown in the popup. image and map are optional.
+const BOOKINGS = [
+  {
+    icon:'🏨', title:'Saka Hotel Kyoto', label:'Saka Hotel',
+    date:'2026-12-17', checkout:'2026-12-18', checkinTime:'15:00–19:30', checkoutTime:'by 11:00',
+    ref:'redacted',
+    image:'img/saka-hotel-kyoto-pagoda-view.jpg',
+    map:'https://www.google.com/maps/search/?api=1&query=Saka+Hotel+Kyoto+4-200+Kiyomizu+Higashiyama-ku+Kyoto',
+    info:{
+      room:'Deluxe Twin with terrace · 41 m² · 2 adults',
+      meals:'dinner and breakfast included',
+      'private onsen':'one 50-min session with a Yasaka Pagoda view · asked for 23:10, 22:00 or 20:50',
+      paid:'¥60,357 by card · Kyoto lodging tax and ¥150/person onsen tax due at the hotel',
+      cancellation:'free through Dec 13 JST · 30% from Dec 14, 50% from Dec 16, 100% on Dec 17',
+      address:'4-200 Kiyomizu, Higashiyama-ku, Kyoto · 清水小路 坂のホテル京都',
+      'getting there':'bus 206 or 86 from Kyoto Station to Gojozaka (12 min), then a 5-min walk',
+      phone:'+81-570-078857',
+    },
+  },
+  {
+    icon:'✈️', title:'Tokyo → Seoul', label:'NRT → ICN', date:'2026-12-24',
+    ref:'redacted',
+    legs:[
+      { dep:'11:10', arr:'13:50', from:'NRT Narita T1', to:'ICN Incheon T2', flight:'LJ212 · Jin Air · Boeing 737-800' },
+    ],
+    tags:['2h 40m', 'economy', 'no meals', '2 adults · Ming Yang Mao, Chia Hua Lin'],
+  },
+  {
+    icon:'🏨', title:'K-Grand Hotel Myeongdong', label:'K-Grand Myeongdong',
+    date:'2026-12-24', checkout:'2026-12-26', checkinTime:'after 15:00', checkoutTime:'08:00–11:00',
+    ref:'redacted',
+    map:'https://www.google.com/maps/search/?api=1&query=K-Grand+Hotel+Myeongdong+36+Myeongdong+8-gil+Jung-gu+Seoul',
+    info:{
+      room:'1 room',
+      'front desk':'08:00–23:00',
+      cancellation:'free until Dec 14 12:00 KST · then non-refundable',
+      address:'4F, 36 Myeongdong 8-gil, Jung-gu, Seoul 04536 · 서울 중구 명동8길 36 4F',
+      phone:'+82-70-8880-3650',
+    },
+  },
+  {
+    icon:'✈️', title:'Cheongju → Shanghai', label:'CJJ → PVG', date:'2026-12-26',
+    ref:'redacted',
+    legs:[
+      { dep:'23:40', arr:'01:20 +1', from:'CJJ Cheongju T1', to:'PVG Pudong T2', flight:'ZE821 · Eastar Jet · Boeing 737-800' },
+    ],
+    tags:['2h 40m', 'economy', 'no meals', 'lands 1:20 am Dec 27', '2 adults · Ming Yang Mao, Chia Hua Lin'],
+  },
+  {
+    icon:'✈️', title:'Taipei → Vancouver', label:'TPE → YVR', date:'2027-01-07', ref:'redacted',
+    legs:[
+      { dep:'17:05', arr:'20:30', from:'TPE Taoyuan T2', to:'ICN Incheon T2', flight:'OZ714 · Asiana Airlines' },
+      { dep:'22:55', arr:'16:40', from:'ICN Incheon T2', to:'YVR Vancouver', flight:'KE075 · Korean Air · lands same day (date line)' },
+    ],
+    tags:['2h 25m layover · T2 → T2', 'bags checked through', '1 carry-on', '2 checked bags'],
+  },
+];
+// Unscheduled day-level itineraries. Drag a card onto the calendar to place it.
+const DAY_TEMPLATES = [
+  {
+    id:'asakusa-akihabara', icon:'🏮', title:'Asakusa + Akihabara', city:'tokyo',
+    summary:'Sumo lunch, Sensō-ji, then Akihabara shops and light arcade games.',
+    pois:['Sumo Club', 'Sensō-ji', 'Akihabara'],
+    note:'Start with lunch and a live sumo show at Asakusa Sumo Club Annex, then spend a relaxed afternoon around Sensō-ji before browsing Akihabara and playing a few arcade games. Choose dinner nearby, then head back.',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Asakusa+Sumo+Club+Annex&destination=Akihabara+Electric+Town&waypoints=Senso-ji+Temple&travelmode=walking',
+    events:[
+      {
+        time:'12:00', title:'Asakusa Sumo Club Annex', note:'Lunch and live sumo show.',
+        image:'img/asakusa-sumo-club-annex.jpg',
+        source:'https://asakusasumo-annex.com/'
+      },
+      {
+        time:'14:00', title:'Sensō-ji and Asakusa',
+        note:'Nakamise, the temple grounds, Asakusa Shrine, and surrounding streets.',
+        image:'img/senso-ji-and-asakusa.jpg',
+        source:'https://www.gotokyo.org/en/spot/15/index.html'
+      },
+      {
+        time:'16:30', title:'Akihabara',
+        note:'Browse Electric Town and play a few casual arcade games.',
+        image:'img/akihabara.jpg',
+        source:'https://www.gotokyo.org/en/destinations/central-tokyo/akihabara/index.html'
+      },
+      {
+        time:'', title:'Flexible dinner', note:'Choose somewhere nearby, then head back.',
+        image:'img/flexible-dinner.jpg',
+        source:'https://www.gotokyo.org/en/see-and-do/drinking-and-dining/index.html'
+      },
+    ],
+  },
+  {
+    id:'tokyo-disneysea', icon:'🌊', title:'Tokyo DisneySea', city:'tokyo',
+    summary:'A full park day focused on Fantasy Springs and the biggest rides.',
+    pois:['Fantasy Springs', 'Frozen Journey', 'Soaring', 'Toy Story Mania!'],
+    note:'Set up the Tokyo Disney Resort App before the visit, then use the first minutes after entering to secure the most important ride access. Keep the rest of the day flexible around live wait times and return windows.',
+    map:'https://www.google.com/maps/search/?api=1&query=Tokyo+DisneySea',
+    tips:[
+      {
+        icon:'📱', title:'Set up the app before park day',
+        note:'Install or update the Tokyo Disney Resort App, sign in, create one group, and confirm every person’s ticket appears. Bring mobile data and a battery pack.',
+        source:'https://www.tokyodisneyresort.jp/en/tdr/app/group.html'
+      },
+      {
+        icon:'❄️', title:'Book Frozen as soon as everyone enters',
+        note:'Once the full group is through the gate, use one phone to buy Disney Premier Access for Anna and Elsa’s Frozen Journey. Availability is limited, so make this the first app task.',
+        source:'https://www.tokyodisneyresort.jp/en/tdr/guide/app_service/disneypremieraccess.html'
+      },
+      {
+        icon:'🎟️', title:'Choose the next high-wait ride',
+        note:'Check live availability and waits before committing. After Frozen, compare Rapunzel’s Lantern Festival, Peter Pan’s Never Land Adventure, Soaring, and Toy Story Mania! rather than fixing the whole day now.',
+        source:'https://www.tokyodisneyresort.jp/en/tds/attraction.html'
+      },
+      {
+        icon:'🕘', title:'Use the return window well',
+        note:'While waiting for a reserved ride, choose a nearby standby queue with a manageable wait. Just after opening, rides farther from the entrance often have shorter lines.',
+        source:'https://www.tokyodisneyresort.jp/en/tdr/guide/app_service.html'
+      },
+      {
+        icon:'🍜', title:'Handle food in the app too',
+        note:'Place a Disney Mobile Order before useful lunch slots tighten. Check Entry Request in the app early if there is a must-see show.',
+        source:'https://www.tokyodisneyresort.jp/en/tdr/guide/app_service/mobileorder.html'
+      },
+      {
+        icon:'⚠️', title:'Ignore old free-pass guides',
+        note:'The free 40th Anniversary Priority Pass ended August 31, 2026. For this December visit, use the app’s current Disney Premier Access and standby information.',
+        source:'https://www.tokyodisneyresort.jp/en/tdr/guide/app_service/prioritypass.html'
+      },
+    ],
+  },
+  {
+    id:'ghibli-museum-kichijoji', icon:'🎞️', title:'Ghibli Museum + Koenji', city:'tokyo',
+    summary:'Reserved museum entry, Inokashira Park, Koenji vintage, then Shinjuku.',
+    pois:['Ghibli Museum', 'Inokashira Park', 'Koenji', 'Shinjuku'],
+    note:'Admission is reservation-only. December tickets go on sale online November 10 at 10:00 JST; buy the exact date and entry time promptly. During the Tokyo stay, the museum is open December 12–14 and 16–17, and closed December 15. Aim for an early slot, spend the afternoon thrifting in Koenji, then finish with an optional Godzilla Head stop and flexible Shinjuku izakayas.',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Ghibli+Museum+Mitaka&destination=Omoide+Yokocho&waypoints=Inokashira+Park%7CKoenji+Tokyo%7CGodzilla+Head+Shinjuku',
+    events:[
+      {
+        time:'10:00', title:'Ghibli Museum — reserved entry',
+        note:'Target the early slot. Explore the central hall, animation exhibits, one Saturn Theater short, the rooftop Robot Soldier, and the museum shop at an unhurried pace.',
+        image:'img/ghibli-museum-reserved-entry.jpg',
+        source:'https://www.ghibli-museum.jp/en/welcome/'
+      },
+      {
+        time:'13:00', title:'Inokashira Park',
+        note:'Walk the pond and wooded paths, with a casual lunch whenever it fits.',
+        image:'img/inokashira-park.jpg',
+        source:'https://www.gotokyo.org/en/spot/624/index.html'
+      },
+      {
+        time:'15:00', title:'Koenji vintage shopping',
+        note:'Browse the used-clothing shops around Nakadori, Pal, and Look shopping streets, mixing affordable secondhand finds with curated vintage.',
+        image:'img/koenji-vintage-shopping.jpg',
+        source:'https://www.gotokyo.org/en/destinations/western-tokyo/koenji/index.html'
+      },
+      {
+        time:'18:30', title:'Godzilla Head', optional:true,
+        note:'Take a quick Kabukicho photo detour before dinner. If timing works, catch the hourly roar and lights before the final 20:00 display; skip it if everyone is tired.',
+        image:'img/godzilla-head.jpg',
+        source:'https://shinjuku-toho-bldg.toho.co.jp/gim/en.html'
+      },
+      {
+        time:'19:00', title:'Shinjuku dinner + izakayas',
+        note:'Choose dinner flexibly around Shinjuku. Try Omoide Yokocho for yakitori and a drink if the tiny counters have room.',
+        image:'img/shinjuku-dinner-izakayas.jpg',
+        source:'https://www.gotokyo.org/en/spot/63/index.html'
+      },
+    ],
+  },
+  {
+    id:'meiji-jingu-harajuku-shibuya', icon:'⛩️', title:'Meiji Jingu + Harajuku + Shibuya', city:'tokyo',
+    summary:'Forest shrine, Harajuku shopping, Shibuya landmarks, SHIBUYA109, and winter lights.',
+    pois:['Meiji Jingu', 'Harajuku', 'Shibuya Crossing', 'SHIBUYA109'],
+    note:'Start at Meiji Jingu at 10:30; the shrine closes at 16:00 in December. Keep lunch flexible in Harajuku, then spend the late afternoon in Shibuya. Blue Cave is a possible winter finale, but the official site currently shows only the completed 2025 run, with no 2026 announcement. Treat it as unconfirmed and check again closer to the trip.',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Meiji+Jingu&destination=Yoyogi+Park+Keyaki+Namiki&waypoints=Takeshita+Street%7CHachiko+Memorial+Statue%7CShibuya+Scramble+Crossing%7CSHIBUYA109&travelmode=walking',
+    events:[
+      {
+        time:'10:30', title:'Meiji Jingu',
+        note:'Follow the forest approach to the main shrine, explore at an unhurried pace, and allow roughly 90 minutes.',
+        image:'img/meiji-jingu.jpg',
+        source:'https://www.gotokyo.org/en/spot/76/index.html'
+      },
+      {
+        time:'12:15', title:'Harajuku shopping + flexible lunch',
+        note:'Browse Takeshita Street and the quieter surrounding lanes, stopping for a casual lunch whenever everyone is ready.',
+        image:'img/harajuku-shopping-flexible-lunch.jpg',
+        source:'https://www.gotokyo.org/en/destinations/western-tokyo/harajuku/index.html'
+      },
+      {
+        time:'15:30', title:'Hachikō + Shibuya Crossing',
+        note:'See the Hachikō statue, cross the scramble, and pause to watch another signal cycle from the edge.',
+        image:'img/hachiko-shibuya-crossing.jpg',
+        source:'https://www.gotokyo.org/en/spot/78/index.html'
+      },
+      {
+        time:'16:00', title:'SHIBUYA109',
+        note:'Browse the fashion, cosmetics, accessories, and whatever pop-ups are running, without trying to cover every floor.',
+        image:'img/shibuya109.jpg',
+        source:'https://www.gotokyo.org/en/spot/66/index.html'
+      },
+      {
+        time:'18:00', title:'Blue Cave Shibuya illumination', optional:true,
+        note:'The official site currently shows only the completed 2025 run. If a 2026 edition is confirmed for the trip dates, follow the blue-lit route from Shibuya Koen-dori to the Yoyogi Park Keyaki tree avenue before dinner.',
+        image:'img/blue-cave-shibuya-illumination.jpg',
+        source:'https://shibuya-aonodokutsu.jp/'
+      },
+      {
+        time:'', title:'Flexible Shibuya dinner',
+        note:'Choose somewhere nearby when everyone is ready, then head back.',
+        image:'img/flexible-dinner.jpg',
+        source:'https://www.gotokyo.org/en/see-and-do/drinking-and-dining/index.html'
+      },
+    ],
+  },
+  {
+    id:'toyosu-teamlab-ginza-tokyo-tower', icon:'🐟', title:'Toyosu + teamLab + Ginza + Tokyo Tower', city:'tokyo',
+    summary:'Fish-market lunch, teamLab Planets, Ginza, then Roppongi and Tokyo Tower at night.',
+    pois:['Toyosu Market', 'teamLab Planets', 'Ginza', 'Tokyo Tower'],
+    note:'Use this on December 12, 14, 15, or 17; the official 2026 Toyosu calendar shows the market open on those trip dates and closed December 13 and 16. Book teamLab Planets for 12:45 once December tickets open in late September; tickets are not sold onsite. Keep Roppongi optional so the day does not become rushed.',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Toyosu+Market&destination=Tokyo+Tower&waypoints=Toyosu+Senkyaku+Banrai%7CteamLab+Planets+TOKYO%7CKabukiza+Theatre%7CGINZA+SIX%7CRoppongi+Hills',
+    events:[
+      {
+        time:'10:30', title:'Toyosu Market + seafood lunch',
+        note:'The tuna auction is over by this hour; see the visitor galleries and Uogashi Yokocho, then choose an early seafood lunch in the market or Senkyaku Banrai.',
+        image:'img/toyosu-market-seafood-lunch.jpg',
+        source:'https://www.english.metro.tokyo.lg.jp/w/016-101-003992'
+      },
+      {
+        time:'12:45', title:'teamLab Planets TOKYO',
+        note:'Allow about two and a half hours for the water, light, garden, and Athletics Forest works. Expect barefoot areas, water up to knee height, and mirrored floors.',
+        image:'img/teamlab-planets-tokyo.jpg',
+        source:'https://www.teamlab.art/e/planets'
+      },
+      {
+        time:'15:45', title:'Ginza browsing',
+        note:'Start at Kabukiza, then browse GINZA SIX and Chuo-dori. Use the rooftop garden or side streets if nobody wants more shopping.',
+        image:'img/ginza-browsing.jpg',
+        source:'https://www.gotokyo.org/en/destinations/central-tokyo/ginza/index.html'
+      },
+      {
+        time:'18:00', title:'Roppongi Hills + Keyakizaka', optional:true,
+        note:'Keep this to a short outdoor stop around Mori Garden and Keyakizaka for the Tokyo Tower view. The 2026 Christmas illumination has not been announced yet; if it returns, stay for the lights.',
+        image:'img/roppongi-hills-keyakizaka.jpg',
+        source:'https://www.gotokyo.org/en/spot/81/index.html'
+      },
+      {
+        time:'19:30', title:'Tokyo Tower at night',
+        note:'See the tower lit from outside, then choose the 150-meter Main Deck or the timed 250-meter Top Deck if everyone still wants another view.',
+        image:'img/tokyo-tower-at-night.jpg',
+        source:'https://en.tokyotower.co.jp/fee/'
+      },
+      {
+        time:'', title:'Flexible Minato dinner',
+        note:'Choose somewhere nearby when everyone is ready, then head back.',
+        image:'img/flexible-dinner.jpg',
+        source:'https://www.gotokyo.org/en/see-and-do/drinking-and-dining/index.html'
+      },
+    ],
+  },
+  {
+    id:'nara-deer-park', icon:'🦌', title:'Nara Day Trip', city:'kyoto',
+    summary:'Feed the deer in Nara Park, then Tōdai-ji, Kōfuku-ji, and Naramachi.',
+    pois:['Nara Park', 'Tōdai-ji', 'Kōfuku-ji', 'Naramachi'],
+    note:'Nara is a straightforward day trip on the Kintetsu line: about 35 minutes direct from Kyoto Station, or about 39 minutes from Osaka-Namba. Deer cracker (shika senbei) stalls run roughly 9:00-16:30, shorter in winter, so arrive well before mid-afternoon. Tōdai-ji keeps winter hours of 8:00-17:00. The deer roam freely and will bow for a cracker, but they can nip or headbutt if you tease them with food, so keep crackers visible and hand them over without hesitation.',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Nara+Park&destination=Naramachi&waypoints=Todai-ji+Temple%7CKofuku-ji+Temple',
+    events:[
+      {
+        time:'09:30', title:'Nara Park + deer feeding',
+        note:'Buy shika senbei from a park stall and feed the free-roaming deer. Nara Park is open around the clock, but the cracker stalls keep their own shorter hours.',
+        image:'img/nara-park-deer-feeding.jpg',
+        source:'https://narashikanko.or.jp/en/spot/detail_10089.html'
+      },
+      {
+        time:'10:30', title:'Tōdai-ji + the Great Buddha',
+        note:'Walk through the Nandaimon gate to the Great Buddha Hall, home to Japan\u2019s largest bronze Buddha inside the world\u2019s largest wooden building. Allow 1-1.5 hours.',
+        image:'img/todai-ji-the-great-buddha.jpg',
+        source:'https://narashikanko.or.jp/en/spot/detail_10001.html'
+      },
+      {
+        time:'12:30', title:'Kōfuku-ji + lunch',
+        note:'See the five-story pagoda on the way toward Naramachi, then find lunch \u2014 Nara-style somen or a casual set meal both work well.',
+        image:'img/kofuku-ji-lunch.jpg',
+        source:'https://narashikanko.or.jp/en/feature/daibutsu'
+      },
+      {
+        time:'14:00', title:'Naramachi',
+        note:'Wander the old merchant quarter\u2019s narrow lanes, machiya houses, small shops, and cafés at an easy pace before heading back.',
+        image:'img/naramachi.jpg',
+        source:'https://narashikanko.or.jp/en/feature/narashi'
+      },
+    ],
+  },
+];
+
+// Fixed route segments; names, flags, and colours live here.
+const COUNTRIES = [
+  { country:'japan',  flag:'🇯🇵', hue:'var(--leg-1)' },
+  { country:'korea',  flag:'🇰🇷', hue:'var(--leg-4)' },
+  { country:'china',  flag:'🇨🇳', hue:'var(--leg-2)' },
+  { country:'taiwan', flag:'🇹🇼', hue:'var(--leg-3)' },
+];
+// Stretches of time drawn as bands across the weeks. Add more rows here.
+//   kind 'crew' = people you'd overlap with
+// Order matters: later rows render closer to the day cells, so the base
+// itinerary (cities) sits nearest the calendar and context stacks above it.
+const BANDS = [
+  // City bands show where you wake up. December 18 is the Kyoto wake-up and Tokyo travel day.
+  { kind:'city', icon:'🗼', label:'tokyo',    sub:'', start:'2026-11-25', end:'2026-12-06' },
+  { kind:'city', icon:'🏯', label:'osaka',    sub:'', start:'2026-12-07', end:'2026-12-15', hue:'var(--city-osaka)' },
+  { kind:'city', icon:'⛩', label:'kyoto',    sub:'', start:'2026-12-16', end:'2026-12-18', hue:'var(--city-kyoto)' },
+  { kind:'city', icon:'🗼', label:'tokyo',    sub:'', start:'2026-12-19', end:'2026-12-24' },
+  { kind:'city', icon:'🇰🇷', label:'seoul',    sub:'', start:'2026-12-25', end:'2026-12-26' },
+  { kind:'city', icon:'🏙', label:'shanghai', sub:'', start:'2026-12-27', end:'2026-12-31' },
+  { kind:'city', icon:'🚄', label:'suzhou',   sub:'', start:'2027-01-01', end:'2027-01-01', hue:'var(--city-suzhou)' },
+  { kind:'city', icon:'🚄', label:'hangzhou', sub:'', start:'2027-01-02', end:'2027-01-02', hue:'var(--city-hangzhou)' },
+  { kind:'city', icon:'🏙', label:'shanghai', sub:'', start:'2027-01-03', end:'2027-01-04' },
+  { kind:'city', icon:'🇹🇼', label:'taiwan', sub:'', start:'2027-01-05', end:'2027-01-07' },
+];
+const CREW_STAYS = [
+  { start:'2026-11-29', end:'2026-12-06', location:'tokyo', hue:'var(--city-tokyo)' },
+  { start:'2026-12-07', end:'2026-12-08', location:'osaka', hue:'var(--city-osaka)' },
+  { start:'2026-12-09', end:'2026-12-11', location:'kyoto', hue:'var(--city-kyoto)' },
+  { start:'2026-12-12', end:'2026-12-12', location:'tokyo', hue:'var(--city-tokyo)' },
+];
+const KIND_ORDER = ['city', 'booking'];
+
+const DEFAULT_WFH = ['2026-11-25', '2026-12-11'];
+const EXTRA_WFH = [];
+const LEGS = [
+  { start:'2026-11-25', end:'2026-12-24' },
+  { start:'2026-12-25', end:'2026-12-26' },
+  { start:'2026-12-27', end:'2027-01-04' },
+  { start:'2027-01-05', end:'2027-01-07' },
+];
+const KEY = 'bigtrip.v4';
+
+const iso  = d => d.toISOString().slice(0, 10);
+const mk   = s => new Date(s + 'T00:00:00Z');
+const add  = (d, n) => new Date(d.getTime() + n * 86400000);
+const days = (a, b) => Math.round((mk(b) - mk(a)) / 86400000);
+const isWeekend = k => [0, 6].includes(mk(k).getUTCDay());
+const pretty = s => mk(s).toLocaleDateString('en-US',
+  { weekday:'short', month:'short', day:'numeric', timeZone:'UTC' }).toLowerCase();
+
+const BOOKING_BANDS = BOOKINGS.map(b => ({
+  kind:'booking', icon:b.icon, label:b.label || b.title, sub:'',
+  start:b.date, end:b.checkout ? iso(add(mk(b.checkout), -1)) : b.date, booking:b,
+}));
+
+let saved = {};
+try { saved = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) {}
+const state = { cells: saved.cells || {}, showCrewSide: saved.showCrewSide !== false };
+const save = () => localStorage.setItem(KEY, JSON.stringify(state));
+
+const CREW_SIDE_START = '2026-11-25', CREW_SIDE_END = '2026-12-12';
+const toggleCrewSide = document.getElementById('toggle-crew-side');
+toggleCrewSide.checked = state.showCrewSide;
+toggleCrewSide.addEventListener('change', () => {
+  state.showCrewSide = toggleCrewSide.checked;
+  save();
+  buildCalendar();
+  paint();
+});
+
+const dayDeck = document.getElementById('day-deck');
+let selectedTemplateId = null;
+const templateById = id => DAY_TEMPLATES.find(template => template.id === id);
+const assignedKeyFor = id =>
+  Object.keys(state.cells).find(key => state.cells[key]?.templateId === id) || null;
+const hasSavedPlan = data => Boolean(data &&
+  (data.templateId || data.city || data.note || data.events?.length));
+const templateData = template => ({ templateId:template.id });
+
+// Tag a card copied by the earlier version so it cannot be mapped twice.
+let migrated = false;
+Object.values(state.cells).forEach(data => {
+  if (data.templateId || !data.events?.length) return;
+  const template = DAY_TEMPLATES.find(item =>
+    item.events?.[0]?.title === data.events[0].title);
+  if (!template) return;
+  data.templateId = template.id;
+  migrated = true;
+});
+if (migrated) save();
+
+function clearTemplateSelection() {
+  selectedTemplateId = null;
+  dayDeck.querySelectorAll('.itinerary-card').forEach(card => {
+    card.classList.remove('selected');
+    card.setAttribute('aria-pressed', 'false');
+  });
+}
+
+function assignTemplate(id, key) {
+  const template = templateById(id);
+  if (!template) return;
+
+  const oldKey = assignedKeyFor(id);
+  if (oldKey === key) {
+    clearTemplateSelection();
+    return;
+  }
+  if (hasSavedPlan(state.cells[key])
+      && !confirm(`Replace the saved plan on ${pretty(key)} with “${template.title}”?`)) return;
+
+  const data = oldKey ? state.cells[oldKey] : templateData(template);
+  if (oldKey) delete state.cells[oldKey];
+  state.cells[key] = data;
+  clearTemplateSelection();
+  save();
+  renderDayDeck();
+  paint();
+}
+
+/* ---- booking details dialog, opened from a booking stripe ---- */
+const bookingDialog = document.getElementById('booking-dialog');
+function openBooking(b) {
+  document.getElementById('booking-kicker').textContent = `booking · ${pretty(b.date)}`;
+  document.getElementById('booking-title').textContent = `${b.icon} ${b.title}`;
+  document.getElementById('booking-ref').textContent = b.ref || '';
+  const photo = document.getElementById('booking-image');
+  photo.hidden = !b.image;
+  if (b.image) { photo.src = b.image; photo.alt = b.title; }
+  const info = b.checkout ? {
+    'check-in': `${pretty(b.date)} · ${b.checkinTime}`,
+    'check-out': `${pretty(b.checkout)} · ${b.checkoutTime}`,
+    nights: days(b.date, b.checkout),
+    ...b.info,
+  } : {};
+  document.getElementById('booking-info').innerHTML =
+    Object.entries(info).map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('');
+  const map = document.getElementById('booking-map');
+  map.hidden = !/^https:\/\/www\.google\.com\/maps\//.test(b.map || '');
+  if (!map.hidden) map.href = b.map;
+  document.getElementById('booking-legs').innerHTML = (b.legs || []).map(l =>
+    `<li><b>${l.dep} → ${l.arr}</b>${l.from} → ${l.to}<span>${l.flight}</span></li>`).join('');
+  document.getElementById('booking-tags').innerHTML =
+    (b.tags || []).map(t => `<span class="poi-tag">${t}</span>`).join('');
+  bookingDialog.showModal();
+}
+document.getElementById('close-booking').addEventListener('click', () => bookingDialog.close());
+bookingDialog.addEventListener('click', event => {
+  if (event.target === bookingDialog) bookingDialog.close();
+});
+
+function renderDayDeck() {
+  const available = DAY_TEMPLATES.filter(template => !assignedKeyFor(template.id));
+  if (!available.length) {
+    dayDeck.innerHTML = '<p class="day-deck-empty">All day cards are on the calendar.</p>';
+    return;
+  }
+
+  dayDeck.innerHTML = available.map(template =>
+    `<article class="itinerary-card" draggable="true" tabindex="0" role="button" aria-pressed="false" aria-describedby="day-bank-help" data-template="${template.id}">` +
+      `<div class="itinerary-card-head">` +
+        `<span class="itinerary-card-icon" aria-hidden="true">${template.icon}</span>` +
+        `<div><div class="itinerary-card-title">${template.title}</div>` +
+        `<div class="itinerary-card-pois">${(template.pois || []).map(poi => `<span class="poi-tag">${poi}</span>`).join('')}</div></div>` +
+        `<button class="itinerary-card-preview" type="button" title="Preview this day">👁</button>` +
+      `</div>` +
+    `</article>`).join('');
+
+  dayDeck.querySelectorAll('.itinerary-card-preview').forEach(btn => {
+    btn.addEventListener('click', event => {
+      event.stopPropagation();
+      previewTemplate(btn.closest('.itinerary-card').dataset.template);
+    });
+  });
+
+  dayDeck.querySelectorAll('.itinerary-card').forEach(card => {
+    const selectCard = () => {
+      selectedTemplateId = selectedTemplateId === card.dataset.template ? null : card.dataset.template;
+      dayDeck.querySelectorAll('.itinerary-card').forEach(item => {
+        const selected = item.dataset.template === selectedTemplateId;
+        item.classList.toggle('selected', selected);
+        item.setAttribute('aria-pressed', String(selected));
+      });
+    };
+    card.addEventListener('click', selectCard);
+    card.addEventListener('keydown', event => {
+      if (event.target !== card || !['Enter', ' '].includes(event.key)) return;
+      event.preventDefault();
+      selectCard();
+    });
+    card.addEventListener('dragstart', event => {
+      event.dataTransfer.effectAllowed = 'move';
+      event.dataTransfer.setData('text/plain', card.dataset.template);
+    });
+  });
+}
+
+const legOf = key => {
+  const i = LEGS.findIndex(l => key >= l.start && key <= l.end);
+  return i < 0 ? null : { ...COUNTRIES[i], ...LEGS[i], idx:i };
+};
+const bandsOn = (key, kind) =>
+  BANDS.filter(b => b.kind === kind && key >= b.start && key <= b.end);
+const crewOn = key => CREW_STAYS.filter(stay => key >= stay.start && key <= stay.end);
+const crewLabel = stays => stays.map(stay => stay.location).join(' → ');
+const crewTransferLabel = key => crewOn(key)[0]?.location || '';
+
+/* ---- build the fixed postcard calendar ---- */
+const DOWS = ['sun','mon','tue','wed','thu','fri','sat'];
+document.getElementById('dows').innerHTML =
+  DOWS.map(d => `<th scope="col">${d}</th>`).join('');
+
+const tbody = document.getElementById('weeks');
+const boxes = {};
+
+const spacerTd = n => { const t = document.createElement('td'); t.colSpan = n; return t; };
+
+function buildCalendar() {
+  for (const k in boxes) delete boxes[k];
+  tbody.replaceChildren();
+  let seenMonth = null;
+
+  // Hiding the crew's side of the trip removes those days from the grid
+  // entirely (not just visually), so the week/weekday columns still line up
+  // starting from the first visible date.
+  const visibleStart = state.showCrewSide ? SPAN_START : iso(add(mk(CREW_SIDE_END), 1));
+  const gridStart = add(mk(visibleStart), -mk(visibleStart).getUTCDay());
+  const gridEnd   = add(mk(SPAN_END), 6 - mk(SPAN_END).getUTCDay());
+
+  for (let w = gridStart; w <= gridEnd; w = add(w, 7)) {
+  // A continuous bar per crew stretch touching this week. colspan merges the
+  // day columns *and* the gaps between them, so it reads as one unbroken stretch.
+  // Which bands touch this week, and over which columns.
+  const segs = [];
+  [...BANDS, ...BOOKING_BANDS].forEach(o => {
+    let from = -1, to = -1;
+    for (let i = 0; i < 7; i++) {
+      const k = iso(add(w, i));
+      if (k >= o.start && k <= o.end && k >= visibleStart && k <= SPAN_END) {
+        if (from < 0) from = i;
+        to = i;
+      }
+    }
+    if (from >= 0) segs.push({ o, from, to });
+  });
+
+  const makeBar = ({ o, from, to }) => {
+    const bar = document.createElement('div');
+    bar.className = 'band ' + o.kind
+      + (iso(add(w, from)) === o.start ? ' s' : '')
+      + (iso(add(w, to)) === o.end ? ' e' : '');
+    // a city stay borrows the colour of whichever country leg contains it
+    if (o.kind === 'city') {
+      const l = legOf(o.start);
+      if (l) bar.style.setProperty('--citybg', o.hue || l.hue);
+    }
+    // a booking stripe is outlined in its country's colour and opens its details
+    if (o.booking) {
+      const open = () => openBooking(o.booking);
+      // end, not start: a hotel's check-in day can be the previous country's travel day
+      bar.style.setProperty('--bookline', legOf(o.end)?.hue || 'var(--ring)');
+      bar.tabIndex = 0;
+      bar.setAttribute('role', 'button');
+      bar.addEventListener('click', open);
+      bar.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+      });
+    }
+    // roughly 18 characters fit per day column (5 on a phone); drop to the icon if the name won't
+    const cols = to - from + 1;
+    const text = o.label.length + 3 > cols * (PHONE ? 5 : 18)
+      ? o.icon
+      : `${o.icon} ${o.label}${o.sub && cols >= 3 ? ' · ' + o.sub : ''}`;
+    bar.innerHTML = `<span>${text}</span>`;
+    bar.title = `${o.label}${o.sub ? ' — ' + o.sub : ''}: ${pretty(o.start)} → ${pretty(o.end)}`;
+    return bar;
+  };
+
+  // Pack same-kind bands onto shared rows where they don't overlap, so a week
+  // with four short city stays is one row rather than four.
+  KIND_ORDER.forEach(kind => {
+    const rows = [];
+    segs.filter(s => s.o.kind === kind).forEach(s => {
+      let row = rows.find(r => r.every(x => s.from > x.to || s.to < x.from));
+      if (!row) { row = []; rows.push(row); }
+      row.push(s);
+    });
+    rows.forEach(row => {
+      row.sort((a, b) => a.from - b.from);
+      const br = document.createElement('tr');
+      br.className = 'bandrow' + (kind === 'booking' ? ' bookingrow' : '');
+      let col = 0;
+      row.forEach(s => {
+        if (s.from > col) br.append(spacerTd(s.from - col));
+        const cell = document.createElement('td');
+        cell.colSpan = s.to - s.from + 1;
+        cell.append(makeBar(s));
+        br.append(cell);
+        col = s.to + 1;
+      });
+      if (col < 7) br.append(spacerTd(7 - col));
+      tbody.append(br);
+    });
+  });
+
+  const tr = document.createElement('tr');
+  for (let i = 0; i < 7; i++) {
+    const key = iso(add(w, i));
+    const td = document.createElement('td');
+    if (key < visibleStart || key > SPAN_END) { td.className = 'ghost'; tr.append(td); continue; }
+
+    const dt = mk(key), dom = dt.getUTCDate();
+    const mo = dt.toLocaleDateString('en-US', { month:'short', timeZone:'UTC' }).toLowerCase();
+    const showMo = mo !== seenMonth; seenMonth = mo;
+    const saved = state.cells[key] || {};
+
+    const box = document.createElement('div');
+    box.className = 'day';
+    box.innerHTML =
+      `<div class="num">${dom}${showMo ? `<span class="mo">${mo}</span>` : ''}` +
+        `<span class="tag"></span></div>` +
+      `<div class="chiprow"></div>` +
+      `<div class="city"></div>` +
+      `<div class="note"></div>` +
+      `<div class="crew-label"></div>`;
+    const city = box.querySelector('.city'), note = box.querySelector('.note');
+    city.textContent = saved.city || ''; note.textContent = saved.note || '';
+    box.tabIndex = 0;
+    box.setAttribute('role', 'button');
+    box.addEventListener('click', () => {
+      if (selectedTemplateId) assignTemplate(selectedTemplateId, key);
+      else openDay(key);
+    });
+    box.addEventListener('keydown', event => {
+      if (event.target !== box || !['Enter', ' '].includes(event.key)) return;
+      event.preventDefault();
+      box.click();
+    });
+    box.addEventListener('dragover', event => {
+      event.preventDefault();
+      event.dataTransfer.dropEffect = 'move';
+      box.classList.add('drop-target');
+    });
+    box.addEventListener('dragleave', () => box.classList.remove('drop-target'));
+    box.addEventListener('drop', event => {
+      event.preventDefault();
+      box.classList.remove('drop-target');
+      assignTemplate(event.dataTransfer.getData('text/plain'), key);
+    });
+
+    td.append(box); tr.append(td);
+    boxes[key] = {
+      box, city, note,
+      chiprow: box.querySelector('.chiprow'),
+      tag: box.querySelector('.tag'),
+      crewText: box.querySelector('.crew-label'),
+    };
+  }
+  tbody.append(tr);
+  }
+}
+buildCalendar();
+
+/* ---- paint fixed postcard details ---- */
+const STATE_WORDS = { travel:'travel day', locked:'on the trip' };
+
+function paint() {
+  for (const [key, { box, city, note, chiprow, tag, crewText }] of Object.entries(boxes)) {
+    const data = state.cells[key] || {};
+    const itinerary = templateById(data.templateId);
+    const cls = key === DEPART || key === RETURN ? 'travel' : 'locked';
+    const hol = CORP_HOLIDAYS[key];
+    const leg = legOf(key);
+    const cityBand = bandsOn(key, 'city')[0];
+    const majorStopHue = cityBand?.hue;
+    const nextKey = iso(add(mk(key), 1));
+    const nextCityBand = bandsOn(nextKey, 'city')[0];
+    const nextLeg = legOf(nextKey);
+    const todayFill = majorStopHue || (leg ? leg.hue : null);
+    const nextFill = nextCityBand?.hue || (nextLeg ? nextLeg.hue : null);
+    const isCommuteDay = Boolean(todayFill && nextFill && todayFill !== nextFill);
+    const crew = crewOn(key);
+    const crewName = crewTransferLabel(key);
+    const [yesterdayCrew] = crewOn(iso(add(mk(key), -1)));
+    const [todayCrew] = crew;
+    const showCrewLabel = Boolean(todayCrew) && (!yesterdayCrew || yesterdayCrew.location !== todayCrew.location);
+    const milestone = MILESTONES[key];
+
+    city.textContent = data.city || '';
+    if (itinerary?.pois?.length) {
+      note.textContent = '';
+      note.innerHTML = itinerary.pois.map(poi => `<span class="poi-tag">${poi}</span>`).join('');
+      note.classList.add('poi-tags');
+    } else {
+      note.classList.remove('poi-tags');
+      note.textContent = itinerary?.summary || data.note || '';
+    }
+    box.className = 'day ' + cls + ' away'
+      + (!leg ? ' noleg' : '')
+      + (hol ? ' holiday' : '')
+      + (crew.length ? ' crew-location' : (isCommuteDay ? ' commute-day' : ''));
+    box.style.setProperty('--fill', todayFill || 'var(--surface)');
+    // crew half = where the crew sleeps tonight, i.e. tomorrow's stay when they move
+    box.style.setProperty('--crew-fill', (crewOn(nextKey)[0] || crew.at(-1))?.hue || 'transparent');
+    box.style.setProperty('--commute-fill', isCommuteDay ? nextFill : 'transparent');
+    crewText.textContent = showCrewLabel ? `👯 ${crewName}` : '';
+    tag.textContent = ((milestone ? milestone.icon : '')
+      + (hol ? hol[0] : '') + (leg && !PHONE ? leg.flag : '')) || FUN_DAYS[key] || '';  // phone: the fill already says the country
+
+    chiprow.innerHTML = '';
+    const notes = [];
+    if (hol) {
+      chiprow.insertAdjacentHTML('beforeend', `<span class="chip hol">${hol[0]} ${hol[1]}</span>`);
+      notes.push('company holiday — no pto needed');
+    } else if (!isWeekend(key) && ((key >= DEFAULT_WFH[0] && key <= DEFAULT_WFH[1]) || EXTRA_WFH.includes(key))) {
+      const chip = document.createElement('span');
+      chip.className = 'chip wfh';
+      chip.textContent = PHONE ? 'wfh' : '💻 wfh';
+      chiprow.append(chip);
+      notes.push('working remote');
+    }
+    if (milestone) {
+      const marker = document.createElement('span');
+      marker.className = 'chip crew';
+      marker.textContent = `${milestone.icon} ${milestone.label}`;
+      chiprow.append(marker);
+      notes.push(milestone.label);
+    }
+    if (itinerary) {
+      chiprow.insertAdjacentHTML('beforeend', `<span class="chip itinerary">${itinerary.icon} ${itinerary.title}</span>`);
+      notes.push(`${itinerary.title}: ${itinerary.summary}`);
+    }
+    if (leg) notes.push(`in ${leg.country}`);
+    if (crew.length) notes.push(`Strathinja, Aly & David: ${crewName}`);
+    bandsOn(key, 'city').forEach(city => notes.push(`in ${city.label}`));
+    box.setAttribute('aria-label', `${pretty(key)} — ${STATE_WORDS[cls]}${notes.length ? ', ' + notes.join(', ') : ''}`);
+    box.title = notes.join(' · ');
+  }
+
+  const todayKey = iso(new Date());
+  if (boxes[todayKey]) boxes[todayKey].box.classList.add('today');
+  paintRibbon();
+}
+
+/* ---- fixed route ribbon ---- */
+function paintRibbon() {
+  const ribbon = document.getElementById('ribbon');
+  ribbon.innerHTML = '';
+  LEGS.forEach((leg, index) => {
+    const country = COUNTRIES[index];
+    const segment = document.createElement('div');
+    const span = days(leg.start, leg.end) + 1;
+    segment.style.flex = span;
+    segment.style.background = country.hue;
+    segment.textContent = `${country.flag} ${country.country} · ${span}d`;
+    segment.title = segment.textContent;
+    ribbon.append(segment);
+  });
+}
+
+/* ---- compact day details ---- */
+const detailDialog = document.getElementById('day-dialog');
+const detailCountry = document.getElementById('detail-country');
+const detailDate = document.getElementById('detail-date');
+const detailContext = document.getElementById('detail-context');
+const detailSummary = document.getElementById('detail-summary');
+const detailMap = document.getElementById('detail-map');
+const detailSectionTitle = document.getElementById('detail-section-title');
+const eventList = document.getElementById('event-list');
+const clearDay = document.getElementById('clear-day');
+let selectedDay = null;
+
+function openDay(key) {
+  selectedDay = key;
+  const data = state.cells[key] || {};
+  const itinerary = templateById(data.templateId);
+  const leg = legOf(key);
+  const cityBand = bandsOn(key, 'city')[0];
+  const context = [pretty(key)];
+  if (CORP_HOLIDAYS[key]) context.push(`${CORP_HOLIDAYS[key][0]} ${CORP_HOLIDAYS[key][1]}`);
+  if (MILESTONES[key]) context.push(`${MILESTONES[key].icon} ${MILESTONES[key].label}`);
+  if (cityBand) context.push(`${cityBand.icon} ${cityBand.label}${cityBand.sub ? ` · ${cityBand.sub}` : ''}`);
+  const crew = crewOn(key);
+  if (crew.length) context.push(`👯 crew · ${crewLabel(crew)}`);
+
+  renderDetail(itinerary, data, {
+    country: leg ? `${leg.flag} ${leg.country}` : 'trip planning window',
+    context: context.join(' · '),
+    fallbackTitle: pretty(key),
+    showClear: hasSavedPlan(data),
+  });
+}
+
+function previewTemplate(id) {
+  selectedDay = null;
+  const itinerary = templateById(id);
+  if (!itinerary) return;
+  renderDetail(itinerary, {}, {
+    country: 'available day · not yet on the calendar',
+    context: 'drag this card onto a date, or select it then select a date',
+    fallbackTitle: itinerary.title,
+    showClear: false,
+  });
+}
+
+function renderDetail(itinerary, data, { country, context, fallbackTitle, showClear }) {
+  detailCountry.textContent = country;
+  detailDate.textContent = itinerary ? `${itinerary.icon} ${itinerary.title}` : fallbackTitle;
+  detailContext.textContent = context;
+  detailSummary.textContent = itinerary?.note || data.note || 'No day card assigned yet.';
+  const mapUrl = /^https:\/\/www\.google\.com\/maps\//.test(itinerary?.map || '') ? itinerary.map : '';
+  detailMap.hidden = !mapUrl;
+  if (mapUrl) detailMap.href = mapUrl;
+  else detailMap.removeAttribute('href');
+  clearDay.hidden = !showClear;
+  const showTips = Boolean(itinerary?.tips);
+  detailSectionTitle.textContent = showTips ? 'park tips' : 'day outline';
+  renderOutline(showTips ? itinerary.tips : itinerary?.events || data.events || [], showTips);
+  detailDialog.showModal();
+}
+
+function renderOutline(items, showTips = false) {
+  eventList.replaceChildren();
+  if (!items.length) {
+    const empty = document.createElement('div');
+    empty.className = 'event-empty';
+    empty.textContent = showTips ? 'No tips available.' : 'Nothing planned yet.';
+    eventList.append(empty);
+    return;
+  }
+
+  items.forEach(item => {
+    const card = document.createElement('article');
+    card.className = `postcard-event${showTips ? ' postcard-tip' : ''}`;
+
+    const marker = document.createElement(showTips ? 'span' : 'time');
+    marker.className = showTips ? 'postcard-marker' : 'postcard-time';
+    marker.textContent = showTips ? item.icon : item.time || 'later';
+
+    const copy = document.createElement('div');
+    copy.className = 'postcard-copy';
+    const title = document.createElement('h3');
+    title.textContent = item.title;
+    const note = document.createElement('p');
+    note.textContent = item.note;
+    if (!showTips && item.optional) {
+      const optional = document.createElement('span');
+      optional.className = 'postcard-optional';
+      optional.textContent = 'optional';
+      copy.append(optional);
+    }
+    copy.append(title, note);
+
+    const sourceUrl = /^https:\/\//.test(item.source || '') ? item.source : '';
+    if (showTips && sourceUrl) {
+      const source = document.createElement('a');
+      source.className = 'postcard-source';
+      source.href = sourceUrl;
+      source.target = '_blank';
+      source.rel = 'noopener noreferrer';
+      source.textContent = 'official guide ↗';
+      copy.append(source);
+    }
+    card.append(marker, copy);
+
+    const imageUrl = /^(https:\/\/|img\/)/.test(item.image || '') ? item.image : '';
+    if (!showTips && imageUrl) {
+      const link = document.createElement('a');
+      link.className = 'postcard-image-link';
+      link.href = sourceUrl || imageUrl;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.setAttribute('aria-label', `Open source for ${item.title}`);
+      const image = document.createElement('img');
+      image.className = 'postcard-image';
+      image.src = imageUrl;
+      image.alt = item.title;
+      image.loading = 'lazy';
+      image.addEventListener('error', () => { link.hidden = true; });
+      link.append(image);
+      card.append(link);
+    }
+    eventList.append(card);
+  });
+}
+
+clearDay.addEventListener('click', () => {
+  if (!state.cells[selectedDay]) return;
+  delete state.cells[selectedDay];
+  save();
+  renderDayDeck();
+  paint();
+  detailDialog.close();
+});
+document.getElementById('close-detail').addEventListener('click', () => detailDialog.close());
+detailDialog.addEventListener('click', event => {
+  if (event.target === detailDialog) detailDialog.close();
+});
+
+document.getElementById('clear').addEventListener('click', () => {
+  if (!confirm('Clear every mapped day?')) return;
+  localStorage.removeItem(KEY); location.reload();
+});
+
+renderDayDeck();
+paint();
+</script>
+</body>
+</html>
