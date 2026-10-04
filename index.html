@@ -653,11 +653,11 @@ const BOOKINGS = [
 // Unscheduled day-level itineraries. Drag a card onto the calendar to place it.
 const DAY_TEMPLATES = [
   {
-    id:'kyoto-to-asakusa-akihabara', icon:'🏮', title:'Kyoto → Asakusa + Akihabara (half day)', city:'tokyo', date:'2026-12-18',
-    summary:'Travel day: noon Shinkansen from Kyoto, Sensō-ji before it closes, Asakusa dinner, then Akihabara arcades.',
-    pois:['Kyoto Station', 'Sensō-ji', 'Asakusa', 'Akihabara'],
-    note:'Built for Fri December 18, checking out of Saka Hotel Kyoto and into the square hotel GINZA. A Shinkansen ticket to Tokyo is valid to any JR station in the 23 wards, so Yurakucho costs nothing extra. Nozomi seats do not need to be reserved this early in the holidays, but reserving is easy. To add teamLab instead of Akihabara, book a 19:00 entry (last entry 21:00); tickets are date-changeable but not refundable.',
-    map:'https://www.google.com/maps/dir/?api=1&origin=Kyoto+Station&destination=Akihabara+Electric+Town&waypoints=Tokyo+Station%7Cthe+square+hotel+GINZA%7CSenso-ji+Temple&travelmode=transit',
+    id:'kyoto-to-ginza-shopping', icon:'🛍️', title:'Kyoto → Ginza shopping (half day)', city:'tokyo', date:'2026-12-18',
+    summary:'Travel day: noon Shinkansen from Kyoto, check in at the square hotel GINZA, then an afternoon and dinner in Ginza.',
+    pois:['Kyoto Station', 'the square hotel GINZA', 'GINZA SIX', 'Chuo-dori'],
+    note:'Built for Fri December 18, checking out of Saka Hotel Kyoto and into the square hotel GINZA. A Shinkansen ticket to Tokyo is valid to any JR station in the 23 wards, so Yurakucho costs nothing extra. Nozomi seats do not need to be reserved this early in the holidays, but reserving is easy. Chuo-dori only closes to cars on weekends, so Friday is ordinary street shopping.',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Kyoto+Station&destination=GINZA+SIX&waypoints=Tokyo+Station%7Cthe+square+hotel+GINZA&travelmode=transit',
     events:[
       {
         time:'12:00', title:'Leave Kiyomizu-dera for Kyoto Station',
@@ -669,21 +669,45 @@ const DAY_TEMPLATES = [
       },
       {
         time:'15:00', title:'Check in at the square hotel GINZA',
-        note:'Check-in opens at 15:00. Drop bags, then walk 5 min to Higashi-ginza Exit A2 for the Toei Asakusa line straight to Asakusa, about 15 min, no transfer.',
+        note:'Check-in opens at 15:00. Drop bags; Chuo-dori is a few minutes on foot.',
       },
       {
-        time:'16:00', title:'Sensō-ji and Asakusa',
-        note:'The main hall closes at 17:00 (opens 6:30 October-March). After that, browse Nakamise until the shops close around 18:00-19:00; the grounds stay open and are lit at night.',
+        time:'15:30', title:'Ginza shopping',
+        note:'Browse Chuo-dori, GINZA SIX, and the department stores. GINZA SIX shops are open 10:30-20:30; most department stores close around 20:00.',
+        image:'img/ginza-browsing.jpg',
+        source:'https://ginza6.tokyo/hours/'
+      },
+      {
+        time:'19:00', title:'Dinner: Ginza', meal:'dinner',
+        note:'Eat around Ginza, a short walk back to the hotel.',
+      },
+    ],
+  },
+  {
+    id:'asakusa-sumo-lunch-akihabara', icon:'🏮', title:'Asakusa + Sumo lunch + Akihabara', city:'tokyo', date:'2026-12-19',
+    summary:'Sensō-ji in the morning, the Asakusa Sumo Club ANNEX lunch show, then Akihabara. Late afternoon and evening still open.',
+    pois:['Sensō-ji', 'Nakamise', 'Asakusa Sumo Club ANNEX', 'Akihabara'],
+    note:'Built for Sat December 19 from the square hotel GINZA. Saturday crowds at Sensō-ji build after about 10:00, so start early. The late afternoon and evening are left open for now.',
+    map:'https://www.google.com/maps/dir/?api=1&origin=the+square+hotel+GINZA&destination=Akihabara+Electric+Town&waypoints=Senso-ji+Temple%7CAsakusa+Sumo+Club+ANNEX&travelmode=transit',
+    events:[
+      {
+        time:'08:30', title:'Hotel to Asakusa',
+        note:'Walk 5 min to Higashi-ginza Exit A2, then the Toei Asakusa line straight to Asakusa, about 15 min, no transfer.',
+      },
+      {
+        time:'09:00', title:'Sensō-ji and Asakusa',
+        note:'The main hall opens at 6:30 and closes at 17:00 (October-March). Nakamise shops open around 9:00-10:00, so do the temple first and the shops after.',
         image:'img/senso-ji-and-asakusa.jpg',
         source:'https://www.senso-ji.jp/about/'
       },
       {
-        time:'18:00', title:'Dinner: Asakusa or Akihabara', meal:'dinner',
-        note:'Eat in Asakusa, or ride to Akihabara first and eat there before the arcades.',
+        time:'12:00', title:'Asakusa Sumo Club ANNEX lunch show', meal:'lunch',
+        note:'Two-hour show with an A5 wagyu sukiyaki meal and drinks. 2-11-7 Asakusa (Wada Bldg B1) on Kokusai-dori, a few minutes from Sensō-ji. The 12:00 slot matches the main Asakusa Sumo Club schedule (12:00-14:00); confirm the ANNEX time when booking.',
+        source:'https://tokyocheapo.com/restaurant/asakusa-sumo-club-annex/'
       },
       {
-        time:'19:30', title:'Akihabara arcades',
-        note:'Tsukuba Express from Asakusa, about 5 min. Most shops close around 20:00-21:00, but the big arcades (GiGO, Taito Station) run to about 23:00. Back to the hotel: Hibiya line from Akihabara straight to Higashi-ginza, about 12 min, then a 5 min walk.',
+        time:'14:30', title:'Akihabara',
+        note:'Tsukuba Express from Asakusa (2 min from the ANNEX) to Akihabara, about 5 min. Electronics, anime shops, and arcades (GiGO, Taito Station). Back to the hotel: Hibiya line straight to Higashi-ginza, about 12 min, then a 5 min walk.',
         image:'img/akihabara.jpg',
         source:'https://www.gotokyo.org/en/destinations/central-tokyo/akihabara/index.html'
       },
@@ -817,10 +841,10 @@ const DAY_TEMPLATES = [
     ],
   },
   {
-    id:'toyosu-teamlab-ginza-tokyo-tower', icon:'🐟', title:'Tsukiji + Ginza + Tokyo Tower', city:'tokyo', date:'2026-12-19',
+    id:'toyosu-teamlab-ginza-tokyo-tower', icon:'🐟', title:'Tsukiji + Ginza + Tokyo Tower', city:'tokyo',
     summary:'Tsukiji street-food brunch, an afternoon in Ginza, a sumo kaiseki dinner show, then Roppongi Hills lights and Tokyo Tower at night.',
     pois:['Tsukiji Outer Market', 'Ginza', 'Hirakuza', 'Roppongi Hills', 'Tokyo Tower'],
-    note:'Use this on Sat December 19 while staying in Ginza. Tsukiji follows the wholesale-market calendar, so many shops close December 20 and 23. Hirakuza has only its 17:00 show that day. Book Hirakuza early: full refund only until 21 days before (Nov 28).',
+    note:'Use this while staying in Ginza (December 18-20). Tsukiji follows the wholesale-market calendar, so many shops close December 20 and 23. Hirakuza has only its 17:00 show December 18-21. Book Hirakuza early: full refund only until 21 days before (Nov 28).',
     map:'https://www.google.com/maps/dir/?api=1&origin=Tsukiji+Outer+Market&destination=Tokyo+Tower&waypoints=Kabukiza+Theatre%7CGINZA+SIX%7CHIRAKUZA+GINZA+TOKYO%7CRoppongi+Hills',
     events:[
       {
