@@ -654,10 +654,10 @@ const BOOKINGS = [
 const DAY_TEMPLATES = [
   {
     id:'kyoto-to-ginza-shopping', icon:'🛍️', title:'Kyoto → Ginza shopping (half day)', city:'tokyo', date:'2026-12-18',
-    summary:'Travel day: noon Shinkansen from Kyoto, check in at the square hotel GINZA, then an afternoon and dinner in Ginza.',
-    pois:['Kyoto Station', 'the square hotel GINZA', 'GINZA SIX', 'Chuo-dori'],
+    summary:'Travel day: noon Shinkansen from Kyoto, check in at the square hotel GINZA, Ginza shopping and dinner, then Roppongi Hills and Tokyo Tower at night.',
+    pois:['Kyoto Station', 'the square hotel GINZA', 'GINZA SIX', 'Chuo-dori', 'Roppongi Hills', 'Tokyo Tower'],
     note:'Built for Fri December 18, checking out of Saka Hotel Kyoto and into the square hotel GINZA. A Shinkansen ticket to Tokyo is valid to any JR station in the 23 wards, so Yurakucho costs nothing extra. Nozomi seats do not need to be reserved this early in the holidays, but reserving is easy. Chuo-dori only closes to cars on weekends, so Friday is ordinary street shopping.',
-    map:'https://www.google.com/maps/dir/?api=1&origin=Kyoto+Station&destination=GINZA+SIX&waypoints=Tokyo+Station%7Cthe+square+hotel+GINZA&travelmode=transit',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Kyoto+Station&destination=Tokyo+Tower&waypoints=Tokyo+Station%7Cthe+square+hotel+GINZA%7CGINZA+SIX%7CRoppongi+Hills&travelmode=transit',
     events:[
       {
         time:'12:00', title:'Leave Kiyomizu-dera for Kyoto Station',
@@ -678,13 +678,25 @@ const DAY_TEMPLATES = [
         source:'https://ginza6.tokyo/hours/'
       },
       {
-        time:'18:30', title:'GINZA SIX rooftop ice skating', optional:true,
-        note:'Outdoor rink in the GINZA SIX rooftop garden, lit at night. 2025 season: Nov 15-Jan 25, weekdays 14:00-20:30 (last entry 20:00), ¥2,000 per adult; skate rental cost not checked. 2026 dates not announced yet.',
-        source:'https://metropolisjapan.com/outdoor-ice-skating-rinks-in-tokyo/'
+        time:'19:30', title:'Dinner: Ginza', meal:'dinner',
+        note:'Eat around Ginza, then walk 5 min to Higashi-ginza for the Hibiya line to Roppongi (~10 min, no transfer).',
       },
       {
-        time:'19:30', title:'Dinner: Ginza', meal:'dinner',
-        note:'Eat around Ginza, a short walk back to the hotel.',
+        time:'20:30', title:'Roppongi Hills: Keyakizaka lights + Christmas market',
+        note:'Walk the lit Keyakizaka street for the photo with Tokyo Tower at the end, and the German-style Christmas market in Roppongi Hills Arena. The 2026 illumination and market dates are not announced yet; in past years both ran until Dec 25.',
+        image:'img/roppongi-hills-keyakizaka.jpg',
+        source:'https://www.gotokyo.org/en/spot/81/index.html'
+      },
+      {
+        time:'21:00', title:'Something to do in Roppongi (pick one)', optional:true,
+        note:'Tokyo City View (Mori Tower 52F) or the Mori Art Museum (53F): both 10:00-22:00, last entry 21:30, so go straight up if you pick one. Bauhaus live rock bar (7-13-2 Roppongi B1): house band plays 70s-90s rock covers, 19:00-01:00, closed Sun/Mon/holidays; a 2026 listing shows ¥7,000 with 1 drink and asks you to book. Abbey Road: Beatles tribute band, Mon-Sat 18:00-23:00.',
+        source:'http://www.roppongihills.com/tcv/en/'
+      },
+      {
+        time:'22:00', title:'Tokyo Tower from below',
+        note:'Walk ~15-20 min from Roppongi Hills, mostly downhill, or a ~5 min taxi. See the tower lit up from its base and Shiba Park; no need to go up. Back to the hotel: Hibiya line from Kamiyacho to Higashi-ginza (~10 min), then 5 min on foot.',
+        image:'img/tokyo-tower-at-night.jpg',
+        source:'https://en.tokyotower.co.jp/'
       },
     ],
   },
@@ -846,11 +858,11 @@ const DAY_TEMPLATES = [
     ],
   },
   {
-    id:'toyosu-teamlab-ginza-tokyo-tower', icon:'🐟', title:'Tsukiji + Ginza + Tokyo Tower', city:'tokyo',
-    summary:'Tsukiji street-food brunch, an afternoon in Ginza, a sumo kaiseki dinner show, then Roppongi Hills lights and Tokyo Tower at night.',
-    pois:['Tsukiji Outer Market', 'Ginza', 'Hirakuza', 'Roppongi Hills', 'Tokyo Tower'],
+    id:'toyosu-teamlab-ginza-tokyo-tower', icon:'🐟', title:'Tsukiji + Ginza + Hirakuza', city:'tokyo',
+    summary:'Tsukiji street-food brunch, an afternoon in Ginza, then a sumo kaiseki dinner show.',
+    pois:['Tsukiji Outer Market', 'Ginza', 'Hirakuza'],
     note:'Use this while staying in Ginza (December 18-20). Tsukiji follows the wholesale-market calendar, so many shops close December 20 and 23. Hirakuza has only its 17:00 show December 18-21. Book Hirakuza early: full refund only until 21 days before (Nov 28).',
-    map:'https://www.google.com/maps/dir/?api=1&origin=Tsukiji+Outer+Market&destination=Tokyo+Tower&waypoints=Kabukiza+Theatre%7CGINZA+SIX%7CHIRAKUZA+GINZA+TOKYO%7CRoppongi+Hills',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Tsukiji+Outer+Market&destination=HIRAKUZA+GINZA+TOKYO&waypoints=Kabukiza+Theatre%7CGINZA+SIX',
     events:[
       {
         time:'09:30', title:'Brunch: Tsukiji Outer Market', meal:'brunch',
@@ -869,23 +881,6 @@ const DAY_TEMPLATES = [
         note:'Two-hour show with a kaiseki dinner (17:00-19:00). ¥17,000 standard / ¥21,000 premium per adult plus a ¥700 fee; drinks extra. 1-9-13 Ginza B1, 1 min from Ginza-itchome Exit 10.',
         image:'img/hirakuza-ginza-sumo-show.jpg',
         source:'https://en.hirakuza.net/sumolp2/'
-      },
-      {
-        time:'19:30', title:'Roppongi Hills: Keyakizaka lights + Christmas market',
-        note:'From Hirakuza walk 5 min to Higashi-ginza, then Hibiya line to Roppongi (~10 min, no transfer). Walk the lit Keyakizaka street for the photo with Tokyo Tower at the end, and the German-style Christmas market in Roppongi Hills Arena. Skip the shops. The 2026 illumination and market dates are not announced yet; in past years both ran until Dec 25.',
-        image:'img/roppongi-hills-keyakizaka.jpg',
-        source:'https://www.gotokyo.org/en/spot/81/index.html'
-      },
-      {
-        time:'20:30', title:'Tokyo City View (52F)',
-        note:'Mori Tower observation deck, with Tokyo Tower right in front of you. Usually last entry around 21:30; confirm closer to the date.',
-        source:'https://tcv.roppongihills.com/en/'
-      },
-      {
-        time:'21:30', title:'Tokyo Tower from below',
-        note:'Walk ~15-20 min, mostly downhill, or a ~5 min taxi. See the tower lit up from its base and Shiba Park; no need to go up. Back to the hotel: Hibiya line from Kamiyacho to Higashi-ginza (~10 min), then 5 min on foot.',
-        image:'img/tokyo-tower-at-night.jpg',
-        source:'https://en.tokyotower.co.jp/'
       },
     ],
   },
