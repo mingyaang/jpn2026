@@ -1523,14 +1523,17 @@ function renderOutline(items, showTips = false) {
 
     const marker = document.createElement(showTips ? 'span' : 'time');
     marker.className = showTips ? 'postcard-marker' : 'postcard-time';
-    marker.textContent = showTips ? item.icon : item.time || 'later';
+    const hour = parseInt(item.time, 10);
+    // 12-hour display; the am/pm label carries the half of the day
+    marker.textContent = showTips ? item.icon
+      : item.time ? item.time.replace(/^\d+/, String(hour % 12 || 12)) : 'later';
     const period = !showTips && item.time &&
       (item.time < '12:30' ? 'morning' : item.time < '18:00' ? 'afternoon' : 'evening');
     if (period) {
       card.classList.add(`tod-${period}`);
       const label = document.createElement('span');
       label.className = 'postcard-period';
-      label.textContent = { morning:'☀️ am', afternoon:'🌤️ pm', evening:'🌙 eve' }[period];
+      label.textContent = `${{ morning:'☀️', afternoon:'🌤️', evening:'🌙' }[period]} ${hour < 12 ? 'am' : 'pm'}`;
       marker.append(label);
     }
 
