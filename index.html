@@ -755,6 +755,26 @@ const DAY_TEMPLATES = [
     ],
   },
   {
+    id:'tsukiji-jojoen-shinjuku', icon:'🥩', title:'Tsukiji + Jojoen lunch', city:'tokyo', date:'2026-12-21',
+    summary:'Hotel-move day: Tsukiji in the morning, then a late yakiniku lunch on the 53rd floor of Tokyo Opera City.',
+    pois:['Tsukiji Outer Market', 'Jojoen'],
+    note:'Built for Mon December 21, the day after DisneySea. Check out of the square hotel GINZA, leave bags in its self-service cloakroom, then taxi them to Hotel Gracery Shinjuku (check-in from 14:00). Afternoon kept open.',
+    map:'https://www.google.com/maps/dir/?api=1&origin=the+square+hotel+GINZA&destination=Jojoen+Tokyo+Opera+City+53&waypoints=Tsukiji+Outer+Market%7CHotel+Gracery+Shinjuku&travelmode=transit',
+    events:[
+      {
+        time:'09:30', title:'Tsukiji Outer Market',
+        note:'~15 min walk from the hotel. Light street-food breakfast (tamagoyaki, seafood skewers). Open on Mondays; most shops close ~14:00.',
+        image:'img/tsukiji-outer-market.jpg',
+        source:'https://www.tsukiji.or.jp/english/'
+      },
+      {
+        time:'14:00', title:'Jojoen Tokyo Opera City 53', meal:'lunch',
+        note:'Yakiniku lunch with a view over Shinjuku, 53F. Weekday lunch 11:30-15:00. Hatsudai Station (Keio New Line, 1 stop from Shinjuku) connects straight into the building. Book ahead and ask for a window table.',
+        source:'https://www.jojoen.co.jp/shop/jojoen/operacity/'
+      },
+    ],
+  },
+  {
     id:'ghibli-museum-kichijoji', icon:'🎞️', title:'Ghibli Museum + Koenji', city:'tokyo',
     summary:'Reserved museum entry, Inokashira Park, Koenji vintage, then Shinjuku.',
     pois:['Ghibli Museum', 'Koenji', 'Shinjuku'],
@@ -832,27 +852,6 @@ const DAY_TEMPLATES = [
         note:'Two-hour show with a kaiseki dinner (17:00-19:00). ¥17,000 standard / ¥21,000 premium per adult plus a ¥700 fee; drinks extra. 1-9-13 Ginza B1, 1 min from Ginza-itchome Exit 10.',
         image:'img/hirakuza-ginza-sumo-show.jpg',
         source:'https://en.hirakuza.net/sumolp2/'
-      },
-    ],
-  },
-  {
-    id:'kawagoe-day-trip', icon:'🏯', title:'Kawagoe Day Trip', city:'tokyo',
-    summary:'Little Edo from Shinjuku: Kitain temple, the warehouse street, the Toki no Kane bell, and Candy Alley.',
-    pois:['Kitain', 'Kawagoe old town'],
-    note:'Best during the Shinjuku stay: Seibu-Shinjuku Station is a few minutes on foot from Hotel Gracery Shinjuku. The Red Arrow "KOEDO" limited express reaches Hon-Kawagoe in about 45 min for ¥1,200 one way (all seats reserved; buy at the station or on Seibu\u2019s Smooz site, sales open one month ahead). Regular Seibu Shinjuku line trains cost ¥600 and take about an hour. Not covered by the JR Pass. Kitain closes December 25 to January 8, so use this before Christmas. Most warehouse-street and Candy Alley shops open around 10:00 and close around 17:00-18:00.',
-    map:'https://www.google.com/maps/dir/?api=1&origin=Hon-Kawagoe+Station&destination=Hon-Kawagoe+Station&waypoints=Kitain+Temple+Kawagoe%7CKawagoe+Ichibangai%7CToki+no+Kane+Kawagoe%7CKashiya+Yokocho+Kawagoe&travelmode=walking',
-    events:[
-      {
-        time:'11:00', title:'Kitain temple',
-        note:'KOEDO from Seibu-Shinjuku ~10:00 (~45 min), then 15 min walk. 540 Gohyaku Rakan stone statues and the only surviving rooms of Edo Castle. ¥400; 9:00-16:00 from late November.',
-        image:'img/kitain-temple.jpg',
-        source:'https://www.japan-guide.com/e/e6502.html'
-      },
-      {
-        time:'13:00', title:'Kawagoe old town',
-        note:'Ichibangai\u2019s Edo-era kurazukuri warehouse street, Toki no Kane bell tower (rings 15:00), Kashiya Yokocho candy alley, sweet-potato snacks. Shops close ~17:00; KOEDO back to Seibu-Shinjuku.',
-        image:'img/kurazukuri-warehouse-street.jpg',
-        source:'https://www.japan-guide.com/e/e6501.html'
       },
     ],
   },
