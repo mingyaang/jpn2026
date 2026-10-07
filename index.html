@@ -702,10 +702,10 @@ const DAY_TEMPLATES = [
   },
   {
     id:'asakusa-sumo-lunch-akihabara', icon:'🏮', title:'Asakusa + Sumo lunch + Shibamata + Akihabara night', city:'tokyo', date:'2026-12-19',
-    summary:'Sensō-ji in the morning, the Asakusa Sumo Club ANNEX lunch show, the retro Shibamata temple street in the afternoon, then batting cages and arcades in Akihabara at night.',
-    pois:['Sensō-ji', 'Nakamise', 'Asakusa Sumo Club ANNEX', 'Shibamata Taishakuten', 'Yagiri no Watashi', 'Kawachiya', 'Active AKIBA Batting Center', 'Akihabara arcades'],
-    note:'Built for Sat December 19 from the square hotel GINZA. Saturday crowds at Sensō-ji build after about 10:00, so expect a busy Nakamise. Shibamata is a short Kawagoe-style old street; its gallery and ferry close at 16:00 and most shops by 17:00-17:30, so the afternoon is tight. DisneySea is the next day: aim to leave Akihabara by about 21:30.',
-    map:'https://www.google.com/maps/dir/?api=1&origin=the+square+hotel+GINZA&destination=Yodobashi+AKIBA&waypoints=Senso-ji+Temple%7CAsakusa+Sumo+Club+ANNEX%7CShibamata+Taishakuten%7CYagiri+no+Watashi&travelmode=transit',
+    summary:'Sensō-ji in the morning, the Asakusa Sumo Club ANNEX lunch show, the retro Shibamata temple street in the afternoon, then capsule toys, arcades and the old Manseibashi station in Akihabara at night. Dinner wherever you are.',
+    pois:['Sensō-ji', 'Nakamise', 'Asakusa Sumo Club ANNEX', 'Shibamata Taishakuten', 'Yagiri no Watashi', 'GASHAPON BANDAI Akihabara', 'Akihabara arcades', 'mAAch ecute Kanda Manseibashi'],
+    note:'Built for Sat December 19 from the square hotel GINZA. Saturday crowds at Sensō-ji build after about 10:00, so expect a busy Nakamise. Shibamata is a short Kawagoe-style old street; its gallery and ferry close at 16:00 and most shops by 17:00-17:30, so the afternoon is tight. DisneySea is the next day: aim to head back by about 21:30.',
+    map:'https://www.google.com/maps/dir/?api=1&origin=the+square+hotel+GINZA&destination=mAAch+ecute+Kanda+Manseibashi&waypoints=Senso-ji+Temple%7CAsakusa+Sumo+Club+ANNEX%7CShibamata+Taishakuten%7CYagiri+no+Watashi%7CGASHAPON+BANDAI+Official+Shop+Akihabara&travelmode=transit',
     events:[
       {
         time:'10:00', title:'Hotel to Asakusa',
@@ -743,24 +743,28 @@ const DAY_TEMPLATES = [
         source:'https://chocolaful.com/shibamata-monzentoraya/'
       },
       {
-        time:'17:00', title:'Dinner: Kawachiya eel', meal:'dinner',
-        note:'川千家, on the temple street: grilled eel served since the Edo era. Open 11:00, last order 18:00, closed Tuesdays.',
-        source:'https://rurubu.jp/andmore/spot/80012273'
-      },
-      {
-        time:'18:00', title:'Shibamata to Akihabara',
+        time:'17:00', title:'Shibamata to Akihabara',
         note:'About 40 min: Keisei to Keisei-Takasago, the Toei Asakusa line to Asakusabashi, then JR Sobu line one stop to Akihabara. A taxi is about 25 min and ¥5,000-6,000.',
       },
       {
-        time:'19:00', title:'Active AKIBA Batting Center',
-        note:'Yodobashi AKIBA 9F, next to Akihabara Station. Batting cages from 80 to 170 km/h, a pitching speed game and golf practice. Open until 22:00, last game 21:55. Prices and December hours not checked.',
-        source:'https://www.tokyonightstory.com/en/spot/active-akiba/'
+        time:'18:00', title:'GASHAPON BANDAI Official Shop',
+        note:'About 800 capsule-toy machines: tiny food replicas, animals, mini appliances and joke items, not only anime. ¥300-500 a spin. Open 10:00-23:00.',
+        source:'https://bandainamco-am.co.jp/en/others/gashapon-bandai-officialshop/store/akihabara/'
       },
       {
-        time:'20:00', title:'Akihabara arcades',
-        note:'Claw machines, Taiko no Tatsujin and other rhythm games, and purikura photo booths. Taito Station and Hey are open to 23:30, Game Panic to 24:00. Bring ¥100 coins; change machines take ¥1,000 notes. Most anime shops are closed by now. Back to the hotel around 21:30: Hibiya line straight to Higashi-ginza, about 12 min, then a 5 min walk.',
+        time:'18:30', title:'Akihabara arcades',
+        note:'Claw machines, Taiko no Tatsujin and other rhythm games, and purikura photo booths. Taito Station and Hey are open to 23:30, Game Panic to 24:00. Bring ¥100 coins; change machines take ¥1,000 notes. Most anime shops are closed by now.',
         image:'img/akihabara.jpg',
         source:'https://nerz.jp/2025/01/18/akihabara-at-night-top-gaming-arcades-and-late-night-tips'
+      },
+      {
+        time:'19:30', title:'Dinner: along the way', meal:'dinner',
+        note:'Eat wherever looks good: snacks on the Shibamata temple street, somewhere in Akihabara, or inside mAAch ecute (Hitachino Brewing Lab serves food; last order 21:30).',
+      },
+      {
+        time:'20:30', title:'mAAch ecute Kanda Manseibashi',
+        note:'~5 min walk south of Akihabara Station. A 1912 red-brick station turned into a small mall; sit on the old platform with trains passing on both sides, or have a beer at Hitachino Brewing Lab. Platform open to 22:00 on Saturdays. Back to the hotel around 21:30: walk ~10 min to Akihabara Station, then the Hibiya line straight to Higashi-ginza (~12 min) and a 5 min walk.',
+        source:'http://www.ejrcf.or.jp/mansei/english/'
       },
     ],
   },
