@@ -655,46 +655,29 @@ const DAY_TEMPLATES = [
   {
     id:'kyoto-to-ginza-shopping', icon:'🛍️', title:'Kyoto → Ginza shopping (half day)', city:'tokyo', date:'2026-12-18',
     summary:'Travel day: noon Shinkansen from Kyoto, check in at the square hotel GINZA, Ginza shopping and dinner, then Roppongi Hills and Tokyo Tower at night.',
-    pois:['Kyoto Station', 'the square hotel GINZA', 'GINZA SIX', 'Chuo-dori', 'Roppongi Hills', 'Don Quijote Roppongi', 'Tokyo Tower'],
+    pois:['Shinkansen', 'Ginza', 'Roppongi', 'Tokyo Tower'],
     note:'Built for Fri December 18, checking out of Saka Hotel Kyoto and into the square hotel GINZA. A Shinkansen ticket to Tokyo is valid to any JR station in the 23 wards, so Yurakucho costs nothing extra. Nozomi seats do not need to be reserved this early in the holidays, but reserving is easy. Chuo-dori only closes to cars on weekends, so Friday is ordinary street shopping.',
     map:'https://www.google.com/maps/dir/?api=1&origin=Kyoto+Station&destination=Tokyo+Tower&waypoints=Tokyo+Station%7Cthe+square+hotel+GINZA%7CGINZA+SIX%7CRoppongi+Hills%7CDon+Quijote+Roppongi&travelmode=transit',
     events:[
       {
-        time:'12:00', title:'Leave Kiyomizu-dera for Kyoto Station',
-        note:'Collect bags at Saka Hotel. A taxi is about 20 min; buses 206 and 86 from Gojozaka are slower and crowded with luggage.',
-      },
-      {
         time:'12:30', title:'Nozomi to Tokyo',
-        note:'About 2h15m; trains leave every ~10 min. At Tokyo Station, take the JR Yamanote or Keihin-Tohoku line 1 stop to Yurakucho, then walk 8 min from the Kyobashi Exit. Arrive at the hotel around 15:00.',
+        note:'Taxi from Saka Hotel to Kyoto Station ~20 min. Nozomi ~2h15m, every ~10 min; JR one stop to Yurakucho, then 8 min on foot. Hotel check-in from 15:00.',
       },
       {
-        time:'15:00', title:'Check in at the square hotel GINZA',
-        note:'Check-in opens at 15:00. Drop bags; Chuo-dori is a few minutes on foot.',
-      },
-      {
-        time:'15:30', title:'Ginza shopping',
-        note:'Browse Chuo-dori, GINZA SIX, and the department stores. GINZA SIX shops are open 10:30-20:30; most department stores close around 20:00.',
+        time:'15:30', title:'Ginza',
+        note:'Chuo-dori, GINZA SIX and the department stores until ~19:00, then dinner in Ginza.',
         image:'img/ginza-browsing.jpg',
         source:'https://ginza6.tokyo/hours/'
       },
       {
-        time:'19:30', title:'Dinner: Ginza', meal:'dinner',
-        note:'Eat around Ginza, then walk 5 min to Higashi-ginza for the Hibiya line to Roppongi (~10 min, no transfer).',
-      },
-      {
-        time:'20:30', title:'Roppongi Hills: Keyakizaka lights + Christmas market',
-        note:'Walk the lit Keyakizaka street for the photo with Tokyo Tower at the end, and the German-style Christmas market in Roppongi Hills Arena. The 2026 illumination and market dates are not announced yet; in past years both ran until Dec 25.',
+        time:'20:30', title:'Roppongi',
+        note:'Hibiya line from Higashi-ginza, ~10 min. Main stop: Don Quijote Roppongi (24 h, tax-free, gachapon). On the way: Keyakizaka lights + Roppongi Hills Christmas market (2026 dates not announced). If passing: Midtown lights, Tokyo City View (last entry 21:30).',
         image:'img/roppongi-hills-keyakizaka.jpg',
         source:'https://www.gotokyo.org/en/spot/81/index.html'
       },
       {
-        time:'21:00', title:'Don Quijote Roppongi',
-        note:'3-14-10 Roppongi, ~5 min walk from Roppongi Hills. Open 24 h, tax-free with passport; try the gachapon capsule toys. Only if something catches your eye: Tokyo Midtown Christmas lights (~10 min walk; 2025: 17:00-23:00, free, short light show on the hour), Tokyo City View (Mori Tower 52F, last entry 21:30), or the Azabudai Hills Christmas market on the walk to Tokyo Tower (2025: until Dec 25, 11:00-21:00 per the official page, so it may be closing as you pass).',
-        source:'https://donki.com/store/shop_detail.php?parts=menu_leaflet&pre=shop_detail&shop_id=31'
-      },
-      {
-        time:'22:00', title:'Tokyo Tower from below',
-        note:'Walk ~15-20 min from Don Quijote, past Azabudai Hills, or a ~5 min taxi. See the tower lit up from its base and Shiba Park; no need to go up. Back to the hotel: Hibiya line from Kamiyacho to Higashi-ginza (~10 min), then 5 min on foot.',
+        time:'22:00', title:'Tokyo Tower',
+        note:'Lit up, seen from its base and Shiba Park; ~15-20 min walk from Don Quijote past the Azabudai Hills Christmas market (2025: to 21:00, likely closed by then). Hibiya line from Kamiyacho back to Higashi-ginza.',
         image:'img/tokyo-tower-at-night.jpg',
         source:'https://en.tokyotower.co.jp/'
       },
@@ -774,88 +757,54 @@ const DAY_TEMPLATES = [
   {
     id:'ghibli-museum-kichijoji', icon:'🎞️', title:'Ghibli Museum + Koenji', city:'tokyo',
     summary:'Reserved museum entry, Inokashira Park, Koenji vintage, then Shinjuku.',
-    pois:['Ghibli Museum', 'Inokashira Park', 'Koenji', 'Shinjuku'],
-    note:'Admission is reservation-only. December tickets go on sale online November 10 at 10:00 JST; buy the exact date and entry time promptly. During the Tokyo stay, the museum is open December 12–14 and 16–17, and closed December 15. Aim for an early slot, spend the afternoon thrifting in Koenji, then finish with an optional Godzilla Head stop and flexible Shinjuku izakayas.',
+    pois:['Ghibli Museum', 'Koenji', 'Shinjuku'],
+    note:'Admission is reservation-only. December tickets go on sale online November 10 at 10:00 JST; buy the exact date and entry time promptly. During the Tokyo stay, the museum is open December 12–14 and 16–17, and closed December 15. Aim for an early slot, spend the afternoon thrifting in Koenji, then finish in Shinjuku.',
     map:'https://www.google.com/maps/dir/?api=1&origin=Ghibli+Museum+Mitaka&destination=Omoide+Yokocho&waypoints=Inokashira+Park%7CKoenji+Tokyo%7CGodzilla+Head+Shinjuku',
     events:[
       {
-        time:'10:00', title:'Ghibli Museum — reserved entry',
-        note:'Target the early slot. Explore the central hall, animation exhibits, one Saturn Theater short, the rooftop Robot Soldier, and the museum shop at an unhurried pace.',
+        time:'10:00', title:'Ghibli Museum + Inokashira Park',
+        note:'Reserved entry; take the early slot. Central hall, animation rooms, a Saturn Theater short, the rooftop Robot Soldier. Then walk Inokashira Park\u2019s pond toward Kichijoji.',
         image:'img/ghibli-museum-reserved-entry.jpg',
         source:'https://www.ghibli-museum.jp/en/welcome/'
       },
       {
-        time:'13:00', title:'Inokashira Park',
-        note:'Walk the pond and wooded paths, with a casual lunch whenever it fits.',
-        image:'img/inokashira-park.jpg',
-        source:'https://www.gotokyo.org/en/spot/624/index.html'
-      },
-      {
-        time:'15:00', title:'Koenji vintage shopping',
-        note:'Browse the used-clothing shops around Nakadori, Pal, and Look shopping streets, mixing affordable secondhand finds with curated vintage.',
+        time:'15:00', title:'Koenji',
+        note:'Vintage and secondhand clothing around the Nakadori, Pal and Look shopping streets.',
         image:'img/koenji-vintage-shopping.jpg',
         source:'https://www.gotokyo.org/en/destinations/western-tokyo/koenji/index.html'
       },
       {
-        time:'18:30', title:'Godzilla Head', optional:true,
-        note:'Take a quick Kabukicho photo detour before dinner. If timing works, catch the hourly roar and lights before the final 20:00 display; skip it if everyone is tired.',
+        time:'18:30', title:'Shinjuku',
+        note:'Godzilla Head in Kabukicho (hourly roar and lights, last at 20:00) and the tiny yakitori counters of Omoide Yokocho.',
         image:'img/godzilla-head.jpg',
         source:'https://shinjuku-toho-bldg.toho.co.jp/gim/en.html'
-      },
-      {
-        time:'19:00', title:'Dinner: Shinjuku', meal:'dinner',
-        note:'Eat around Shinjuku. Omoide Yokocho has tiny yakitori counters if they have room.',
-        image:'img/shinjuku-dinner-izakayas.jpg',
-        source:'https://www.gotokyo.org/en/spot/63/index.html'
       },
     ],
   },
   {
     id:'meiji-jingu-harajuku-shibuya', icon:'⛩️', title:'Meiji Jingu + Harajuku + Shibuya', city:'tokyo',
     summary:'Forest shrine, Harajuku shopping, Shibuya landmarks, SHIBUYA109, and winter lights.',
-    pois:['Meiji Jingu', 'Harajuku', 'Shibuya Crossing', 'SHIBUYA109'],
+    pois:['Meiji Jingu', 'Harajuku', 'Shibuya'],
     note:'Start at Meiji Jingu at 10:30; the shrine closes at 16:00 in December. Keep lunch flexible in Harajuku, then spend the late afternoon in Shibuya. Blue Cave is a possible winter finale, but the official site currently shows only the completed 2025 run, with no 2026 announcement. Treat it as unconfirmed and check again closer to the trip.',
     map:'https://www.google.com/maps/dir/?api=1&origin=Meiji+Jingu&destination=Yoyogi+Park+Keyaki+Namiki&waypoints=Takeshita+Street%7CHachiko+Memorial+Statue%7CShibuya+Scramble+Crossing%7CSHIBUYA109&travelmode=walking',
     events:[
       {
         time:'10:30', title:'Meiji Jingu',
-        note:'Follow the forest approach to the main shrine, explore at an unhurried pace, and allow roughly 90 minutes.',
+        note:'Forest approach, the giant torii and the main shrine. Closes 16:00 in December.',
         image:'img/meiji-jingu.jpg',
         source:'https://www.gotokyo.org/en/spot/76/index.html'
       },
       {
-        time:'12:00', title:'Lunch: Harajuku', meal:'lunch',
-        note:'Something casual around Harajuku.',
-      },
-      {
-        time:'13:00', title:'Harajuku shopping',
-        note:'Browse Takeshita Street and the quieter surrounding lanes.',
+        time:'12:00', title:'Harajuku',
+        note:'Takeshita Street and the quieter Ura-Harajuku lanes.',
         image:'img/harajuku-shopping-flexible-lunch.jpg',
         source:'https://www.gotokyo.org/en/destinations/western-tokyo/harajuku/index.html'
       },
       {
-        time:'15:30', title:'Hachikō + Shibuya Crossing',
-        note:'See the Hachikō statue, cross the scramble, and pause to watch another signal cycle from the edge.',
+        time:'15:30', title:'Shibuya',
+        note:'Hachikō statue, Scramble Crossing, SHIBUYA109. Blue Cave illumination toward Yoyogi Park if a 2026 run is confirmed (not announced yet).',
         image:'img/hachiko-shibuya-crossing.jpg',
         source:'https://www.gotokyo.org/en/spot/78/index.html'
-      },
-      {
-        time:'16:00', title:'SHIBUYA109',
-        note:'Browse the fashion, cosmetics, accessories, and whatever pop-ups are running, without trying to cover every floor.',
-        image:'img/shibuya109.jpg',
-        source:'https://www.gotokyo.org/en/spot/66/index.html'
-      },
-      {
-        time:'18:00', title:'Blue Cave Shibuya illumination', optional:true,
-        note:'The official site currently shows only the completed 2025 run. If a 2026 edition is confirmed for the trip dates, follow the blue-lit route from Shibuya Koen-dori to the Yoyogi Park Keyaki tree avenue before dinner.',
-        image:'img/blue-cave-shibuya-illumination.jpg',
-        source:'https://shibuya-aonodokutsu.jp/'
-      },
-      {
-        time:'', title:'Dinner: Shibuya', meal:'dinner',
-        note:'Eat around Shibuya when everyone is ready, then head back.',
-        image:'img/flexible-dinner.jpg',
-        source:'https://www.gotokyo.org/en/see-and-do/drinking-and-dining/index.html'
       },
     ],
   },
@@ -867,14 +816,14 @@ const DAY_TEMPLATES = [
     map:'https://www.google.com/maps/dir/?api=1&origin=Tsukiji+Outer+Market&destination=HIRAKUZA+GINZA+TOKYO&waypoints=Kabukiza+Theatre%7CGINZA+SIX',
     events:[
       {
-        time:'09:30', title:'Brunch: Tsukiji Outer Market', meal:'brunch',
-        note:'Graze through tamagoyaki, grilled seafood skewers, and a sushi or kaisen-don stop. Public hours are 9:00-14:00 and Saturdays get crowded, so go early. Eat at the stalls, not while walking. Walk 10-15 min into Ginza when you are done.',
+        time:'09:30', title:'Tsukiji Outer Market', meal:'brunch',
+        note:'Street-food brunch: tamagoyaki, grilled seafood skewers, sushi or kaisen-don. Shops ~9:00-14:00; Saturdays are crowded. Eat at the stalls, not while walking.',
         image:'img/tsukiji-outer-market.jpg',
         source:'https://www.tsukiji.or.jp/english/'
       },
       {
-        time:'12:30', title:'Ginza browsing',
-        note:'Start at Kabukiza, then browse GINZA SIX and Chuo-dori. Use the rooftop garden or side streets if nobody wants more shopping. Leave for Hirakuza at 16:30.',
+        time:'12:30', title:'Ginza',
+        note:'Kabukiza, GINZA SIX and its rooftop garden, Chuo-dori.',
         image:'img/ginza-browsing.jpg',
         source:'https://www.gotokyo.org/en/destinations/central-tokyo/ginza/index.html'
       },
@@ -889,81 +838,40 @@ const DAY_TEMPLATES = [
   {
     id:'kawagoe-day-trip', icon:'🏯', title:'Kawagoe Day Trip', city:'tokyo',
     summary:'Little Edo from Shinjuku: Kitain temple, the warehouse street, the Toki no Kane bell, and Candy Alley.',
-    pois:['Kitain', 'Kurazukuri Street', 'Toki no Kane', 'Kashiya Yokocho'],
+    pois:['Kitain', 'Kawagoe old town'],
     note:'Best during the Shinjuku stay: Seibu-Shinjuku Station is a few minutes on foot from Hotel Gracery Shinjuku. The Red Arrow "KOEDO" limited express reaches Hon-Kawagoe in about 45 min for ¥1,200 one way (all seats reserved; buy at the station or on Seibu\u2019s Smooz site, sales open one month ahead). Regular Seibu Shinjuku line trains cost ¥600 and take about an hour. Not covered by the JR Pass. Kitain closes December 25 to January 8, so use this before Christmas. Most warehouse-street and Candy Alley shops open around 10:00 and close around 17:00-18:00.',
-    map:'https://www.google.com/maps/dir/?api=1&origin=Hon-Kawagoe+Station&destination=Hon-Kawagoe+Station&waypoints=Kitain+Temple+Kawagoe%7CToki+no+Kane+Kawagoe%7CKashiya+Yokocho+Kawagoe&travelmode=walking',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Hon-Kawagoe+Station&destination=Hon-Kawagoe+Station&waypoints=Kitain+Temple+Kawagoe%7CKawagoe+Ichibangai%7CToki+no+Kane+Kawagoe%7CKashiya+Yokocho+Kawagoe&travelmode=walking',
     events:[
       {
-        time:'10:00', title:'KOEDO limited express to Hon-Kawagoe',
-        note:'From Seibu-Shinjuku Station, about 45 min. Reserve seats for both directions together.',
-        source:'https://www.ekitan.com/en/article/koedo-ltd-express'
-      },
-      {
         time:'11:00', title:'Kitain temple',
-        note:'15 min walk from Hon-Kawagoe. The 540 Gohyaku Rakan stone statues, each with its own face, and the only surviving rooms of Edo Castle, including the one where shogun Iemitsu is said to have been born. ¥400; 9:00-16:00 from late November.',
+        note:'KOEDO from Seibu-Shinjuku ~10:00 (~45 min), then 15 min walk. 540 Gohyaku Rakan stone statues and the only surviving rooms of Edo Castle. ¥400; 9:00-16:00 from late November.',
         image:'img/kitain-temple.jpg',
         source:'https://www.japan-guide.com/e/e6502.html'
       },
       {
-        time:'12:30', title:'Lunch: Kawagoe', meal:'lunch',
-        note:'Eat around the warehouse district.',
-      },
-      {
-        time:'13:30', title:'Kurazukuri warehouse street',
-        note:'Ichibangai\u2019s Edo-era clay-walled merchant houses. Graze on Kawagoe\u2019s sweet-potato snacks as you walk.',
+        time:'13:00', title:'Kawagoe old town',
+        note:'Ichibangai\u2019s Edo-era kurazukuri warehouse street, Toki no Kane bell tower (rings 15:00), Kashiya Yokocho candy alley, sweet-potato snacks. Shops close ~17:00; KOEDO back to Seibu-Shinjuku.',
         image:'img/kurazukuri-warehouse-street.jpg',
         source:'https://www.japan-guide.com/e/e6501.html'
-      },
-      {
-        time:'15:00', title:'Toki no Kane bell tower',
-        note:'The wooden bell tower rings at 15:00 (also 6:00, 12:00 and 18:00), just off Ichibangai.',
-        image:'img/toki-no-kane-bell-tower.jpg',
-        source:'https://www.tobu.co.jp/en/information/kawagoe_news/west/index.html'
-      },
-      {
-        time:'15:30', title:'Kashiya Yokocho (Candy Alley)',
-        note:'A short lane of old-fashioned sweet and dagashi shops. Go before the shops close around 17:00.',
-        image:'img/kashiya-yokocho-candy-alley.jpg',
-        source:'https://www.japan-guide.com/e/e6503.html'
-      },
-      {
-        time:'16:30', title:'Back to Shinjuku',
-        note:'Walk 15 min to Hon-Kawagoe for the KOEDO back to Seibu-Shinjuku, arriving around 17:30 with the evening free.',
       },
     ],
   },
   {
     id:'nara-deer-park', icon:'🦌', title:'Nara Day Trip', city:'kyoto', date:'2026-12-15',
     summary:'Feed the deer in Nara Park, then Tōdai-ji, Kōfuku-ji, and Naramachi.',
-    pois:['Nara Park', 'Tōdai-ji', 'Kōfuku-ji', 'Naramachi'],
+    pois:['Nara Park', 'Naramachi'],
     note:'Nara is a straightforward day trip on the Kintetsu line: about 35 minutes direct from Kyoto Station, or about 39 minutes from Osaka-Namba. Deer cracker (shika senbei) stalls run roughly 9:00-16:30, shorter in winter, so arrive well before mid-afternoon. Tōdai-ji keeps winter hours of 8:00-17:00. The deer roam freely and will bow for a cracker, but they can nip or headbutt if you tease them with food, so keep crackers visible and hand them over without hesitation.',
     map:'https://www.google.com/maps/dir/?api=1&origin=Nara+Park&destination=Naramachi&waypoints=Todai-ji+Temple%7CKofuku-ji+Temple',
     events:[
       {
-        time:'09:30', title:'Nara Park + deer feeding',
-        note:'Buy shika senbei from a park stall and feed the free-roaming deer. Nara Park is open around the clock, but the cracker stalls keep their own shorter hours.',
-        image:'img/nara-park-deer-feeding.jpg',
-        source:'https://narashikanko.or.jp/en/spot/detail_10089.html'
-      },
-      {
-        time:'10:30', title:'Tōdai-ji + the Great Buddha',
-        note:'Walk through the Nandaimon gate to the Great Buddha Hall, home to Japan\u2019s largest bronze Buddha inside the world\u2019s largest wooden building. Allow 1-1.5 hours.',
+        time:'09:30', title:'Nara Park + Tōdai-ji',
+        note:'Feed the free-roaming deer (shika senbei stalls ~9:00-16:30), Tōdai-ji\u2019s Nandaimon gate and Great Buddha Hall (8:00-17:00), Kōfuku-ji\u2019s five-story pagoda.',
         image:'img/todai-ji-the-great-buddha.jpg',
         source:'https://narashikanko.or.jp/en/spot/detail_10001.html'
       },
       {
-        time:'12:30', title:'Kōfuku-ji',
-        note:'See the five-story pagoda on the way toward Naramachi.',
-        image:'img/kofuku-ji-lunch.jpg',
-        source:'https://narashikanko.or.jp/en/feature/daibutsu'
-      },
-      {
-        time:'13:00', title:'Lunch: Nara', meal:'lunch',
-        note:'Nara-style somen or a casual set meal both work well.',
-      },
-      {
-        time:'14:00', title:'Naramachi',
-        note:'Wander the old merchant quarter\u2019s narrow lanes, machiya houses, small shops, and cafés at an easy pace before heading back.',
+        time:'13:30', title:'Naramachi',
+        note:'Old merchant quarter: narrow lanes, machiya houses, small shops and cafés.',
         image:'img/naramachi.jpg',
         source:'https://narashikanko.or.jp/en/feature/narashi'
       },
