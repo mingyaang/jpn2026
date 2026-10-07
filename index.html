@@ -701,11 +701,11 @@ const DAY_TEMPLATES = [
     ],
   },
   {
-    id:'asakusa-sumo-lunch-akihabara', icon:'🏮', title:'Asakusa + Sumo lunch + Akihabara', city:'tokyo', date:'2026-12-19',
-    summary:'Sensō-ji in the morning, the Asakusa Sumo Club ANNEX lunch show, then Akihabara. Late afternoon and evening still open.',
-    pois:['Sensō-ji', 'Nakamise', 'Asakusa Sumo Club ANNEX', 'Akihabara'],
-    note:'Built for Sat December 19 from the square hotel GINZA. Saturday crowds at Sensō-ji build after about 10:00, so expect a busy Nakamise. The late afternoon and evening are left open for now.',
-    map:'https://www.google.com/maps/dir/?api=1&origin=the+square+hotel+GINZA&destination=Akihabara+Electric+Town&waypoints=Senso-ji+Temple%7CAsakusa+Sumo+Club+ANNEX&travelmode=transit',
+    id:'asakusa-sumo-lunch-akihabara', icon:'🏮', title:'Asakusa + Sumo lunch + Shibamata + Akihabara night', city:'tokyo', date:'2026-12-19',
+    summary:'Sensō-ji in the morning, the Asakusa Sumo Club ANNEX lunch show, the retro Shibamata temple street in the afternoon, then batting cages and arcades in Akihabara at night.',
+    pois:['Sensō-ji', 'Nakamise', 'Asakusa Sumo Club ANNEX', 'Shibamata Taishakuten', 'Yagiri no Watashi', 'Kawachiya', 'Active AKIBA Batting Center', 'Akihabara arcades'],
+    note:'Built for Sat December 19 from the square hotel GINZA. Saturday crowds at Sensō-ji build after about 10:00, so expect a busy Nakamise. Shibamata is a short Kawagoe-style old street; its gallery and ferry close at 16:00 and most shops by 17:00-17:30, so the afternoon is tight. DisneySea is the next day: aim to leave Akihabara by about 21:30.',
+    map:'https://www.google.com/maps/dir/?api=1&origin=the+square+hotel+GINZA&destination=Yodobashi+AKIBA&waypoints=Senso-ji+Temple%7CAsakusa+Sumo+Club+ANNEX%7CShibamata+Taishakuten%7CYagiri+no+Watashi&travelmode=transit',
     events:[
       {
         time:'10:00', title:'Hotel to Asakusa',
@@ -723,10 +723,44 @@ const DAY_TEMPLATES = [
         source:'https://tokyocheapo.com/restaurant/asakusa-sumo-club-annex/'
       },
       {
-        time:'14:30', title:'Akihabara',
-        note:'Tsukuba Express from Asakusa (2 min from the ANNEX) to Akihabara, about 5 min. Electronics, anime shops, and arcades (GiGO, Taito Station). Back to the hotel: Hibiya line straight to Higashi-ginza, about 12 min, then a 5 min walk.',
+        time:'14:00', title:'Asakusa to Shibamata',
+        note:'Toei Asakusa line from Asakusa toward Keisei-Takasago (most trains run through onto the Keisei line), then change to the Keisei Kanamachi line for one stop to Shibamata. About 30 min.',
+      },
+      {
+        time:'14:30', title:'Shibamata Taishakuten temple street + carving gallery',
+        note:'Taishakuten-sandō, ~200 m of Showa-era wooden shops selling kusa-dango (mugwort dumplings), senbei and old-fashioned candy; the set of the Tora-san films. At the end, Taishakuten temple: the carving gallery (wood reliefs covering the hall, carved 1922-34) and Suikeien garden are open 9:00-16:00.',
+        image:'img/shibamata-taishakuten-sando.jpg',
+        source:'https://www.keisei.co.jp/keisei/short_trip/us/area/shibamata_yagiri.php'
+      },
+      {
+        time:'15:30', title:'Yagiri no Watashi ferry',
+        note:'~10 min walk from the temple to the Edogawa river. A hand-rowed wooden boat across the river, about 5 min each way. In December it runs on weekends and holidays only, 10:00-16:00, and stops in rain or bad weather.',
+        source:'https://digjapan.travel/en/spot/id=12239'
+      },
+      {
+        time:'16:30', title:'Dango on the temple street',
+        note:'Back along the sandō before the shops close. Monzen Toraya (the Tora-san dango shop) is open 9:00-17:30 on weekends, cash only. Sunset is around 16:30, so the street is getting dark as the shops shut.',
+        source:'https://chocolaful.com/shibamata-monzentoraya/'
+      },
+      {
+        time:'17:00', title:'Dinner: Kawachiya eel', meal:'dinner',
+        note:'川千家, on the temple street: grilled eel served since the Edo era. Open 11:00, last order 18:00, closed Tuesdays.',
+        source:'https://rurubu.jp/andmore/spot/80012273'
+      },
+      {
+        time:'18:00', title:'Shibamata to Akihabara',
+        note:'About 40 min: Keisei to Keisei-Takasago, the Toei Asakusa line to Asakusabashi, then JR Sobu line one stop to Akihabara. A taxi is about 25 min and ¥5,000-6,000.',
+      },
+      {
+        time:'19:00', title:'Active AKIBA Batting Center',
+        note:'Yodobashi AKIBA 9F, next to Akihabara Station. Batting cages from 80 to 170 km/h, a pitching speed game and golf practice. Open until 22:00, last game 21:55. Prices and December hours not checked.',
+        source:'https://www.tokyonightstory.com/en/spot/active-akiba/'
+      },
+      {
+        time:'20:00', title:'Akihabara arcades',
+        note:'Claw machines, Taiko no Tatsujin and other rhythm games, and purikura photo booths. Taito Station and Hey are open to 23:30, Game Panic to 24:00. Bring ¥100 coins; change machines take ¥1,000 notes. Most anime shops are closed by now. Back to the hotel around 21:30: Hibiya line straight to Higashi-ginza, about 12 min, then a 5 min walk.',
         image:'img/akihabara.jpg',
-        source:'https://www.gotokyo.org/en/destinations/central-tokyo/akihabara/index.html'
+        source:'https://nerz.jp/2025/01/18/akihabara-at-night-top-gaming-arcades-and-late-night-tips'
       },
     ],
   },
