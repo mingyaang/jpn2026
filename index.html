@@ -763,11 +763,11 @@ const DAY_TEMPLATES = [
     ],
   },
   {
-    id:'tsukiji-jojoen-shinjuku', icon:'🥩', title:'Tsukiji + Jojoen lunch', city:'tokyo', date:'2026-12-21',
-    summary:'Hotel-move day: Tsukiji in the morning, then a late yakiniku lunch on the 53rd floor of Tokyo Opera City.',
-    pois:['Tsukiji Outer Market', 'Move to Shinjuku', 'Jojoen'],
-    note:'Built for Mon December 21, the day after DisneySea. Check out of the square hotel GINZA first and leave the bags in its self-service cloakroom. Open after lunch.',
-    map:'https://www.google.com/maps/dir/?api=1&origin=the+square+hotel+GINZA&destination=Jojoen+Tokyo+Opera+City+53&waypoints=Tsukiji+Outer+Market%7CHotel+Gracery+Shinjuku&travelmode=transit',
+    id:'tsukiji-jojoen-shinjuku', icon:'🥩', title:'Tsukiji + Jojoen + Meiji Jingu', city:'tokyo', date:'2026-12-21',
+    summary:'Hotel-move day: Tsukiji in the morning, then a yakiniku lunch on the 53rd floor of Tokyo Opera City and a short Meiji Jingu visit before it closes.',
+    pois:['Tsukiji Outer Market', 'Move to Shinjuku', 'Jojoen', 'Meiji Jingu'],
+    note:'Built for Mon December 21, the day after DisneySea. Check out of the square hotel GINZA first and leave the bags in its self-service cloakroom. Open after Meiji Jingu.',
+    map:'https://www.google.com/maps/dir/?api=1&origin=the+square+hotel+GINZA&destination=Meiji+Jingu&waypoints=Tsukiji+Outer+Market%7CHotel+Gracery+Shinjuku%7CJojoen+Tokyo+Opera+City+53&travelmode=transit',
     events:[
       {
         time:'09:30', title:'Tsukiji Outer Market',
@@ -780,9 +780,15 @@ const DAY_TEMPLATES = [
         note:'Walk back to the Ginza hotel for the bags, then taxi to Hotel Gracery Shinjuku (~20-30 min, ~¥3,800-4,600; ask for a JPN Taxi so both big suitcases fit). Leave the bags at the 8F front desk; check-in from 14:00.',
       },
       {
-        time:'14:00', title:'Jojoen Tokyo Opera City 53', meal:'lunch',
+        time:'13:30', title:'Jojoen Tokyo Opera City 53', meal:'lunch',
         note:'Yakiniku lunch with a view over Shinjuku, 53F. Weekday lunch 11:30-15:00. Hatsudai Station (Keio New Line, 1 stop from Shinjuku) connects straight into the building. Book ahead and ask for a window table.',
         source:'https://www.jojoen.co.jp/shop/jojoen/operacity/'
+      },
+      {
+        time:'15:00', title:'Meiji Jingu',
+        note:'~10 min taxi from Opera City to the west (Sangubashi) gate. Forest walk to the main shrine, ~10 min each way. Gates close 16:00 in December.',
+        image:'img/meiji-jingu.jpg',
+        source:'https://www.meijijingu.or.jp/en/opening/'
       },
     ],
   },
