@@ -661,6 +661,35 @@ const BOOKINGS = [
 // Unscheduled day-level itineraries. Drag a card onto the calendar to place it.
 const DAY_TEMPLATES = [
   {
+    id:'osaka-amazing-pass-day', icon:'🦀', title:'Osaka Amazing Pass: Umeda + Castle + Dotonbori', city:'osaka', date:'2026-12-13',
+    summary:'One-day OSAKA AMAZING PASS: Umeda views, Osaka Castle, Dotonbori at dusk with a river cruise, then a crab dinner.',
+    pois:['Umeda', 'Osaka Castle', 'Dotonbori', 'Kani Doraku'],
+    note:'Built for Sun December 13, the first full day with Yvonne. OSAKA AMAZING PASS 1day: ¥3,500 each, digital QR bought on Surutto QRtto (account needed). Valid for the calendar day (not 24 h): Osaka Metro, city buses and private lines within Osaka, plus one entry each at ~40 attractions. Today\u2019s covered stops are worth ~¥6,000+ each before trains.',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Umeda+Sky+Building&destination=Kani+Doraku+Dotonbori+Honten&waypoints=HEP+FIVE%7COsaka+Castle%7CGlico+Sign+Dotonbori&travelmode=transit',
+    events:[
+      {
+        time:'11:00', title:'Umeda',
+        note:'Umeda Sky Building Floating Garden observatory (pass entry only until 15:00, so go first), then the red HEP FIVE Ferris wheel (from 11:00).',
+        source:'https://osaka-amazing-pass.com/en/service_free.html'
+      },
+      {
+        time:'13:30', title:'Osaka Castle',
+        note:'Main tower and museum (9:00-18:00, last entry 17:30) and the castle grounds. ~15 min from Umeda.',
+        source:'https://www.osakacastle.net/english/'
+      },
+      {
+        time:'17:00', title:'Dotonbori + Namba',
+        note:'Glico sign and street food as it gets dark. Tombori River Cruise (covered by the pass, last 21:00): exchange the pass for a timed boarding ticket at the counter on arrival; evening slots sell out.',
+        source:'https://osaka-amazing-pass.com/en/service_free.html'
+      },
+      {
+        time:'19:00', title:'Kani Doraku Dotonbori Honten', meal:'dinner',
+        note:'Crab courses under the giant moving crab sign; Matsuba snow crab in season from Nov 6. 11:00-22:00 (L.O. 21:00), roughly ¥6,000-15,000 per person. Book ahead for a Sunday. Optional after: Shinsekai + Tsutenkaku (pass, last entry 21:15), ~10 min from Namba.',
+        source:'https://japantravel.navitime.com/en/area/jp/spot/02301-1900042/'
+      },
+    ],
+  },
+  {
     id:'kyoto-to-ginza-shopping', icon:'🛍️', title:'Kyoto → Ginza shopping (half day)', city:'tokyo', date:'2026-12-18',
     summary:'Travel day: noon Shinkansen from Kyoto, check in at the square hotel GINZA, Ginza shopping and dinner, then Roppongi Hills and Tokyo Tower at night.',
     pois:['Shinkansen', 'Ginza', 'Roppongi', 'Tokyo Tower'],
