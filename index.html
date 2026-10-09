@@ -944,11 +944,11 @@ const DAY_TEMPLATES = [
     ],
   },
   {
-    id:'fushimi-inari-uzumasa', icon:'⛩️', title:'Fushimi Inari + Uzumasa Kyoto Village', city:'kyoto', date:'2026-12-16',
-    summary:'Morning under the Fushimi Inari torii gates, then an afternoon in the Uzumasa samurai film-set town. Evening open.',
-    pois:['Fushimi Inari', 'Uzumasa Kyoto Village'],
-    note:'Built for Wed December 16. Uzumasa Kyoto Village (the former Toei Kyoto Studio Park) closes on some Tuesdays, so Wednesday is safe. teamLab Biovortex is on December 17 instead, so the two big stops are not on the same day.',
-    map:'https://www.google.com/maps/dir/?api=1&origin=Fushimi+Inari+Taisha&destination=Uzumasa+Kyoto+Village&waypoints=Yotsutsuji+Intersection+Fushimi+Inari&travelmode=transit',
+    id:'fushimi-inari-uzumasa', icon:'⛩️', title:'Fushimi Inari + Uzumasa + teamLab', city:'kyoto', date:'2026-12-16',
+    summary:'Morning under the Fushimi Inari torii gates, an afternoon in the Uzumasa samurai film-set town, then teamLab Biovortex by Kyoto Station.',
+    pois:['Fushimi Inari', 'Uzumasa Kyoto Village', 'teamLab Biovortex'],
+    note:'Built for Wed December 16. Uzumasa Kyoto Village (the former Toei Kyoto Studio Park) closes on some Tuesdays, so Wednesday is safe. Leave Uzumasa by ~17:00 for teamLab\u2019s 19:30 last entry.',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Fushimi+Inari+Taisha&destination=teamLab+Biovortex+Kyoto&waypoints=Yotsutsuji+Intersection+Fushimi+Inari%7CUzumasa+Kyoto+Village&travelmode=transit',
     events:[
       {
         time:'10:00', title:'Fushimi Inari',
@@ -960,19 +960,29 @@ const DAY_TEMPLATES = [
         note:'Edo-era film-set town: ninja shows, ninja maze, haunted house, period-costume rental and photos. ~10:00-21:00, last entry 1 h before close. ¥2,800 each, some attractions ¥400-800 extra. From Inari: JR to Kyoto Station, JR Sagano line to Hanazono (10 min), then 15 min on foot (~45-60 min total).',
         source:'https://www.japan-guide.com/e/e3934.html'
       },
+      {
+        time:'17:30', title:'teamLab Biovortex Kyoto',
+        note:'JR from Hanazono back to Kyoto Station (~10 min), then 7-10 min on foot from the Hachijo East exit. Last entry 19:30. Timed tickets, ¥3,600-5,600 depending on the day; book a 17:30-18:00 slot ahead. Plan 1.5-2 h. Dinner after: Kyoto Ramen Koji, Kyoto Station 10F.',
+        source:'https://www.teamlab.art/e/kyoto/'
+      },
     ],
   },
   {
-    id:'teamlab-biovortex-kyoto', icon:'🌀', title:'teamLab Biovortex Kyoto', city:'kyoto', date:'2026-12-17',
-    summary:'teamLab Biovortex by Kyoto Station, then check in at Saka Hotel from 15:00; dinner is at the hotel.',
-    pois:['teamLab Biovortex'],
-    note:'Built for Thu December 17, moving to Saka Hotel Kyoto (check-in 15:00-19:30, dinner and breakfast included). Kyoto Station has coin lockers for the bags during teamLab.',
-    map:'https://www.google.com/maps/dir/?api=1&origin=Kyoto+Station&destination=Saka+Hotel+Kyoto&waypoints=teamLab+Biovortex+Kyoto&travelmode=transit',
+    id:'arashiyama-sagano-hozugawa', icon:'🎋', title:'Arashiyama + Sagano train + Hozugawa boat', city:'kyoto', date:'2026-12-17',
+    summary:'A quick look at the bamboo grove, the Sagano train up the gorge, and the Hozugawa boat back down; then check in at Saka Hotel, dinner at the hotel.',
+    pois:['Arashiyama', 'Hozugawa River Boat'],
+    note:'Built for Thu December 17 (Sagano train is closed Wednesdays), moving to Saka Hotel Kyoto (check-in 15:00-19:30, dinner and breakfast included). Bags: Kyoto Station coin lockers on the way out, collect on the way to the hotel.',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Saga-Arashiyama+Station&destination=Saka+Hotel+Kyoto&waypoints=Arashiyama+Bamboo+Grove%7CTorokko+Arashiyama+Station%7CTorokko+Kameoka+Station%7CHozugawa+Kudari+Boarding+Point%7CTogetsukyo+Bridge&travelmode=transit',
     events:[
       {
-        time:'11:00', title:'teamLab Biovortex Kyoto',
-        note:'7-10 min on foot from Kyoto Station\u2019s Hachijo East exit. 9:00-21:00, last entry 19:30. Timed tickets, ¥3,600-5,600 depending on the day; book a slot ahead. Plan 1.5-3 h.',
-        source:'https://www.teamlab.art/e/kyoto/'
+        time:'11:00', title:'Bamboo grove + Sagano train',
+        note:'JR from Kyoto Station to Saga-Arashiyama (~15 min). A 20-30 min look along the main bamboo path, then the Sagano Romantic Train from Torokko Arashiyama to Torokko Kameoka (~25 min); book the departure ~1 h before the boat, seats sell out. Bus to the boat pier ~15 min, ¥500. 2026 is the current train\u2019s last year.',
+        source:'https://www.sagano-kanko.co.jp/en/train-info/'
+      },
+      {
+        time:'13:00', title:'Hozugawa boat',
+        note:'~2 h down the gorge in a poled wooden boat, ¥6,000 each. Winter departures every 90 min, 10:00-14:30 (14:30 is the backup). Dress warm. Lands near Togetsukyo Bridge, then JR back via Kyoto Station for the bags and a taxi to Saka Hotel (~20 min).',
+        source:'https://www.japan-guide.com/e/e3966.html'
       },
     ],
   },
