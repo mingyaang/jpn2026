@@ -661,11 +661,11 @@ const BOOKINGS = [
 // Unscheduled day-level itineraries. Drag a card onto the calendar to place it.
 const DAY_TEMPLATES = [
   {
-    id:'osaka-amazing-pass-day', icon:'🏯', title:'Osaka Amazing Pass: Umeda + Castle + Dotonbori + Shinsekai', city:'osaka', date:'2026-12-13',
-    summary:'One-day OSAKA AMAZING PASS: Umeda views, Osaka Castle, Dotonbori at dusk with a river cruise, then Shinsekai at night.',
-    pois:['Umeda', 'Osaka Castle', 'Dotonbori', 'Shinsekai'],
+    id:'osaka-amazing-pass-day', icon:'🏯', title:'Osaka Amazing Pass: Umeda + Castle + Dotonbori + Round1', city:'osaka', date:'2026-12-13',
+    summary:'One-day OSAKA AMAZING PASS: Umeda views, Osaka Castle, Dotonbori at dusk with a river cruise and dinner, then a few hours at Round1.',
+    pois:['Umeda', 'Osaka Castle', 'Dotonbori', 'Round1'],
     note:'Built for Sun December 13, the first full day with Yvonne. OSAKA AMAZING PASS 1day: ¥3,500 each, digital QR bought on Surutto QRtto (account needed). Valid for the calendar day (not 24 h): Osaka Metro, city buses and private lines within Osaka, plus one entry each at ~40 attractions. Today\u2019s covered stops are worth ~¥6,000+ each before trains.',
-    map:'https://www.google.com/maps/dir/?api=1&origin=Umeda+Sky+Building&destination=Tsutenkaku&waypoints=HEP+FIVE%7COsaka+Castle%7CGlico+Sign+Dotonbori&travelmode=transit',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Umeda+Sky+Building&destination=ROUND1+STADIUM+Sennichimae&waypoints=HEP+FIVE%7COsaka+Castle%7CGlico+Sign+Dotonbori&travelmode=transit',
     events:[
       {
         time:'11:00', title:'Umeda',
@@ -679,13 +679,27 @@ const DAY_TEMPLATES = [
       },
       {
         time:'17:00', title:'Dotonbori + Namba',
-        note:'Glico sign and street food as it gets dark. Tombori River Cruise (covered by the pass, every 30 min, last 21:00). Board at the time on the ticket picked up that morning (counter opens ~1 h before the first 11:00 boat; evening slots sell out).',
+        note:'Glico sign and street food as it gets dark. Tombori River Cruise (covered by the pass, every 30 min, last 21:00). Board at the time on the ticket picked up that morning (counter opens ~1 h before the first 11:00 boat; evening slots sell out). Dinner wherever looks good in Dotonbori.',
         source:'https://osaka-amazing-pass.com/en/service_free.html'
       },
       {
-        time:'19:30', title:'Shinsekai',
-        note:'Retro neon streets around Tsutenkaku tower, ~10 min from Namba. Tsutenkaku observation deck is on the pass (last entry 21:15; book a time slot at the tower).',
-        source:'https://www.tsutenkaku.co.jp/annai/index.html'
+        time:'20:00', title:'Round1 Stadium Sennichimae',
+        note:'A few hours after dinner, ~5-10 min walk south of Dotonbori. Spo-Cha all-you-can-play sports floors by the hour, bowling, karaoke, darts, ping pong and the arcade (pay per game). Open 24 h; arcade 06:00-00:50.',
+        source:'http://www.round1.co.jp/shop/tenpo/osaka-sennichimae-eng.html'
+      },
+    ],
+  },
+  {
+    id:'amanohashidate-ine-tour', icon:'🌊', title:'Amanohashidate + Ine Funaya tour', city:'osaka', date:'2026-12-14',
+    summary:'Klook bus day trip from Osaka: the Ine boathouses and a bay cruise, then Amanohashidate by cable car.',
+    pois:['Ine + Amanohashidate'],
+    note:'Built for Mon December 14. Not booked yet. Klook package: "Departing from Osaka (includes Amanohashidate Cable Car and Ine Bay Boat Tour tickets)", 30% off, from CAD 79.39 per person. Kintetsu Nippombashi is one stop or ~10 min walk from Namba. No refund if late. Meals not included. Chinese / English guide; the tour LINE group link arrives by email ~18:00 the day before. Free cancellation up to 24 h before.',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Kintetsu+Nippombashi+Station&destination=Kintetsu+Nippombashi+Station&waypoints=Ine+Funaya+Observatory%7CINE+CAFE%7CAmanohashidate+View+Land%7CChion-ji+Temple+Miyazu%7CKaisen-kyo+Bridge&travelmode=driving',
+    events:[
+      {
+        time:'08:00', title:'Amanohashidate + Ine Funaya tour',
+        note:'Bus from Kintetsu Nippombashi (be there 07:45). Ine Funaya ~1.5 h: the observatory over Ine Bay, the boathouse street, Funaya no Sato park, INE CAFE, lunch on your own (Ine is known for seafood), then the 30-min Ine Bay boat. Amanohashidate ~2 h: the single-seat chairlift to View Land for the upside-down view, Chion-ji temple and its fan omikuji, the Kaisen-kyo swing bridge and the beach. Bus back at 15:30, Nippombashi 18:00-19:30. Evening on your own.',
+        source:'https://www.klook.com/en-US/activity/146607-amanohashidate-funaya-ine-bay-beautiful-scenery-tour-osaka-kyoto/'
       },
     ],
   },
