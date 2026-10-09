@@ -1,0 +1,13 @@
+Photo credits (Wikimedia Commons)
+img/umeda-sky-building.jpg: "Umeda Sky Building 201807.jpg" by SH6188, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Umeda_Sky_Building_201807.jpg
+img/osaka-castle.jpg: "Osaka Castle 2022-04-23.jpg" by Dick Thomas Johnson, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Osaka_Castle_2022-04-23.jpg
+img/dotonbori-night.jpg: "Neon signs in Dotonbori at night,16th August 2014 (1).JPG" by Tokumeigakarinoaoshima, CC0, https://commons.wikimedia.org/wiki/File:Neon_signs_in_Dotonbori_at_night,16th_August_2014_(1).JPG
+img/shinsekai-tsutenkaku.jpg: "Shinsekai Tsutenkaku at night 2022-04-23.jpg" by Dick Thomas Johnson, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Shinsekai_Tsutenkaku_at_night_2022-04-23.jpg
+img/ine-funaya.jpg: "Funaya in Ine Town, Yosa District, Kyoto Prefecture 001.jpg" by Naokijp, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Funaya_in_Ine_Town,_Yosa_District,_Kyoto_Prefecture_001.jpg
+img/shimokitazawa.jpg: "Walk in Shimokitazawa 5.jpg" by Syced, CC0, https://commons.wikimedia.org/wiki/File:Walk_in_Shimokitazawa_5.jpg
+img/kasuga-taisha-lanterns.jpg: "Lanterns Kasuga-taisha Nara.jpg" by Gzzz, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Lanterns_Kasuga-taisha_Nara.jpg
+img/pontocho-night.jpg: "Pontocho, Kyoto (3810354565).jpg" by Andrea Schaffer from Sydney, Australia, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Pontocho,_Kyoto_(3810354565).jpg
+img/fushimi-inari-torii.jpg: "20181110 Fushimi Inari Torii 12.jpg" by Balon Greyjoy, CC0, https://commons.wikimedia.org/wiki/File:20181110_Fushimi_Inari_Torii_12.jpg
+img/uzumasa-kyoto-village.jpg: "130706 Toei Kyoto Studio Park Kyoto Japan02n.jpg" by 663highland, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:130706_Toei_Kyoto_Studio_Park_Kyoto_Japan02n.jpg
+img/arashiyama-bamboo-grove.jpg: "2021 Sagano Bamboo forest in Arashiyama, Kyoto, Japan.jpg" by Naokijp, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:2021_Sagano_Bamboo_forest_in_Arashiyama,_Kyoto,_Japan.jpg
+img/hozugawa-boat.jpg: "20131017 19 Hozugawa-Kudari (10563161554).jpg" by Sjaak Kempe from Groningen, The Netherlands, CC BY 2.0, https://commons.wikimedia.org/wiki/File:20131017_19_Hozugawa-Kudari_(10563161554).jpg
