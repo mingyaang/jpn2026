@@ -374,7 +374,7 @@
       <div class="who"><i class="dot" style="background:var(--leg-1)"></i>🇯🇵 japan</div>
       <div class="when">nov 25 → dec 24</div>
       <div class="sub">👯 crew · nov 29 → dec 12</div>
-      <div class="sub"><a href="?part=japan">👋 yvonne · dec 12 → dec 24</a></div>
+      <div class="sub"><a href="japan">👋 yvonne · dec 12 → dec 24</a></div>
     </div>
     <div class="leg">
       <div class="who"><i class="dot" style="background:var(--leg-4)"></i>🇰🇷 korea</div>
@@ -541,11 +541,12 @@
 <script>
 document.getElementById('js-status').hidden = true;
 const DEPART = '2026-11-25', RETURN = '2027-01-07';
-// Sub-pages: ?part=<key> shows one stretch of the trip with the same cards and bookings.
+// Sub-pages: /<key> (a <key>.html symlink to this file) shows one stretch of the trip
+// with the same cards and bookings.
 const PARTS = {
   japan: { country:'japan', start:'2026-12-12', end:'2026-12-24', title:'🇯🇵 japan with yvonne' },
 };
-const PART = PARTS[new URLSearchParams(location.search).get('part')];
+const PART = PARTS[location.pathname.split('/').pop().replace(/\.html$/, '')];
 const SPAN_START = PART?.start || DEPART, SPAN_END = PART?.end || RETURN;
 const PHONE = matchMedia('(max-width:640px)').matches;  // matches the CSS breakpoint
 
@@ -1075,7 +1076,7 @@ if (PART) {
   document.title = `${PART.title} · the big trip`;
   document.querySelector('h1').textContent = PART.title;
   document.getElementById('trip-sub').innerHTML =
-    `${pretty(SPAN_START)} → ${pretty(SPAN_END)} · <a href="${location.pathname}">see the whole trip</a>`;
+    `${pretty(SPAN_START)} → ${pretty(SPAN_END)} · <a href="./">see the whole trip</a>`;
   document.getElementById('plan-bar').style.display = 'none';
   const legCards = document.querySelectorAll('.leg');
   const legendItems = document.querySelectorAll('.legend:first-of-type li');
