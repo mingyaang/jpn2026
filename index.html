@@ -67,6 +67,7 @@
   .leg .dot{width:9px;height:9px;border-radius:3px;flex:none}
   .leg .when{display:flex;align-items:center;gap:5px;margin-top:5px;color:var(--muted);font-size:12px}
   .leg .sub{display:flex;align-items:center;gap:5px;margin-top:3px;color:var(--muted);font-size:11px}
+  .sub a{color:inherit}
 
   /* ---- route ribbon ---- */
   .ribbon{display:flex;gap:4px;margin:14px 0 0;height:40px}
@@ -358,9 +359,9 @@
 <div class="wrap">
 
   <h1>the big trip <span class="grad">✈️</span></h1>
-  <p class="sub">nov 25 → jan 7 · 43 nights · 🇯🇵 japan → 🇰🇷 korea → 🇨🇳 china → 🇹🇼 taiwan</p>
+  <p class="sub" id="trip-sub">nov 25 → jan 7 · 43 nights · 🇯🇵 japan → 🇰🇷 korea → 🇨🇳 china → 🇹🇼 taiwan</p>
 
-  <div class="bar">
+  <div class="bar" id="plan-bar">
     <span class="barlab">the plan</span>
     <div class="stat"><b>17/20</b><span>pto days</span></div>
     <div class="stat"><b>12</b><span>remote days</span></div>
@@ -373,7 +374,7 @@
       <div class="who"><i class="dot" style="background:var(--leg-1)"></i>🇯🇵 japan</div>
       <div class="when">nov 25 → dec 24</div>
       <div class="sub">👯 crew · nov 29 → dec 12</div>
-      <div class="sub">👋 yvonne · dec 12 → dec 24</div>
+      <div class="sub"><a href="?part=japan">👋 yvonne · dec 12 → dec 24</a></div>
     </div>
     <div class="leg">
       <div class="who"><i class="dot" style="background:var(--leg-4)"></i>🇰🇷 korea</div>
@@ -540,7 +541,12 @@
 <script>
 document.getElementById('js-status').hidden = true;
 const DEPART = '2026-11-25', RETURN = '2027-01-07';
-const SPAN_START = DEPART, SPAN_END = RETURN;
+// Sub-pages: ?part=<key> shows one stretch of the trip with the same cards and bookings.
+const PARTS = {
+  japan: { country:'japan', start:'2026-12-12', end:'2026-12-24', title:'🇯🇵 japan with yvonne' },
+};
+const PART = PARTS[new URLSearchParams(location.search).get('part')];
+const SPAN_START = PART?.start || DEPART, SPAN_END = PART?.end || RETURN;
 const PHONE = matchMedia('(max-width:640px)').matches;  // matches the CSS breakpoint
 
 // Company-paid days off. These fall inside the trip and cost no PTO.
@@ -1048,6 +1054,23 @@ toggleCrewSide.addEventListener('change', () => {
   paint();
 });
 
+// Sub-page header: its own dates, no PTO stats, only its country. style.display because
+// the CSS sets display on .bar and .legend li, which beats the hidden attribute.
+if (PART) {
+  document.title = `${PART.title} · the big trip`;
+  document.querySelector('h1').textContent = PART.title;
+  document.getElementById('trip-sub').innerHTML =
+    `${pretty(SPAN_START)} → ${pretty(SPAN_END)} · <a href="${location.pathname}">see the whole trip</a>`;
+  document.getElementById('plan-bar').style.display = 'none';
+  const legCards = document.querySelectorAll('.leg');
+  const legendItems = document.querySelectorAll('.legend:first-of-type li');
+  COUNTRIES.forEach((c, i) => {
+    if (c.country === PART.country) return;
+    legCards[i].style.display = 'none';
+    legendItems[i].style.display = 'none';
+  });
+}
+
 const dayDeck = document.getElementById('day-deck');
 let selectedTemplateId = null;
 const templateById = id => DAY_TEMPLATES.find(template => template.id === id);
@@ -1217,7 +1240,7 @@ function buildCalendar() {
   // Hiding the crew's side of the trip removes those days from the grid
   // entirely (not just visually), so the week/weekday columns still line up
   // starting from the first visible date.
-  const visibleStart = state.showCrewSide ? SPAN_START : iso(add(mk(CREW_SIDE_END), 1));
+  const visibleStart = PART || state.showCrewSide ? SPAN_START : iso(add(mk(CREW_SIDE_END), 1));
   const gridStart = add(mk(visibleStart), -mk(visibleStart).getUTCDay());
   const gridEnd   = add(mk(SPAN_END), 6 - mk(SPAN_END).getUTCDay());
 
@@ -1442,8 +1465,12 @@ function paintRibbon() {
   ribbon.innerHTML = '';
   LEGS.forEach((leg, index) => {
     const country = COUNTRIES[index];
+    // clip to the visible span so a sub-page counts only its own days
+    const start = leg.start > SPAN_START ? leg.start : SPAN_START;
+    const end = leg.end < SPAN_END ? leg.end : SPAN_END;
+    if (start > end) return;
     const segment = document.createElement('div');
-    const span = days(leg.start, leg.end) + 1;
+    const span = days(start, end) + 1;
     segment.style.flex = span;
     segment.style.background = country.hue;
     segment.textContent = `${country.flag} ${country.country} · ${span}d`;
