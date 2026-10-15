@@ -936,6 +936,7 @@ const DAY_TEMPLATES = [
       {
         time:'20:00', title:'Ginza Happo Shinjuku', meal:'dinner',
         note:'Seafood + yakiniku buffet, 120 min with all-you-can-drink, ¥13,000 each incl. tax: king and snow crab, sushi, Peking duck. Closes 22:00. 3F, 5-17-13 Shinjuku, 1 min from Shinjuku-sanchome Exit E2, ~10 min walk from the hotel. Book the 20:00 table; cancelling from midnight on the day costs the full price, the day before 50%.',
+        map:'https://www.google.com/maps/search/?api=1&query=Seafood+Buffet+Dining+Ginza+Happo+Shinjuku+5-17-13+Shinjuku+Tokyo',
         source:'https://ginzahappo-shinjuku.owst.jp/'
       },
     ],
@@ -1659,6 +1660,16 @@ function renderOutline(items, showTips = false) {
       source.rel = 'noopener noreferrer';
       source.textContent = 'official guide ↗';
       copy.append(source);
+    }
+    const placeUrl = /^https:\/\/www\.google\.com\/maps\//.test(item.map || '') ? item.map : '';
+    if (!showTips && placeUrl) {
+      const place = document.createElement('a');
+      place.className = 'postcard-map';
+      place.href = placeUrl;
+      place.target = '_blank';
+      place.rel = 'noopener noreferrer';
+      place.textContent = 'Google Maps ↗';
+      copy.append(place);
     }
     card.append(marker, copy);
 
