@@ -589,7 +589,7 @@ const BOOKINGS = [
     map:'https://www.google.com/maps/search/?api=1&query=HOTEL+AMANEK+Osaka+Namba+1-9-7+Sennichimae+Chuo-ku+Osaka',
     info:{
       room:'Standard Double, non-smoking · 2 adults',
-      meals:'breakfast included',
+      meals:'breakfast included · 6:30-10:00, last order 9:30',
       paid:'¥37,244 total (after Genius 10% off and a ¥4,561 Booking.com credit); Booking.com charges the card automatically, ¥0 paid so far',
       cancellation:'free until 7 days before arrival (Dec 5); after that, or no-show, the first night is charged',
       address:'1-9-7 Sennichimae, Chuo-ku, Osaka',
@@ -713,10 +713,15 @@ const DAY_TEMPLATES = [
   {
     id:'osaka-amazing-pass-day', icon:'🏯', title:'Osaka Amazing Pass: Umeda + Castle + Dotonbori + Shinsekai', city:'osaka', date:'2026-12-13',
     summary:'One-day OSAKA AMAZING PASS: Umeda views, Osaka Castle, Dotonbori at dusk with a river cruise, then Shinsekai at night.',
-    pois:['Umeda', 'Osaka Castle', 'Dotonbori', 'Shinsekai'],
+    pois:['AMANEK', 'Umeda', 'Osaka Castle', 'Dotonbori', 'Shinsekai'],
     note:'Built for Sun December 13, the first full day with Yvonne. OSAKA AMAZING PASS 1day: ¥3,500 each, digital QR bought on Surutto QRtto (account needed). Valid for the calendar day (not 24 h): Osaka Metro, city buses and private lines within Osaka, plus one entry each at ~40 attractions. Today\u2019s covered stops are worth ~¥6,000+ each before trains.',
     map:'https://www.google.com/maps/dir/?api=1&origin=Umeda+Sky+Building&destination=Tsutenkaku&waypoints=HEP+FIVE%7COsaka+Castle%7CGlico+Sign+Dotonbori&travelmode=transit',
     events:[
+      {
+        time:'09:00', title:'AMANEK breakfast', meal:'breakfast',
+        note:'Osaka-style breakfast buffet (takoyaki, nikusui) included with the stay; 6:30-10:00, last order 9:30. Then ~5 min walk to the Tombori counter.',
+        source:'https://en.amanekhotels.jp/osaka-namba/meal/'
+      },
       {
         time:'11:00', title:'Umeda',
         note:'First, ~10:30: stop at the Tombori River Cruise counter in Dotonbori and show the pass to get a timed boarding ticket for an evening cruise (the pass stays valid all day), then Midosuji line to Umeda, ~10 min. Umeda Sky Building Floating Garden observatory (pass entry only until 15:00, so go first), then the red HEP FIVE Ferris wheel (from 11:00).',
@@ -746,10 +751,15 @@ const DAY_TEMPLATES = [
   {
     id:'amanohashidate-ine-tour', icon:'🌊', title:'Amanohashidate + Ine Funaya tour', city:'osaka', date:'2026-12-14',
     summary:'Klook bus day trip from Osaka: the Ine boathouses and a bay cruise, then Amanohashidate by cable car. Dinner in Namba, then Round1.',
-    pois:['Ine + Amanohashidate', 'Namba', 'Round1'],
+    pois:['AMANEK', 'Ine + Amanohashidate', 'Namba', 'Round1'],
     note:'Built for Mon December 14. Not booked yet. Klook package: "Departing from Osaka (includes Amanohashidate Cable Car and Ine Bay Boat Tour tickets)", 30% off, from CAD 79.39 per person. Kintetsu Nippombashi is one stop or ~10 min walk from Namba. No refund if late. Meals not included. Chinese / English guide; the tour LINE group link arrives by email ~18:00 the day before. Free cancellation up to 24 h before.',
     map:'https://www.google.com/maps/dir/?api=1&origin=Kintetsu+Nippombashi+Station&destination=Kintetsu+Nippombashi+Station&waypoints=Ine+Funaya+Observatory%7CINE+CAFE%7CAmanohashidate+View+Land%7CChion-ji+Temple+Miyazu%7CKaisen-kyo+Bridge&travelmode=driving',
     events:[
+      {
+        time:'07:00', title:'AMANEK breakfast', meal:'breakfast',
+        note:'Included with the stay; opens 6:30. Quick one: the hotel is ~3 min from Kintetsu Nippombashi, be at the bus by 07:45.',
+        source:'https://en.amanekhotels.jp/osaka-namba/meal/'
+      },
       {
         time:'08:00', title:'Amanohashidate + Ine Funaya tour',
         note:'Bus from Kintetsu Nippombashi (be there 07:45). Ine Funaya ~1.5 h: the observatory over Ine Bay, the boathouse street, Funaya no Sato park, INE CAFE, lunch on your own (Ine is known for seafood), then the 30-min Ine Bay boat. Amanohashidate ~2 h: the single-seat chairlift to View Land for the upside-down view, Chion-ji temple and its fan omikuji, the Kaisen-kyo swing bridge and the beach. Bus back at 15:30, Nippombashi 18:00-19:30.',
@@ -846,7 +856,7 @@ const DAY_TEMPLATES = [
     ],
   },
   {
-    id:'tokyo-disneysea', icon:'🌊', title:'Tokyo DisneySea', city:'tokyo', date:'2026-12-20',
+    id:'tokyo-disneysea', icon:'🧜‍♀️', title:'Tokyo DisneySea', city:'tokyo', date:'2026-12-20',
     summary:'A full park day focused on Fantasy Springs and the biggest rides.',
     pois:['Fantasy Springs', 'Frozen Journey', 'Soaring', 'Toy Story Mania!'],
     note:'Set up the Tokyo Disney Resort App before the visit, then use the first minutes after entering to secure the most important ride access. Keep the rest of the day flexible around live wait times and return windows.',
@@ -952,7 +962,7 @@ const DAY_TEMPLATES = [
     ],
   },
   {
-    id:'meiji-jingu-harajuku-shibuya', icon:'⛩️', title:'Harajuku + Shibuya', city:'tokyo', date:'2026-12-22',
+    id:'meiji-jingu-harajuku-shibuya', icon:'🚦', title:'Harajuku + Shibuya', city:'tokyo', date:'2026-12-22',
     summary:'Harajuku shopping (optional Meiji Jingu), Shibuya landmarks, SHIBUYA109, and winter lights.',
     pois:['Harajuku', 'Shibuya'],
     note:'Start in Harajuku; Meiji Jingu is next to the station if you want it (closes 16:00 in December). Keep lunch flexible in Harajuku, then spend the late afternoon in Shibuya. Blue Cave is a possible winter finale, but the official site currently shows only the completed 2025 run, with no 2026 announcement. Treat it as unconfirmed and check again closer to the trip.',
@@ -975,10 +985,15 @@ const DAY_TEMPLATES = [
   {
     id:'nara-deer-park', icon:'🦌', title:'Nara on the way to Kyoto', city:'kyoto', date:'2026-12-15',
     summary:'Osaka to Kyoto via Nara: feed the deer in Nara Park, Tōdai-ji, Kōfuku-ji, then up to Kasuga Taisha and on to Kyoto for an evening in Pontocho and Gion.',
-    pois:['Nara Park', 'Kasuga Taisha', 'Pontocho + Gion'],
+    pois:['AMANEK', 'Nara Park', 'Kasuga Taisha', 'Pontocho + Gion'],
     note:'Moving day from Namba to Kyoto, with bags. Kintetsu from Osaka-Namba direct to Kintetsu-Nara, about 39 minutes; coin lockers at Exit 1 past the east gates, plus a staffed baggage counter for big suitcases. Kintetsu-Nara to Kyoto: limited express 35 min (~¥1,280, reserved seat) or express 45-50 min (¥760). Deer cracker (shika senbei) stalls run roughly 9:00-16:30, shorter in winter, so arrive well before mid-afternoon. Tōdai-ji keeps winter hours of 8:00-17:00. The deer roam freely and will bow for a cracker, but they can nip or headbutt if you tease them with food, so keep crackers visible and hand them over without hesitation.',
     map:'https://www.google.com/maps/dir/?api=1&origin=Kintetsu+Nara+Station&destination=Yasaka+Shrine&waypoints=Kofuku-ji+Temple%7CTodai-ji+Temple%7CKasuga+Taisha%7CKintetsu+Nara+Station%7CKyoto+Station%7CPontocho%7CGion+Shirakawa',
     events:[
+      {
+        time:'09:00', title:'AMANEK breakfast', meal:'breakfast',
+        note:'Included with the stay; 6:30-10:00, last order 9:30. Check out by 11:00.',
+        source:'https://en.amanekhotels.jp/osaka-namba/meal/'
+      },
       {
         time:'11:00', title:'Nara Park + Tōdai-ji',
         note:'Feed the free-roaming deer (shika senbei stalls ~9:00-16:30), Tōdai-ji\u2019s Nandaimon gate and Great Buddha Hall (8:00-17:00), Kōfuku-ji\u2019s five-story pagoda.',
