@@ -769,10 +769,10 @@ const DAY_TEMPLATES = [
   },
   {
     id:'kyoto-to-ginza-shopping', icon:'🛍️', title:'Kyoto → Ginza shopping (half day)', city:'tokyo', date:'2026-12-18',
-    summary:'Travel day: noon Shinkansen from Kyoto, check in at the square hotel GINZA, Ginza shopping and dinner, then Roppongi Hills and Tokyo Tower at night.',
-    pois:['Shinkansen', 'Ginza', 'Roppongi', 'Tokyo Tower'],
+    summary:'Travel day: noon Shinkansen from Kyoto, check in at the square hotel GINZA, Ginza shopping and a Hanayama Udon dinner, then Roppongi Hills and Tokyo Tower at night.',
+    pois:['Shinkansen', 'Ginza', 'Hanayama Udon', 'Roppongi', 'Tokyo Tower'],
     note:'Built for Fri December 18, checking out of Saka Hotel Kyoto and into the square hotel GINZA. A Shinkansen ticket to Tokyo is valid to any JR station in the 23 wards, so Yurakucho costs nothing extra. Nozomi seats do not need to be reserved this early in the holidays, but reserving is easy. Chuo-dori only closes to cars on weekends, so Friday is ordinary street shopping.',
-    map:'https://www.google.com/maps/dir/?api=1&origin=Kyoto+Station&destination=Tokyo+Tower&waypoints=Tokyo+Station%7Cthe+square+hotel+GINZA%7CGINZA+SIX%7CRoppongi+Hills%7CDon+Quijote+Roppongi&travelmode=transit',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Kyoto+Station&destination=Tokyo+Tower&waypoints=Tokyo+Station%7Cthe+square+hotel+GINZA%7CGodaime+Hanayama+Udon+Ginza%7CGINZA+SIX%7CRoppongi+Hills%7CDon+Quijote+Roppongi&travelmode=transit',
     events:[
       {
         time:'12:30', title:'Nozomi to Tokyo',
@@ -780,9 +780,15 @@ const DAY_TEMPLATES = [
       },
       {
         time:'15:30', title:'Ginza',
-        note:'Chuo-dori, GINZA SIX and the department stores until ~19:00, then dinner in Ginza.',
+        note:'Drop the bags, then straight to Hanayama Udon (~5 min walk) for a numbered ticket from the machine at the door. If lunch tickets are done (lunch to 15:30), ask when dinner tickets start. Chuo-dori, GINZA SIX and the department stores while you wait.',
         image:'img/ginza-browsing.jpg',
         source:'https://ginza6.tokyo/hours/'
+      },
+      {
+        time:'17:30', title:'Godaime Hanayama Udon Ginza', meal:'dinner',
+        note:'Oni himokawa, ~5 cm wide Gunma udon. Weekday dinner 17:30-21:30; no reservations, numbered tickets only, called in order (weekday dinner is the shorter wait). 3-14-13 Ginza, behind Kabuki-za. Back to the shops after if time allows.',
+        map:'https://www.google.com/maps/search/?api=1&query=Godaime+Hanayama+Udon+Ginza+3-14-13+Ginza+Tokyo',
+        source:'https://www.hanayamaudon.co.jp/ginza/'
       },
       {
         time:'20:30', title:'Roppongi',
