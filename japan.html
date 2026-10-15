@@ -1489,6 +1489,8 @@ function paint() {
     crewText.textContent = showCrewLabel ? `👯 ${crewName}` : '';
     tag.textContent = ((milestone ? milestone.icon : '')
       + (hol ? hol[0] : '') + (leg && !PHONE ? leg.flag : '')) || FUN_DAYS[key] || '';  // phone: the fill already says the country
+    const meals = (itinerary?.events || data.events || []).filter(e => e.meal);
+    if (meals.length) tag.textContent = '🍽️' + tag.textContent;
 
     chiprow.innerHTML = '';
     const notes = [];
@@ -1513,6 +1515,7 @@ function paint() {
       chiprow.insertAdjacentHTML('beforeend', `<span class="chip itinerary">${itinerary.icon} ${itinerary.title}</span>`);
       notes.push(`${itinerary.title}: ${itinerary.summary}`);
     }
+    meals.forEach(e => notes.push(`${e.meal}: ${e.title}`));
     if (leg) notes.push(`in ${leg.country}`);
     if (crew.length) notes.push(`Strathinja, Aly & David: ${crewName}`);
     bandsOn(key, 'city').forEach(city => notes.push(`in ${city.label}`));
