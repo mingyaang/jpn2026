@@ -1046,23 +1046,26 @@ const DAY_TEMPLATES = [
     ],
   },
   {
-    id:'arashiyama-sagano-hozugawa', icon:'🎋', title:'Arashiyama + Sagano train + Hozugawa boat', city:'kyoto', date:'2026-12-17',
-    summary:'A quick look at the bamboo grove, the Sagano train up the gorge, and the Hozugawa boat back down; then check in at Saka Hotel, kaiseki dinner at the hotel.',
-    pois:['Arashiyama', 'Hozugawa River Boat', 'Saka Hotel'],
-    note:'Built for Thu December 17 (Sagano train is closed Wednesdays), moving to Saka Hotel Kyoto (check-in 15:00-19:30, dinner and breakfast included). Bags: Kyoto Station coin lockers on the way out, collect on the way to the hotel.',
-    map:'https://www.google.com/maps/dir/?api=1&origin=Saga-Arashiyama+Station&destination=Saka+Hotel+Kyoto&waypoints=Arashiyama+Bamboo+Grove%7CTorokko+Arashiyama+Station%7CTorokko+Kameoka+Station%7CHozugawa+Kudari+Boarding+Point%7CTogetsukyo+Bridge&travelmode=transit',
+    id:'arashiyama-sagano-hozugawa', icon:'🎋', title:'Sagano train + Arashiyama + Kiyomizu-dera sunset', city:'kyoto', date:'2026-12-17',
+    summary:'The Sagano train down the gorge from Kameoka, the bamboo grove and Arashiyama shops, then move to Saka Hotel and Kiyomizu-dera at sunset; kaiseki dinner at the hotel.',
+    pois:['Sagano Train', 'Arashiyama', 'Kiyomizu-dera'],
+    note:'Built for Thu December 17 (Sagano train is closed Wednesdays), moving from Musse to Saka Hotel Kyoto (check-in 15:00-19:30, dinner and breakfast included). Bags: leave them at the Musse front desk at check-out, collect them on the way back.',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Hotel+Musse+Kyoto+Shijo+Kawaramachi+Meitetsu&destination=Kiyomizu-dera&waypoints=Torokko+Kameoka+Station%7CTorokko+Arashiyama+Station%7CArashiyama+Bamboo+Grove%7CTogetsukyo+Bridge%7CHotel+Musse+Kyoto+Shijo+Kawaramachi+Meitetsu%7CSaka+Hotel+Kyoto&travelmode=transit',
     events:[
       {
-        time:'11:00', title:'Bamboo grove + Sagano train',
-        note:'JR from Kyoto Station to Saga-Arashiyama (~15 min). A 20-30 min look along the main bamboo path, then the Sagano Romantic Train from Torokko Arashiyama to Torokko Kameoka (~25 min); book the departure ~1 h before the boat, seats sell out. Bus to the boat pier ~15 min, ¥500. 2026 is the current train\u2019s last year.',
-        image:'img/arashiyama-bamboo-grove.jpg',
+        time:'11:00', title:'Sagano train (Kameoka → Arashiyama)',
+        note:'Check out of Musse and leave the bags at the desk. Subway Shijo to Kyoto Station (2 stops), then the JR Sagano line LOCAL to Umahori (~25 min; rapid trains skip it), then ~5 min on foot to Torokko Kameoka. 12:30 Sagano Romantic Train down the gorge to Torokko Arashiyama (~13:00). Reserve seats ahead with Torokko Kameoka as the boarding station; seats sell out. 2026 is the current train\u2019s last year.',
         source:'https://www.sagano-kanko.co.jp/en/train-info/'
       },
       {
-        time:'13:00', title:'Hozugawa boat',
-        note:'~2 h down the gorge in a poled wooden boat, ¥6,000 each. Winter departures every 90 min, 10:00-14:30 (14:30 is the backup). Dress warm. Lands near Togetsukyo Bridge, then JR back via Kyoto Station for the bags and a taxi to Saka Hotel (~20 min).',
-        image:'img/hozugawa-boat.jpg',
-        source:'https://www.japan-guide.com/e/e3966.html'
+        time:'13:00', title:'Arashiyama',
+        note:'The train drops you at the top of the bamboo grove, so walk down through it toward the river. Sights: the bamboo grove, the shops and snacks on the main street, Togetsukyo Bridge. ~15:00 Hankyu from Arashiyama to Kyoto-kawaramachi (change at Katsura, ~25 min), collect the bags at Musse (~15:45), then a taxi to Saka Hotel (~10-15 min).',
+        image:'img/arashiyama-bamboo-grove.jpg',
+        source:'https://www.sagano-kanko.co.jp/en/station/arashiyama/'
+      },
+      {
+        time:'16:00', title:'Kiyomizu-dera',
+        note:'Drop the bags at Saka Hotel, then ~5 min up the slope to the temple. Sunset ~16:45 from the main stage. Confirm the December closing time before the day.',
       },
       {
         time:'19:00', title:'Saka Hotel kaiseki dinner', meal:'dinner',
