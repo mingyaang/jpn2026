@@ -374,7 +374,7 @@
       <div class="who"><i class="dot" style="background:var(--leg-1)"></i>🇯🇵 japan</div>
       <div class="when">nov 25 → dec 24</div>
       <div class="sub">👯 crew · nov 29 → dec 12</div>
-      <div class="sub"><a href="japan">👋 yvonne · dec 12 → dec 24</a></div>
+      <div class="sub"><a href="japan">👋 y. · dec 12 → dec 24</a></div>
     </div>
     <div class="leg">
       <div class="who"><i class="dot" style="background:var(--leg-4)"></i>🇰🇷 korea</div>
@@ -544,7 +544,7 @@ const DEPART = '2026-11-25', RETURN = '2027-01-07';
 // Sub-pages: /<key> (a <key>.html symlink to this file) shows one stretch of the trip
 // with the same cards and bookings.
 const PARTS = {
-  japan: { country:'japan', start:'2026-12-12', end:'2026-12-24', title:'🇯🇵 japan with yvonne' },
+  japan: { country:'japan', start:'2026-12-12', end:'2026-12-24', title:'🇯🇵 japan with y.' },
 };
 const PART = PARTS[location.pathname.split('/').pop().replace(/\.html$/, '')];
 const SPAN_START = PART?.start || DEPART, SPAN_END = PART?.end || RETURN;
@@ -559,7 +559,7 @@ const CORP_HOLIDAYS = {
 // Not company holidays — still workdays, just noting them.
 const FUN_DAYS = { '2026-12-24': '🎁', '2026-12-31': '🥂' };
 const MILESTONES = {
-  '2026-12-12': { icon:'👋', label:'yvonne arrives (night)' },
+  '2026-12-12': { icon:'👋', label:'y. arrives (night)' },
   '2027-01-07': { icon:'✈️', label:'departing taipei' },
 };
 
@@ -571,13 +571,13 @@ const BOOKINGS = [
   {
     icon:'🏨', title:'Travelodge Osaka Shinsaibashi', label:'Travelodge Shinsaibashi',
     date:'2026-12-06', checkout:'2026-12-12', checkinTime:'from 15:00', checkoutTime:'by 10:00',
-    ref:'redacted',
+    ref:'',
     map:'https://www.google.com/maps/search/?api=1&query=Travelodge+Osaka+Shinsaibashi+2-4-10+Minamisenba+Chuo-ku+Osaka',
     info:{
       room:'Standard Double · 1 queen bed · 13 m² · booked for 1 adult (room fits 2) · Early Bird rate',
-      paid:'¥33,285 for 6 nights, due at check-in; show the card used to book',
+      
       'nightly rate':'Dec 6–7 ¥5,706 · Dec 8–9 ¥5,072 · Dec 10 ¥5,706 · Dec 11 ¥6,023',
-      cancellation:'free until 72 h before arrival (Dec 3, 18:00 Osaka time); 1-night penalty after',
+      
       address:'2-4-10 Minamisenba, Chuo-ku, Osaka 542-0081',
       phone:'+81-6-7777-9450',
     },
@@ -585,13 +585,13 @@ const BOOKINGS = [
   {
     icon:'🏨', title:'HOTEL AMANEK Osaka Namba', label:'AMANEK Namba',
     date:'2026-12-12', checkout:'2026-12-15', checkinTime:'15:00–23:00', checkoutTime:'by 11:00',
-    ref:'redacted',
+    ref:'',
     map:'https://www.google.com/maps/search/?api=1&query=HOTEL+AMANEK+Osaka+Namba+1-9-7+Sennichimae+Chuo-ku+Osaka',
     info:{
       room:'Standard Double, non-smoking · 2 adults',
       meals:'breakfast included · 6:30-10:00, last order 9:30',
-      paid:'¥37,244 total (after Genius 10% off and a ¥4,561 Booking.com credit); Booking.com charges the card automatically, ¥0 paid so far',
-      cancellation:'free until 7 days before arrival (Dec 5); after that, or no-show, the first night is charged',
+      
+      
       address:'1-9-7 Sennichimae, Chuo-ku, Osaka',
       phone:'+81-80-7589-1130',
     },
@@ -599,13 +599,13 @@ const BOOKINGS = [
   {
     icon:'🏨', title:'Hotel Musse Kyoto Shijo Kawaramachi Meitetsu', label:'Hotel Musse Kyoto',
     date:'2026-12-15', checkout:'2026-12-17', checkinTime:'15:00–00:00', checkoutTime:'by 11:00',
-    ref:'redacted',
+    ref:'',
     map:'https://www.google.com/maps/search/?api=1&query=Hotel+Musse+Kyoto+Shijo+Kawaramachi+Meitetsu',
     info:{
       room:'Moderate Double, non-smoking · 1 queen bed · 16 m² · 2 adults',
       meals:'room only',
-      paid:'CA$182.24 prepaid · Kyoto lodging tax due at the hotel',
-      cancellation:'free until Dec 12, 23:59 Kyoto time',
+      
+      
       address:'3-301-1 Narayacho, Nakagyo-ku, Kyoto 604-8033 · ホテルミュッセ 京都四条河原町名鉄',
       'getting there':'210 m from Shijo Kawaramachi Station; 510 m from Gion-Shijo Station',
       phone:'+81-75-241-3535',
@@ -614,15 +614,15 @@ const BOOKINGS = [
   {
     icon:'🏨', title:'Saka Hotel Kyoto', label:'Saka Hotel',
     date:'2026-12-17', checkout:'2026-12-18', checkinTime:'15:00–19:30', checkoutTime:'by 11:00',
-    ref:'redacted',
+    ref:'',
     image:'img/saka-hotel-kyoto-pagoda-view.jpg',
     map:'https://www.google.com/maps/search/?api=1&query=Saka+Hotel+Kyoto+4-200+Kiyomizu+Higashiyama-ku+Kyoto',
     info:{
       room:'Deluxe Twin with terrace · 41 m² · 2 adults',
       meals:'dinner and breakfast included',
       'private onsen':'one 50-min session with a Yasaka Pagoda view · asked for 23:10, 22:00 or 20:50',
-      paid:'¥60,357 by card · Kyoto lodging tax and ¥150/person onsen tax due at the hotel',
-      cancellation:'free through Dec 13 JST · 30% from Dec 14, 50% from Dec 16, 100% on Dec 17',
+      
+      
       address:'4-200 Kiyomizu, Higashiyama-ku, Kyoto · 清水小路 坂のホテル京都',
       'getting there':'bus 206 or 86 from Kyoto Station to Gojozaka (12 min), then a 5-min walk',
       phone:'+81-570-078857',
@@ -631,14 +631,14 @@ const BOOKINGS = [
   {
     icon:'🏨', title:'the square hotel GINZA', label:'the square hotel GINZA',
     date:'2026-12-18', checkout:'2026-12-21', checkinTime:'from 15:00', checkoutTime:'by 11:00',
-    ref:'redacted',
+    ref:'',
     image:'img/the-square-hotel-ginza-cafe.jpg',
     map:'https://www.google.com/maps/search/?api=1&query=the+square+hotel+GINZA+2-11-6+Ginza+Chuo-ku+Tokyo',
     info:{
       room:'Superior Double · ~15 m², queen bed · 2 adults',
       'late arrival':'after 21:00, contact the hotel or the booking may be cancelled',
-      paid:'CA$602.47 (¥66,740) incl. taxes; the hotel charges in JPY · Tokyo lodging tax due at the hotel',
-      cancellation:'free until Wed Dec 16, 23:59; non-refundable after',
+      
+      
       address:'2-11-6 Ginza, Chuo-ku, Tokyo',
       'getting there':'1 min from Ginza-itchome Exit 11 (Yurakucho line; exit open 7:00-22:00); 5 min from Higashi-ginza Exit A2 (Hibiya and Toei Asakusa lines); 8 min from JR Yurakucho Kyobashi Exit',
       facilities:'large public bath and gym on 2F; BUNDOZA cafe and bar on 1F',
@@ -648,14 +648,14 @@ const BOOKINGS = [
   {
     icon:'🏨', title:'Hotel Gracery Shinjuku', label:'Gracery Shinjuku',
     date:'2026-12-21', checkout:'2026-12-24', checkinTime:'14:00–01:00', checkoutTime:'by 11:00',
-    ref:'redacted',
+    ref:'',
     image:'img/hotel-gracery-shinjuku-godzilla.jpg',
     map:'https://www.google.com/maps/search/?api=1&query=Hotel+Gracery+Shinjuku+1-19-1+Kabukicho+Shinjuku-ku+Tokyo',
     info:{
       room:'Double Room, non-smoking · 2 adults',
       meals:'room only',
-      paid:'in full at booking',
-      cancellation:'free until Dec 18, 23:59 Tokyo time; 100% after',
+      
+      
       'front desk':'8th floor lobby · after 01:00 arrival, contact the hotel first',
       address:'1-19-1 Kabukicho, Shinjuku-ku, Tokyo (Shinjuku Toho Building, under the Godzilla Head)',
       'getting there':'5 min walk from JR Shinjuku Station East Exit; 3 min from Seibu-Shinjuku Station',
@@ -664,43 +664,43 @@ const BOOKINGS = [
   },
   {
     icon:'✈️', title:'Tokyo → Seoul', label:'NRT → ICN', date:'2026-12-24',
-    ref:'redacted',
+    ref:'',
     legs:[
       { dep:'11:10', arr:'13:50', from:'NRT Narita T1', to:'ICN Incheon T2', flight:'LJ212 · Jin Air · Boeing 737-800' },
     ],
-    tags:['2h 40m', 'economy', 'no meals', '2 adults · Ming Yang Mao, Chia Hua Lin'],
+    tags:['2h 40m', 'economy', 'no meals', '2 adults'],
   },
   {
     icon:'🏨', title:'K-Grand Hotel Myeongdong', label:'K-Grand Myeongdong',
     date:'2026-12-24', checkout:'2026-12-26', checkinTime:'after 15:00', checkoutTime:'08:00–11:00',
-    ref:'redacted',
+    ref:'',
     map:'https://www.google.com/maps/search/?api=1&query=K-Grand+Hotel+Myeongdong+36+Myeongdong+8-gil+Jung-gu+Seoul',
     info:{
       room:'1 room',
       'front desk':'08:00–23:00',
-      cancellation:'free until Dec 14 12:00 KST · then non-refundable',
+      
       address:'4F, 36 Myeongdong 8-gil, Jung-gu, Seoul 04536 · 서울 중구 명동8길 36 4F',
       phone:'+82-70-8880-3650',
     },
   },
   {
     icon:'✈️', title:'Cheongju → Shanghai', label:'CJJ → PVG', date:'2026-12-26',
-    ref:'redacted',
+    ref:'',
     legs:[
       { dep:'23:40', arr:'01:20 +1', from:'CJJ Cheongju T1', to:'PVG Pudong T2', flight:'ZE821 · Eastar Jet · Boeing 737-800' },
     ],
-    tags:['2h 40m', 'economy', 'no meals', 'lands 1:20 am Dec 27', '2 adults · Ming Yang Mao, Chia Hua Lin'],
+    tags:['2h 40m', 'economy', 'no meals', 'lands 1:20 am Dec 27', '2 adults'],
   },
   {
     icon:'✈️', title:'Shanghai → Taipei', label:'PVG → TPE', date:'2027-01-04',
-    ref:'redacted',
+    ref:'',
     legs:[
       { dep:'08:25', arr:'10:30', from:'PVG Pudong T2', to:'TPE Taoyuan T1', flight:'9C8951 · Spring Airlines' },
     ],
     tags:['2h 5m', 'economy (R4)'],
   },
   {
-    icon:'✈️', title:'Taipei → Vancouver', label:'TPE → YVR', date:'2027-01-07', ref:'redacted',
+    icon:'✈️', title:'Taipei → Vancouver', label:'TPE → YVR', date:'2027-01-07', ref:'',
     legs:[
       { dep:'17:05', arr:'20:30', from:'TPE Taoyuan T2', to:'ICN Incheon T2', flight:'OZ714 · Asiana Airlines' },
       { dep:'22:55', arr:'16:40', from:'ICN Incheon T2', to:'YVR Vancouver', flight:'KE075 · Korean Air · lands same day (date line)' },
@@ -714,7 +714,7 @@ const DAY_TEMPLATES = [
     id:'osaka-amazing-pass-day', icon:'🏯', title:'Osaka Amazing Pass: Umeda + Castle + Dotonbori + Shinsekai', city:'osaka', date:'2026-12-13',
     summary:'One-day OSAKA AMAZING PASS: Umeda views, Osaka Castle, Dotonbori at dusk with a river cruise, then Shinsekai at night.',
     pois:['AMANEK', 'Umeda', 'Osaka Castle', 'Dotonbori', 'Shinsekai'],
-    note:'Built for Sun December 13, the first full day with Yvonne. OSAKA AMAZING PASS 1day: ¥3,500 each, digital QR bought on Surutto QRtto (account needed). Valid for the calendar day (not 24 h): Osaka Metro, city buses and private lines within Osaka, plus one entry each at ~40 attractions. Today\u2019s covered stops are worth ~¥6,000+ each before trains.',
+    note:'Built for Sun December 13, the first full day with Y.. OSAKA AMAZING PASS 1day: ¥3,500 each, digital QR bought on Surutto QRtto (account needed). Valid for the calendar day (not 24 h): Osaka Metro, city buses and private lines within Osaka, plus one entry each at ~40 attractions. Today\u2019s covered stops are worth ~¥6,000+ each before trains.',
     map:'https://www.google.com/maps/dir/?api=1&origin=Umeda+Sky+Building&destination=Tsutenkaku&waypoints=HEP+FIVE%7COsaka+Castle%7CGlico+Sign+Dotonbori&travelmode=transit',
     events:[
       {
@@ -1545,7 +1545,7 @@ function paint() {
     }
     meals.forEach(e => notes.push(`${e.meal}: ${e.title}`));
     if (leg) notes.push(`in ${leg.country}`);
-    if (crew.length) notes.push(`Strathinja, Aly & David: ${crewName}`);
+    if (crew.length) notes.push(`Friends: ${crewName}`);
     bandsOn(key, 'city').forEach(city => notes.push(`in ${city.label}`));
     box.setAttribute('aria-label', `${pretty(key)} — ${STATE_WORDS[cls]}${notes.length ? ', ' + notes.join(', ') : ''}`);
     box.title = notes.join(' · ');
