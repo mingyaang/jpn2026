@@ -787,7 +787,7 @@ const BOOKINGS = [
 const DAY_TEMPLATES = [
   {
     id:'osaka-amazing-pass-day', short:'Osaka pass', icon:'🏯', title:'Osaka Amazing Pass: Umeda + Castle + Dotonbori + Shinsekai', city:'osaka', date:'2026-12-13',
-    summary:'One-day OSAKA AMAZING PASS: Umeda views, Osaka Castle, Dotonbori at dusk with a river cruise, then Shinsekai at night.',
+    summary:'One-day OSAKA AMAZING PASS: Umeda views, Osaka Castle, an evening Dotonbori river cruise, then kushikatsu dinner and Tsutenkaku in Shinsekai.',
     pois:['AMANEK', 'Umeda', 'Osaka Castle', 'Dotonbori', 'Shinsekai'],
     note:'Built for Sun December 13, the first full day with Y.. OSAKA AMAZING PASS 1day: ¥3,500 each, digital QR bought on Surutto QRtto (account needed). Valid for the calendar day (not 24 h): Osaka Metro, city buses and private lines within Osaka, plus one entry each at ~40 attractions. Today\u2019s covered stops are worth ~¥8,000 each before trains. Tap \u201cStart Using\u201d after 3:00 am on the day (activating 0:00-2:59 counts as the previous day); one QR per person, so transfer one pass to Y.. Use within 3 months of purchase.',
     map:'https://www.google.com/maps/dir/?api=1&origin=Umeda+Sky+Building&destination=Tsutenkaku&waypoints=HEP+FIVE%7COsaka+Castle%7CGlico+Sign+Dotonbori&travelmode=transit',
@@ -805,19 +805,19 @@ const DAY_TEMPLATES = [
       },
       {
         time:'14:30', title:'Osaka Castle',
-        note:'All on the pass. Nishinomaru Garden first, ~14:45-15:30 (last entry 16:00, best view of the tower). Then the main tower + Stone Wall Museum ~15:45-17:00 (last entry 17:30; weekend queue possible). Sunset ~16:50 from the tower or grounds. Leave by ~17:00.',
+        note:'All on the pass. Nishinomaru Garden first, ~14:45-15:30 (last entry 16:00, best view of the tower). Then the main tower + Stone Wall Museum ~15:45-17:00 (last entry 17:30; weekend queue possible). Sunset ~16:50 from the tower or grounds. Leave by ~17:00; Midosuji line to Namba, ~20 min.',
         image:'img/osaka-castle.jpg',
         source:'https://www.osakacastle.net/english/'
       },
       {
-        time:'17:30', title:'Dotonbori + Namba',
-        note:'Glico sign and street food as it gets dark. Tombori River Cruise (covered by the pass, every 30 min, last 21:00). Pick an ~18:30 slot at the counter that morning and board at that time (counter opens ~1 h before the first 11:00 boat; evening slots sell out).',
+        time:'18:00', title:'Tombori River Cruise',
+        note:'Cruise only today; the full Dotonbori walk is on Dec 12 and Dec 14. Ask for the 18:00 slot at the counter that morning (evening slots sell out); board at that time, ~20 min, passing under the Glico sign. Arrive ~17:30 for a quick look at Glico first.',
         image:'img/dotonbori-night.jpg',
         source:'https://osaka-amazing-pass.com/en/service_free.html'
       },
       {
-        time:'20:00', title:'Shinsekai',
-        note:'Retro neon streets around Tsutenkaku tower, ~10 min from Namba. Tsutenkaku observation deck is on the pass (last entry 21:15; book a time slot at the tower).',
+        time:'18:30', title:'Shinsekai', meal:'dinner',
+        note:'Midosuji line Namba to Dobutsuen-mae, 2 stops, ~15-20 min. Kushikatsu dinner in the retro neon streets, then Tsutenkaku: observation deck (last entry 21:15) and Tower Slider (last entry 20:00), both on the pass; book time slots at the tower on arrival.',
         image:'img/shinsekai-tsutenkaku.jpg',
         source:'https://osaka-amazing-pass.com/en/service_free.html'
       },
