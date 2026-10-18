@@ -7,6 +7,7 @@
 <style>
   :root{
     color-scheme:dark;
+    --font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",system-ui,"Hiragino Sans",sans-serif;
     /* surfaces + ink */
     --plane:#0a0a0c;
     --surface:#16161b;
@@ -34,7 +35,8 @@
       radial-gradient(60rem 35rem at 90% 0%, #3a1e14 0%, transparent 55%),
       var(--plane);
     color:var(--ink);
-    font:400 16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;
+    font:400 16px/1.45 var(--font);
+    text-rendering:optimizeLegibility;
     -webkit-font-smoothing:antialiased;
     padding:clamp(16px,3vw,40px);
     min-height:100vh;
@@ -53,7 +55,7 @@
     color:var(--muted);font-weight:700;margin-bottom:-2px
   }
   .stat{background:var(--surface);border:1px solid var(--ring);border-radius:16px;padding:12px 16px;min-width:112px}
-  .stat b{display:block;font-size:clamp(24px,3.2vw,32px);font-weight:800;letter-spacing:-.03em;line-height:1.15}
+  .stat b{font-variant-numeric:tabular-nums;display:block;font-size:clamp(24px,3.2vw,32px);font-weight:800;letter-spacing:-.03em;line-height:1.15}
   .stat span{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:700}
   .toggle{
     background:var(--surface);border:1px solid var(--ring);border-radius:16px;padding:12px 16px;
@@ -63,7 +65,7 @@
   .toggle span{font-size:12px;color:var(--ink-2);font-weight:600}
 
   /* ---- route legs ---- */
-  .leg{background:var(--surface);border:1px solid var(--ring);border-radius:16px;padding:10px 14px;min-width:212px}
+  .leg{flex:1 1 0;background:var(--surface);border:1px solid var(--ring);border-radius:16px;padding:10px 14px;min-width:212px}
   .leg .who{display:flex;align-items:center;gap:7px;font-weight:800;font-size:14px;letter-spacing:-.01em}
   .leg .dot{width:9px;height:9px;border-radius:3px;flex:none}
   .leg .when{display:flex;align-items:center;gap:5px;margin-top:5px;color:var(--muted);font-size:12px}
@@ -72,16 +74,29 @@
 
   /* ---- route ribbon ---- */
   .ribbon{display:flex;gap:4px;margin:14px 0 0;height:40px}
+  .ribbon .rb-days{opacity:.72;font-weight:700}
+  .ribbon .rb-name+.rb-days::before{content:'· '}
   .ribbon div{
     display:flex;align-items:center;justify-content:center;gap:6px;border-radius:10px;
-    font:800 12px system-ui,sans-serif;color:#0b0b0b;letter-spacing:-.01em;
+    font:800 12px var(--font);color:#0b0b0b;letter-spacing:-.01em;
     overflow:hidden;white-space:nowrap;padding:0 6px;
     min-width:104px   /* so a short leg still fits its own label */
   }
 
   /* ---- legend ---- */
-  .legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin:18px 0 0;padding:0;list-style:none}
-  .legend li{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-2)}
+  .key{margin:16px 0 0;padding:10px 14px 12px;border:1px solid var(--ring);border-radius:14px;background:rgba(22,22,27,.6)}
+  .key summary{
+    display:flex;align-items:center;gap:6px;width:max-content;cursor:pointer;list-style:none;
+    font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:700
+  }
+  .key summary::-webkit-details-marker{display:none}
+  .key summary::after{content:'';width:6px;height:6px;margin-left:2px;border:solid currentColor;border-width:0 1.5px 1.5px 0;transform:translateY(-2px) rotate(45deg);transition:transform .18s ease}
+  .key:not([open]) summary::after{transform:rotate(-45deg)}
+  .key summary:hover{color:var(--ink-2)}
+  .key summary:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:4px}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin:10px 0 0;padding:0;list-style:none}
+  .legend+.legend{margin-top:8px;padding-top:8px;border-top:1px solid var(--ring)}
+  .legend li{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink-2)}
   .sw{width:15px;height:15px;border-radius:5px;flex:none;border:1px solid var(--ring)}
   /* neutral base — stripes mean "holiday" on whatever country colour the day already is */
   .sw.hol{
@@ -112,7 +127,7 @@
   .day{
     position:relative;height:100%;border-radius:14px;padding:7px 9px 8px;background:var(--surface);
     border:1px solid var(--ring);display:flex;flex-direction:column;gap:1px;overflow:hidden;
-    transition:background .18s ease,color .18s ease;
+    transition:background .18s ease,color .18s ease,transform .15s ease,box-shadow .15s ease,filter .15s ease;
   }
   /* crew stretch: one continuous bar spanning the days, like a multi-day event.
      Neutral ink so it reads as an annotation and costs nothing in the palette. */
@@ -121,7 +136,7 @@
   .band{
     display:flex;align-items:center;height:21px;padding:0 9px;border-radius:3px;
     background:rgba(255,255,255,.16);box-shadow:inset 0 0 0 1px rgba(255,255,255,.34);
-    font:700 11px system-ui,sans-serif;color:var(--ink);letter-spacing:-.01em;
+    font:700 11px var(--font);color:var(--ink);letter-spacing:-.01em;
     white-space:nowrap;overflow:hidden;text-overflow:ellipsis
   }
   /* round only the true ends, so a week wrap reads as "continues" */
@@ -133,12 +148,12 @@
     background:var(--citybg,rgba(255,255,255,.16));color:#0b0b0b;box-shadow:none;
     font-weight:800;height:19px
   }
-  .num{display:flex;align-items:baseline;gap:6px;font-weight:800;font-size:19px;letter-spacing:-.02em}
+  .num{font-variant-numeric:tabular-nums;display:flex;align-items:baseline;gap:6px;font-weight:800;font-size:19px;letter-spacing:-.02em}
   .mo{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
   .tag{margin-left:auto;font-size:13px;line-height:1;letter-spacing:-.5px}
   .chiprow{display:flex;flex-wrap:wrap;gap:3px;min-height:17px;margin:1px 0 1px}
   .chip{
-    font:800 9.5px/1.5 system-ui,sans-serif;letter-spacing:.05em;text-transform:uppercase;
+    font:800 9.5px/1.5 var(--font);letter-spacing:.05em;text-transform:uppercase;
     padding:1px 7px;border-radius:999px;border:1px solid transparent;background:none;
     color:inherit;cursor:default;font-family:inherit;
   }
@@ -167,7 +182,7 @@
   .crew-label{
     display:none;position:absolute;right:8px;bottom:7px;max-width:78%;overflow:hidden;
     text-overflow:ellipsis;white-space:nowrap;color:rgba(11,11,11,.82);
-    font:800 9px/1.35 system-ui,sans-serif;letter-spacing:.02em;text-transform:uppercase
+    font:800 9px/1.35 var(--font);letter-spacing:.02em;text-transform:uppercase
   }
   .day.crew-location .crew-label{display:block}
   /* an away day with no leg assigned — hatched so a gap in the route is obvious */
@@ -197,7 +212,7 @@
   .next-label{
     display:none;margin-top:auto;padding-top:4px;align-self:flex-end;max-width:100%;overflow:hidden;
     text-overflow:ellipsis;white-space:nowrap;color:rgba(11,11,11,.85);
-    font:800 10px/1.3 system-ui,sans-serif;letter-spacing:.02em
+    font:800 10px/1.3 var(--font);letter-spacing:.02em
   }
   .day.commute-day .next-label{display:block}
   /* phone-only short area word; desktop shows the full itinerary chip instead */
@@ -206,21 +221,28 @@
   .poi-tags,.itinerary-card-pois{display:flex;flex-wrap:wrap;gap:3px;margin-top:4px}
   .poi-tag{
     max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
-    padding:1px 6px;border:1px solid currentColor;border-radius:999px;
-    background:rgba(11,11,11,.1);
-    color:rgba(11,11,11,.92);font:800 10px/1.45 system-ui,sans-serif;letter-spacing:.02em
+    padding:1px 7px;border:0;border-radius:999px;
+    background:rgba(11,11,11,.13);
+    color:rgba(11,11,11,.86);font:650 10px/1.5 var(--font);letter-spacing:.01em
   }
   .day.away .poi-tag{color:rgba(11,11,11,.92)}
   .itinerary-card-pois{margin-top:8px}
-  .itinerary-card-pois .poi-tag{background:rgba(255,255,255,.06);color:var(--ink);font-size:11px}
+  .itinerary-card-pois .poi-tag{background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px var(--ring);color:var(--ink-2);font-size:11px}
 
   .day{cursor:pointer}
-  .day:hover{filter:brightness(1.08)}
+  @media (hover:hover){
+    .day:hover{filter:brightness(1.06);transform:translateY(-1px)}
+    .day:not(.travel):not(.holiday):not(.today):hover{box-shadow:0 6px 18px rgba(0,0,0,.35)}
+    .itinerary-card:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(0,0,0,.35)}
+  }
+  .day:active{transform:scale(.985)}
   .day:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
   .day.drop-target{outline:3px solid var(--focus);outline-offset:2px;filter:brightness(1.12)}
   .chip.itinerary{
-    max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
-    background:#0b0b0b;color:#fff;text-transform:none;letter-spacing:0
+    max-width:100%;overflow:hidden;white-space:normal;
+    display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;
+    padding:2px 8px;border-radius:7px;line-height:1.3;
+    background:rgba(11,11,11,.86);color:#fff;text-transform:none;letter-spacing:0
   }
 
   /* ---- available day cards ---- */
@@ -235,7 +257,7 @@
   .day-deck{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:10px}
   .itinerary-card{
     padding:14px;border:1px solid var(--ring);border-radius:15px;background:#202027;
-    cursor:grab;user-select:none
+    cursor:grab;user-select:none;transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease
   }
   .itinerary-card:hover{border-color:rgba(255,255,255,.28)}
   .itinerary-card:focus-visible,.itinerary-card.selected{outline:2px solid var(--focus);outline-offset:2px}
@@ -276,10 +298,13 @@
   }
   dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(5px)}
   .day-detail{max-height:calc(100vh - 24px);max-height:calc(100dvh - 24px);overflow-y:auto;overscroll-behavior:contain;padding:0 18px 18px}
+  .day-detail{scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.16) transparent;scrollbar-gutter:stable}
   /* the bar stays put while the itinerary scrolls under it: date, prev/next, close */
   .detail-bar{
     position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:6px;
-    margin:0 -18px;padding:10px 12px 10px 18px;background:var(--surface);
+    margin:0 -18px;padding:10px 12px 10px 18px;
+    background:color-mix(in srgb,var(--surface) 86%,transparent);
+    -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
     border-bottom:1px solid var(--ring)
   }
   .detail-kicker{
@@ -291,7 +316,7 @@
   .detail-context{margin:6px 0 0;color:var(--ink-2);font-size:13px}
   .iconbtn{
     width:44px;height:44px;flex:none;border:1px solid var(--ring);border-radius:50%;
-    background:transparent;color:var(--ink);font:600 17px system-ui,sans-serif;cursor:pointer;
+    background:transparent;color:var(--ink);font:600 17px var(--font);cursor:pointer;
     display:grid;place-items:center
   }
   .iconbtn:hover{border-color:rgba(255,255,255,.34)}
@@ -302,10 +327,10 @@
   .postcard-summary{margin-top:12px;color:var(--ink-2);font-size:14px;line-height:1.5}
   .event-head{margin:16px 0 8px}
   .event-head h3{margin:0;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-  .postcard-events{display:grid;gap:8px}
+  .postcard-events{display:grid;gap:10px}
   .postcard-event{
-    display:grid;grid-template-columns:48px minmax(0,1fr) 96px;gap:10px;align-items:start;
-    padding:9px;border:1px solid var(--ring);border-radius:13px;background:#202027
+    display:grid;grid-template-columns:52px minmax(0,1fr) 96px;gap:12px;align-items:start;
+    padding:12px 12px 12px 10px;border:1px solid var(--ring);border-radius:14px;background:#1d1d23
   }
   .postcard-time{padding-top:1px;font-size:13px;font-weight:800;color:var(--focus);font-variant-numeric:tabular-nums}
   /* time-of-day tint: morning < 12:30 <= afternoon < 18:00 <= evening */
@@ -314,26 +339,43 @@
   .postcard-event.tod-evening{--tod:#8f84f0}
   .postcard-event[class*=tod-]{
     border-left:3px solid var(--tod);
-    background:linear-gradient(90deg,color-mix(in srgb,var(--tod) 18%,#202027),#202027 70%)
+    background:linear-gradient(90deg,color-mix(in srgb,var(--tod) 11%,#1d1d23),#1d1d23 55%)
   }
   .postcard-event[class*=tod-] .postcard-time{color:var(--tod)}
   .postcard-period{display:block;margin-top:2px;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
-  /* meals: dashed outline so they read as a slot to fill, not a fixed stop */
-  .postcard-event.postcard-meal{border-style:dashed;border-left-style:solid}
+  /* reserved/fixed meals (meal:) get the badge + calendar icon; unreserved ideas (idea:) are a
+     dashed slot to fill with a plain muted kicker, no icon */
+  .postcard-event.postcard-idea{border-style:dashed;border-left-style:solid;background:#1d1d23}
+  .postcard-idea-kicker{display:block;margin-bottom:3px;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:lowercase}
   .postcard-meal-badge{display:inline-block;margin-bottom:5px;padding:2px 7px;border-radius:999px;background:var(--tod,var(--ink-2));color:#16161a;font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
   .postcard-tip{grid-template-columns:32px minmax(0,1fr)}
   .postcard-marker{font-size:18px;text-align:center}
-  .postcard-copy h3{font-size:15px;line-height:1.25}
-  .postcard-copy p{margin-top:4px;color:var(--ink-2);font-size:13px;line-height:1.5}
+  .postcard-copy h3{font-size:15px;font-weight:700;line-height:1.3;letter-spacing:-.01em}
+  .postcard-copy p{margin-top:5px;color:var(--ink-2);font-size:13px;line-height:1.55}
+  /* key facts: short label column, value column; deadlines (leave / be at / book) in the accent colour */
+  .facts{display:grid;grid-template-columns:76px minmax(0,1fr);gap:4px 10px;margin:8px 0 0;font-size:12.5px;line-height:1.45}
+  .facts dt{padding-top:2px;color:var(--muted);font-size:9.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+  .facts dt.urgent{color:var(--tod,var(--focus))}
+  .facts dd{margin:0;color:var(--ink-2)}
+  .facts-brief{grid-template-columns:84px minmax(0,1fr);gap:6px 12px;margin:0;font-size:13.5px;padding:12px 14px;border:1px solid var(--ring);border-radius:12px;background:#1a1a20}
+  .facts-brief dt{padding-top:3px}
   .postcard-optional{display:inline-block;margin-bottom:5px;padding:2px 6px;border:1px solid var(--ring);border-radius:999px;color:var(--muted);font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-  .postcard-source,.postcard-map{display:inline-flex;align-items:center;min-height:44px;color:var(--focus);font-size:13px;font-weight:700;text-underline-offset:3px}
+  .postcard-source,.postcard-map{display:inline-flex;align-items:center;min-height:44px;color:var(--focus);font-size:13px;font-weight:650;text-decoration:none;text-underline-offset:3px}
+  .postcard-source:hover,.postcard-map:hover{text-decoration:underline}
+  /* the day-level map link reads as a button, not a stray underline */
+  a.postcard-map[id]{
+    min-height:38px;margin-top:14px;padding:0 16px;border-radius:999px;
+    border:1px solid color-mix(in srgb,var(--focus) 45%,transparent);
+    background:color-mix(in srgb,var(--focus) 10%,transparent)
+  }
+  a.postcard-map[id]:hover{text-decoration:none;background:color-mix(in srgb,var(--focus) 18%,transparent)}
   .postcard-links{display:flex;flex-wrap:wrap;gap:0 18px;margin-bottom:-8px}
   .postcard-image-link{display:block}
   .postcard-image{display:block;width:100%;height:96px;object-fit:cover;border-radius:9px;background:var(--surface)}
   .event-empty{padding:22px;border:1px dashed var(--ring);border-radius:14px;color:var(--muted);font-size:13px;text-align:center}
   .clear-day{
     margin-top:18px;border:1px solid var(--ring);border-radius:999px;background:transparent;
-    color:var(--muted);padding:7px 12px;font:700 11px system-ui,sans-serif;cursor:pointer
+    color:var(--muted);padding:7px 12px;font:700 11px var(--font);cursor:pointer
   }
   .clear-day:hover{border-color:var(--travel);color:var(--travel)}
 
@@ -341,13 +383,13 @@
   .today-btn{
     position:fixed;z-index:5;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));
     min-height:44px;padding:0 18px;border:0;border-radius:999px;background:var(--alert);color:#0b0b0b;
-    font:800 14px system-ui,sans-serif;box-shadow:0 8px 28px rgba(0,0,0,.55);cursor:pointer
+    font:800 14px var(--font);box-shadow:0 8px 28px rgba(0,0,0,.55);cursor:pointer
   }
   .today-btn[hidden]{display:none}
-  footer{margin-top:24px;color:var(--muted);font-size:12.5px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  footer{margin-top:28px;padding-top:16px;border-top:1px solid var(--ring);color:var(--muted);font-size:13px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between}
   button.clear{
     background:transparent;border:1px solid var(--ring);color:var(--ink-2);
-    border-radius:999px;padding:6px 14px;font:600 12px system-ui,sans-serif;cursor:pointer
+    border-radius:999px;padding:6px 14px;font:600 12px var(--font);cursor:pointer
   }
   button.clear:hover{border-color:var(--travel);color:var(--travel)}
   @media (max-width:640px){
@@ -359,6 +401,8 @@
     .day-detail{padding:0 12px 14px}
     .detail-bar{margin:0 -12px;padding:8px 8px 8px 12px;gap:4px}
     .postcard-event{grid-template-columns:52px 1fr;gap:10px;padding:10px}
+    .facts{grid-template-columns:60px minmax(0,1fr);gap:4px 8px} .facts dt{white-space:normal}
+    .facts-brief{grid-template-columns:66px minmax(0,1fr);padding:10px 12px}
     .postcard-tip{grid-template-columns:30px 1fr}
     .postcard-image{grid-column:1/-1;height:120px}
     .booking-info{grid-template-columns:1fr;gap:2px}
@@ -371,8 +415,12 @@
     .toggle{flex:1 1 100%;padding:9px 12px}
     .leg{flex:1 1 calc(50% - 4px);min-width:0;padding:8px 10px}
     .ribbon{height:32px;gap:3px}
-    .ribbon div{min-width:60px;font-size:10px;padding:0 4px;justify-content:flex-start;text-overflow:ellipsis}
-    .legend{gap:6px 12px;margin-top:12px}
+    .ribbon div{min-width:52px;font-size:11px;padding:0 6px;gap:4px;justify-content:center}
+    .ribbon .rb-name{display:none}
+    .ribbon .rb-days::before{content:none!important}
+    .ribbon .rb-days{font-variant-numeric:tabular-nums}
+    .key{margin-top:12px;padding:9px 12px}
+    .legend{gap:6px 12px}
     .legend li{font-size:12px}
     /* swipe through day cards instead of a long stack above the calendar */
     .day-bank{padding:12px}
@@ -395,7 +443,7 @@
     .crew-label{right:4px;bottom:4px;max-width:calc(100% - 8px);font-size:7.5px;letter-spacing:0}
     /* their icon is already in .tag and the name is in the day popup */
     .chip.hol,.chip.crew,.chip.itinerary{display:none}
-    .area{display:block;margin-top:2px;font:800 9px/1.15 system-ui,sans-serif;letter-spacing:-.04em;overflow:hidden;text-overflow:ellipsis}
+    .area{display:block;margin-top:2px;font:800 9px/1.15 var(--font);letter-spacing:-.04em;overflow:hidden;text-overflow:ellipsis}
     .area i{display:block;font-style:normal;font-size:15px;line-height:1.1;margin-bottom:1px}
     .next-label{font-size:8px;letter-spacing:-.03em;white-space:normal;text-align:right}
     .day.crew-location .next-label{display:none}
@@ -443,6 +491,8 @@
   </div>
   <div class="ribbon" id="ribbon"></div>
 
+  <details class="key" id="key" open>
+  <summary>key</summary>
   <ul class="legend">
     <li><i class="sw" style="background:var(--leg-1)"></i>🇯🇵 japan</li>
     <li><i class="sw" style="background:var(--leg-4)"></i>🇰🇷 korea</li>
@@ -457,6 +507,7 @@
     <li><i class="sw crew"></i>👯 crew city · lower half</li>
     <li><i class="swchip wfh">💻 wfh</i>working remote</li>
   </ul>
+  </details>
 
   <section class="day-bank" aria-labelledby="day-bank-title">
     <header class="day-bank-head">
@@ -567,7 +618,7 @@
       <h2 id="detail-date"></h2>
       <p class="detail-context" id="detail-context"></p>
     </header>
-    <p class="postcard-summary" id="detail-summary"></p>
+    <div class="postcard-summary" id="detail-summary"></div>
     <a class="postcard-map" id="detail-map" target="_blank" rel="noopener noreferrer" hidden>Open in Google Maps ↗</a>
     <div class="event-head">
       <h3 id="detail-section-title">day outline</h3>
@@ -787,39 +838,81 @@ const BOOKINGS = [
 const DAY_TEMPLATES = [
   {
     id:'osaka-amazing-pass-day', short:'Osaka pass', icon:'🏯', title:'Osaka Amazing Pass: Umeda + Castle + Dotonbori + Shinsekai', city:'osaka', date:'2026-12-13',
-    summary:'One-day OSAKA AMAZING PASS: Umeda views, Osaka Castle, an evening Dotonbori river cruise, then kushikatsu dinner and Tsutenkaku in Shinsekai.',
+    summary:'One-day OSAKA AMAZING PASS: Umeda views, Osaka Castle, an evening Dotonbori river cruise, then Tsutenkaku and a kushikatsu + monja dinner in Shinsekai.',
     pois:['AMANEK', 'Umeda', 'Osaka Castle', 'Dotonbori', 'Shinsekai'],
-    note:'Built for Sun December 13, the first full day with Y.. OSAKA AMAZING PASS 1day: ¥3,500 each, digital QR bought on Surutto QRtto (account needed). Valid for the calendar day (not 24 h): Osaka Metro, city buses and private lines within Osaka, plus one entry each at ~40 attractions. Today\u2019s covered stops are worth ~¥8,000 each before trains. Tap \u201cStart Using\u201d after 3:00 am on the day (activating 0:00-2:59 counts as the previous day); one QR per person, so transfer one pass to Y.. Use within 3 months of purchase.',
+    brief:[
+      ['pass', 'OSAKA AMAZING PASS 1day, ¥3,500 each. Covers Osaka Metro, city buses, private lines within Osaka and one entry at ~40 attractions. Today’s stops are worth ~¥8,000 each.'],
+      ['buy', 'Digital QR on Surutto QRtto (account needed). One QR per person: buy both and transfer one to Y.. Use within 3 months of purchase.'],
+      ['activate', 'Tap “Start Using” after 3:00 am on the day; 0:00-2:59 counts as the previous day. Valid for the calendar day, not 24 h.'],
+    ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Umeda+Sky+Building&destination=Tsutenkaku&waypoints=HEP+FIVE%7COsaka+Castle%7CGlico+Sign+Dotonbori&travelmode=transit',
     events:[
       {
         time:'09:00', title:'AMANEK breakfast', meal:'breakfast',
-        note:'Osaka-style breakfast buffet (takoyaki, nikusui) included with the stay; 6:30-10:00, last order 9:30. Then ~5 min walk to the Tombori counter.',
+        note:'Osaka-style buffet (takoyaki, nikusui), included with the stay.',
+        facts:[
+          ['hours', '6:30-10:00, last order 9:30.'],
+          ['next', '~5 min walk to the Tombori River Cruise counter.'],
+        ],
         source:'https://en.amanekhotels.jp/osaka-namba/meal/'
       },
       {
         time:'11:00', title:'Umeda',
-        note:'First, ~10:30: stop at the Tombori River Cruise counter in Dotonbori and show the pass to get a timed boarding ticket for an evening cruise (the pass stays valid all day), then Midosuji line to Umeda, ~10 min. Umeda Sky Building Floating Garden observatory (pass entry only until 15:00, so go first), then the red HEP FIVE Ferris wheel (from 11:00). Lunch in Umeda ~12:30-13:30, then ~30 min to the castle (Tanimachi line to Tanimachi 4-chome, then a 15-20 min walk up).',
+        note:'Umeda Sky Building’s Floating Garden observatory, then the red HEP FIVE Ferris wheel.',
+        facts:[
+          ['first', '~10:30 at the Tombori counter in Dotonbori: show the pass and get the 18:00 cruise slot. Evening slots sell out.'],
+          ['go', 'Midosuji line to Umeda, ~10 min.'],
+          ['hours', 'Sky Building is on the pass only until 15:00, so go there first. HEP FIVE from 11:00.'],
+        ],
         image:'img/umeda-sky-building.jpg',
         source:'https://osaka-amazing-pass.com/en/service_free.html'
       },
       {
+        time:'12:30', title:'Udon', idea:'lunch',
+        note:'Anywhere in Umeda, ~12:30-13:30.',
+        facts:[
+          ['to castle', '~30 min: Tanimachi line to Tanimachi 4-chome, then a 15-20 min walk up.'],
+        ],
+      },
+      {
         time:'14:30', title:'Osaka Castle',
-        note:'All on the pass. Nishinomaru Garden first, ~14:45-15:30 (last entry 16:00, best view of the tower). Then the main tower + Stone Wall Museum ~15:45-17:00 (last entry 17:30; weekend queue possible). Sunset ~16:50 from the tower or grounds. Leave by ~17:00; Midosuji line to Namba, ~20 min.',
+        note:'Everything here is on the pass.',
+        facts:[
+          ['garden', 'Nishinomaru Garden first, ~14:45-15:30 (last entry 16:00). Best view of the tower.'],
+          ['tower', 'Main tower + Stone Wall Museum, ~15:45-17:00 (last entry 17:30). Expect a weekend queue.'],
+          ['sunset', '~16:50, from the tower or the grounds.'],
+          ['leave', 'By ~17:00. Midosuji line to Namba, ~20 min.'],
+        ],
         image:'img/osaka-castle.jpg',
         source:'https://www.osakacastle.net/english/'
       },
       {
         time:'18:00', title:'Tombori River Cruise',
-        note:'Cruise only today; the full Dotonbori walk is on Dec 12 and Dec 14. Ask for the 18:00 slot at the counter that morning (evening slots sell out); board at that time, ~20 min, passing under the Glico sign. Arrive ~17:30 for a quick look at Glico first.',
+        note:'~20 min, passing under the Glico sign. Cruise only today; the full Dotonbori walk is on Dec 12 and Dec 14.',
+        facts:[
+          ['arrive', '~17:30 for a quick look at Glico.'],
+          ['board', 'At the 18:00 slot picked up that morning.'],
+        ],
         image:'img/dotonbori-night.jpg',
         source:'https://osaka-amazing-pass.com/en/service_free.html'
       },
       {
-        time:'19:00', title:'Shinsekai', meal:'dinner',
-        note:'Cruise ends ~18:20; walk ~10 min to Namba Station, Midosuji line to Dobutsuen-mae (2 stops), then ~5 min on foot, so ~30-40 min door to door. Kushikatsu dinner in the retro neon streets, then Tsutenkaku: observation deck (last entry 21:15) and Tower Slider (last entry 20:00), both on the pass; book time slots at the tower on arrival.',
+        time:'19:00', title:'Shinsekai + Tsutenkaku',
+        note:'Retro neon streets around Tsutenkaku tower. Tower first, so the slider’s 20:00 last entry isn’t lost to dinner.',
+        facts:[
+          ['go', 'Cruise ends ~18:20. Walk ~10 min to Namba Station, Midosuji line 2 stops to Dobutsuen-mae, ~5 min on foot. ~30-40 min in all.'],
+          ['tower', 'Tower Slider (last entry 20:00), then the observation deck (last entry 21:15). Both on the pass; book time slots at the tower on arrival.'],
+        ],
         image:'img/shinsekai-tsutenkaku.jpg',
         source:'https://osaka-amazing-pass.com/en/service_free.html'
+      },
+      {
+        time:'20:00', title:'Kushikatsu + monjayaki', idea:'dinner',
+        note:'Anywhere in Shinsekai. Suggestion: Shodai Ebisu Bekkan, ~5 min from Tsutenkaku, serving kushikatsu, Osaka-style monja and okonomiyaki.',
+        facts:[
+          ['hours', '11:30-21:30, last order 21:00, open daily.'],
+        ],
+        map:'https://www.google.com/maps/place/Shodai+Ebisu+Bekkan/@34.6511102,135.506836,17z/data=!4m6!3m5!1s0x6000dd0022a1e013:0xeea22ad1b6bf7c17!8m2!3d34.6511102!4d135.506836!16s%2Fg%2F11w2clvtph',
       },
     ],
   },
@@ -827,27 +920,48 @@ const DAY_TEMPLATES = [
     id:'amanohashidate-ine-tour', short:'Ine trip', icon:'🌊', title:'Amanohashidate + Ine Funaya tour', city:'osaka', date:'2026-12-14',
     summary:'Klook bus day trip from Osaka: the Ine boathouses and a bay cruise, then Amanohashidate by cable car. Dotonbori and dinner after, then Round1.',
     pois:['AMANEK', 'Ine + Amanohashidate', 'Dotonbori', 'Round1'],
-    note:'Built for Mon December 14. Not booked yet. Klook package: "Departing from Osaka (includes Amanohashidate Cable Car and Ine Bay Boat Tour tickets)", 30% off, from CAD 79.39 per person. Kintetsu Nippombashi is one stop or ~10 min walk from Namba. No refund if late. Meals not included. Chinese / English guide; the tour LINE group link arrives by email ~18:00 the day before. Free cancellation up to 24 h before.',
+    brief:[
+      ['book', 'Not booked yet. Klook option “Departing from Osaka (includes Amanohashidate Cable Car and Ine Bay Boat Tour tickets)”, 30% off, from CAD 79.39 each. Free cancellation up to 24 h before.'],
+      ['meet', 'Kintetsu Nippombashi at 07:45; no refund if late. One stop or ~10 min walk from Namba.'],
+      ['tour', 'Chinese / English guide. The tour LINE group link arrives by email ~18:00 the day before. Meals not included.'],
+    ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Kintetsu+Nippombashi+Station&destination=Kintetsu+Nippombashi+Station&waypoints=Ine+Funaya+Observatory%7CINE+CAFE%7CAmanohashidate+View+Land%7CChion-ji+Temple+Miyazu%7CKaisen-kyo+Bridge&travelmode=driving',
     events:[
       {
         time:'07:00', title:'AMANEK breakfast', meal:'breakfast',
-        note:'Included with the stay; opens 6:30. Quick one: the hotel is ~3 min from Kintetsu Nippombashi, be at the bus by 07:45.',
+        note:'Included with the stay; opens 6:30. Keep it quick.',
+        facts:[
+          ['be at', 'The bus by 07:45. Kintetsu Nippombashi is ~3 min from the hotel.'],
+        ],
         source:'https://en.amanekhotels.jp/osaka-namba/meal/'
       },
       {
         time:'08:00', title:'Amanohashidate + Ine Funaya tour',
-        note:'Bus from Kintetsu Nippombashi (be there 07:45). Ine Funaya ~1.5 h: the observatory over Ine Bay, the boathouse street, Funaya no Sato park, INE CAFE, lunch on your own (Ine is known for seafood), then the 30-min Ine Bay boat. Amanohashidate ~2 h: the single-seat chairlift to View Land for the upside-down view, Chion-ji temple and its fan omikuji, the Kaisen-kyo swing bridge and the beach. Bus back at 15:30, Nippombashi 18:00-19:30.',
+        note:'Guided bus loop from Kintetsu Nippombashi.',
+        facts:[
+          ['first', 'Ine Funaya, ~1.5 h: the observatory over Ine Bay, the boathouse street, Funaya no Sato park, INE CAFE, then the 30-min Ine Bay boat.'],
+          ['lunch', 'On your own in Ine, which is known for seafood.'],
+          ['then', 'Amanohashidate, ~2 h: the single-seat chairlift to View Land for the upside-down view, Chion-ji and its fan omikuji, the Kaisen-kyo swing bridge and the beach.'],
+          ['back', 'Bus leaves at 15:30; Nippombashi ~18:00-19:30.'],
+        ],
         image:'img/ine-funaya.jpg',
         source:'https://www.klook.com/en-US/activity/146607-amanohashidate-funaya-ine-bay-beautiful-scenery-tour-osaka-kyoto/'
       },
       {
         time:'19:30', title:'Dotonbori + dinner',
-        note:'The full Dotonbori walk (Dec 13 was cruise only): Glico sign, Ebisubashi, the giant crab and pufferfish signs, street food (takoyaki, okonomiyaki), Hozenji Yokocho\u2019s lantern alley. ~5 min from Nippombashi; dinner wherever looks good.',
+        note:'The full Dotonbori walk (Dec 13 was cruise only), ~5 min from Nippombashi. Dinner wherever looks good.',
+        facts:[
+          ['see', 'Glico sign, Ebisubashi, the giant crab and pufferfish signs, Hozenji Yokocho’s lantern alley.'],
+          ['eat', 'Street food: takoyaki, okonomiyaki.'],
+        ],
       },
       {
         time:'21:00', title:'Round1 Sennichimae',
-        note:'ROUND1 STADIUM Sennichimae (~3 min walk from Namba Station): bowling, karaoke, arcade and Spo-Cha. Open 24 h; arcade games stop at 00:50.',
+        note:'ROUND1 STADIUM Sennichimae: bowling, karaoke, arcade and Spo-Cha.',
+        facts:[
+          ['go', '~3 min walk from Namba Station.'],
+          ['hours', 'Open 24 h; arcade games stop at 00:50.'],
+        ],
         source:'https://osaka-info.jp/experience/en/osaka/spot/422'
       },
     ],
@@ -856,38 +970,67 @@ const DAY_TEMPLATES = [
     id:'kyoto-to-ginza-shopping', short:'Ginza', icon:'🛍️', title:'Kyoto → Ginza shopping (half day)', city:'tokyo', date:'2026-12-18',
     summary:'Travel day: breakfast at Saka Hotel, late-morning Shinkansen from Kyoto, check in at the square hotel GINZA, Ginza shopping and a Hanayama Udon dinner, then Roppongi Hills and Tokyo Tower at night.',
     pois:['Saka Hotel', 'Shinkansen', 'Ginza', 'Hanayama Udon', 'Roppongi', 'Tokyo Tower'],
-    note:'Built for Fri December 18, checking out of Saka Hotel Kyoto and into the square hotel GINZA. A Shinkansen ticket to Tokyo is valid to any JR station in the 23 wards, so Yurakucho costs nothing extra. Reserve the Nozomi ahead, mainly for the suitcases (see the Nozomi block). Chuo-dori only closes to cars on weekends, so Friday is ordinary street shopping.',
+    brief:[
+      ['move', 'Saka Hotel Kyoto → the square hotel GINZA.'],
+      ['ticket', 'A Shinkansen ticket to Tokyo is valid to any JR station in the 23 wards, so Yurakucho costs nothing extra. Reserve the Nozomi ahead (see the Nozomi block).'],
+      ['shopping', 'Chuo-dori only closes to cars on weekends, so Friday is ordinary street shopping.'],
+    ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Kyoto+Station&destination=Tokyo+Tower&waypoints=Tokyo+Station%7Cthe+square+hotel+GINZA%7CGodaime+Hanayama+Udon+Ginza%7CGINZA+SIX%7CRoppongi+Hills%7CDon+Quijote+Roppongi&travelmode=transit',
     events:[
       {
         time:'09:00', title:'Saka Hotel breakfast', meal:'breakfast',
-        note:'Breakfast included with the stay. Time is a placeholder until the hotel confirms it.',
+        note:'Included with the stay. The time is a placeholder until the hotel confirms it.',
       },
       {
         time:'11:00', title:'Nozomi to Tokyo',
-        note:'Leave Saka Hotel at check-out (by 11:00); taxi to Kyoto Station ~20 min. Nozomi ~2h15m, every ~10 min, so Tokyo ~13:45; JR one stop to Yurakucho, then 8 min on foot. Check-in is from 15:00; ask the front desk to hold the bags. Book ahead on smartEX (sales open ~Nov 18; free changes before departure). Pick seat E for Mt Fuji: E is always the north (mountain) side, so the left-hand window going to Tokyo. Any suitcase over 160 cm (L+W+H) needs a "seat with oversized baggage area" (last row of the car), or it costs ¥1,000 extra on board.',
+        note:'~2h15m, every ~10 min, so Tokyo ~13:45.',
+        facts:[
+          ['leave', 'Saka Hotel at check-out (by 11:00). Taxi to Kyoto Station, ~20 min.'],
+          ['book', 'smartEX; sales open ~Nov 18, free changes before departure.'],
+          ['seat', 'E for Mt Fuji. E is always the north (mountain) side: the left-hand window going to Tokyo.'],
+          ['bags', 'Any suitcase over 160 cm (L+W+H) needs a “seat with oversized baggage area” (last row of the car), or it costs ¥1,000 extra on board.'],
+          ['arrive', 'JR one stop to Yurakucho, then 8 min on foot. Check-in from 15:00; the front desk holds bags.'],
+        ],
       },
       {
         time:'14:00', title:'Ginza',
-        note:'Drop the bags, then straight to Hanayama Udon (~5 min walk). The lunch ticket machine may already have stopped; if so, ask when dinner tickets start and be back at that time. Chuo-dori, GINZA SIX and the department stores while you wait.',
+        note:'Drop the bags, then straight to Hanayama Udon (~5 min walk).',
+        facts:[
+          ['if late', 'The lunch ticket machine may already have stopped. Ask when dinner tickets start and come back then.'],
+          ['shop', 'Chuo-dori, GINZA SIX and the department stores while you wait.'],
+        ],
         image:'img/ginza-browsing.jpg',
         source:'https://ginza6.tokyo/hours/'
       },
       {
         time:'17:30', title:'Godaime Hanayama Udon Ginza', meal:'dinner',
-        note:'Oni himokawa, ~5 cm wide Gunma udon. Weekday dinner 17:30-21:30; no reservations, numbered tickets only, called in order (weekday dinner is the shorter wait). 3-14-13 Ginza, behind Kabuki-za. Back to the shops after if time allows.',
+        note:'Oni himokawa, ~5 cm wide Gunma udon. 3-14-13 Ginza, behind Kabuki-za.',
+        facts:[
+          ['hours', 'Weekday dinner 17:30-21:30.'],
+          ['queue', 'No reservations. Numbered tickets, called in order; weekday dinner is the shorter wait.'],
+          ['after', 'Back to the shops if time allows.'],
+        ],
         map:'https://www.google.com/maps/search/?api=1&query=Godaime+Hanayama+Udon+Ginza+3-14-13+Ginza+Tokyo',
         source:'https://www.hanayamaudon.co.jp/ginza/'
       },
       {
         time:'20:30', title:'Roppongi',
-        note:'Hibiya line from Higashi-ginza, ~10 min. Main stop: Don Quijote Roppongi (24 h, tax-free, gachapon). On the way: Keyakizaka lights + Roppongi Hills Christmas market (2026 dates not announced). If passing: Midtown lights, Tokyo City View (last entry 21:30).',
+        note:'Main stop: Don Quijote Roppongi (24 h, tax-free, gachapon).',
+        facts:[
+          ['go', 'Hibiya line from Higashi-ginza, ~10 min.'],
+          ['on the way', 'Keyakizaka lights and the Roppongi Hills Christmas market (2026 dates not announced).'],
+          ['if passing', 'Midtown lights; Tokyo City View (last entry 21:30).'],
+        ],
         image:'img/roppongi-hills-keyakizaka.jpg',
         source:'https://www.gotokyo.org/en/spot/81/index.html'
       },
       {
         time:'22:00', title:'Tokyo Tower',
-        note:'Lit up, seen from its base and Shiba Park; ~15-20 min walk from Don Quijote past the Azabudai Hills Christmas market (2025: to 21:00, likely closed by then). Hibiya line from Kamiyacho back to Higashi-ginza.',
+        note:'Lit up at night, seen from its base and Shiba Park.',
+        facts:[
+          ['go', '~15-20 min walk from Don Quijote, past the Azabudai Hills Christmas market (2025: to 21:00, likely closed by then).'],
+          ['back', 'Hibiya line from Kamiyacho to Higashi-ginza.'],
+        ],
         image:'img/tokyo-tower-at-night.jpg',
         source:'https://en.tokyotower.co.jp/'
       },
@@ -897,12 +1040,20 @@ const DAY_TEMPLATES = [
     id:'asakusa-sumo-lunch-akihabara', short:'Asakusa', icon:'🏮', title:'Asakusa + Sumo lunch + Shibamata + Akihabara night', city:'tokyo', date:'2026-12-19',
     summary:'Koami Shrine first thing, Sensō-ji in the morning, the Asakusa Sumo Club ANNEX lunch show, the retro Shibamata temple street in the afternoon, then capsule toys and arcades in Akihabara at night.',
     pois:['Koami Shrine', 'Sensō-ji', 'Sumo lunch', 'Shibamata', 'Akihabara'],
-    note:'Built for Sat December 19 from the square hotel GINZA. DisneySea is the next day, so aim to head back by about 21:30.',
+    brief:[
+      ['start', 'From the square hotel GINZA.'],
+      ['end', 'Head back by ~21:30; DisneySea is the next day.'],
+    ],
     map:'https://www.google.com/maps/dir/?api=1&origin=the+square+hotel+GINZA&destination=GASHAPON+BANDAI+Official+Shop+Akihabara&waypoints=Koami+Shrine%7CSenso-ji+Temple%7CAsakusa+Sumo+Club+ANNEX%7CShibamata+Taishakuten&travelmode=transit',
     events:[
       {
         time:'09:00', title:'Koami Shrine (Nihonbashi)',
-        note:'Small 1466 shrine known for strong luck and warding off bad luck; wash coins at the Tokyo Zeniarai Benten well (free baskets), dragon carvings on the main hall. Toei Asakusa line Higashi-ginza to Ningyocho (3 stops, ~6 min), 5 min walk from Exit A2. Amulet office 9:00-17:00; Saturday queues build 9:00-12:00, so arrive at opening (~30-45 min). Then back on the same line from Ningyocho to Asakusa, ~10 min.',
+        note:'Small 1466 shrine known for strong luck and warding off bad luck. Wash coins at the Tokyo Zeniarai Benten well (free baskets); dragon carvings on the main hall.',
+        facts:[
+          ['go', 'Toei Asakusa line Higashi-ginza to Ningyocho (3 stops, ~6 min), 5 min walk from Exit A2.'],
+          ['arrive', 'At opening. Amulet office 9:00-17:00; Saturday queues build 9:00-12:00. ~30-45 min here.'],
+          ['next', 'Same line from Ningyocho to Asakusa, ~10 min.'],
+        ],
         source:'https://www.gltjp.com/en/directory/item/13972/'
       },
       {
@@ -913,18 +1064,30 @@ const DAY_TEMPLATES = [
       },
       {
         time:'12:00', title:'Asakusa Sumo Club ANNEX lunch show', meal:'lunch',
-        note:'Two-hour sumo show with a wagyu sukiyaki lunch, a few minutes from Sensō-ji. Book ahead and confirm the 12:00 time.',
+        note:'Two-hour sumo show with a wagyu sukiyaki lunch, a few minutes from Sensō-ji.',
+        facts:[
+          ['book', 'Ahead, and confirm the 12:00 time.'],
+        ],
         source:'https://tokyocheapo.com/restaurant/asakusa-sumo-club-annex/'
       },
       {
         time:'14:30', title:'Shibamata',
-        note:'~30 min by train after the show (Toei Asakusa line to Keisei-Takasago, then one stop to Shibamata), so ~14:45. Taishakuten\u2019s carving gallery first (closes 16:00), then the gate and the retro temple street (shops to ~17:00). Leave ~17:15.',
+        note:'Taishakuten temple, its carving gallery and the retro temple street.',
+        facts:[
+          ['go', '~30 min after the show: Toei Asakusa line to Keisei-Takasago, then one stop to Shibamata. Arrive ~14:45.'],
+          ['first', 'The carving gallery, which closes at 16:00. Then the gate and the temple street (shops to ~17:00).'],
+          ['leave', '~17:15.'],
+        ],
         image:'img/shibamata-taishakuten-sando.jpg',
         source:'https://www.keisei.co.jp/keisei/short_trip/us/area/shibamata_yagiri.php'
       },
       {
         time:'18:00', title:'Akihabara',
-        note:'~40 min by train from Shibamata. GASHAPON BANDAI capsule-toy shop (to 23:00) and an arcade (Taito Station or Hey, to 23:30). Hibiya line back to Higashi-ginza, ~12 min.',
+        note:'GASHAPON BANDAI capsule-toy shop (to 23:00) and an arcade (Taito Station or Hey, to 23:30).',
+        facts:[
+          ['go', '~40 min by train from Shibamata.'],
+          ['back', 'Hibiya line to Higashi-ginza, ~12 min.'],
+        ],
         image:'img/akihabara.jpg',
         source:'https://bandainamco-am.co.jp/en/others/gashapon-bandai-officialshop/store/akihabara/'
       },
@@ -934,37 +1097,40 @@ const DAY_TEMPLATES = [
     id:'tokyo-disneysea', short:'Disney', icon:'🧜‍♀️', title:'Tokyo DisneySea', city:'tokyo', date:'2026-12-20',
     summary:'A full park day focused on Fantasy Springs and the biggest rides.',
     pois:['Fantasy Springs', 'Frozen Journey', 'Soaring', 'Toy Story Mania!'],
-    note:'Tickets for Dec 20 go on sale Oct 20 at 14:00 JST (two months ahead, fixed date); the Sunday before Christmas sells out. Set up the Tokyo Disney Resort App before the visit, then use the first minutes after entering to secure the most important ride access. Keep the rest of the day flexible around live wait times and return windows.',
+    brief:[
+      ['tickets', 'On sale Oct 20 at 14:00 JST (two months ahead, fixed date). The Sunday before Christmas sells out.'],
+      ['plan', 'Set up the app before the visit. Use the first minutes inside to secure the key ride, then flex around live waits and return windows.'],
+    ],
     map:'https://www.google.com/maps/search/?api=1&query=Tokyo+DisneySea',
     tips:[
       {
         icon:'📱', title:'Set up the app before park day',
-        note:'Install or update the Tokyo Disney Resort App, sign in, create one group, and confirm every person’s ticket appears. Bring mobile data and a battery pack.',
+        note:'Install the Tokyo Disney Resort App, sign in, create one group and check every ticket appears. Bring mobile data and a battery pack.',
         source:'https://www.tokyodisneyresort.jp/en/tdr/app/group.html'
       },
       {
         icon:'❄️', title:'Book Frozen as soon as everyone enters',
-        note:'Once the full group is through the gate, use one phone to buy Disney Premier Access for Anna and Elsa’s Frozen Journey. Availability is limited, so make this the first app task.',
+        note:'Once the whole group is through the gate, use one phone to buy Disney Premier Access for Anna and Elsa’s Frozen Journey. It is limited, so do it first.',
         source:'https://www.tokyodisneyresort.jp/en/tdr/guide/app_service/disneypremieraccess.html'
       },
       {
         icon:'🎟️', title:'Choose the next high-wait ride',
-        note:'Check live availability and waits before committing. After Frozen, compare Rapunzel’s Lantern Festival, Peter Pan’s Never Land Adventure, Soaring, and Toy Story Mania! rather than fixing the whole day now.',
+        note:'After Frozen, compare live waits for Rapunzel’s Lantern Festival, Peter Pan’s Never Land Adventure, Soaring and Toy Story Mania!',
         source:'https://www.tokyodisneyresort.jp/en/tds/attraction.html'
       },
       {
         icon:'🕘', title:'Use the return window well',
-        note:'While waiting for a reserved ride, choose a nearby standby queue with a manageable wait. Just after opening, rides farther from the entrance often have shorter lines.',
+        note:'While waiting for a reserved ride, join a nearby standby queue with a short wait. Just after opening, rides far from the entrance have shorter lines.',
         source:'https://www.tokyodisneyresort.jp/en/tdr/guide/app_service.html'
       },
       {
         icon:'🍜', title:'Handle food in the app too',
-        note:'Place a Disney Mobile Order before useful lunch slots tighten. Check Entry Request in the app early if there is a must-see show.',
+        note:'Place a Disney Mobile Order before lunch slots fill. Check Entry Request early for any must-see show.',
         source:'https://www.tokyodisneyresort.jp/en/tdr/guide/app_service/mobileorder.html'
       },
       {
         icon:'⚠️', title:'Ignore old free-pass guides',
-        note:'The free 40th Anniversary Priority Pass ended August 31, 2026. For this December visit, use the app’s current Disney Premier Access and standby information.',
+        note:'The free 40th Anniversary Priority Pass ended August 31, 2026. Use the app’s current Disney Premier Access and standby information.',
         source:'https://www.tokyodisneyresort.jp/en/tdr/guide/app_service/prioritypass.html'
       },
     ],
@@ -973,31 +1139,51 @@ const DAY_TEMPLATES = [
     id:'tsukiji-jojoen-shinjuku', short:'Tsukiji', icon:'🥩', title:'Tsukiji + Jojoen + Shimokitazawa', city:'tokyo', date:'2026-12-21',
     summary:'Hotel-move day: Tsukiji in the morning, then a yakiniku lunch on the 53rd floor of Tokyo Opera City, then an easy Shinjuku afternoon and an evening of shops and live jazz in Shimokitazawa.',
     pois:['Tsukiji Outer Market', 'Move to Shinjuku', 'Jojoen', 'Shinjuku', 'Shimokitazawa'],
-    note:'Built for Mon December 21, the day after DisneySea. Check out of the square hotel GINZA first and leave the bags in its self-service cloakroom.',
+    brief:[
+      ['move', 'the square hotel GINZA → Hotel Gracery Shinjuku.'],
+      ['bags', 'Check out first and leave them in the Ginza hotel’s self-service cloakroom.'],
+    ],
     map:'https://www.google.com/maps/dir/?api=1&origin=the+square+hotel+GINZA&destination=Shimokitazawa+Station&waypoints=Tsukiji+Outer+Market%7CHotel+Gracery+Shinjuku%7CJojoen+Tokyo+Opera+City+53%7CIsetan+Shinjuku&travelmode=transit',
     events:[
       {
         time:'09:30', title:'Tsukiji Outer Market',
-        note:'~15 min walk from the hotel. Light street-food breakfast (tamagoyaki, seafood skewers). Open on Mondays; most shops close ~14:00.',
+        note:'Light street-food breakfast: tamagoyaki, seafood skewers.',
+        facts:[
+          ['go', '~15 min walk from the hotel.'],
+          ['hours', 'Open on Mondays; most shops close ~14:00.'],
+        ],
         image:'img/tsukiji-outer-market.jpg',
         source:'https://www.tsukiji.or.jp/english/'
       },
       {
         time:'12:00', title:'Move to Shinjuku',
-        note:'Walk back to the Ginza hotel for the bags, then taxi to Hotel Gracery Shinjuku (~20-30 min, ~¥3,800-4,600; ask for a JPN Taxi so both big suitcases fit). Leave the bags at the 8F front desk; check-in from 14:00.',
+        note:'Walk back to the Ginza hotel for the bags, then taxi to Hotel Gracery Shinjuku.',
+        facts:[
+          ['taxi', '~20-30 min, ~¥3,800-4,600. Ask for a JPN Taxi so both big suitcases fit.'],
+          ['bags', 'Leave them at the 8F front desk; check-in from 14:00.'],
+        ],
       },
       {
         time:'13:30', title:'Jojoen Tokyo Opera City 53', meal:'lunch',
-        note:'Yakiniku lunch with a view over Shinjuku, 53F. Weekday lunch 11:30-15:00. Hatsudai Station (Keio New Line, 1 stop from Shinjuku) connects straight into the building. Book ahead and ask for a window table.',
+        note:'Yakiniku lunch on the 53rd floor, looking over Shinjuku.',
+        facts:[
+          ['go', 'Hatsudai Station (Keio New Line, 1 stop from Shinjuku) connects straight into the building.'],
+          ['hours', 'Weekday lunch 11:30-15:00.'],
+          ['book', 'Ahead, and ask for a window table.'],
+        ],
         source:'https://www.jojoen.co.jp/shop/jojoen/operacity/'
       },
       {
         time:'15:00', title:'Shinjuku',
-        note:'Easy look around near the hotel: Isetan food hall, Kabukicho Tower.',
+        note:'An easy look around near the hotel: Isetan food hall, Kabukicho Tower.',
       },
       {
         time:'18:00', title:'Shimokitazawa at night',
-        note:'Odakyu line from Shinjuku, ~8 min. Vintage shops, reload and BONUS TRACK until they close ~20:00, then dinner wherever. Live jazz after: music bar rpm jam session from 19:00 (¥4,000 incl. 2 drinks) or No Room for Squares (opens 20:00 Mon).',
+        note:'Vintage shops, reload and BONUS TRACK until they close ~20:00, then dinner wherever.',
+        facts:[
+          ['go', 'Odakyu line from Shinjuku, ~8 min.'],
+          ['jazz', 'Music bar rpm jam session from 19:00 (¥4,000 incl. 2 drinks), or No Room for Squares (opens 20:00 on Mondays).'],
+        ],
         image:'img/shimokitazawa.jpg',
         source:'https://koko.tokyo/en/venues/shimokitazawa-music-bar-rpm/'
       },
@@ -1007,30 +1193,44 @@ const DAY_TEMPLATES = [
     id:'ghibli-museum-kichijoji', short:'Ghibli', icon:'🎞️', title:'Ghibli Museum + Koenji', city:'tokyo', date:'2026-12-23',
     summary:'Reserved museum entry, Inokashira Park, Koenji vintage, then Shinjuku and a Ginza Happo buffet dinner.',
     pois:['Ghibli Museum', 'Koenji', 'Shinjuku', 'Ginza Happo'],
-    note:'Admission is reservation-only. December tickets go on sale online November 10 at 10:00 JST; buy the exact date and entry time promptly. Open Wed December 23 (closed Tuesdays, so not December 22). Aim for an early slot, spend the afternoon thrifting in Koenji, then finish in Shinjuku.',
+    brief:[
+      ['tickets', 'Reservation only. December tickets go on sale Nov 10 at 10:00 JST; buy the exact date and an early entry time.'],
+      ['open', 'Wed Dec 23. The museum is closed Tuesdays, so not Dec 22.'],
+    ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Ghibli+Museum+Mitaka&destination=Ginza+Happo+Shinjuku&waypoints=Inokashira+Park%7CKoenji+Tokyo%7CGodzilla+Head+Shinjuku%7COmoide+Yokocho',
     events:[
       {
         time:'10:00', title:'Ghibli Museum + Inokashira Park',
-        note:'Reserved entry; take the early slot. Central hall, animation rooms, a Saturn Theater short, the rooftop Robot Soldier. Then walk Inokashira Park\u2019s pond toward Kichijoji.',
+        note:'Central hall, animation rooms, a Saturn Theater short and the rooftop Robot Soldier. Then walk Inokashira Park’s pond toward Kichijoji.',
+        facts:[
+          ['entry', 'Reserved; take the early slot.'],
+        ],
         image:'img/ghibli-museum-reserved-entry.jpg',
         source:'https://www.ghibli-museum.jp/en/welcome/'
       },
       {
         time:'15:00', title:'Koenji',
-        note:'Vintage and secondhand clothing around the Nakadori, Pal and Look shopping streets.',
+        note:'Vintage and secondhand clothing on the Nakadori, Pal and Look shopping streets.',
         image:'img/koenji-vintage-shopping.jpg',
         source:'https://www.gotokyo.org/en/destinations/western-tokyo/koenji/index.html'
       },
       {
         time:'18:30', title:'Shinjuku',
-        note:'Omoide Yokocho\u2019s tiny yakitori alleys, just to look (save room for the buffet). Godzilla Head in Kabukicho: catch the 19:00 roar (hourly, last at 20:00, when you\u2019ll be at dinner).',
+        note:'Omoide Yokocho’s tiny yakitori alleys, just to look; save room for the buffet.',
+        facts:[
+          ['godzilla', 'The Godzilla Head in Kabukicho roars hourly. Catch the 19:00 one; the last, at 20:00, is during dinner.'],
+        ],
         image:'img/godzilla-head.jpg',
         source:'https://shinjuku-toho-bldg.toho.co.jp/gim/en.html'
       },
       {
         time:'20:00', title:'Ginza Happo Shinjuku', meal:'dinner',
-        note:'Seafood + yakiniku buffet, 120 min with all-you-can-drink, ¥13,000 each incl. tax: king and snow crab, sushi, Peking duck. Closes 22:00. 3F, 5-17-13 Shinjuku, 1 min from Shinjuku-sanchome Exit E2, ~10 min walk from the hotel. Book the 20:00 table; cancelling from midnight on the day costs the full price, the day before 50%.',
+        note:'Seafood + yakiniku buffet, 120 min with all-you-can-drink: king and snow crab, sushi, Peking duck.',
+        facts:[
+          ['cost', '¥13,000 each incl. tax.'],
+          ['where', '3F, 5-17-13 Shinjuku. 1 min from Shinjuku-sanchome Exit E2, ~10 min walk from the hotel. Closes 22:00.'],
+          ['book', 'The 20:00 table. Cancelling the day before costs 50%; from midnight on the day, the full price.'],
+        ],
         map:'https://www.google.com/maps/search/?api=1&query=Seafood+Buffet+Dining+Ginza+Happo+Shinjuku+5-17-13+Shinjuku+Tokyo',
         source:'https://ginzahappo-shinjuku.owst.jp/'
       },
@@ -1040,18 +1240,27 @@ const DAY_TEMPLATES = [
     id:'meiji-jingu-harajuku-shibuya', short:'Shibuya', icon:'🚦', title:'Harajuku + Shibuya', city:'tokyo', date:'2026-12-22',
     summary:'Harajuku shopping (optional Meiji Jingu), Shibuya landmarks, SHIBUYA109, and winter lights.',
     pois:['Harajuku', 'Shibuya'],
-    note:'Start in Harajuku; Meiji Jingu is next to the station if you want it (closes 16:00 in December). Keep lunch flexible in Harajuku, then spend the late afternoon in Shibuya. Blue Cave is a possible winter finale, but the official site currently shows only the completed 2025 run, with no 2026 announcement. Treat it as unconfirmed and check again closer to the trip.',
+    brief:[
+      ['plan', 'Harajuku with a flexible lunch, then Shibuya in the late afternoon.'],
+      ['blue cave', 'Possible winter finale, but unconfirmed: the official site shows only the 2025 run. Check again closer to the trip.'],
+    ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Meiji+Jingu&destination=Yoyogi+Park+Keyaki+Namiki&waypoints=Takeshita+Street%7CHachiko+Memorial+Statue%7CShibuya+Scramble+Crossing%7CSHIBUYA109&travelmode=walking',
     events:[
       {
         time:'11:00', title:'Harajuku',
-        note:'Takeshita Street and the quieter Ura-Harajuku lanes. Optional: Meiji Jingu next to the station (forest approach, giant torii, main shrine; closes 16:00).',
+        note:'Takeshita Street and the quieter Ura-Harajuku lanes.',
+        facts:[
+          ['optional', 'Meiji Jingu, next to the station: forest approach, giant torii, main shrine. Closes 16:00 in December.'],
+        ],
         image:'img/harajuku-shopping-flexible-lunch.jpg',
         source:'https://www.gotokyo.org/en/destinations/western-tokyo/harajuku/index.html'
       },
       {
         time:'15:30', title:'Shibuya',
-        note:'Hachikō statue, Scramble Crossing, SHIBUYA109. Blue Cave illumination toward Yoyogi Park if a 2026 run is confirmed (not announced yet).',
+        note:'Hachikō statue, Scramble Crossing, SHIBUYA109.',
+        facts:[
+          ['if on', 'Blue Cave illumination toward Yoyogi Park, if a 2026 run is announced.'],
+        ],
         image:'img/hachiko-shibuya-crossing.jpg',
         source:'https://www.gotokyo.org/en/spot/78/index.html'
       },
@@ -1061,29 +1270,54 @@ const DAY_TEMPLATES = [
     id:'nara-deer-park', short:'Nara', icon:'🦌', title:'Nara on the way to Kyoto', city:'kyoto', date:'2026-12-15',
     summary:'Osaka to Kyoto via Nara: feed the deer in Nara Park, Tōdai-ji, Kōfuku-ji, then up to Kasuga Taisha and on to Kyoto for an evening in Pontocho and Gion.',
     pois:['AMANEK', 'Nara Park', 'Kasuga Taisha', 'Pontocho + Gion'],
-    note:'Moving day from Namba to Kyoto, with bags. Kintetsu from Kintetsu Nippombashi (~5 min walk from AMANEK) to Kintetsu-Nara, ~40 min, unreserved; coin lockers at Exit 1 past the east gates, plus a staffed baggage counter for big suitcases. Nara to Kyoto: Aoniyoshi 15:55 (¥1,490, Twin Seat, luggage space; on sale Nov 15, 10:30 JST on Kintetsu\u2019s site) or a regular limited express, ~2 an hour (¥1,280, reserved, buy on the day). All ~35 min to Kyoto Station. Deer cracker (shika senbei) stalls run roughly 9:00-16:30, shorter in winter, so arrive well before mid-afternoon. Tōdai-ji keeps winter hours of 8:00-17:00. The deer roam freely and will bow for a cracker, but they can nip or headbutt if you tease them with food, so keep crackers visible and hand them over without hesitation.',
+    brief:[
+      ['move', 'AMANEK (Namba) → Hotel Musse Kyoto, with the bags.'],
+      ['to nara', 'Kintetsu from Kintetsu Nippombashi (~5 min walk from AMANEK) to Kintetsu-Nara, ~40 min, unreserved.'],
+      ['bags', 'Coin lockers at Exit 1, past the east gates. Staffed baggage counter for big suitcases.'],
+      ['to kyoto', 'Aoniyoshi 15:55 (¥1,490, Twin Seat, luggage space; on sale Nov 15, 10:30 JST on Kintetsu’s site). Backup: a regular limited express, ~2 an hour (¥1,280, reserved, buy on the day). Both ~35 min to Kyoto Station.'],
+      ['deer', 'Cracker (shika senbei) stalls run ~9:00-16:30, shorter in winter. Don’t tease the deer with food; hand crackers over promptly or they nip and headbutt.'],
+    ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Kintetsu+Nara+Station&destination=Yasaka+Shrine&waypoints=Kofuku-ji+Temple%7CTodai-ji+Temple%7CKasuga+Taisha%7CKintetsu+Nara+Station%7CKyoto+Station%7CPontocho%7CGion+Shirakawa',
     events:[
       {
         time:'09:00', title:'AMANEK breakfast', meal:'breakfast',
-        note:'Included with the stay; 6:30-10:00, last order 9:30. Check out ~10:15 and walk to Kintetsu Nippombashi.',
+        note:'Included with the stay; 6:30-10:00, last order 9:30.',
+        facts:[
+          ['leave', 'Check out ~10:15 and walk to Kintetsu Nippombashi.'],
+        ],
         source:'https://en.amanekhotels.jp/osaka-namba/meal/'
       },
       {
         time:'11:00', title:'Nara Park + Tōdai-ji',
-        note:'Be at Kintetsu-Nara by ~11:00: the large lockers fill later in the day (staffed counter as backup). Kōfuku-ji\u2019s five-story pagoda first (~5 min), then the deer on the way to Tōdai-ji (shika senbei ~¥200, best bought here); Nandaimon gate and Great Buddha Hall ~12:30-13:15 (8:00-17:00). Lunch ~13:15-14:00 near Tōdai-ji.',
+        note:'Kōfuku-ji’s five-story pagoda, the deer, then Tōdai-ji’s Great Buddha.',
+        facts:[
+          ['be at', 'Kintetsu-Nara lockers by ~11:00; the large ones fill later in the day.'],
+          ['route', 'Kōfuku-ji first (~5 min walk), then the deer on the way to Tōdai-ji. Buy crackers here (~¥200).'],
+          ['tōdai-ji', 'Nandaimon gate and Great Buddha Hall, ~12:30-13:15 (open 8:00-17:00).'],
+          ['lunch', '~13:15-14:00 near Tōdai-ji.'],
+        ],
         image:'img/todai-ji-the-great-buddha.jpg',
         source:'https://narashikanko.or.jp/en/spot/detail_10001.html'
       },
       {
         time:'14:00', title:'Kasuga Taisha',
-        note:'~20 min walk from Tōdai-ji (no weekday bus), the last stretch on a lantern-lined path. ~1 h at the shrine (main sanctuary 7:00-17:00 in winter). Leave by 15:20: bus from the Kasuga Taisha Honden stop (~hourly, check the stop) or ~25-30 min walk down. Bags, then the 15:55 Aoniyoshi (Kyoto 16:31); taxi to Musse ~15-20 min.',
+        note:'~1 h at the shrine; main sanctuary 7:00-17:00 in winter.',
+        facts:[
+          ['go', '~20 min walk from Tōdai-ji (no weekday bus). The last stretch is the lantern-lined path.'],
+          ['leave', 'By 15:20. Bus from the Kasuga Taisha Honden stop (~hourly; check the stop) or a ~25-30 min walk down.'],
+          ['then', 'Bags, then the 15:55 Aoniyoshi (Kyoto 16:31). Taxi to Musse, ~15-20 min.'],
+        ],
         image:'img/kasuga-taisha-lanterns.jpg',
         source:'https://www.japan.travel/en/spot/1013/'
       },
       {
         time:'18:00', title:'Pontocho + Gion at night',
-        note:'After check-in. Pontocho\u2019s lantern-lit alley (side passages are cheaper than the main lane), dinner at an izakaya on Kiyamachi, then across the Shijo bridge to Gion Shirakawa and Hanamikoji, ending at Yasaka Shrine (lit at night, open 24 h). Flat, ~1.5 km. Tired backup: Kyoto Ramen Koji, Kyoto Station 10F.',
+        note:'Evening walk after check-in. Flat, ~1.5 km.',
+        facts:[
+          ['route', 'Pontocho’s lantern-lit alley, across the Shijo bridge to Gion Shirakawa and Hanamikoji, ending at Yasaka Shrine (lit at night, open 24 h).'],
+          ['eat', 'An izakaya on Kiyamachi. Pontocho’s side passages are cheaper than the main lane.'],
+          ['backup', 'If tired: Kyoto Ramen Koji, Kyoto Station 10F.'],
+        ],
         image:'img/pontocho-night.jpg',
         source:'https://www.japan-guide.com/e/e3921.html'
       },
@@ -1093,24 +1327,43 @@ const DAY_TEMPLATES = [
     id:'fushimi-inari-uzumasa', short:'Inari', icon:'⛩️', title:'Fushimi Inari + Uzumasa + teamLab', city:'kyoto', date:'2026-12-16',
     summary:'Morning under the Fushimi Inari torii gates, a long afternoon in the Uzumasa samurai film-set town, then teamLab Biovortex by Kyoto Station.',
     pois:['Fushimi Inari', 'Uzumasa Kyoto Village', 'teamLab Biovortex'],
-    note:'Built for Wed December 16. Uzumasa Kyoto Village (the former Toei Kyoto Studio Park) closes on some Tuesdays, so Wednesday is safe. Leave Uzumasa ~16:30 for a snack at Kyoto Station before the 18:00 teamLab slot; real dinner after teamLab.',
+    brief:[
+      ['open', 'Uzumasa Kyoto Village closes on some Tuesdays, so Wednesday is safe.'],
+      ['food', 'A snack at Kyoto Station before the 18:00 teamLab slot; real dinner after.'],
+    ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Fushimi+Inari+Taisha&destination=teamLab+Biovortex+Kyoto&waypoints=Yotsutsuji+Intersection+Fushimi+Inari%7CUzumasa+Kyoto+Village&travelmode=transit',
     events:[
       {
         time:'09:00', title:'Fushimi Inari',
-        note:'From Musse: ~5 min walk across the Shijo bridge to Gion-Shijo, Keihan line to Fushimi-Inari (~10 min), then ~5 min on foot. Free, open 24 h. Through the torii tunnels to the Yotsutsuji viewpoint over Kyoto and back (~1.5-2 h); the lower gates are the most crowded. Leave ~11:00. Lunch on the shrine street: inari sushi, kitsune udon, grilled skewers.',
+        note:'Through the torii tunnels to the Yotsutsuji viewpoint over Kyoto and back, ~1.5-2 h. Free, open 24 h; the lower gates are the most crowded.',
+        facts:[
+          ['go', 'From Musse: ~5 min walk across the Shijo bridge to Gion-Shijo, Keihan line to Fushimi-Inari (~10 min), then ~5 min on foot.'],
+          ['lunch', '~11:00 on the shrine street: inari sushi, kitsune udon, grilled skewers.'],
+        ],
         image:'img/fushimi-inari-torii.jpg',
         source:'https://www.japan-guide.com/e/e3915.html'
       },
       {
         time:'13:00', title:'Uzumasa Kyoto Village',
-        note:'Edo-era film-set town: ninja shows, ninja maze, haunted house, period-costume rental and photos. ~10:00-21:00, last entry 1 h before close. ¥2,800 each, some attractions ¥400-800 extra. From Inari: JR Inari to Kyoto Station, JR Sagano line to Hanazono (~30 min), then 15 min on foot. Leave ~16:30.',
+        note:'Edo-era film-set town: ninja shows, ninja maze, haunted house, period-costume rental and photos.',
+        facts:[
+          ['go', 'JR Inari to Kyoto Station, JR Sagano line to Hanazono (~30 min), then 15 min on foot.'],
+          ['hours', '~10:00-21:00, last entry 1 h before close.'],
+          ['cost', '¥2,800 each; some attractions ¥400-800 extra.'],
+          ['leave', '~16:30.'],
+        ],
         image:'img/uzumasa-kyoto-village.jpg',
         source:'https://www.japan-guide.com/e/e3934.html'
       },
       {
         time:'18:00', title:'teamLab Biovortex Kyoto',
-        note:'JR from Hanazono back to Kyoto Station (~10 min), then 7-10 min on foot from the Hachijo East exit. Last entry 19:30. Timed tickets, ¥3,600-5,600 depending on the day; book an 18:00 slot ahead. Plan 2-3 h (no re-entry). Before: a small snack at Kyoto Station (~17:15-17:45). After: out by ~20:45 \u2192 Kyoto Ramen Koji, Kyoto Station 10F (to 22:00, last order 21:30); out ~21:00 \u2192 subway to Shijo and eat near Musse (Pontocho, Kiyamachi).',
+        note:'Plan 2-3 h; no re-entry. Last entry 19:30.',
+        facts:[
+          ['go', 'JR Hanazono to Kyoto Station (~10 min), then 7-10 min on foot from the Hachijo East exit.'],
+          ['book', 'An 18:00 slot ahead; ¥3,600-5,600 depending on the day.'],
+          ['before', 'A small snack at Kyoto Station, ~17:15-17:45.'],
+          ['dinner', 'Out by ~20:45: Kyoto Ramen Koji, Kyoto Station 10F (to 22:00, last order 21:30). Out ~21:00: subway to Shijo and eat near Musse (Pontocho, Kiyamachi).'],
+        ],
         source:'https://www.teamlab.art/e/kyoto/'
       },
     ],
@@ -1119,32 +1372,261 @@ const DAY_TEMPLATES = [
     id:'arashiyama-sagano-hozugawa', short:'Sagano', icon:'🎋', title:'Sagano train + Arashiyama + Kiyomizu-dera sunset', city:'kyoto', date:'2026-12-17',
     summary:'The daruma temple Hōrin-ji, the Sagano train down the gorge from Kameoka, the bamboo grove and Arashiyama shops, then move to Saka Hotel and Kiyomizu-dera at sunset; kaiseki dinner at the hotel.',
     pois:['Hōrin-ji (Daruma-dera)', 'Sagano Train', 'Arashiyama', 'Kiyomizu-dera'],
-    note:'Built for Thu December 17 (Sagano train is closed Wednesdays), moving from Musse to Saka Hotel Kyoto (check-in 15:00-19:30, dinner and breakfast included). Bags: leave them at the Musse front desk at check-out, collect them on the way back.',
+    brief:[
+      ['move', 'Hotel Musse Kyoto → Saka Hotel Kyoto (check-in 15:00-19:30; dinner and breakfast included).'],
+      ['bags', 'Leave them at the Musse front desk at check-out; collect them on the way back, ~15:45.'],
+      ['closed', 'The Sagano train doesn’t run on Wednesdays.'],
+    ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Hotel+Musse+Kyoto+Shijo+Kawaramachi+Meitetsu&destination=Kiyomizu-dera&waypoints=Horinji+Darumadera+Temple+Kyoto%7CTorokko+Kameoka+Station%7CTorokko+Arashiyama+Station%7CArashiyama+Bamboo+Grove%7CTogetsukyo+Bridge%7CHotel+Musse+Kyoto+Shijo+Kawaramachi+Meitetsu%7CSaka+Hotel+Kyoto&travelmode=transit',
     events:[
       {
         time:'10:00', title:'Hōrin-ji (Daruma-dera)',
-        note:'Leave Musse 10:00 (check out, bags at the desk). Subway Shijo to Kyoto Station, JR Sagano line LOCAL to Enmachi, 10 min on foot. At the temple ~10:45, leave by 11:25. Thousands of wish daruma dolls and a small dry garden; 9:00-16:30, ¥300 each. Not the Hōrin-ji in Arashiyama.',
+        note:'Thousands of wish daruma dolls and a small dry garden. 9:00-16:30, ¥300 each. Not the Hōrin-ji in Arashiyama.',
+        facts:[
+          ['start', 'Leave Musse at 10:00, checked out, bags at the desk.'],
+          ['go', 'Subway Shijo to Kyoto Station, JR Sagano line LOCAL to Enmachi, then 10 min on foot.'],
+          ['leave', 'The temple by 11:25 (arrive ~10:45).'],
+        ],
         source:'https://www.darumadera.kyoto.jp/access/'
       },
       {
         time:'11:30', title:'Sagano train (Kameoka → Arashiyama)',
-        note:'Enmachi ~11:35, JR LOCAL to Umahori (~20 min; rapid trains skip it), 5 min on foot. Be at Torokko Kameoka by 12:15. 12:30 train, arrives Torokko Arashiyama 12:53. Reserve seats ahead with Torokko Kameoka as the boarding station. If missed: 13:30 train, or JR from Umahori to Saga-Arashiyama. 2026 is the current train\u2019s last year.',
+        note:'The 12:30 from Torokko Kameoka, arriving Torokko Arashiyama 12:53. 2026 is the current train’s last year.',
+        facts:[
+          ['go', 'Enmachi ~11:35, JR LOCAL to Umahori (~20 min; rapid trains skip it), then 5 min on foot.'],
+          ['be at', 'Torokko Kameoka by 12:15.'],
+          ['book', 'Seats ahead, with Torokko Kameoka as the boarding station.'],
+          ['if missed', 'The 13:30 train, or JR from Umahori to Saga-Arashiyama.'],
+        ],
         source:'https://www.sagano-kanko.co.jp/en/train-info/'
       },
       {
         time:'13:00', title:'Arashiyama',
-        note:'Bamboo grove ~13:00-13:30 (the train stops at its top), lunch, then shops and snacks on the main street toward Togetsukyo Bridge. Leave for Hankyu Arashiyama by 15:00: Hankyu to Kyoto-kawaramachi (change at Katsura, ~25 min), bags at Musse ~15:45, taxi to Saka Hotel (~10-15 min, ~16:00).',
+        note:'Bamboo grove ~13:00-13:30 (the train stops at its top), lunch, then shops and snacks on the main street toward Togetsukyo Bridge.',
+        facts:[
+          ['leave', 'For Hankyu Arashiyama by 15:00.'],
+          ['go', 'Hankyu to Kyoto-kawaramachi (change at Katsura, ~25 min). Bags at Musse ~15:45, then a taxi to Saka Hotel (~10-15 min), arriving ~16:00.'],
+        ],
         image:'img/arashiyama-bamboo-grove.jpg',
         source:'https://www.sagano-kanko.co.jp/en/station/arashiyama/'
       },
       {
         time:'16:00', title:'Kiyomizu-dera',
-        note:'Drop the bags at Saka Hotel, then ~5 min up the slope to the temple. Sunset ~16:45 from the main stage. Confirm the December closing time before the day.',
+        note:'Drop the bags at Saka Hotel, then ~5 min up the slope to the temple.',
+        facts:[
+          ['sunset', '~16:45 from the main stage.'],
+          ['to do', 'Confirm the December closing time.'],
+        ],
       },
       {
         time:'19:00', title:'Saka Hotel kaiseki dinner', meal:'dinner',
-        note:'Kaiseki dinner included with the stay. Time is a placeholder until the hotel confirms it.',
+        note:'Included with the stay. The time is a placeholder until the hotel confirms it.',
+      },
+    ],
+  },
+  {
+    id:'seoul-arrival-dakhanmari-namsan', short:'Namsan', icon:'🗼', title:'Arrive Seoul: Dakhanmari + N Seoul Tower + Lotte Mart', city:'seoul', date:'2026-12-24',
+    summary:'Land at Incheon, check in at K-Grand Myeongdong, dakhanmari dinner near Dongdaemun, N Seoul Tower night views, then a Lotte Mart snack run.',
+    pois:['Incheon', 'Dakhanmari', 'N Seoul Tower', 'Lotte Mart'],
+    brief:[
+      ['arrive', 'LJ212 lands at ICN T2 at 13:50. Allow 2-3 h for immigration, bags, the trip into Myeongdong and check-in (from 15:00).'],
+      ['to do', 'Christmas Eve: check holiday hours for the cable car, the tower and Lotte Mart.'],
+    ],
+    map:'https://www.google.com/maps/dir/?api=1&origin=K-Grand+Hotel+Myeongdong&destination=Lotte+Mart+Seoul+Station&waypoints=Jinokhwa+Halmae+Wonjo+Dakhanmari%7CNamsan+Cable+Car%7CN+Seoul+Tower&travelmode=transit',
+    events:[
+      {
+        time:'14:00', title:'Incheon → Myeongdong',
+        note:'Airport limousine bus, or AREX with a subway transfer, depending on luggage.',
+        facts:[
+          ['hotel', 'K-Grand Myeongdong, check-in after 15:00.'],
+        ],
+      },
+      {
+        time:'18:00', title:'Jinokhwa Halmae Wonjo Dakhanmari', meal:'dinner',
+        note:'Whole chicken soup with dipping sauce; add noodles to the broth at the end. ~60-75 min.',
+        facts:[
+          ['address', '18 Jong-ro 40ga-gil, Jongno-gu. Jongno 5-ga Station (Line 1) Exit 5, ~5 min walk; or Dongdaemun Station (Line 4).'],
+          ['go', 'Line 4 Myeongdong → Dongdaemun (~5 min), then 10-15 min on foot. Taxi ~15-25 min.'],
+        ],
+      },
+      {
+        time:'19:30', title:'N Seoul Tower night views',
+        note:'Outdoor viewpoints are free; the observatory ticket is separate.',
+        facts:[
+          ['go', 'Taxi to Namsan Cable Car (남산 케이블카), ~15-25 min.'],
+          ['cable car', 'Allow 20-40 min for queue + ride (ride 3-5 min). Round trip ~₩15,000 per adult. 10-15 min walk up to the tower.'],
+          ['to do', 'Confirm Christmas Eve operating hours.'],
+        ],
+        source:'https://www.seoultower.co.kr/',
+      },
+      {
+        time:'21:30', title:'Lotte Mart ZETTAPLEX Seoul Station',
+        note:'Seaweed, snacks, instant noodles, biscuits and souvenirs. ~45-60 min.',
+        facts:[
+          ['address', '405 Hangang-daero, Jung-gu.'],
+          ['go', 'Taxi from Namsan to Seoul Station.'],
+          ['to do', 'Check holiday opening hours.'],
+        ],
+      },
+      {
+        time:'22:30', title:'Late-night chicken at the hotel', idea:'snack',
+        note:'BHC (cheese powder or honey), Kyochon (garlic soy or honey) or Rosé tteokbokki.',
+        facts:[
+          ['order', 'Search the Korean names in a delivery app. Some need a Korean phone number or local card; takeaway from a Myeongdong branch works too.'],
+        ],
+      },
+    ],
+  },
+  {
+    id:'seoul-bukchon-insadong-seongsu', short:'Seongsu', icon:'🛍️', title:'Bukchon + Insadong + Seongsu + Ikseon-dong', city:'seoul', date:'2026-12-25',
+    summary:'Hanok lanes and sujebi in the morning, Gwanghwamun and Insadong at midday, Seongsu shopping all afternoon, then Ikseon-dong and pojangmacha dinner at Jongno 3-ga.',
+    pois:['Bukchon', 'Samcheong-dong', 'Insadong', 'Seongsu', 'Ikseon-dong'],
+    brief:[
+      ['route', 'Traditional neighbourhoods in the morning, Seongsu in the afternoon, dinner near Jongno 3-ga. Minimal backtracking.'],
+      ['holiday', 'Christmas Day is a public holiday in Korea. Expect crowds and check each stop’s holiday hours.'],
+    ],
+    map:'https://www.google.com/maps/dir/?api=1&origin=Anguk+Station&destination=Jongno+3-ga+Station&waypoints=Bukchon+Hanok+Village%7CSamcheong-dong+Sujebi%7CGwanghwamun%7CInsadong%7CSeongsu+Station%7CIkseon-dong+Hanok+Street&travelmode=transit',
+    events:[
+      {
+        time:'09:00', title:'Garlic Boy Anguk', idea:'breakfast',
+        note:'Garlic bread, garlic crumble bread or truffle cream. ~15-20 min, on the way to Bukchon.',
+        facts:[
+          ['address', '105-1 Jae-dong, Jongno-gu.'],
+          ['go', 'Line 4 Myeongdong → Chungmuro, change to Line 3 toward Daehwa, get off at Anguk (안국역), 5-8 min walk. ~25-30 min in all.'],
+          ['to do', 'Check holiday hours.'],
+        ],
+      },
+      {
+        time:'09:30', title:'Bukchon Hanok Village',
+        note:'Hanok lanes and photos, ~45-60 min, then downhill toward Samcheong-dong.',
+        facts:[
+          ['go', '5-10 min walk from Garlic Boy.'],
+          ['hours', 'Some residential lanes restrict tourist access. Follow the signs and designated visiting hours.'],
+        ],
+      },
+      {
+        time:'11:00', title:'Samcheong-dong Sujebi (삼청동 수제비)', meal:'lunch',
+        note:'Hand-torn dough soup and potato pancake.',
+        facts:[
+          ['arrive', '~10:50 to queue before opening.'],
+          ['hours', '11:00-20:00.'],
+          ['go', '10-15 min walk from Bukchon along Samcheong-ro; slopes and stone paths. Use the Korean name in the map app to find the entrance.'],
+        ],
+      },
+      {
+        time:'12:00', title:'Gwanghwamun Gate (exterior)',
+        note:'Already visited the palace, so photos of the gate and plaza only. No ticket needed. ~30 min.',
+        facts:[
+          ['go', 'Taxi ~5-10 min, or walk ~20-25 min.'],
+        ],
+      },
+      {
+        time:'12:30', title:'Insadong',
+        note:'Traditional stationery, ceramics, souvenirs, accessories and tea shops. ~45-60 min.',
+        facts:[
+          ['go', 'Walk 15-20 min from Gwanghwamun.'],
+        ],
+      },
+      {
+        time:'13:30', title:'Insadong → Seongsu',
+        note:'~30-35 min including walking and the transfer.',
+        facts:[
+          ['go', 'Walk to Anguk, Line 3 toward Ogeum to Euljiro 3-ga (~4-6 min), change to Line 2 toward Seongsu/Jamsil, Seongsu (~14 min), 5-10 min on foot.'],
+        ],
+      },
+      {
+        time:'14:00', title:'Seongsu-dong shopping',
+        note:'~3-3.5 h: fashion brands and select shops near the station, then pop-up stores, then a café break.',
+        facts:[
+          ['book', 'Pop-ups change often and popular ones need reservations or queue registration. Check brand announcements before the trip.'],
+        ],
+      },
+      {
+        time:'17:30', title:'Seongsu → Ikseon-dong',
+        note:'~25-35 min.',
+        facts:[
+          ['go', 'Line 2 to Euljiro 3-ga (~14 min), Line 3 toward Daehwa to Jongno 3-ga (종로3가역, 2-3 min), 5-10 min on foot.'],
+        ],
+      },
+      {
+        time:'18:00', title:'Ikseon-dong Hanok Street',
+        note:'Hanok cafés, small boutiques and evening photos. Wander the lanes rather than chasing specific shops.',
+      },
+      {
+        time:'19:00', title:'Jongno 3-ga pojangmacha', idea:'dinner',
+        note:'Tteokbokki, eomuk-tang, jeon, grilled skewers or stir-fried pork.',
+        facts:[
+          ['go', '5-10 min walk from Ikseon-dong.'],
+          ['tip', 'Pick a stall with visible menus and prices, and confirm the cost before ordering.'],
+          ['back', 'Line 3 toward Ogeum to Chungmuro, Line 4 toward Seoul Station to Myeongdong. ~20-30 min.'],
+        ],
+      },
+    ],
+  },
+  {
+    id:'seoul-hongdae-myeongdong-cheongju', short:'Cheongju', icon:'🚌', title:'Hongdae + Myeongdong shopping → Cheongju Airport', city:'seoul', date:'2026-12-26',
+    summary:'Check out, optional Hongdae morning, gamjatang lunch, Olive Young and emis in Myeongdong, then the bus from Central City to Cheongju Airport for the 23:40 ZE821.',
+    pois:['Hongdae', 'Olive Young', 'emis', 'Central City', 'Cheongju Airport'],
+    brief:[
+      ['priority', 'Reach Cheongju Airport (CJJ) with time for international check-in and bag drop. ZE821 departs 23:40.'],
+      ['bus', 'Central City (센트럴시티) → Cheongju International Airport (청주공항), ~1 h 30 min, ~₩14,000 per person. Not Cheongju city or its bus terminal.'],
+      ['to do', 'Recheck the Dec 26 bus timetable and book seats.'],
+    ],
+    map:'https://www.google.com/maps/dir/?api=1&origin=K-Grand+Hotel+Myeongdong&destination=Cheongju+International+Airport&waypoints=Hongik+University+Station%7COlive+Young+Myeongdong+Town%7CCentral+City+Seoul&travelmode=transit',
+    events:[
+      {
+        time:'09:30', title:'Check out of K-Grand',
+        note:'Leave the bags at the hotel until the afternoon.',
+        facts:[
+          ['to do', 'Confirm the hotel will hold luggage until ~15:30.'],
+        ],
+      },
+      {
+        time:'10:00', title:'Hongdae (optional)',
+        note:'Fashion shops, streetwear brands and independent stores. ~1.5-2 h.',
+        facts:[
+          ['go', 'Line 4 to Seoul Station, AREX All-Stop to Hongik University (홍대입구역), Exit 9. ~30-40 min.'],
+          ['back', 'Same route in reverse, ~30-40 min. Leave by ~11:45.'],
+        ],
+      },
+      {
+        time:'12:00', title:'Lee Tae Jo Gamjatang (이태조 감자탕)', idea:'lunch',
+        note:'Optional; anything nearby works. ~45 min.',
+        facts:[
+          ['to do', 'Confirm the branch and opening hours.'],
+        ],
+      },
+      {
+        time:'13:15', title:'Olive Young Myeongdong Town + emis',
+        note:'Skincare, sheet masks, makeup and sunscreen, then a nearby emis store. Bring a list; it gets crowded.',
+        facts:[
+          ['find', 'Search “emis 명동” in Naver Map for the current branch and hours.'],
+          ['leave', 'By 15:15.'],
+        ],
+      },
+      {
+        time:'15:15', title:'Collect bags at K-Grand',
+        note:'Passport, flight booking, phone, chargers and shopping bags.',
+      },
+      {
+        time:'16:00', title:'Myeongdong → Central City',
+        note:'~30-40 min including the transfer and the walk to the bus bays.',
+        facts:[
+          ['go', 'Line 4 to Chungmuro (~2 min), Line 3 toward Ogeum to Express Bus Terminal (고속터미널역, ~15-20 min), then follow signs to Central City (10-15 min).'],
+          ['careful', 'Central City, Seoul Express Bus Terminal and Seoul Nambu are different terminals.'],
+        ],
+      },
+      {
+        time:'16:50', title:'Bus to Cheongju Airport',
+        note:'Plan for the 16:50, arriving ~18:20. The 18:10 (arrives ~19:40) gives more shopping time but less traffic margin.',
+        facts:[
+          ['times', '16:50 → 18:20 · 18:10 → 19:40 · 19:00 → 20:30 · 20:10 → 21:40 (reference only; recheck for Dec 26).'],
+          ['arrive', 'Aim for CJJ by 19:30-20:00.'],
+        ],
+      },
+      {
+        time:'23:40', title:'ZE821 Cheongju → Shanghai',
+        note:'Lands PVG T2 at 01:20 on Dec 27. Taxi to the Rezen; the metro is closed.',
       },
     ],
   },
@@ -1245,6 +1727,9 @@ if (PART) {
     legendItems[i].style.display = 'none';
   });
 }
+
+// phones: start with the key folded so the calendar is closer to the top
+if (matchMedia('(max-width:640px)').matches) document.getElementById('key').open = false;
 
 const dayDeck = document.getElementById('day-deck');
 let selectedTemplateId = null;
@@ -1686,8 +2171,15 @@ function paintRibbon() {
     const span = days(start, end) + 1;
     segment.style.flex = span;
     segment.style.background = country.hue;
-    segment.textContent = `${country.flag} ${country.country} · ${span}d`;
-    segment.title = segment.textContent;
+    const label = `${country.flag} ${country.country} · ${span}d`;
+    for (const [cls, text] of [['rb-flag', country.flag], ['rb-name', country.country], ['rb-days', `${span}d`]]) {
+      const part = document.createElement('span');
+      part.className = cls;
+      part.textContent = text;
+      segment.append(part);
+    }
+    segment.title = label;
+    segment.setAttribute('aria-label', label);
     ribbon.append(segment);
   });
 }
@@ -1757,7 +2249,8 @@ function renderDetail(itinerary, data, { country, context, fallbackTitle, showCl
   detailCountry.textContent = country;
   detailDate.textContent = itinerary ? `${itinerary.icon} ${itinerary.title}` : fallbackTitle;
   detailContext.textContent = context;
-  detailSummary.textContent = itinerary?.note || data.note || 'No day card assigned yet.';
+  if (itinerary?.brief?.length) detailSummary.replaceChildren(factList(itinerary.brief, 'facts facts-brief'));
+  else detailSummary.textContent = itinerary?.note || data.note || 'No day card assigned yet.';
   const mapUrl = /^https:\/\/www\.google\.com\/maps\//.test(itinerary?.map || '') ? itinerary.map : '';
   detailMap.hidden = !mapUrl;
   if (mapUrl) detailMap.href = mapUrl;
@@ -1768,6 +2261,22 @@ function renderDetail(itinerary, data, { country, context, fallbackTitle, showCl
   renderOutline(showTips ? itinerary.tips : itinerary?.events || data.events || [], showTips);
   if (!detailDialog.open) detailDialog.showModal();  // prev/next re-renders an open dialog
   detailScroll.scrollTop = 0;
+}
+
+// Labelled key facts: [['leave', 'By 15:20 ...'], ...]. Deadline labels get the accent colour.
+const URGENT_FACTS = new Set(['leave', 'be at', 'book']);
+function factList(facts, className = 'facts') {
+  const list = document.createElement('dl');
+  list.className = className;
+  facts.forEach(([label, text]) => {
+    const dt = document.createElement('dt');
+    dt.textContent = label;
+    if (URGENT_FACTS.has(label)) dt.className = 'urgent';
+    const dd = document.createElement('dd');
+    dd.textContent = text;
+    list.append(dt, dd);
+  });
+  return list;
 }
 
 function renderOutline(items, showTips = false) {
@@ -1812,7 +2321,16 @@ function renderOutline(items, showTips = false) {
       optional.textContent = 'optional';
       copy.append(optional);
     }
-    copy.append(title, note);
+    copy.append(title);
+    if (item.note) copy.append(note);
+    if (item.facts?.length) copy.append(factList(item.facts));
+    if (!showTips && item.idea) {
+      card.classList.add('postcard-idea');
+      const kicker = document.createElement('span');
+      kicker.className = 'postcard-idea-kicker';
+      kicker.textContent = `${item.idea} idea · no booking`;
+      copy.prepend(kicker);
+    }
     if (!showTips && item.meal) {
       card.classList.add('postcard-meal');
       const badge = document.createElement('span');
