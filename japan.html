@@ -359,6 +359,9 @@
   .facts dd{margin:0;color:var(--ink-2)}
   .facts-brief{grid-template-columns:84px minmax(0,1fr);gap:6px 12px;margin:0;font-size:13.5px;padding:12px 14px;border:1px solid var(--ring);border-radius:12px;background:#1a1a20}
   .facts-brief dt{padding-top:3px}
+  .postcard-booked-badge{display:inline-block;margin:0 0 5px 4px;padding:2px 7px;border-radius:999px;background:#7ee0a1;color:#16161a;font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+  .postcard-booked-badge:first-child{margin-left:0}
+  .facts dt.booked{color:#7ee0a1}
   .postcard-optional{display:inline-block;margin-bottom:5px;padding:2px 6px;border:1px solid var(--ring);border-radius:999px;color:var(--muted);font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
   .postcard-source,.postcard-map{display:inline-flex;align-items:center;min-height:44px;color:var(--focus);font-size:13px;font-weight:650;text-decoration:none;text-underline-offset:3px}
   .postcard-source:hover,.postcard-map:hover{text-decoration:underline}
@@ -921,7 +924,7 @@ const DAY_TEMPLATES = [
     summary:'Klook bus day trip from Osaka: the Ine boathouses and a bay cruise, then Amanohashidate by cable car. Dotonbori and dinner after, then Round1.',
     pois:['AMANEK', 'Ine + Amanohashidate', 'Dotonbori', 'Round1'],
     brief:[
-      ['book', 'Not booked yet. Klook option “Departing from Osaka (includes Amanohashidate Cable Car and Ine Bay Boat Tour tickets)”, 30% off, from CAD 79.39 each. Free cancellation up to 24 h before.'],
+      ['booked', 'Option “Departing from Osaka (includes Amanohashidate Cable Car and Ine Bay Boat Tour tickets)”. Free cancellation up to 24 h before.'],
       ['meet', 'Kintetsu Nippombashi at 07:45; no refund if late. One stop or ~10 min walk from Namba.'],
       ['tour', 'Chinese / English guide. The tour LINE group link arrives by email ~18:00 the day before. Meals not included.'],
     ],
@@ -2136,7 +2139,8 @@ function paint() {
       + (hol ? hol[0] : '') + (leg && !PHONE ? leg.flag : '')) || FUN_DAYS[key] || '';  // phone: the fill already says the country
     const meals = (itinerary?.events || data.events || []).filter(e => e.meal);
     const mealIcons = Object.keys(MEAL_ICONS).filter(m => meals.some(e => e.meal === m)).map(m => MEAL_ICONS[m]);
-    tag.textContent = mealIcons.join('') + tag.textContent;
+    const dayBooked = itinerary && (isBooked({ facts: itinerary.brief }) || (itinerary.events || []).some(isBooked));
+    tag.textContent = (dayBooked ? '🎟️' : '') + mealIcons.join('') + tag.textContent;
 
     chiprow.innerHTML = '';
     const notes = [];
@@ -2286,6 +2290,7 @@ function renderDetail(itinerary, data, { country, context, fallbackTitle, showCl
 
 // Labelled key facts: [['leave', 'By 15:20 ...'], ...]. Deadline labels get the accent colour.
 const URGENT_FACTS = new Set(['leave', 'be at', 'book']);
+const isBooked = item => (item?.facts || item?.brief || []).some(([label]) => label === 'booked');
 function factList(facts, className = 'facts') {
   const list = document.createElement('dl');
   list.className = className;
@@ -2293,6 +2298,7 @@ function factList(facts, className = 'facts') {
     const dt = document.createElement('dt');
     dt.textContent = label;
     if (URGENT_FACTS.has(label)) dt.className = 'urgent';
+    if (label === 'booked') { dt.className = 'booked'; dt.textContent = '🎟️ booked'; }
     const dd = document.createElement('dd');
     dd.textContent = text;
     list.append(dt, dd);
@@ -2351,6 +2357,12 @@ function renderOutline(items, showTips = false) {
       kicker.className = 'postcard-idea-kicker';
       kicker.textContent = `${item.idea} idea · no booking`;
       copy.prepend(kicker);
+    }
+    if (!showTips && isBooked(item)) {
+      const booked = document.createElement('span');
+      booked.className = 'postcard-booked-badge';
+      booked.textContent = '🎟️ booked';
+      copy.prepend(booked);
     }
     if (!showTips && item.meal) {
       card.classList.add('postcard-meal');
