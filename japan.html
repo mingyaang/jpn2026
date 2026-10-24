@@ -842,7 +842,7 @@ const DAY_TEMPLATES = [
     pois:['AMANEK', 'Umeda', 'Osaka Castle', 'Dotonbori', 'Shinsekai'],
     brief:[
       ['pass', 'OSAKA AMAZING PASS 1day, ¥3,500 each. Covers Osaka Metro, city buses, private lines within Osaka and one entry at ~40 attractions. Today’s stops are worth ~¥8,000 each.'],
-      ['buy', 'Digital QR on Surutto QRtto (account needed). One QR per person: buy both and transfer one to Y.. Use within 3 months of purchase.'],
+      ['booked', 'Both passes bought. Transfer one QR to Y. before the day (one QR per person).'],
       ['activate', 'Tap “Start Using” after 3:00 am on the day; 0:00-2:59 counts as the previous day. Valid for the calendar day, not 24 h.'],
     ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Umeda+Sky+Building&destination=Tsutenkaku&waypoints=HEP+FIVE%7COsaka+Castle%7CGlico+Sign+Dotonbori&travelmode=transit',
@@ -1066,7 +1066,7 @@ const DAY_TEMPLATES = [
         time:'12:00', title:'Asakusa Sumo Club ANNEX lunch show', meal:'lunch',
         note:'Two-hour sumo show with a wagyu sukiyaki lunch, a few minutes from Sensō-ji.',
         facts:[
-          ['book', 'Ahead, and confirm the 12:00 time.'],
+          ['booked', '12:00 lunch show.'],
         ],
         source:'https://tokyocheapo.com/restaurant/asakusa-sumo-club-annex/'
       },
@@ -1098,7 +1098,7 @@ const DAY_TEMPLATES = [
     summary:'A full park day focused on Fantasy Springs and the biggest rides.',
     pois:['Fantasy Springs', 'Frozen Journey', 'Soaring', 'Toy Story Mania!'],
     brief:[
-      ['tickets', 'On sale Oct 20 at 14:00 JST (two months ahead, fixed date). The Sunday before Christmas sells out.'],
+      ['booked', '1-Day Passports for Dec 20. Link both tickets in the app.'],
       ['plan', 'Set up the app before the visit. Use the first minutes inside to secure the key ride, then flex around live waits and return windows.'],
     ],
     map:'https://www.google.com/maps/search/?api=1&query=Tokyo+DisneySea',
@@ -1169,7 +1169,7 @@ const DAY_TEMPLATES = [
         facts:[
           ['go', 'Hatsudai Station (Keio New Line, 1 stop from Shinjuku) connects straight into the building.'],
           ['hours', 'Weekday lunch 11:30-15:00.'],
-          ['book', 'Ahead, and ask for a window table.'],
+          ['booked', '13:30 lunch.'],
         ],
         source:'https://www.jojoen.co.jp/shop/jojoen/operacity/'
       },
@@ -1229,7 +1229,7 @@ const DAY_TEMPLATES = [
         facts:[
           ['cost', '¥13,000 each incl. tax.'],
           ['where', '3F, 5-17-13 Shinjuku. 1 min from Shinjuku-sanchome Exit E2, ~10 min walk from the hotel. Closes 22:00.'],
-          ['book', 'The 20:00 table. Cancelling the day before costs 50%; from midnight on the day, the full price.'],
+          ['booked', '20:00 table. Cancelling the day before costs 50%; from midnight on the day, the full price.'],
         ],
         map:'https://www.google.com/maps/search/?api=1&query=Seafood+Buffet+Dining+Ginza+Happo+Shinjuku+5-17-13+Shinjuku+Tokyo',
         source:'https://ginzahappo-shinjuku.owst.jp/'
@@ -1265,12 +1265,12 @@ const DAY_TEMPLATES = [
         source:'https://www.gotokyo.org/en/spot/78/index.html'
       },
       {
-        time:'19:30', title:'Shibuya Sushiki (tentative)', meal:'dinner',
-        note:'8-seat sushi counter, Tabelog 3.50. Omakase course, 22 items: seasonal appetizers and warm dishes served between the sushi, about as many dishes as nigiri, plus dessert. ~2 h. Not booked yet.',
+        time:'20:30', title:'Shibuya Sushiki', meal:'dinner',
+        note:'8-seat sushi counter, Tabelog 3.50. Omakase course, 22 items: seasonal appetizers and warm dishes served between the sushi, about as many dishes as nigiri, plus dessert. ~2 h, so done ~22:30.',
         facts:[
           ['cost', '¥12,000 each incl. tax (Tabelog online price), or ¥15,000 for the Special Course with abalone and nodoguro. All-you-can-drink +¥3,000 (premium +¥5,000), 2 h.'],
           ['where', 'Y-place Bldg 3F, 1-7-9 Dogenzaka. 2 min from the Inokashira line gates, ~6 min from JR Shibuya.'],
-          ['book', 'On Tabelog. No start times 18:15-19:15, so 18:00 or 19:30. Ask for the counter: a private room for 2 after 17:00 costs extra. Closes 23:00.'],
+          ['booked', '20:30. Closes 23:00.'],
           ['request', 'Paste in the booking notes: 光り物（サバ・アジ・コハダ・イワシ）が苦手なので、控えめにしていただけますか。マグロは大好きです。 (Go light on silver-skinned fish; we love tuna.)'],
         ],
         map:'https://www.google.com/maps/place/Shibuya+Sushiki/@35.6575621,139.6991783,17z/data=!3m1!4b1!4m6!3m5!1s0x60188b6e5c890e71:0xf53797850e73531d!8m2!3d35.6575621!4d139.6991783!16s%2Fg%2F11t9ld8ksq',
@@ -1372,7 +1372,7 @@ const DAY_TEMPLATES = [
         note:'Plan 2-3 h; no re-entry. Last entry 19:30.',
         facts:[
           ['go', 'JR Hanazono to Kyoto Station (~10 min), then 7-10 min on foot from the Hachijo East exit.'],
-          ['book', 'An 18:00 slot ahead; ¥3,600-5,600 depending on the day.'],
+          ['booked', '18:00 slot.'],
           ['before', 'A small snack at Kyoto Station, ~17:15-17:45.'],
           ['dinner', 'Out by ~20:45: Kyoto Ramen Koji, Kyoto Station 10F (to 22:00, last order 21:30). Out ~21:00: subway to Shijo and eat near Musse (Pontocho, Kiyamachi).'],
         ],
