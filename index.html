@@ -681,6 +681,27 @@ const MILESTONES = {
 // info is an ordered label → value list shown in the popup. image and map are optional.
 const BOOKINGS = [
   {
+    icon:'✈️', title:'Seattle → Tokyo', label:'SEA → NRT', short:'NRT', date:'2026-11-27',
+    ref:'',
+    legs:[
+      { dep:'11:55', arr:'15:25 +1', from:'SEA Seattle-Tacoma', to:'NRT Narita', flight:'AS123 · Alaska Airlines' },
+    ],
+    tags:['10h 30m', 'business · seat 2J', '2 checked bags (50 lb each) + carry-on and personal item', 'lands 3:25 pm Nov 28', '1 adult', 'Avios award · US$25 taxes paid'],
+  },
+  {
+    icon:'🏨', title:'9h nine hours Shinjuku-North', label:'9h Shinjuku-North', short:'9h',
+    date:'2026-11-28', checkout:'2026-11-29', checkinTime:'15:00–05:00', checkoutTime:'by 11:00',
+    ref:'',
+    map:'https://www.google.com/maps/search/?api=1&query=9h+nine+hours+Shinjuku-North',
+    info:{
+      room:'[Men Only] Capsule + Sleep Report (quality, snoring, apnea, etc), non-smoking · 1 adult',
+      meals:'no breakfast',
+      
+      
+      'check-in':'under the guest name on the booking, Mao MingYang, with valid ID',
+    },
+  },
+  {
     icon:'🏨', title:'Travelodge Osaka Shinsaibashi', label:'Travelodge Shinsaibashi', short:'Travelodge',
     date:'2026-12-06', checkout:'2026-12-12', checkinTime:'from 15:00', checkoutTime:'by 10:00',
     ref:'',
