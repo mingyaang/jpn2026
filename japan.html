@@ -1497,50 +1497,55 @@ const DAY_TEMPLATES = [
     ],
   },
   {
-    id:'seoul-arrival-dakhanmari-namsan', short:'Namsan', icon:'🗼', title:'Arrive Seoul: Dakhanmari + N Seoul Tower + Lotte Mart', city:'seoul', date:'2026-12-24',
-    summary:'Land at Incheon, check in at K-Grand Myeongdong, dakhanmari dinner near Dongdaemun, N Seoul Tower night views, then a Lotte Mart snack run.',
-    pois:['Incheon', 'Dakhanmari', 'N Seoul Tower', 'Lotte Mart'],
+    id:'seoul-arrival-dakhanmari-namsan', short:'Namsan', icon:'🗼', title:'Arrive Seoul: Dakhanmari + Gwangjang + N Seoul Tower', city:'seoul', date:'2026-12-24',
+    summary:'Land at Incheon, check in at K-Grand Myeongdong, dakhanmari dinner and Gwangjang Market, N Seoul Tower at night, then the Myeongdong Christmas lights on the walk back.',
+    pois:['Incheon', 'Dakhanmari', 'Gwangjang Market', 'N Seoul Tower', 'Myeongdong lights'],
     brief:[
       ['arrive', 'LJ212 lands at ICN T2 at 13:50. Allow 2-3 h for immigration, bags, the trip into Myeongdong and check-in (from 15:00).'],
-      ['to do', 'Christmas Eve: check holiday hours for the cable car, the tower and Lotte Mart.'],
+      ['food', 'A light day after the Tokyo feast: chicken soup, no BBQ. The trip’s one KBBQ meal is Dec 26 lunch.'],
+      ['to do', 'Christmas Eve: check holiday hours for the cable car and the tower.'],
     ],
-    map:'https://www.google.com/maps/dir/?api=1&origin=K-Grand+Hotel+Myeongdong&destination=Lotte+Mart+Seoul+Station&waypoints=Jinokhwa+Halmae+Wonjo+Dakhanmari%7CNamsan+Cable+Car%7CN+Seoul+Tower&travelmode=transit',
+    map:'https://www.google.com/maps/dir/?api=1&origin=K-Grand+Hotel+Myeongdong&destination=K-Grand+Hotel+Myeongdong&waypoints=Jinokhwa+Halmae+Wonjo+Dakhanmari%7CGwangjang+Market%7CNamsan+Cable+Car%7CN+Seoul+Tower%7CMyeongdong+Cathedral&travelmode=transit',
     events:[
       {
         time:'14:00', title:'Incheon → Myeongdong',
         note:'Airport limousine bus, or AREX with a subway transfer, depending on luggage.',
         facts:[
-          ['hotel', 'K-Grand Myeongdong, check-in after 15:00.'],
+          ['hotel', 'K-Grand Myeongdong, check-in after 15:00. Expect to arrive ~16:30.'],
         ],
       },
       {
-        time:'18:00', title:'Jinokhwa Halmae Wonjo Dakhanmari', meal:'dinner',
+        time:'17:30', title:'Jinokhwa Halmae Wonjo Dakhanmari', meal:'dinner',
         note:'Whole chicken soup with dipping sauce; add noodles to the broth at the end. ~60-75 min.',
         facts:[
           ['address', '18 Jong-ro 40ga-gil, Jongno-gu. Jongno 5-ga Station (Line 1) Exit 5, ~5 min walk; or Dongdaemun Station (Line 4).'],
-          ['go', 'Line 4 Myeongdong → Dongdaemun (~5 min), then 10-15 min on foot. Taxi ~15-25 min.'],
+          ['go', 'Leave the hotel ~17:00. Line 4 Myeongdong → Dongdaemun (~5 min), then 10-15 min on foot. Taxi ~15-25 min.'],
         ],
         image:'img/jinokhwa-dakhanmari.jpg',
+      },
+      {
+        time:'18:45', title:'Gwangjang Market + Garlic Boy',
+        note:'Buy Garlic Boy bread for tomorrow’s breakfast. If you still have room, try bindaetteok or mayak gimbap; otherwise just browse.',
+        facts:[
+          ['go', '~5 min walk from the dakhanmari restaurant.'],
+          ['hours', 'Garlic Boy (Gwangjang branch) 10:00-19:30. Get the bread first.'],
+        ],
       },
       {
         time:'19:30', title:'N Seoul Tower night views',
         note:'Outdoor viewpoints are free; the observatory ticket is separate.',
         facts:[
-          ['go', 'Taxi to Namsan Cable Car (남산 케이블카), ~15-25 min.'],
-          ['cable car', 'Allow 20-40 min for queue + ride (ride 3-5 min). Round trip ~₩15,000 per adult. 10-15 min walk up to the tower.'],
+          ['go', 'Taxi from Gwangjang to Namsan Cable Car (남산 케이블카), ~15-25 min.'],
+          ['cable car', 'Allow 20-40 min for queue + ride (ride 3-5 min); the Christmas Eve queue may run longer. Round trip ~₩15,000 per adult. ~5 min walk up to the tower.'],
+          ['last ride', 'Last round-trip boarding 22:30.'],
           ['to do', 'Confirm Christmas Eve operating hours.'],
         ],
         source:'https://www.seoultower.co.kr/',
         image:'img/n-seoul-tower-night.jpg',
       },
       {
-        time:'21:30', title:'Lotte Mart ZETTAPLEX Seoul Station',
-        note:'Seaweed, snacks, instant noodles, biscuits and souvenirs. ~45-60 min.',
-        facts:[
-          ['address', '405 Hangang-daero, Jung-gu.'],
-          ['go', 'Taxi from Namsan to Seoul Station.'],
-          ['to do', 'Check holiday opening hours.'],
-        ],
+        time:'22:00', title:'Myeongdong Christmas lights',
+        note:'Walk down from the lower cable car station (~10 min) to the Shinsegae main store’s light display and Myeongdong Cathedral, then back to the hotel. Free.',
       },
       {
         time:'22:30', title:'Late-night chicken at the hotel', idea:'snack',
@@ -1553,67 +1558,56 @@ const DAY_TEMPLATES = [
   },
   {
     id:'seoul-bukchon-insadong-seongsu', short:'Seongsu', icon:'🛍️', title:'Bukchon + Insadong + Seongsu + Ikseon-dong', city:'seoul', date:'2026-12-25',
-    summary:'Hanok lanes and sujebi in the morning, Gwanghwamun and Insadong at midday, Seongsu shopping all afternoon, then Ikseon-dong and pojangmacha dinner at Jongno 3-ga.',
-    pois:['Bukchon', 'Samcheong-dong', 'Insadong', 'Seongsu', 'Ikseon-dong'],
+    summary:'Bukchon and Insadong in the morning, Silbiok lunch and Seongsu shopping all afternoon, then Ikseon-dong and pojangmacha dinner at Jongno 3-ga.',
+    pois:['Bukchon', 'Insadong', 'Silbiok', 'Seongsu', 'Ikseon-dong', 'Jongno 3-ga'],
     brief:[
-      ['route', 'Traditional neighbourhoods in the morning, Seongsu in the afternoon, dinner near Jongno 3-ga. Minimal backtracking.'],
+      ['route', 'Hanok area in the morning, Seongsu in the afternoon, back to Jongno 3-ga for dinner.'],
+      ['breakfast', 'Garlic Boy bread from Gwangjang Market last night.'],
       ['holiday', 'Christmas Day is a public holiday in Korea. Expect crowds and check each stop’s holiday hours.'],
     ],
-    map:'https://www.google.com/maps/dir/?api=1&origin=Anguk+Station&destination=Jongno+3-ga+Station&waypoints=Bukchon+Hanok+Village%7CSamcheong-dong+Sujebi%7CGwanghwamun%7CInsadong%7CSeongsu+Station%7CIkseon-dong+Hanok+Street&travelmode=transit',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Anguk+Station&destination=Jongno+3-ga+Station&waypoints=Bukchon+Hanok+Village%7CInsadong%7CSeongsu+Station%7CIkseon-dong+Hanok+Street&travelmode=transit',
     events:[
       {
-        time:'09:00', title:'Garlic Boy Anguk', idea:'breakfast',
-        note:'Garlic bread, garlic crumble bread or truffle cream. ~15-20 min, on the way to Bukchon.',
-        facts:[
-          ['address', '105-1 Jae-dong, Jongno-gu.'],
-          ['go', 'Line 4 Myeongdong → Chungmuro, change to Line 3 toward Daehwa, get off at Anguk (안국역), 5-8 min walk. ~25-30 min in all.'],
-          ['to do', 'Check holiday hours.'],
-        ],
+        time:'09:30', title:'Myeongdong → Anguk',
+        note:'Line 4 to Chungmuro, change to Line 3 toward Daehwa, get off at Anguk (안국역). ~25-30 min.',
       },
       {
-        time:'09:30', title:'Bukchon Hanok Village',
-        note:'Hanok lanes and photos, ~45-60 min, then downhill toward Samcheong-dong.',
+        time:'10:00', title:'Bukchon Hanok Village',
+        note:'Hanok lanes and photos, ~45-60 min. Quieter in the morning.',
         facts:[
-          ['go', '5-10 min walk from Garlic Boy.'],
-          ['hours', 'Some residential lanes restrict tourist access. Follow the signs and designated visiting hours.'],
+          ['go', '~5-10 min walk from Anguk Station.'],
+          ['hours', 'The core lanes (Bukchon-ro 11-gil) are open to tourists 10:00-17:00 only; ₩100,000 fine outside those hours.'],
         ],
         image:'img/bukchon-hanok-village.jpg',
       },
       {
-        time:'11:00', title:'Samcheong-dong Sujebi (삼청동 수제비)', meal:'lunch',
-        note:'Hand-torn dough soup and potato pancake.',
+        time:'11:00', title:'Insadong',
+        note:'Traditional stationery, ceramics, souvenirs, accessories and tea shops. ~45 min.',
         facts:[
-          ['arrive', '~10:50 to queue before opening.'],
-          ['hours', '11:00-20:00.'],
-          ['go', '10-15 min walk from Bukchon along Samcheong-ro; slopes and stone paths. Use the Korean name in the map app to find the entrance.'],
-        ],
-      },
-      {
-        time:'12:00', title:'Gwanghwamun Gate (exterior)',
-        note:'Already visited the palace, so photos of the gate and plaza only. No ticket needed. ~30 min.',
-        facts:[
-          ['go', 'Taxi ~5-10 min, or walk ~20-25 min.'],
-        ],
-        image:'img/gwanghwamun-gate.jpg',
-      },
-      {
-        time:'12:30', title:'Insadong',
-        note:'Traditional stationery, ceramics, souvenirs, accessories and tea shops. ~45-60 min.',
-        facts:[
-          ['go', 'Walk 15-20 min from Gwanghwamun.'],
+          ['go', '~10-15 min walk downhill from Bukchon.'],
         ],
         image:'img/insadong.jpg',
       },
       {
-        time:'13:30', title:'Insadong → Seongsu',
-        note:'~30-35 min including walking and the transfer.',
+        time:'11:45', title:'Insadong → Seongsu',
+        note:'~30 min including walking and the transfer.',
         facts:[
-          ['go', 'Walk to Anguk, Line 3 toward Ogeum to Euljiro 3-ga (~4-6 min), change to Line 2 toward Seongsu/Jamsil, Seongsu (~14 min), 5-10 min on foot.'],
+          ['go', 'Walk to Anguk, Line 3 toward Ogeum to Euljiro 3-ga (~4-6 min), change to Line 2 toward Seongsu/Jamsil, Seongsu (~14 min).'],
         ],
       },
       {
-        time:'14:00', title:'Seongsu-dong shopping',
-        note:'~3-3.5 h: fashion brands and select shops near the station, then pop-up stores, then a café break.',
+        time:'12:15', title:'Silbiok (실비옥)', meal:'lunch',
+        note:'Beef and seaweed hot pot (~₩13,900). Add kalguksu or sujebi noodles, then finish with rice porridge. Not spicy.',
+        facts:[
+          ['address', 'Basement floor, ~170 m from Seongsu Station Exit 3.'],
+          ['queue', 'Popular since a TV feature. No office lunch crowd on the holiday, but expect a wait.'],
+          ['to do', 'Check Dec 25 hours on Naver.'],
+        ],
+        source:'https://map.naver.com/p/search/%EC%8B%A4%EB%B9%84%EC%98%A5%20%EC%84%B1%EC%88%98',
+      },
+      {
+        time:'13:15', title:'Seongsu-dong shopping',
+        note:'~4 h 15 min: fashion brands and select shops near the station, then pop-up stores, then a café break.',
         facts:[
           ['book', 'Pop-ups change often and popular ones need reservations or queue registration. Check brand announcements before the trip.'],
         ],
@@ -1632,77 +1626,86 @@ const DAY_TEMPLATES = [
         image:'img/ikseon-dong.jpg',
       },
       {
-        time:'19:00', title:'Jongno 3-ga pojangmacha', idea:'dinner',
+        time:'19:00', title:'Jongno 3-ga pojangmacha', meal:'dinner',
         note:'Tteokbokki, eomuk-tang, jeon, grilled skewers or stir-fried pork.',
         facts:[
-          ['go', '5-10 min walk from Ikseon-dong.'],
-          ['tip', 'Pick a stall with visible menus and prices, and confirm the cost before ordering.'],
+          ['go', '5-10 min walk from Ikseon-dong. The tent street runs between Jongno 3-ga Exits 5 and 6.'],
+          ['tip', 'No reservations. Pick a stall with visible menus and prices, and confirm the cost before ordering.'],
           ['back', 'Line 3 toward Ogeum to Chungmuro, Line 4 toward Seoul Station to Myeongdong. ~20-30 min.'],
         ],
       },
     ],
   },
   {
-    id:'seoul-hongdae-myeongdong-cheongju', short:'Cheongju', icon:'🚌', title:'Hongdae + Myeongdong shopping → Cheongju Airport', city:'seoul', date:'2026-12-26',
-    summary:'Check out, optional Hongdae morning, gamjatang lunch, Olive Young and emis in Myeongdong, then the bus from Central City to Cheongju Airport for the 23:40 ZE821.',
-    pois:['Hongdae', 'Olive Young', 'emis', 'Central City', 'Cheongju Airport'],
+    id:'seoul-hongdae-myeongdong-cheongju', short:'Cheongju', icon:'🚌', title:'Myeongdong KBBQ + Lotte Mart → Cheongju Airport', city:'seoul', date:'2026-12-26',
+    summary:'Check out, Olive Young and emis, KBBQ lunch at Wangbijib, a Lotte Mart snack run at Seoul Station, then the 18:10 bus to Cheongju Airport for the 23:40 ZE821.',
+    pois:['Olive Young', 'emis', 'Wangbijib', 'Lotte Mart', 'Express Bus Terminal', 'Cheongju Airport'],
     brief:[
       ['priority', 'Reach Cheongju Airport (CJJ) with time for international check-in and bag drop. ZE821 departs 23:40.'],
-      ['bus', 'Central City (센트럴시티) → Cheongju International Airport (청주공항), ~1 h 30 min, ~₩14,000 per person. Not Cheongju city or its bus terminal.'],
-      ['to do', 'Recheck the Dec 26 bus timetable and book seats.'],
+      ['bus', 'Seoul Express Bus Terminal, Gyeongbu side (서울경부) → Cheongju International Airport (청주공항), direct, ~1 h 30 min, ~₩14,000 per person. Not Cheongju city or its bus terminal.'],
+      ['book', 'Kobus (kobus.co.kr); the English site takes foreign cards. Sales open ~1 month ahead (late Nov). T-money Bus is the fallback.'],
+      ['to do', 'Recheck the Dec 26 timetable and confirm the departure terminal when booking.'],
     ],
-    map:'https://www.google.com/maps/dir/?api=1&origin=K-Grand+Hotel+Myeongdong&destination=Cheongju+International+Airport&waypoints=Hongik+University+Station%7COlive+Young+Myeongdong+Town%7CCentral+City+Seoul&travelmode=transit',
+    map:'https://www.google.com/maps/dir/?api=1&origin=K-Grand+Hotel+Myeongdong&destination=Cheongju+International+Airport&waypoints=Olive+Young+Myeongdong+Town%7CWangbijib+Myeongdong+Main+Store%7CLotte+Mart+Seoul+Station%7CSeoul+Express+Bus+Terminal&travelmode=transit',
     events:[
       {
         time:'09:30', title:'Check out of K-Grand',
         note:'Leave the bags at the hotel until the afternoon.',
         facts:[
-          ['to do', 'Confirm the hotel will hold luggage until ~15:30.'],
+          ['to do', 'Confirm the hotel will hold luggage until ~15:45.'],
         ],
       },
       {
-        time:'10:00', title:'Hongdae (optional)',
-        note:'Fashion shops, streetwear brands and independent stores. ~1.5-2 h.',
-        facts:[
-          ['go', 'Line 4 to Seoul Station, AREX All-Stop to Hongik University (홍대입구역), Exit 9. ~30-40 min.'],
-          ['back', 'Same route in reverse, ~30-40 min. Leave by ~11:45.'],
-        ],
-        image:'img/hongdae.jpg',
-      },
-      {
-        time:'12:00', title:'Lee Tae Jo Gamjatang (이태조 감자탕)', idea:'lunch',
-        note:'Optional; anything nearby works. ~45 min.',
-        facts:[
-          ['to do', 'Confirm the branch and opening hours.'],
-        ],
-      },
-      {
-        time:'13:15', title:'Olive Young Myeongdong Town + emis',
+        time:'10:00', title:'Olive Young Myeongdong Town + emis',
         note:'Skincare, sheet masks, makeup and sunscreen, then a nearby emis store. Bring a list; it gets crowded.',
         facts:[
           ['find', 'Search “emis 명동” in Naver Map for the current branch and hours.'],
-          ['leave', 'By 15:15.'],
+          ['leave', 'By 11:30 for lunch.'],
         ],
         image:'img/myeongdong.jpg',
       },
       {
-        time:'15:15', title:'Collect bags at K-Grand',
-        note:'Passport, flight booking, phone, chargers and shopping bags.',
+        time:'11:30', title:'Wangbijib Myeongdong main store (왕비집)', meal:'lunch',
+        note:'The trip’s one KBBQ meal. Staff grill at the table; hanwoo beef and pork. ~60-75 min.',
+        facts:[
+          ['hours', '11:30-22:00, break 14:00-16:30, so finish lunch by 14:00.'],
+          ['arrive', 'At the 11:30 opening to skip the queue.'],
+          ['smoke', 'BBQ smoke clings to clothes. Change when you collect your bags.'],
+        ],
+        source:'https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=83635',
       },
       {
-        time:'16:00', title:'Myeongdong → Central City',
-        note:'~30-40 min including the transfer and the walk to the bus bays.',
+        time:'13:00', title:'Free time in Myeongdong', optional:true,
+        note:'More shopping, or a café.',
+      },
+      {
+        time:'14:30', title:'Lotte Mart ZETTAPLEX Seoul Station',
+        note:'Seaweed, snacks, instant noodles, biscuits and souvenirs. ~45-60 min. Buying them last means carrying them only once.',
         facts:[
-          ['go', 'Line 4 to Chungmuro (~2 min), Line 3 toward Ogeum to Express Bus Terminal (고속터미널역, ~15-20 min), then follow signs to Central City (10-15 min).'],
-          ['careful', 'Central City, Seoul Express Bus Terminal and Seoul Nambu are different terminals.'],
+          ['address', '405 Hangang-daero, Jung-gu.'],
+          ['go', 'Line 4 Myeongdong → Seoul Station, 2 stops. Same line back.'],
+          ['hours', 'Open to midnight.'],
         ],
       },
       {
-        time:'16:50', title:'Bus to Cheongju Airport',
-        note:'Plan for the 16:50, arriving ~18:20. The 18:10 (arrives ~19:40) gives more shopping time but less traffic margin.',
+        time:'15:45', title:'Collect bags at K-Grand',
+        note:'Pack the groceries and change out of the BBQ-smoke shirt. Check passport, flight booking, phone and chargers.',
+      },
+      {
+        time:'16:30', title:'Myeongdong → Express Bus Terminal',
+        note:'~30-40 min including the transfer and the walk to the bus bays.',
+        facts:[
+          ['go', 'Line 4 to Chungmuro (~2 min), Line 3 toward Ogeum to Express Bus Terminal (고속터미널역, ~15-20 min), then follow signs to the Gyeongbu terminal.'],
+          ['eat', 'GOTO Mall, the underground shopping strip at the station, for dinner or a last browse.'],
+          ['careful', 'Seoul Express Bus Terminal (Gyeongbu), Central City and Seoul Nambu are different terminals. Go to the one on your ticket.'],
+        ],
+      },
+      {
+        time:'18:10', title:'Bus to Cheongju Airport',
+        note:'Arrives ~19:40, about 4 h before ZE821. The 19:00 (arrives ~20:30) is the backup if it is full.',
         facts:[
           ['times', '16:50 → 18:20 · 18:10 → 19:40 · 19:00 → 20:30 · 20:10 → 21:40 (reference only; recheck for Dec 26).'],
-          ['arrive', 'Aim for CJJ by 19:30-20:00.'],
+          ['traffic', 'Saturday evening southbound sits between the holiday-weekend peaks, and buses use the Gyeongbu bus-only lane. Bad case ~1 h 45 min-2 h.'],
         ],
       },
       {
@@ -1712,15 +1715,18 @@ const DAY_TEMPLATES = [
     ],
   },
   {
-    id:'hangzhou-lingyin-longjing-westlake', short:'West Lake', icon:'🍵', title:'Shanghai → Hangzhou: Lingyin + Longjing tea + West Lake sunset', city:'hangzhou', date:'2026-12-30',
-    summary:'Morning train to Hangzhou, Lingyin Temple and Feilai Feng, a tea-farm lunch in Longjing village, Leifeng Pagoda at sunset, then Lou Wai Lou dinner and a night walk along Bai Causeway back to the Movietel.',
-    pois:['Lingyin Temple', 'Longjing Village', 'Leifeng Pagoda', 'Lou Wai Lou', 'Broken Bridge'],
+    id:'hangzhou-lingyin-longjing-westlake', short:'Longjing', icon:'🍵', title:'Shanghai → Hangzhou: boat across West Lake → Lingyin + Faxi → pick and roast your own tea in Meijiawu → Leifeng sunset → Wulin Night Market', city:'hangzhou', date:'2026-12-30',
+    summary:'Morning train to Hangzhou, a boat across West Lake, Lingyin Temple and Feilai Feng, the young-crowd favourite Faxi Temple, a farmhouse lunch in Meijiawu tea village, then picking, wok-roasting and tasting your own Longjing tea, Leifeng Pagoda at sunset, then a snack dinner at Wulin Night Market near the hotel.',
+    pois:['Hubin Pier', 'Maojiabu', 'Lingyin Temple', 'Faxi Temple', 'Meijiawu Tea Village', 'Leifeng Pagoda', 'Wulin Night Market'],
     brief:[
       ['book', 'Train Shanghai Hongqiao → Hangzhou East on 12306 or . Sales open ~15 days ahead (~Dec 16). ~1 h, about ¥73 second class.'],
       ['to do', 'Cancel the duplicate  Movietel booking before 20:00 today, or you pay for two rooms.'],
-      ['route', 'West side of the lake by day (temple, tea hills), south shore at sunset, north shore at night. The hotel is on the north side.'],
+      ['book', 'Lingyin / Feilai Feng: free, but book the afternoon slot (entry from 11:00) in the 杭州灵隐飞来峰 mini-app on Alipay or WeChat with both passports. Opens 08:00 seven days ahead (Dec 23); no same-day booking.'],
+      ['book', 'Meijiawu tea picking, roasting and tasting (~2 h, ~14:00) on Waug activity 165222. Ask the operator before paying what you pick in late December: winter leaves are not the spring buds.'],
+      ['go', 'Mostly Didi: four short rides for the hill legs (~¥100-150 for the day, estimate). Walk hotel → Hubin Pier (~20 min), Lingyin → Faxi, and to the night market. Request the next car before you finish at each stop; pickups in the tea villages can take a few minutes.'],
+      ['route', 'Boat across the lake to the west shore, temples and tea hills by day, south shore at sunset, back to the Wulin area near the hotel at night.'],
     ],
-    map:'https://www.google.com/maps/dir/?api=1&origin=Hangzhou+East+Railway+Station&destination=Movietel+Hangzhou+West+Lake+Mansion+1937&waypoints=Lingyin+Temple+Hangzhou%7CLongjing+Village+Hangzhou%7CLeifeng+Pagoda%7CLouwailou+Restaurant+Gushan+Hangzhou&travelmode=driving',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Movietel+Hangzhou+West+Lake+Mansion+1937&destination=Wulin+Night+Market+Hangzhou&waypoints=Hubin+Pier+Hangzhou%7CMaojiabu+Hangzhou%7CLingyin+Temple+Hangzhou%7CFaxi+Temple+Hangzhou%7CMeijiawu+Tea+Village+Hangzhou%7CLeifeng+Pagoda&travelmode=driving',
     events:[
       {
         time:'08:00', title:'Train Shanghai → Hangzhou',
@@ -1737,46 +1743,62 @@ const DAY_TEMPLATES = [
         ],
       },
       {
-        time:'10:15', title:'Feilai Feng + Lingyin Temple',
-        note:'See the Buddhist cliff carvings at Feilai Feng (飞来峰) first, then the temple halls. ~2-2.5 h.',
+        time:'10:00', title:'Boat across West Lake → Maojiabu (茅家埠)',
+        note:'Walk ~20 min to Hubin Pier (湖滨码头), or a short Didi, then a cruise boat to Maojiabu on the quiet west shore. There is no water bus to the temples or tea farms; this is the scenic way across.',
         facts:[
-          ['ticket', 'Two tickets: Feilai Feng scenic area (~¥45), then Lingyin Temple (~¥30) inside. Passport for real-name entry.'],
-          ['go', 'Taxi from the hotel, ~20 min.'],
+          ['ticket', 'Buy at the pier; check the route and price there.'],
         ],
       },
       {
-        time:'12:45', title:'Tea-farm lunch in Longjing village', idea:'lunch',
-        note:'Longjing shrimp (龙井虾仁), tea-smoked dishes and local greens at a family restaurant in 龙井村. Taxi ~15 min from Lingyin.',
+        time:'11:00', title:'Feilai Feng + Lingyin Temple',
+        note:'Taxi ~10 min from Maojiabu. See the Buddhist cliff carvings at Feilai Feng (飞来峰) first, then the temple halls. ~1.25 h.',
+        facts:[
+          ['ticket', 'Free since Dec 2025, by timed real-name reservation only (see the booking note above). Open 07:30-17:30.'],
+        ],
+        source:'https://jp.lingyinsi.org/detail_15103.html',
       },
       {
-        time:'14:00', title:'Longjing tea terraces',
-        note:'Walk the tea rows and the Longjing spring (龙井问茶), then taste at a farmhouse. Taste before you buy, and ask the price per 500 g (斤).',
+        time:'12:15', title:'Yongfu Temple → Faxi Temple (法喜寺)',
+        note:'Walk ~25 min uphill past Yongfu Temple (永福寺, quiet, lots of cats) to Faxi, the "internet-famous" temple young people love. Couples pray for love at the Guanyin hall, and the yellow walls are the photo spot. Share one bowl of the vegetarian noodles (素面) at most; lunch is next.',
       },
       {
-        time:'15:45', title:'Leifeng Pagoda at sunset',
-        note:'Climb for the view over the south lake. Sunset is around 17:05.',
+        time:'13:00', title:'Farmhouse lunch in Meijiawu (梅家坞)', idea:'lunch',
+        note:'Taxi ~20 min from Faxi. Longjing shrimp (龙井虾仁), tea-smoked dishes and local greens at a family restaurant in the tea village.',
+      },
+      {
+        time:'14:00', title:'Pick, roast and taste your own Longjing tea', idea:'activity',
+        note:'Put on a tea-picker\'s outfit for photos on the terraces, learn to pick from the bushes, then hand-roast leaves in an iron wok with a local farmer and finish with a tasting. You take home a pack of tea. ~2 h, English-speaking host.',
+        facts:[
+          ['book', 'Waug activity 165222; meeting point in Meijiawu, open daily 09:00-17:00.'],
+          ['ask', 'Late December is outside the main picking season (late March to early November). Confirm with the operator that picking still runs on Dec 30.'],
+          ['buy', 'If you buy extra Longjing tea, taste first and ask the price per 500 g (斤).'],
+        ],
+        source:'https://m.waug.com/en/activities/165222',
+      },
+      {
+        time:'16:15', title:'Leifeng Pagoda at sunset',
+        note:'Taxi ~20-25 min from Meijiawu. Climb for the view over the south lake; sunset is around 17:05.',
         facts:[
           ['ticket', '~¥40. Go up by ~16:30; winter last entry is late afternoon.'],
-          ['go', 'Taxi from Longjing village, ~20 min.'],
         ],
       },
       {
-        time:'18:30', title:'Lou Wai Lou (楼外楼)', idea:'dinner',
-        note:'Classic Hangzhou dishes on Gushan: West Lake vinegar fish (西湖醋鱼), Dongpo pork (东坡肉), beggar\'s chicken (叫花鸡).',
+        time:'17:30', title:'Back to the Movietel: check in and rest',
+        note:'Didi ~20-25 min from Leifeng. Check in, collect your bags from the desk and take a break before going out.',
+      },
+      {
+        time:'18:30', title:'Wulin Night Market (武林夜市)', idea:'dinner',
+        note:'Walk over from the hotel whenever you are ready; no fixed time. Graze dinner along the ~300 m snack street, then walk back.',
         facts:[
-          ['address', '孤山路30号, on Gushan island, north shore.'],
-          ['book', 'Reserve on Dianping or by phone; walk-in queues can run an hour.'],
+          ['hours', 'Daily 17:00-23:00, free entry.'],
         ],
-      },
-      {
-        time:'20:00', title:'Bai Causeway → Broken Bridge',
-        note:'Walk east along Bai Causeway (白堤) to Broken Bridge (断桥), then ~15 min back to the hotel.',
+        source:'https://jp./moments/poi-wulin-night-market-18172191/',
       },
     ],
   },
   {
     id:'hangzhou-westlake-suzhou-nye', short:'NYE', icon:'🥂', title:'West Lake morning → train to Suzhou → New Year\'s Eve', city:'hangzhou', date:'2026-12-31',
-    summary:'Sunrise on Broken Bridge, hotel breakfast, a boat to Three Pools Mirroring the Moon and a Su Causeway walk, lunch at Zhiweiguan, an afternoon train to Suzhou, then a New Year\'s Eve dinner and countdown around Pingjiang Road.',
+    summary:'Sunrise on Broken Bridge, hotel breakfast, a boat to Three Pools Mirroring the Moon and a Su Causeway walk, lunch at Zhiweiguan, an afternoon train to Suzhou, then a New Year\'s Eve boat banquet on the Shantang River and a countdown around Pingjiang Road.',
     pois:['Broken Bridge', 'Three Pools Mirroring the Moon', 'Su Causeway', 'Zhiweiguan', 'Pingjiang Road'],
     brief:[
       ['book', 'Train Hangzhou → Suzhou (苏州站, not Suzhou North) on 12306, ~14:30 departure, ~1.5 h. Sales open ~15 days ahead (~Dec 17).'],
@@ -1828,11 +1850,17 @@ const DAY_TEMPLATES = [
         ],
       },
       {
-        time:'18:30', title:'Songhelou (松鹤楼), Guanqian Street', idea:'dinner',
-        note:'Suzhou\'s famous old restaurant. Order the squirrel-shaped mandarin fish (松鼠鳜鱼). ~15 min walk from the hotel.',
+        time:'18:00', title:'Gusu boat banquet on Shantang River (姑苏船宴)', idea:'dinner',
+        note:'A private painted boat for ~1.5 h, with a Suzhou set menu served on board while you float past the lantern-lit Shantang Street and the city moat. Taxi ~15 min from the hotel.',
         facts:[
-          ['book', 'Reserve ahead; New Year\'s Eve fills.'],
+          ['book', 'KKday product 925423 (boat ticket + meal). Confirmed within 1 business day; no cancellation or changes, so book once the date is firm. New Year\'s Eve sells out.'],
+          ['backup', 'Songhelou (松鹤楼) on Guanqian Street for squirrel-shaped mandarin fish (松鼠鳜鱼), if the boat is full.'],
         ],
+        source:'https://www.kkday.com/en-us/product/925423',
+      },
+      {
+        time:'19:45', title:'Shantang Street at night',
+        note:'Walk the lantern-lit canal street for ~45 min after the boat, then taxi back toward Pingjiang Road.',
       },
       {
         time:'21:00', title:'Pingjiang Road + countdown',
@@ -1845,15 +1873,17 @@ const DAY_TEMPLATES = [
     ],
   },
   {
-    id:'suzhou-garden-museum-pingjiang', short:'Gardens', icon:'🌿', title:'Humble Administrator\'s Garden + Suzhou Museum + Pingjiang Road → Shanghai', city:'suzhou', date:'2027-01-01',
-    summary:'First-slot entry to the Humble Administrator\'s Garden, I.M. Pei\'s Suzhou Museum next door, Suzhou noodles and a Pingjiang Road canal walk, then a ~30 min train to Shanghai.',
-    pois:['Humble Administrator\'s Garden', 'Suzhou Museum', 'Pingjiang Road', 'Suzhou Station'],
+    id:'suzhou-garden-museum-pingjiang', short:'Gardens', icon:'🌿', title:'Humble Administrator\'s Garden + Suzhou Museum + Pingjiang Road → Zhouzhuang at night → Shanghai', city:'suzhou', date:'2027-01-01',
+    summary:'First-slot entry to the Humble Administrator\'s Garden, I.M. Pei\'s Suzhou Museum next door, Suzhou noodles and a Pingjiang Road canal walk, a Hanfu photoshoot, then Zhouzhuang water town (周庄) at dusk on the way to Shanghai.',
+    pois:['Humble Administrator\'s Garden', 'Suzhou Museum', 'Pingjiang Road', 'Zhouzhuang', 'Twin Bridges'],
     brief:[
       ['book', 'Humble Administrator\'s Garden, 07:30 slot, real-name with passports, ¥70 each (off-peak). Slots open ~7 days ahead (~Dec 25); New Year\'s Day sells out.'],
       ['book', 'Suzhou Museum: free, but a separate timed reservation (~10:30) on its official WeChat account (苏州博物馆).'],
-      ['book', 'Train Suzhou → Shanghai on 12306 (opens ~Dec 18). Holiday afternoon trains sell out.'],
+      ['go', 'Didi Suzhou → Zhouzhuang (~40 km, ~50-60 min) and Zhouzhuang → Shanghai (~70 km, ~1-1.25 h). Zhouzhuang has no train station.'],
+      ['ticket', 'Zhouzhuang night ticket ¥80 from 16:00 (2025 price, recheck). Passport for real-name entry.'],
+      ['note', 'New Year\'s Day: the town is busier than on a weekday, but quieter after the day groups leave around dusk.'],
     ],
-    map:'https://www.google.com/maps/dir/?api=1&origin=SCHOLARS+BOUTIQUE+Suzhou+Pingjiangfu&destination=Suzhou+Railway+Station&waypoints=Humble+Administrator%27s+Garden%7CSuzhou+Museum%7CPingjiang+Road+Suzhou&travelmode=walking',
+    map:'https://www.google.com/maps/dir/?api=1&origin=SCHOLARS+BOUTIQUE+Suzhou+Pingjiangfu&destination=Zhouzhuang+Water+Town&waypoints=Humble+Administrator%27s+Garden%7CSuzhou+Museum%7CPingjiang+Road+Suzhou&travelmode=driving',
     events:[
       {
         time:'07:00', title:'Check out, leave bags at the desk',
@@ -1880,11 +1910,252 @@ const DAY_TEMPLATES = [
         note:'Walk south along the canal. Snack on pan-fried buns at 哑巴生煎 (Lindun Road) and sit at a canal-side teahouse. Optional short boat ride.',
       },
       {
-        time:'15:30', title:'Bags → Suzhou Station → Shanghai',
-        note:'Taxi ~10-15 min to Suzhou Station (苏州站). The train takes ~25-30 min to Shanghai Station or Hongqiao; pick by where you sleep.',
+        time:'13:30', title:'Hanfu photoshoot on Pingjiang Road', idea:'activity',
+        note:'The Xiaohongshu classic for couples: rent Hanfu with hair and makeup at a studio on Pingjiang Road, then a photographer shoots you on the bridges and canal lanes. ~2 h.',
         facts:[
+          ['book', 'Search 平江路 汉服 旅拍 on Xiaohongshu or Dianping and book a slot a few days ahead; New Year\'s Day is busy. Check whether edited photos and the photographer are included.'],
+        ],
+      },
+      {
+        time:'15:30', title:'Pick up bags → Didi to Zhouzhuang',
+        note:'Collect your bags at Scholars and take a Didi from the hotel door, ~50-60 min. Holiday traffic can add time.',
+      },
+      {
+        time:'16:45', title:'Twin Bridges (双桥) + Fu\'an Bridge (富安桥)',
+        note:'Buy the night ticket and head straight for the postcard view; sunset is around 17:00. The old houses close at ~17:00, so Shen House is out.',
+      },
+      {
+        time:'17:15', title:'Hand-rowed boat at dusk',
+        note:'A boatwoman rows you under the bridges as the lanterns come on and often sings local tunes. Buy at the pier and check the price there.',
+        facts:[
+          ['upgrade', 'Klook sells a Zhouzhuang night tour with cruise and show; compare it before you go.'],
+        ],
+      },
+      {
+        time:'18:00', title:'Wansan pork knuckle (万三蹄)', idea:'dinner',
+        note:'Zhouzhuang\'s signature: a slow-braised, sweet soy pork knuckle named after the Ming tycoon Shen Wansan. Share one with local river fish at a canal-side restaurant.',
+      },
+      {
+        time:'19:00', title:'Lantern walk',
+        note:'Walk the canal streets after the tour buses leave. The red lanterns reflect on the water.',
+      },
+      {
+        time:'20:00', title:'Didi to Shanghai',
+        note:'~1-1.25 h, about ¥210-290. Start requesting by ~19:45 from the main gate: long cross-border rides into Shanghai can take a while to match at night.',
+        facts:[
+          ['backup', 'Didi ~35 min to Kunshan South (昆山南站), then ~18 min train to Shanghai Station.'],
           ['to do', 'Shanghai hotel for Jan 1-3 is not booked yet.'],
         ],
+      },
+    ],
+  },
+  {
+    id:'lili-water-town-day-trip', short:'Lili', icon:'🚣', title:'Lili water town (黎里古镇): day trip from Shanghai', city:'shanghai',
+    summary:'A lived-in canal town an hour from Shanghai: free entry, the longest covered riverside walkway in Jiangnan, back alleys, local snacks, and a hand-rowed boat at dusk as the lanterns come on.',
+    pois:['Suzhou South Station', 'Lili Ancient Town', 'Duanben Garden'],
+    brief:[
+      ['why', 'Residents still wash clothes at the river steps and drink tea in the corridors. Few souvenir stalls, unlike Zhouzhuang or Wuzhen.'],
+      ['when', 'Best on a Shanghai weekday (Dec 28 or 29). Arrive mid-afternoon and stay past dark.'],
+      ['go', 'Train Shanghai Hongqiao → Suzhou South (苏州南站), ~30-40 min, then taxi ~20 min (~¥30) to the 黎里古镇 visitor centre.'],
+    ],
+    map:'https://www.google.com/maps/dir/?api=1&origin=Shanghai+Hongqiao+Railway+Station&destination=Lili+Ancient+Town+Suzhou&waypoints=Suzhou+South+Railway+Station&travelmode=transit',
+    events:[
+      {
+        time:'13:30', title:'Hongqiao → Suzhou South → Lili',
+        note:'Keep the train ticket. A local guide says a Wujiang-arrival ticket from the past 7 days can be swapped at the visitor centre for the free combo pass.',
+        facts:[
+          ['ticket', 'Old town is free and always open. Combo pass for the sights ~¥60 if you cannot swap a train ticket.'],
+        ],
+      },
+      {
+        time:'14:45', title:'Covered walkway + back alleys',
+        note:'Walk the long riverside corridor (廊棚), then the 150-plus side alleys such as 鸳鸯弄. Pop into Liu Yazi\'s former residence (free) and the China Pewter Museum (~¥10).',
+      },
+      {
+        time:'16:00', title:'Local snack crawl', idea:'snack',
+        note:'Lili\'s three specialties: sweet-sour spicy chicken feet (辣脚, 老马家), radish fritters (油墩, 王记油墩) and stuffed pork intestine (套肠) with big wontons.',
+      },
+      {
+        time:'16:45', title:'Hand-rowed boat at dusk',
+        note:'The boatwoman often sings local tunes. Sunset is around 17:00, so you see the lanterns come on from the water.',
+        facts:[
+          ['ticket', 'About ¥30 per person shared, or ¥150-180 for a private boat.'],
+        ],
+      },
+      {
+        time:'18:00', title:'Dinner in town, then back to Shanghai', idea:'dinner',
+        note:'Eat at a canal-side family restaurant, walk the lit riverfront, then taxi to Suzhou South for a train back to Hongqiao.',
+        facts:[
+          ['note', 'There is no Hanfu rental in Lili. Bring your own outfit if you want photos here.'],
+        ],
+      },
+    ],
+  },
+  {
+    id:'shanghai-wukang-anfu', short:'Wukang', icon:'🌳', title:'Wukang Road + Anfu Road morning → free afternoon', city:'shanghai', date:'2026-12-28',
+    summary:'Wukang Mansion and the plane-tree lanes of the former French Concession, brunch on Anfu Road, then an open afternoon. The undated Lili card fits here if you want a water town.',
+    pois:['Wukang Mansion', 'Anfu Road'],
+    brief:[
+      ['note', 'Zhouzhuang moved to Jan 1, on the way from Suzhou to Shanghai.'],
+    ],
+    map:'https://www.google.com/maps/dir/?api=1&origin=Wukang+Mansion+Shanghai&destination=Anfu+Road+Shanghai&travelmode=walking',
+    events:[
+      {
+        time:'10:00', title:'Wukang Mansion (武康大楼) + Wukang Road',
+        note:'The wedge-shaped 1920s building at the Huaihai Road junction is Shanghai\'s most photographed corner. Walk the plane-tree lanes of the former French Concession. ~1 h.',
+        facts:[
+          ['go', 'Metro Line 10 or 11 to Jiaotong University (交通大学), ~5 min walk.'],
+        ],
+      },
+      {
+        time:'11:15', title:'Brunch on Anfu Road (安福路)', idea:'lunch',
+        note:'The trendy street for cafés, small fashion shops and people-watching, ~10 min walk from Wukang Mansion.',
+      },
+    ],
+  },
+  {
+    id:'shanghai-lujiazui-bund-huanghe', short:'Bund', icon:'🌃', title:'Lujiazui + Oriental Pearl sunset → Bund lights → Nanjing Road → Huanghe Road dinner', city:'shanghai', date:'2026-12-27',
+    summary:'A slow start after the 1:20 am landing, the Oriental Pearl Tower at sunset, a ¥2 ferry across the Huangpu to the lit-up Bund, then Nanjing Road East and dinner on Huanghe Road, the food street from the TV drama Blossoms Shanghai (繁花).',
+    pois:['Oriental Pearl Tower', 'Dongchang Road Ferry', 'The Bund', 'Nanjing Road East', 'Huanghe Road'],
+    brief:[
+      ['to do', 'Shanghai hotel for Dec 27-29 is not booked yet. Near Nanjing Road East (Line 2) works for today, Yu Garden and the Dec 30 train from Hongqiao.'],
+      ['route', 'Pudong in the afternoon, cross the river at dusk, walk west into Puxi for dinner. No backtracking.'],
+    ],
+    map:'https://www.google.com/maps/dir/?api=1&origin=Oriental+Pearl+Tower&destination=Huanghe+Road+Shanghai&waypoints=Dongchang+Road+Ferry+Terminal%7CThe+Bund+Shanghai%7CNanjing+Road+Pedestrian+Street&travelmode=walking',
+    events:[
+      {
+        time:'11:30', title:'Check out of the Rezen, move hotels',
+        note:'Sleep in after the late landing. Check-out is by 12:00 (confirm at the desk); taxi to the new hotel and drop bags.',
+      },
+      {
+        time:'15:45', title:'Oriental Pearl Tower (东方明珠)',
+        note:'Go up before sunset (~16:55) to see the city by day and lit up. Walk the glass-floor deck.',
+        facts:[
+          ['ticket', 'Observation ticket ~¥200 per adult (check the level options on ). Passport for real-name entry.'],
+          ['go', 'Metro Line 2 to Lujiazui (陆家嘴).'],
+        ],
+      },
+      {
+        time:'17:45', title:'Ferry to the Bund',
+        note:'Walk ~15 min south to the Dongchang Road ferry (东昌路渡口) and cross to Jinling East Road (金陵东路). ¥2, ~10 min, with skyline views from the water.',
+      },
+      {
+        time:'18:00', title:'The Bund (外滩) at night',
+        note:'Walk north along the river promenade with the Lujiazui towers lit across the water. ~45 min.',
+      },
+      {
+        time:'19:00', title:'Nanjing Road East (南京东路)',
+        note:'Walk the neon pedestrian street west toward People\'s Square. ~30 min.',
+      },
+      {
+        time:'19:45', title:'Huanghe Road food street (黄河路)', idea:'dinner',
+        note:'The 1990s restaurant row from Blossoms Shanghai. Order Shanghainese classics: braised pork (红烧肉), drunken chicken (醉鸡) and crab or river shrimp. 苔圣园 is one of the old names; check Dianping for queues.',
+      },
+    ],
+  },
+  {
+    id:'shanghai-yuyuan-xintiandi', short:'Yu Garden', icon:'🏮', title:'Yu Garden + City God Temple → Xintiandi → Yuyuan lit up at night', city:'shanghai', date:'2026-12-29',
+    summary:'Yu Garden at opening, City God Temple and xiaolongbao at Nanxiang, Xintiandi\'s shikumen lanes in the afternoon, then back to the Yuyuan bazaar after the lights come on for dinner at Lü Bo Lang.',
+    pois:['Yu Garden', 'City God Temple', 'Nanxiang Mantou Dian', 'Xintiandi', 'Lü Bo Lang'],
+    brief:[
+      ['note', 'Yu Garden is closed on Mondays, so it goes on Tuesday. The garden itself closes 16:30; the bazaar and bridges stay lit until ~22:00.'],
+      ['to do', 'Early night: train to Hangzhou tomorrow morning.'],
+    ],
+    map:'https://www.google.com/maps/dir/?api=1&origin=Yu+Garden+Shanghai&destination=Lubolang+Restaurant+Shanghai&waypoints=Shanghai+City+God+Temple%7CXintiandi+Shanghai&travelmode=walking',
+    events:[
+      {
+        time:'09:00', title:'Yu Garden (豫园)',
+        note:'Ming-dynasty garden: the Great Rockery, the Exquisite Jade Rock and dragon walls. Go at opening, before the tour groups. ~1.5 h.',
+        facts:[
+          ['ticket', '~¥30-40, real-name with passport. Last entry 16:00.'],
+          ['go', 'Metro Line 10 to Yuyuan Garden (豫园).'],
+        ],
+      },
+      {
+        time:'10:45', title:'City God Temple (城隍庙)',
+        note:'Small Taoist temple inside the bazaar; a quick look. ~30 min.',
+      },
+      {
+        time:'11:30', title:'Nanxiang Mantou Dian (南翔馒头店)', idea:'lunch',
+        note:'The famous xiaolongbao shop by the Zigzag Bridge. The takeaway window queue moves faster than the upstairs dining room.',
+      },
+      {
+        time:'13:30', title:'Xintiandi (新天地)',
+        note:'Restored shikumen stone-gate lanes with cafés and shops. Taxi ~10 min. ~2 h, then rest at the hotel.',
+      },
+      {
+        time:'17:45', title:'Yuyuan bazaar lit up',
+        note:'Back for when the lights come on (~18:00): Zigzag Bridge (九曲桥), Huxinting teahouse and the lantern-hung rooftops. Best photos ~20:00 when crowds thin.',
+        facts:[
+          ['upgrade', 'A ticketed evening garden experience ran Fri-Sun in winter 2025 (~¥60); Tuesday is likely not a night, so check before you go.'],
+        ],
+      },
+      {
+        time:'18:45', title:'Lü Bo Lang (绿波廊)', idea:'dinner',
+        note:'Old Yuyuan restaurant known for dim sum and Shanghainese dishes, overlooking the lit bazaar. Reserve on Dianping.',
+      },
+    ],
+  },
+  {
+    id:'shanghai-qiangu-gongyan', short:'Gong Yan', icon:'👘', title:'Shanghai Romance show (上海千古情) → Gong Yan palace banquet in costume', city:'shanghai', date:'2027-01-02',
+    summary:'An afternoon at the Shanghai Romance park and its big staged history show at the old Expo site, then a palace-style costume banquet with six staged court performances served course by course.',
+    pois:['Shanghai Romance Park', 'Gong Yan'],
+    brief:[
+      ['note', 'New Year holiday: both are ticketed and seated, so crowds matter less than at the Bund or Yu Garden.'],
+      ['book', 'Gong Yan (宫宴) on WeChat at least 24 h ahead, ¥500-600 per person. Pick the dinner sitting. Three Shanghai venues; your confirmation names which one.'],
+      ['book', 'Shanghai Romance: park + show ticket on  or KKday; choose a show time. Holiday shows sell out.'],
+    ],
+    map:'https://www.google.com/maps/search/?api=1&query=Shanghai+Romance+Park+1750+Shibo+Avenue+Pudong',
+    events:[
+      {
+        time:'13:00', title:'Shanghai Romance park (上海千古情景区)',
+        note:'Theme park of old-Shanghai streets and smaller shows, built around the main show.',
+        facts:[
+          ['address', '浦东新区世博大道1750号, the old Expo site. Taxi ~25 min from Nanjing Road East.'],
+        ],
+      },
+      {
+        time:'15:00', title:'"Shanghai Romance" (上海千古情) show',
+        note:'Large staged show of Shanghai history with sets, water and aerial effects. ~1 h. Shows run several times a day; pick one that lets you leave by ~16:30.',
+      },
+      {
+        time:'17:30', title:'Gong Yan palace banquet (宫宴)', meal:'dinner',
+        note:'Dress in Hanfu, then a set menu served in a palace-style hall. Each course arrives with a staged rite: music, dance and a Kunqu opera excerpt. ~2-2.5 h.',
+        facts:[
+          ['be at', 'The check-in time on your confirmation; the hall is seated together before the first rite.'],
+          ['costume', 'Hanfu and styling is an add-on, done on site before you sit. Arrive early for it.'],
+          ['food', 'Ask for vegetarian when booking if needed; the menu changes by season.'],
+        ],
+        source:'https://shanghairoyalbanquet.com/',
+      },
+    ],
+  },
+  {
+    id:'shanghai-zhujiajiao-last-day', short:'Zhujiajiao', icon:'🌉', title:'Zhujiajiao water town morning → pack for the early flight', city:'shanghai', date:'2027-01-03',
+    summary:'Shanghai\'s own water town by metro before the holiday crowds arrive, then a free afternoon and an early night before the 08:25 flight to Taipei.',
+    pois:['Zhujiajiao', 'Fangsheng Bridge'],
+    brief:[
+      ['note', 'Last day of the New Year holiday: arrive by ~9:00, because crowds build fast from late morning.'],
+      ['to do', 'Jan 4: 9C8951 departs PVG T2 at 08:25. Leave the hotel by ~05:45; taxi ~45-60 min. Metro is too late.'],
+      ['to do', 'Shanghai hotel for Jan 1-3 is not booked yet.'],
+    ],
+    map:'https://www.google.com/maps/search/?api=1&query=Zhujiajiao+Ancient+Town+Shanghai',
+    events:[
+      {
+        time:'08:00', title:'Metro to Zhujiajiao (朱家角)',
+        note:'Line 2 to Hongqiao, then Line 17 to Zhujiajiao station. ~1 h from Nanjing Road East.',
+      },
+      {
+        time:'09:00', title:'Zhujiajiao old town',
+        note:'Free to walk. Cross Fangsheng Bridge (放生桥), the five-arch Ming bridge, and wander the North Street lanes. Optional short boat ride. ~2.5 h.',
+      },
+      {
+        time:'11:30', title:'Lunch in town', idea:'lunch',
+        note:'Zongzi (粽子) and braised pork knuckle are the local snacks.',
+      },
+      {
+        time:'13:00', title:'Back to the city, free afternoon',
+        note:'Last shopping, pack, early dinner near the hotel, early night.',
       },
     ],
   },
