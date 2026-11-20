@@ -1775,15 +1775,14 @@ const DAY_TEMPLATES = [
     ],
   },
   {
-    id:'hangzhou-wuzhen-suzhou-nye', short:'Wuzhen', icon:'🛶', title:'West Lake sunrise → Wuzhen Xizha → Suzhou New Year\'s Eve', city:'hangzhou', date:'2026-12-31',
-    summary:'Early lake walk and hotel breakfast, a car to Wuzhen for a canal afternoon in Xizha, on to Suzhou by 17:30, then a New Year\'s Eve dinner and countdown around Pingjiang Road.',
-    pois:['Broken Bridge', 'Wuzhen Xizha', 'Scholars Pingjiangfu', 'Guanqian Street', 'Pingjiang Road'],
+    id:'hangzhou-westlake-suzhou-nye', short:'NYE', icon:'🥂', title:'West Lake morning → train to Suzhou → New Year\'s Eve', city:'hangzhou', date:'2026-12-31',
+    summary:'Sunrise on Broken Bridge, hotel breakfast, a boat to Three Pools Mirroring the Moon and a Su Causeway walk, lunch at Zhiweiguan, an afternoon train to Suzhou, then a New Year\'s Eve dinner and countdown around Pingjiang Road.',
+    pois:['Broken Bridge', 'Three Pools Mirroring the Moon', 'Su Causeway', 'Zhiweiguan', 'Pingjiang Road'],
     brief:[
-      ['book', 'One car and driver for the day: Hangzhou → Wuzhen (~1 h 15) → Suzhou (~1 h 45), waiting while you tour. Bags stay in the car. Get a quote on  car charter; estimate ¥800-1,200 total.'],
-      ['to do', 'Call Scholars (+86-512-67706688) by noon to say you arrive ~17:30. Pay-at-hotel rooms can be released.'],
+      ['book', 'Train Hangzhou → Suzhou (苏州站, not Suzhou North) on 12306, ~14:30 departure, ~1.5 h. Sales open ~15 days ahead (~Dec 17).'],
       ['to do', 'Hanshan Temple New Year bell tickets: watch the temple\'s WeChat account (寒山寺) from mid-December.'],
     ],
-    map:'https://www.google.com/maps/dir/?api=1&origin=Movietel+Hangzhou+West+Lake+Mansion+1937&destination=Pingjiang+Road+Suzhou&waypoints=Wuzhen+Xizha+Scenic+Area%7CSCHOLARS+BOUTIQUE+Suzhou+Pingjiangfu&travelmode=driving',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Movietel+Hangzhou+West+Lake+Mansion+1937&destination=Su+Causeway+Hangzhou&waypoints=Broken+Bridge+Hangzhou%7CThree+Pools+Mirroring+the+Moon&travelmode=walking',
     events:[
       {
         time:'06:45', title:'Sunrise on Broken Bridge', idea:'walk',
@@ -1796,34 +1795,33 @@ const DAY_TEMPLATES = [
         ],
       },
       {
-        time:'09:30', title:'Check out → car to Wuzhen',
-        note:'~85 km, ~1 h 15. Check-out is allowed until 14:00, but leaving early buys daylight in Wuzhen.',
+        time:'09:00', title:'Boat to Three Pools Mirroring the Moon (三潭印月)',
+        note:'Take a West Lake cruise boat from a north-shore pier to the island, walk its loop, then ride on to the Su Causeway. ~1.5 h.',
         facts:[
-          ['leave', '09:30 from the Movietel.'],
+          ['ticket', 'Boat tickets include island entry; buy at the pier and check the price there.'],
         ],
       },
       {
-        time:'11:00', title:'Wuzhen Xizha (乌镇西栅)',
-        note:'Follow the canal west from the indigo-dye workshop and Zhaoming Academy to the White Lotus Pagoda. Take one boat ride. ~4 h.',
-        facts:[
-          ['ticket', 'Xizha ¥150 per adult on the official site. Passport for real-name entry.'],
-          ['note', 'Dec 31 is a Thursday, ahead of the New Year holiday, so crowds should be lighter than Jan 1-3.'],
-        ],
-        source:'https://www.wuzhen.com.cn/',
+        time:'10:30', title:'Su Causeway (苏堤) walk',
+        note:'Walk north along the causeway past its six bridges, then taxi back toward the hotel. ~1 h.',
       },
       {
-        time:'12:30', title:'Lunch inside Xizha', idea:'lunch',
-        note:'Braised mutton (红烧羊肉), Dingsheng cakes (定胜糕) and a taste of local Sanbai rice wine (三白酒).',
-      },
-      {
-        time:'15:30', title:'Car to Suzhou',
-        note:'~110 km, ~1 h 45. Expect evening traffic into the old town on New Year\'s Eve.',
+        time:'12:00', title:'Zhiweiguan (知味观)', idea:'lunch',
+        note:'Old Hangzhou snack house: Pianerchuan noodles (片儿川), xiaolongbao and "cat ear" pasta (猫耳朵).',
         facts:[
-          ['leave', 'By 15:30 to reach the hotel ~17:15.'],
+          ['address', '仁和路83号, by the Hubin shore.'],
         ],
       },
       {
-        time:'17:15', title:'Check in at Scholars Pingjiangfu',
+        time:'13:30', title:'Check out → train to Suzhou',
+        note:'Check-out is allowed until 14:00. Taxi to the station, then ~1.5 h to Suzhou Station (苏州站).',
+        facts:[
+          ['leave', 'Hotel by 13:45 for a ~14:30 train.'],
+          ['go', 'Suzhou Station → Scholars: taxi ~10-15 min.'],
+        ],
+      },
+      {
+        time:'16:30', title:'Check in at Scholars Pingjiangfu',
         facts:[
           ['hotel', '白塔东路60号, at the north end of Pingjiang Road. Pay ¥568 at check-in.'],
           ['bring', 'Toothbrushes and toothpaste; Suzhou hotels no longer put them out.'],
