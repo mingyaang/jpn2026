@@ -20,3 +20,9 @@ img/seongsu-dong.jpg: "Snowy shopping street in Seongsu-dong.jpg" by CartoonChes
 img/ikseon-dong.jpg: "Ikseon-dong 익선동 October 1 2020 5.jpg" by S h y numis, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Ikseon-dong_%EC%9D%B5%EC%84%A0%EB%8F%99_October_1_2020_5.jpg
 img/hongdae.jpg: "Hongdae Street 02.jpg" by Qhairy, CC BY 4.0, https://commons.wikimedia.org/wiki/File:Hongdae_Street_02.jpg
 img/myeongdong.jpg: "Seoul-Myeongdong-03.jpg" by thelearnr, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Seoul-Myeongdong-03.jpg
+img/west-lake-dragon-boat.jpg: "Dragon-Faced Boat on West Lake, Hangzhou 120529 3.jpg" by DXR, CC BY-SA 3.0, https://commons.wikimedia.org/wiki/File:Dragon-Faced_Boat_on_West_Lake,_Hangzhou_120529_3.jpg
+img/feilai-feng-buddhas.jpg: "20090607 Hangzhou Feilai Feng 9027.jpg" by Jakub Hałun, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:20090607_Hangzhou_Feilai_Feng_9027.jpg
+img/faxi-temple.jpg: "上天竺 - 法喜寺 - panoramio (1).jpg" by zhiyin586@163.com, CC BY 3.0, https://commons.wikimedia.org/wiki/File:%E4%B8%8A%E5%A4%A9%E7%AB%BA_-_%E6%B3%95%E5%96%9C%E5%AF%BA_-_panoramio_(1).jpg
+img/meijiawu-tea-terraces.jpg: "Longjing Tea field, Dragon Well area, Meijiawu China.jpg" by Peter K Burian, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Longjing_Tea_field,_Dragon_Well_area,_Meijiawu_China.jpg
+img/leifeng-pagoda.jpg: "Leifeng Pagoda DJI 0593 (2).jpg" by David290, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Leifeng_Pagoda_DJI_0593_(2).jpg
+img/hangzhou-snack-stall.jpg: "Chinese Snack Foods (40693892792).jpg" by David Stanley from Nanaimo, Canada, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Chinese_Snack_Foods_(40693892792).jpg
