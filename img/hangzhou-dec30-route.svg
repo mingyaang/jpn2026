@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif">
-  <title>Dec 30 Hangzhou route: hotel, Hubin café, boat to Three Pools and back, Meijiawu, Leifeng, hotel, Wulin Night Market</title>
+  <title>Dec 30 Hangzhou route: hotel, Hubin café, boat to Three Pools, boat on to Huagang pier, Meijiawu, Leifeng, hotel, Wulin Night Market</title>
   <rect width="640" height="700" fill="#16161b"/>
   <!-- tea hills -->
   <ellipse cx="120" cy="520" rx="120" ry="200" fill="#9fcf5f" fill-opacity="0.10"/>
@@ -15,16 +15,17 @@
   <!-- legs -->
   <line x1="522" y1="89" x2="495" y2="191" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
   <path d="M495 191 C 480 250, 460 300, 445 335" fill="none" stroke="#68b6d6" stroke-width="3" stroke-dasharray="9 6"/>
-  <path d="M445 335 C 485 300, 500 250, 495 191" fill="none" stroke="#68b6d6" stroke-width="3" stroke-dasharray="9 6" stroke-opacity="0.55"/>
-  <path d="M495 191 C 420 110, 260 120, 180 260 C 120 370, 100 520, 94 638" fill="none" stroke="#9fcf5f" stroke-width="3"/>
+  <path d="M445 335 C 420 370, 380 395, 345 405" fill="none" stroke="#68b6d6" stroke-width="3" stroke-dasharray="9 6"/>
+  <path d="M345 405 C 260 440, 150 520, 94 638" fill="none" stroke="#9fcf5f" stroke-width="3"/>
   <path d="M94 638 C 220 600, 330 480, 400 425" fill="none" stroke="#9fcf5f" stroke-width="3"/>
   <path d="M400 425 C 570 360, 570 160, 522 89" fill="none" stroke="#9fcf5f" stroke-width="3"/>
   <line x1="522" y1="89" x2="512" y2="47" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
   <!-- leg times -->
   <g font-size="10.5" font-weight="600" text-anchor="middle">
     <rect x="530" y="131" width="80" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="570" y="144" fill="#c9c7c1">walk ~20 min</text>
-    <rect x="392" y="262" width="122" height="18" rx="9" fill="#16161b" stroke="#68b6d6"/><text x="453" y="275" fill="#68b6d6">boat ~15-20 min each way</text>
-    <rect x="200" y="152" width="76" height="18" rx="9" fill="#16161b" stroke="#9fcf5f"/><text x="238" y="165" fill="#9fcf5f">Didi ~25 min</text>
+    <rect x="420" y="262" width="96" height="18" rx="9" fill="#16161b" stroke="#68b6d6"/><text x="468" y="275" fill="#68b6d6">boat ~15-20 min</text>
+    <rect x="340" y="350" width="96" height="18" rx="9" fill="#16161b" stroke="#68b6d6"/><text x="388" y="363" fill="#68b6d6">boat ~15-20 min</text>
+    <rect x="160" y="478" width="76" height="18" rx="9" fill="#16161b" stroke="#9fcf5f"/><text x="198" y="491" fill="#9fcf5f">Didi ~15 min</text>
     <rect x="232" y="530" width="94" height="18" rx="9" fill="#16161b" stroke="#9fcf5f"/><text x="279" y="543" fill="#9fcf5f">Didi ~20-25 min</text>
     <rect x="548" y="291" width="88" height="18" rx="9" fill="#16161b" stroke="#9fcf5f"/><text x="592" y="304" fill="#9fcf5f">Didi ~20-25 min</text>
     <rect x="424" y="58" width="82" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="465" y="71" fill="#c9c7c1">walk ~15 min</text>
@@ -34,6 +35,7 @@
     <circle cx="522" cy="89" r="13" fill="#ffffff"/><text x="522" y="94" fill="#16161b">H</text>
     <circle cx="495" cy="191" r="13" fill="#9fcf5f"/><text x="495" y="196" fill="#16161b">1</text>
     <circle cx="445" cy="335" r="13" fill="#9fcf5f"/><text x="445" y="340" fill="#16161b">2</text>
+    <circle cx="345" cy="405" r="8" fill="#68b6d6"/>
     <circle cx="94" cy="638" r="13" fill="#9fcf5f"/><text x="94" y="643" fill="#16161b">3</text>
     <circle cx="400" cy="425" r="13" fill="#9fcf5f"/><text x="400" y="430" fill="#16161b">4</text>
     <circle cx="512" cy="47" r="13" fill="#9fcf5f"/><text x="512" y="52" fill="#16161b">5</text>
@@ -43,6 +45,8 @@
     <text x="513" y="196">Hubin café + pier</text>
     <text x="478" y="196" font-size="11" fill="#c9c7c1" text-anchor="end">湖滨码头</text>
     <text x="462" y="340">Three Pools 三潭印月</text>
+    <text x="333" y="398" text-anchor="end" font-size="11">Huagang pier</text>
+    <text x="333" y="412" text-anchor="end" font-size="11" fill="#c9c7c1">花港观鱼码头</text>
     <text x="112" y="643">Meijiawu 梅家坞</text>
     <text x="418" y="447">Leifeng 雷峰塔</text>
     <text x="494" y="42" text-anchor="end">Wulin Night Market 武林夜市</text>
@@ -50,7 +54,7 @@
   <!-- legend -->
   <g font-size="11" fill="#898781">
     <line x1="420" y1="580" x2="450" y2="580" stroke="#9fcf5f" stroke-width="3"/><text x="458" y="584">Didi</text>
-    <line x1="420" y1="602" x2="450" y2="602" stroke="#68b6d6" stroke-width="3" stroke-dasharray="9 6"/><text x="458" y="606">boat (out and back)</text>
+    <line x1="420" y1="602" x2="450" y2="602" stroke="#68b6d6" stroke-width="3" stroke-dasharray="9 6"/><text x="458" y="606">boat</text>
     <line x1="420" y1="624" x2="450" y2="624" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/><text x="458" y="628">walk</text>
     <text x="420" y="652">positions approximate</text>
     <text x="420" y="670">show drivers the Chinese names</text>
