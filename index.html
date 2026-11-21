@@ -1717,17 +1717,18 @@ const DAY_TEMPLATES = [
     ],
   },
   {
-    id:'hangzhou-lingyin-longjing-westlake', short:'Longjing', icon:'🍵', title:'Shanghai → Hangzhou: lakeside café → boat to Three Pools Mirroring the Moon → farmhouse lunch + pick and roast your own tea in Meijiawu → Leifeng sunset → Wulin Night Market', city:'hangzhou', date:'2026-12-30',
-    summary:'Morning train to Hangzhou, a light breakfast at a lakeside café in Hubin, a boat to the Three Pools Mirroring the Moon island, a farmhouse lunch in Meijiawu tea village, then picking, wok-roasting and tasting your own Longjing tea, Leifeng Pagoda at sunset, then a snack dinner at Wulin Night Market near the hotel.',
-    pois:['Hubin Pier', 'Three Pools Mirroring the Moon', 'Huagang Guanyu Pier', 'Meijiawu Tea Village', 'Leifeng Pagoda', 'Wulin Night Market'],
+    id:'hangzhou-lingyin-longjing-westlake', short:'Longjing', icon:'🍵', title:'Shanghai → Hangzhou: lakeside café → boat to Three Pools Mirroring the Moon → Lingyin → farmhouse lunch + pick and roast your own tea in Meijiawu → Leifeng sunset → Wulin Night Market', city:'hangzhou', date:'2026-12-30',
+    summary:'Morning train to Hangzhou, a light breakfast at a lakeside café in Hubin, a boat to the Three Pools Mirroring the Moon island and on to Huagang pier, Lingyin Temple and the Feilai Feng carvings, a farmhouse lunch in Meijiawu tea village, then picking, wok-roasting and tasting your own Longjing tea, Leifeng Pagoda at sunset, then a snack dinner at Wulin Night Market near the hotel.',
+    pois:['Hubin Pier', 'Three Pools Mirroring the Moon', 'Huagang Guanyu Pier', 'Lingyin Temple', 'Meijiawu Tea Village', 'Leifeng Pagoda', 'Wulin Night Market'],
     brief:[
       ['book', 'Train Shanghai Hongqiao → Hangzhou East on 12306 or . Sales open ~15 days ahead (~Dec 16). ~1 h, about ¥73 second class.'],
       ['to do', 'Cancel the duplicate  Movietel booking before 20:00 today, or you pay for two rooms.'],
-      ['book', 'Meijiawu tea picking, roasting and tasting (~2 h, ~13:30) on Waug activity 165222. Ask the operator before paying what you pick in late December: winter leaves are not the spring buds.'],
-      ['go', 'Mostly Didi: three rides for the hill legs (~¥100-150 for the day, estimate). Walk hotel → Hubin (~20 min) and to the night market. Request the next car before you finish at each stop; pickups in the tea villages can take a few minutes.'],
-      ['route', 'Hubin and the island in the morning, tea hills at midday, south shore at sunset, back to the Wulin area near the hotel at night.'],
+      ['book', 'Lingyin / Feilai Feng: free, but book the afternoon slot (entry from 11:00) in the 杭州灵隐飞来峰 mini-app on Alipay or WeChat with both passports. Opens 08:00 seven days ahead (Dec 23); no same-day booking.'],
+      ['book', 'Meijiawu tea picking, roasting and tasting on Waug activity 165222, ~14:15 start. Ask for a ~1.5 h session so Leifeng still works at sunset, and ask what you pick in late December: winter leaves are not the spring buds.'],
+      ['go', 'Mostly Didi: four rides for the hill legs (~¥100-150 for the day, estimate). Walk hotel → Hubin (~20 min) and to the night market. Request the next car before you finish at each stop; pickups in the tea villages can take a few minutes.'],
+      ['route', 'Hubin and the island in the morning, Lingyin and the tea hills at midday, south shore at sunset, back to the Wulin area near the hotel at night.'],
     ],
-    map:'https://www.google.com/maps/dir/?api=1&origin=Movietel+Hangzhou+West+Lake+Mansion+1937&destination=Wulin+Night+Market+Hangzhou&waypoints=Hubin+Pier+Hangzhou%7CHuagang+Guanyu+Hangzhou%7CMeijiawu+Tea+Village+Hangzhou%7CLeifeng+Pagoda&travelmode=driving',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Movietel+Hangzhou+West+Lake+Mansion+1937&destination=Wulin+Night+Market+Hangzhou&waypoints=Hubin+Pier+Hangzhou%7CHuagang+Guanyu+Hangzhou%7CLingyin+Temple+Hangzhou%7CMeijiawu+Tea+Village+Hangzhou%7CLeifeng+Pagoda&travelmode=driving',
     routeMap:'img/hangzhou-dec30-route.svg',
     events:[
       {
@@ -1746,13 +1747,13 @@ const DAY_TEMPLATES = [
       },
       {
         time:'10:00', title:'Light breakfast at a lakeside café in Hubin (湖滨)', idea:'breakfast',
-        note:'Walk ~20 min from the hotel to the Hubin shore. Coffee and something small by the water; keep it light, lunch is a farmhouse meal. ~40 min.',
+        note:'Walk ~20 min from the hotel to the Hubin shore. Coffee and something small by the water; keep it light, lunch is a farmhouse meal. ~30 min.',
         facts:[
           ['find', 'Search 湖滨 湖景 咖啡 on Dianping or Xiaohongshu and pick one with a lake-view window, near Hubin Pier (湖滨码头).'],
         ],
       },
       {
-        time:'11:00', title:'Boat to Three Pools Mirroring the Moon (三潭印月)',
+        time:'10:50', title:'Boat to Three Pools Mirroring the Moon (三潭印月)',
         note:'Cruise boat from Hubin Pier to Xiaoyingzhou island (~15-20 min). Skip the full loop: walk straight to the south side for the three stone lanterns (the view on the ¥1 note) and the zigzag bridges, ~30 min, then a return boat to Huagang Guanyu pier (花港观鱼码头) on the southwest shore, near the tea hills.',
         facts:[
           ['ticket', 'Boat tickets include island entry; buy at the pier and check the price there.'],
@@ -1762,12 +1763,21 @@ const DAY_TEMPLATES = [
         image:'img/west-lake-dragon-boat.jpg',
       },
       {
-        time:'12:30', title:'Farmhouse lunch in Meijiawu (梅家坞)', idea:'lunch',
-        note:'Didi ~15 min from Huagang Guanyu pier. Longjing shrimp (龙井虾仁), tea-smoked dishes and local greens at a family restaurant in the tea village.',
+        time:'12:00', title:'Feilai Feng + Lingyin Temple',
+        note:'Didi ~15 min from Huagang pier. See the Buddhist cliff carvings at Feilai Feng (飞来峰) first, then the main temple halls. ~1 h.',
+        facts:[
+          ['ticket', 'Free since Dec 2025, by timed real-name reservation only (see the booking note above). Open 07:30-17:30.'],
+        ],
+        source:'https://jp.lingyinsi.org/detail_15103.html',
+        image:'img/feilai-feng-buddhas.jpg',
       },
       {
-        time:'13:30', title:'Pick, roast and taste your own Longjing tea', idea:'activity',
-        note:'Put on a tea-picker\'s outfit for photos on the terraces, learn to pick from the bushes, then hand-roast leaves in an iron wok with a local farmer and finish with a tasting. You take home a pack of tea. ~2 h, English-speaking host.',
+        time:'13:20', title:'Farmhouse lunch in Meijiawu (梅家坞)', idea:'lunch',
+        note:'Didi ~20 min from Lingyin. Longjing shrimp (龙井虾仁), tea-smoked dishes and local greens at a family restaurant in the tea village.',
+      },
+      {
+        time:'14:15', title:'Pick, roast and taste your own Longjing tea', idea:'activity',
+        note:'Put on a tea-picker\'s outfit for photos on the terraces, learn to pick from the bushes, then hand-roast leaves in an iron wok with a local farmer and finish with a tasting. You take home a pack of tea. Listed as ~2 h; ask for ~1.5 h. English-speaking host.',
         facts:[
           ['book', 'Waug activity 165222; meeting point in Meijiawu, open daily 09:00-17:00.'],
           ['ask', 'Late December is outside the main picking season (late March to early November). Confirm with the operator that picking still runs on Dec 30.'],
@@ -1777,7 +1787,7 @@ const DAY_TEMPLATES = [
         image:'img/meijiawu-tea-terraces.jpg',
       },
       {
-        time:'15:55', title:'Leifeng Pagoda at sunset',
+        time:'16:05', title:'Leifeng Pagoda at sunset',
         note:'Taxi ~20-25 min from Meijiawu. Climb for the view over the south lake; sunset is around 17:05.',
         facts:[
           ['ticket', '~¥40. Go up by ~16:30; winter last entry is late afternoon.'],
