@@ -26,3 +26,12 @@ img/faxi-temple.jpg: "上天竺 - 法喜寺 - panoramio (1).jpg" by zhiyin586@16
 img/meijiawu-tea-terraces.jpg: "Longjing Tea field, Dragon Well area, Meijiawu China.jpg" by Peter K Burian, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Longjing_Tea_field,_Dragon_Well_area,_Meijiawu_China.jpg
 img/leifeng-pagoda.jpg: "Leifeng Pagoda DJI 0593 (2).jpg" by David290, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Leifeng_Pagoda_DJI_0593_(2).jpg
 img/hangzhou-snack-stall.jpg: "Chinese Snack Foods (40693892792).jpg" by David Stanley from Nanaimo, Canada, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Chinese_Snack_Foods_(40693892792).jpg
+
+img/wuzhen-indigo-cloth.jpg: "乌镇蓝印花布.JPG" by Gisling, CC BY-SA 3.0, https://commons.wikimedia.org/wiki/File:%E4%B9%8C%E9%95%87%E8%93%9D%E5%8D%B0%E8%8A%B1%E5%B8%83.JPG
+img/wuzhen-rowed-boats.jpg: "Wuzhen boats.jpg" by Michelet-密是力 (talk), Public domain, https://commons.wikimedia.org/wiki/File:Wuzhen_boats.jpg
+img/shantang-river-day.jpg: "2017-04-17 Shantang River, Suzhou 02.jpg" by Windmemories, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:2017-04-17_Shantang_River,_Suzhou_02.jpg
+img/squirrel-mandarin-fish.jpg: "Squirrel fish.jpg" by Ines Yeh, CC BY 2.0, https://commons.wikimedia.org/wiki/File:Squirrel_fish.jpg
+img/shantang-canal-night.jpg: "Shantang Canal at Night.jpg" by Chinatravelsavvy, CC BY-SA 3.0, https://commons.wikimedia.org/wiki/File:Shantang_Canal_at_Night.jpg
+img/humble-administrators-garden.jpg: "Humble Administrator's Garden Suzhou November 2017 008.jpg" by King of Hearts, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Humble_Administrator%27s_Garden_Suzhou_November_2017_008.jpg
+img/suzhou-noodles.jpg: "苏式汤面.JPG" by Shwangtianyuan, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:%E8%8B%8F%E5%BC%8F%E6%B1%A4%E9%9D%A2.JPG
+img/pingjiang-stone-bridge.jpg: "A stone arch bridge in Pingjiang Road, Suzhou.jpg" by kevinmcgill from Den Bosch, Netherlands, CC BY-SA 2.0, https://commons.wikimedia.org/wiki/File:A_stone_arch_bridge_in_Pingjiang_Road,_Suzhou.jpg
