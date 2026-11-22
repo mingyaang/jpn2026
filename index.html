@@ -1811,49 +1811,51 @@ const DAY_TEMPLATES = [
     ],
   },
   {
-    id:'hangzhou-westlake-suzhou-nye', short:'NYE', icon:'🥂', title:'West Lake morning → train to Suzhou → New Year\'s Eve', city:'hangzhou', date:'2026-12-31',
-    summary:'Sunrise on Broken Bridge, hotel breakfast, a boat to Three Pools Mirroring the Moon and a Su Causeway walk, lunch at Zhiweiguan, an afternoon train to Suzhou, then a New Year\'s Eve boat banquet on the Shantang River and a countdown around Pingjiang Road.',
-    pois:['Broken Bridge', 'Three Pools Mirroring the Moon', 'Su Causeway', 'Zhiweiguan', 'Pingjiang Road'],
+    id:'hangzhou-westlake-suzhou-nye', short:'Wuzhen', icon:'🏮', title:'Hangzhou → Wuzhen water town → Suzhou: New Year\'s Eve on Shantang Street', city:'hangzhou', date:'2026-12-31',
+    summary:'Sleep in, hotel breakfast, a Didi to Wuzhen\'s Xizha water town for the indigo dye workshop, a canal-side lunch and a hand-rowed boat, a Didi on to Suzhou, then Shantang Street at dusk, a canal-view dinner and a tentative countdown.',
+    pois:['Wuzhen Xizha', 'Shantang Street', 'Pingjiang Road'],
     brief:[
-      ['book', 'Train Hangzhou → Suzhou (苏州站, not Suzhou North) on 12306, ~14:30 departure, ~1.5 h. Sales open ~15 days ahead (~Dec 17).'],
-      ['to do', 'Hanshan Temple New Year bell tickets: watch the temple\'s WeChat account (寒山寺) from mid-December.'],
+      ['book', 'Wuzhen Xizha (乌镇西栅) day ticket, ~¥120 per person (2025 price; recheck). GetYourGuide sells one you scan with your passport at the gate.'],
+      ['book', 'New Year\'s Eve dinner on Shantang Street: reserve a canal-view window table (靠窗). Search 山塘街 临河 餐厅 on Dianping; tables go fast that night.'],
+      ['to do', 'Countdown is tentative: a canal-side bar on Pingjiang Road by the hotel, or stay on Shantang. Bars post 跨年 events on Dianping / Xiaohongshu from ~Dec 10. Reminder set for Dec 12.'],
+      ['note', 'Several Chinese cities curbed public countdowns for 2025-26 (SCMP), so a bar\'s own party is a safer bet than a public square.'],
     ],
-    map:'https://www.google.com/maps/dir/?api=1&origin=Movietel+Hangzhou+West+Lake+Mansion+1937&destination=Su+Causeway+Hangzhou&waypoints=Broken+Bridge+Hangzhou%7CThree+Pools+Mirroring+the+Moon&travelmode=walking',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Movietel+Hangzhou+West+Lake+Mansion+1937&destination=Shantang+Street+Suzhou&waypoints=Wuzhen+Xizha&travelmode=driving',
     events:[
       {
-        time:'06:45', title:'Sunrise on Broken Bridge', idea:'walk',
-        note:'Optional: Broken Bridge and Bai Causeway before the crowds, ~10 min from the hotel. Sunrise is around 06:50.',
-      },
-      {
-        time:'07:45', title:'Movietel breakfast', meal:'breakfast',
+        time:'09:00', title:'Movietel breakfast', meal:'breakfast',
+        note:'Sleep in. Out the door by 10:00.',
         facts:[
           ['booked', 'Included. Show the Agoda VIP voucher.'],
         ],
       },
       {
-        time:'09:00', title:'Boat to Three Pools Mirroring the Moon (三潭印月)',
-        note:'Take a West Lake cruise boat from a north-shore pier to the island, walk its loop, then ride on to the Su Causeway. ~1.5 h.',
+        time:'10:00', title:'Check out → Didi to Wuzhen Xizha',
+        note:'~80 km, ~1 h 15. Didi Express ~¥200-250 (estimate; check the fare in the app to 乌镇西栅). The small bag comes with you.',
         facts:[
-          ['ticket', 'Boat tickets include island entry; buy at the pier and check the price there.'],
+          ['cheaper', 'Metro Line 1 from Fengqi Road to Hangzhou East, G train to Tongxiang (桐乡站, ~20 min), taxi ~30 min to Xizha. Saves ~¥100, takes ~30 min longer.'],
         ],
       },
       {
-        time:'10:30', title:'Su Causeway (苏堤) walk',
-        note:'Walk north along the causeway past its six bridges, then taxi back toward the hotel. ~1 h.',
-      },
-      {
-        time:'12:00', title:'Zhiweiguan (知味观)', idea:'lunch',
-        note:'Old Hangzhou snack house: Pianerchuan noodles (片儿川), xiaolongbao and "cat ear" pasta (猫耳朵).',
+        time:'11:15', title:'Wuzhen Xizha water town (乌镇西栅)', idea:'activity',
+        note:'Ferry across from the visitor centre into the old town. Blue-indigo dye workshop (蓝印花布) and the Sanbai rice wine distillery (三白酒坊), then the back lanes to Bailian Pagoda (白莲塔) for the rooftop view. Skip Dongzha (东栅): smaller, and a second ticket. Plan ~3-3.5 h in total.',
         facts:[
-          ['address', '仁和路83号, by the Hubin shore.'],
+          ['ticket', '~¥120 per person (2025). Xizha opens ~09:00-22:00.'],
         ],
       },
       {
-        time:'13:30', title:'Check out → train to Suzhou',
-        note:'Check-out is allowed until 14:00. Taxi to the station, then ~1.5 h to Suzhou Station (苏州站).',
+        time:'12:30', title:'Canal-side lunch in Xizha', idea:'lunch',
+        note:'Braised lamb (红烧羊肉), Wuzhen\'s winter dish, plus 定胜糕 cakes.',
+      },
+      {
+        time:'13:30', title:'Hand-rowed boat (摇橹船) on the main canal', idea:'activity',
+        note:'The one canal boat of this leg. Agree the price before boarding.',
+      },
+      {
+        time:'14:45', title:'Didi Wuzhen → Suzhou',
+        note:'Request it from the Xizha visitor centre car park (乌镇西栅景区停车场) and leave by 15:00. ~70 km, ~1-1.25 h, ~¥200-250 (estimate; check the fare to 苏州平江路).',
         facts:[
-          ['leave', 'Hotel by 13:45 for a ~14:30 train.'],
-          ['go', 'Suzhou Station → Scholars: taxi ~10-15 min.'],
+          ['tip', 'The ride crosses from Zhejiang into Jiangsu, so a driver can take a few minutes to accept. Allow extra time for New Year\'s Eve traffic.'],
         ],
       },
       {
@@ -1864,22 +1866,26 @@ const DAY_TEMPLATES = [
         ],
       },
       {
-        time:'18:00', title:'Gusu boat banquet on Shantang River (姑苏船宴)', idea:'dinner',
-        note:'A private painted boat for ~1.5 h, with a Suzhou set menu served on board while you float past the lantern-lit Shantang Street and the city moat. Taxi ~15 min from the hotel.',
+        time:'17:00', title:'Shantang Street at dusk (山塘街)', idea:'walk',
+        note:'Didi ~15 min. Walk the restored stretch near Changmen (阊门) as the lanterns come on. Best views from Tonggui Bridge (通贵桥) and Xingqiao (星桥). Snack on 海棠糕 and 梅花糕.',
+      },
+      {
+        time:'18:30', title:'Canal-view dinner on Shantang', idea:'dinner',
+        note:'Ask for a window table (靠窗) over the canal.',
         facts:[
-          ['book', 'KKday product 925423 (boat ticket + meal). Confirmed within 1 business day; no cancellation or changes, so book once the date is firm. New Year\'s Eve sells out.'],
-          ['backup', 'Songhelou (松鹤楼) on Guanqian Street for squirrel-shaped mandarin fish (松鼠鳜鱼), if the boat is full.'],
+          ['book', 'Search 山塘街 临河 餐厅 on Dianping and reserve; New Year\'s Eve tables go fast.'],
+          ['backup', 'Songhelou (松鹤楼) on Guanqian Street for squirrel-shaped mandarin fish (松鼠鳜鱼), ~10 min by Didi; no canal view.'],
         ],
-        source:'https://www.kkday.com/en-us/product/925423',
       },
       {
-        time:'19:45', title:'Shantang Street at night',
-        note:'Walk the lantern-lit canal street for ~45 min after the boat, then taxi back toward Pingjiang Road.',
+        time:'20:00', title:'Shantang Street at night',
+        note:'Walk the rest of the lantern-lit street at your own pace.',
       },
       {
-        time:'21:00', title:'Pingjiang Road + countdown',
-        note:'Free and walkable: stroll Pingjiang Road (平江路) and the canal lanes, then count down near Xiangmen city wall (相门城墙), ~20 min on foot. In 2024 the Hanshan bell ceremony was streamed live there.',
+        time:'21:30', title:'New Year countdown (tentative)',
+        note:'Not booked yet. Option A: Didi back to Pingjiang Road and count down at a canal-side bar (清吧) by the hotel, then walk home. Option B: stay on Shantang; expect heavy crowds and possible entry limits, and walk home ~40 min or queue for a taxi.',
         facts:[
+          ['to do', 'Pick and book a place. Search 平江路 清吧 跨年 on Dianping from ~Dec 10.'],
           ['upgrade', 'Hanshan Temple 108-bell ceremony at midnight is ticketed (one listing showed ¥380). Taxi ~25 min each way; pre-book the ride back, because taxis are scarce after midnight.'],
         ],
         source:'https://en.youth.cn/RightNow/202412/t20241230_15741908.htm',
