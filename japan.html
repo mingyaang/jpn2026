@@ -673,7 +673,7 @@ const CORP_HOLIDAYS = {
 // Not company holidays — still workdays, just noting them.
 const FUN_DAYS = { '2026-12-24': '🎁', '2026-12-31': '🥂' };
 const MILESTONES = {
-  '2026-12-12': { icon:'👋', label:'y. arrives (night)' },
+  '2026-12-12': { icon:'👋', label:'y. lands KIX 9:45 pm' },
   '2027-01-07': { icon:'✈️', label:'departing taipei' },
 };
 
@@ -716,6 +716,13 @@ const BOOKINGS = [
       address:'2-4-10 Minamisenba, Chuo-ku, Osaka 542-0081',
       phone:'+81-6-7777-9450',
     },
+  },
+  {
+    icon:'✈️', title:'Y.: Taipei → Osaka', label:'Y. TPE → KIX', short:'KIX', date:'2026-12-12',
+    legs:[
+      { dep:'tbc', arr:'21:45', from:'TPE Taoyuan', to:'KIX Kansai', flight:'GK52 · Jetstar Japan' },
+    ],
+    tags:['lands 9:45 pm Dec 12', 'Y.', 'to Namba: Nankai line, ~40 min'],
   },
   {
     icon:'🏨', title:'HOTEL AMANEK Osaka Namba', label:'AMANEK Namba', short:'AMANEK',
