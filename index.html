@@ -1893,78 +1893,38 @@ const DAY_TEMPLATES = [
     ],
   },
   {
-    id:'suzhou-garden-museum-pingjiang', short:'Gardens', icon:'🌿', title:'Humble Administrator\'s Garden + Suzhou Museum + Pingjiang Road → Zhouzhuang at night → Shanghai', city:'suzhou', date:'2027-01-01',
-    summary:'First-slot entry to the Humble Administrator\'s Garden, I.M. Pei\'s Suzhou Museum next door, Suzhou noodles and a Pingjiang Road canal walk, a Hanfu photoshoot, then Zhouzhuang water town (周庄) at dusk on the way to Shanghai.',
-    pois:['Humble Administrator\'s Garden', 'Suzhou Museum', 'Pingjiang Road', 'Zhouzhuang', 'Twin Bridges'],
+    id:'suzhou-garden-museum-pingjiang', short:'Hanfu', icon:'🌿', title:'Humble Administrator\'s Garden + Suzhou noodles + Hanfu photoshoot on Pingjiang Road', city:'suzhou', date:'2027-01-01',
+    summary:'A later start after the countdown: the Humble Administrator\'s Garden at 09:00, Suzhou noodles for brunch, then a Hanfu photoshoot on the Pingjiang Road bridges. The afternoon is open.',
+    pois:['Humble Administrator\'s Garden', 'Pingjiang Road'],
     brief:[
-      ['book', 'Humble Administrator\'s Garden, 07:30 slot, real-name with passports, ¥70 each (off-peak). Slots open ~7 days ahead (~Dec 25); New Year\'s Day sells out.'],
-      ['book', 'Suzhou Museum: free, but a separate timed reservation (~10:30) on its official WeChat account (苏州博物馆).'],
-      ['go', 'Didi Suzhou → Zhouzhuang (~40 km, ~50-60 min) and Zhouzhuang → Shanghai (~70 km, ~1-1.25 h). Zhouzhuang has no train station.'],
-      ['ticket', 'Zhouzhuang night ticket ¥80 from 16:00 (2025 price, recheck). Passport for real-name entry.'],
-      ['note', 'New Year\'s Day: the town is busier than on a weekday, but quieter after the day groups leave around dusk.'],
+      ['book', 'Humble Administrator\'s Garden, 09:00 slot, real-name with passports, ¥70 each (off-peak). Slots open ~7 days ahead (~Dec 25); New Year\'s Day sells out.'],
+      ['book', 'Hanfu studio on Pingjiang Road, ~11:30-12:00 start. Search 平江路 汉服 旅拍 on Xiaohongshu or Dianping and book a few days ahead.'],
+      ['to do', 'Afternoon from 14:30 and the move to Shanghai are not planned yet. Shanghai hotel for Jan 1-3 is not booked.'],
     ],
-    map:'https://www.google.com/maps/dir/?api=1&origin=SCHOLARS+BOUTIQUE+Suzhou+Pingjiangfu&destination=Zhouzhuang+Water+Town&waypoints=Humble+Administrator%27s+Garden%7CSuzhou+Museum%7CPingjiang+Road+Suzhou&travelmode=driving',
+    map:'https://www.google.com/maps/dir/?api=1&origin=SCHOLARS+BOUTIQUE+Suzhou+Pingjiangfu&destination=Pingjiang+Road+Suzhou&waypoints=Humble+Administrator%27s+Garden&travelmode=walking',
     events:[
       {
-        time:'07:00', title:'Check out, leave bags at the desk',
-        note:'Check-out is before 12:00 and you will be out all morning, so settle up now.',
+        time:'08:45', title:'Check out, leave bags at the desk',
+        note:'Sleep in after the countdown. Check-out is before 12:00 and you will be out until the afternoon, so settle up now.',
       },
       {
-        time:'07:30', title:'Humble Administrator\'s Garden (拙政园)',
-        note:'Go straight to the central pond while it is quiet: Hall of Distant Fragrance and Small Flying Rainbow bridge. Then the western courtyards. ~2 h.',
+        time:'09:00', title:'Humble Administrator\'s Garden (拙政园)',
+        note:'Head to the central pond first: Hall of Distant Fragrance and Small Flying Rainbow bridge. Then the western courtyards. ~1.5-2 h.',
         facts:[
-          ['be at', 'Gate by 07:20 with passports. 东北街178号, ~10 min walk from the hotel.'],
+          ['be at', 'Gate by 08:55 with passports. 东北街178号, ~10 min walk from the hotel.'],
         ],
         source:'https://www.wanderinchina.com/destinations/suzhou/humble-administrators-garden/',
       },
       {
-        time:'09:40', title:'Suzhou noodles', idea:'breakfast',
-        note:'Locals eat 苏式汤面 for breakfast. Order 焖肉面 (braised pork) or 爆鱼面 (fried fish) at a noodle shop near the garden.',
+        time:'11:00', title:'Suzhou noodles', idea:'lunch',
+        note:'Brunch the local way: 苏式汤面. Order 焖肉面 (braised pork) or 爆鱼面 (fried fish) at a noodle shop near the garden.',
       },
       {
-        time:'10:30', title:'Suzhou Museum (苏州博物馆)',
-        note:'I.M. Pei\'s modern take on a Suzhou garden: white walls, rock and water. ~1.5 h. Next door to the garden, but separate security.',
-      },
-      {
-        time:'12:30', title:'Pingjiang Road', idea:'lunch',
-        note:'Walk south along the canal. Snack on pan-fried buns at 哑巴生煎 (Lindun Road) and sit at a canal-side teahouse. Optional short boat ride.',
-      },
-      {
-        time:'13:30', title:'Hanfu photoshoot on Pingjiang Road', idea:'activity',
-        note:'The Xiaohongshu classic for couples: rent Hanfu with hair and makeup at a studio on Pingjiang Road, then a photographer shoots you on the bridges and canal lanes. ~2 h.',
+        time:'11:45', title:'Hanfu photoshoot on Pingjiang Road', idea:'activity',
+        note:'Rent Hanfu with hair and makeup at a studio on Pingjiang Road, then a photographer shoots you on the bridges and canal lanes. ~2.5 h including makeup.',
         facts:[
-          ['book', 'Search 平江路 汉服 旅拍 on Xiaohongshu or Dianping and book a slot a few days ahead; New Year\'s Day is busy. Check whether edited photos and the photographer are included.'],
-        ],
-      },
-      {
-        time:'15:30', title:'Pick up bags → Didi to Zhouzhuang',
-        note:'Collect your bags at Scholars and take a Didi from the hotel door, ~50-60 min. Holiday traffic can add time.',
-      },
-      {
-        time:'16:45', title:'Twin Bridges (双桥) + Fu\'an Bridge (富安桥)',
-        note:'Buy the night ticket and head straight for the postcard view; sunset is around 17:00. The old houses close at ~17:00, so Shen House is out.',
-      },
-      {
-        time:'17:15', title:'Hand-rowed boat at dusk',
-        note:'A boatwoman rows you under the bridges as the lanterns come on and often sings local tunes. Buy at the pier and check the price there.',
-        facts:[
-          ['upgrade', 'Klook sells a Zhouzhuang night tour with cruise and show; compare it before you go.'],
-        ],
-      },
-      {
-        time:'18:00', title:'Wansan pork knuckle (万三蹄)', idea:'dinner',
-        note:'Zhouzhuang\'s signature: a slow-braised, sweet soy pork knuckle named after the Ming tycoon Shen Wansan. Share one with local river fish at a canal-side restaurant.',
-      },
-      {
-        time:'19:00', title:'Lantern walk',
-        note:'Walk the canal streets after the tour buses leave. The red lanterns reflect on the water.',
-      },
-      {
-        time:'20:00', title:'Didi to Shanghai',
-        note:'~1-1.25 h, about ¥210-290. Start requesting by ~19:45 from the main gate: long cross-border rides into Shanghai can take a while to match at night.',
-        facts:[
-          ['backup', 'Didi ~35 min to Kunshan South (昆山南站), then ~18 min train to Shanghai Station.'],
-          ['to do', 'Shanghai hotel for Jan 1-3 is not booked yet.'],
+          ['book', 'Search 平江路 汉服 旅拍 on Xiaohongshu or Dianping; New Year\'s Day is busy. Check whether edited photos and the photographer are included.'],
+          ['ask', 'Whether you can keep the outfit on after the shoot. Some studios rent by the half day.'],
         ],
       },
     ],
