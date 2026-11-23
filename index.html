@@ -1904,16 +1904,16 @@ const DAY_TEMPLATES = [
     ],
   },
   {
-    id:'hangzhou-westlake-suzhou-nye', short:'Wuzhen', icon:'🏮', title:'Hangzhou → Wuzhen water town → Suzhou: New Year\'s Eve on Shantang Street', city:'hangzhou', date:'2026-12-31',
-    summary:'Sleep in, hotel breakfast, a Didi to Wuzhen\'s Xizha water town for the indigo dye workshop, a canal-side lunch and a hand-rowed boat, a Didi on to Suzhou, then Shantang Street at dusk, a canal-view dinner and a tentative countdown.',
-    pois:['Wuzhen Xizha', 'Shantang Street', 'Pingjiang Road'],
+    id:'hangzhou-westlake-suzhou-nye', short:'Wuzhen', icon:'🏮', title:'Hangzhou → Wuzhen water town → Suzhou: open New Year\'s Eve', city:'hangzhou', date:'2026-12-31',
+    summary:'Sleep in, hotel breakfast, a Didi to Wuzhen\'s Xizha water town for the indigo dye workshop, a canal-side lunch and a hand-rowed boat, a Didi on to Suzhou, then an open evening and a tentative countdown.',
+    pois:['Wuzhen Xizha', 'Pingjiang Road'],
     brief:[
       ['book', 'Wuzhen Xizha (乌镇西栅) day ticket, ~¥120 per person (2025 price; recheck). GetYourGuide sells one you scan with your passport at the gate.'],
-      ['book', 'New Year\'s Eve dinner on Shantang Street: reserve a canal-view window table (靠窗). Search 山塘街 临河 餐厅 on Dianping; tables go fast that night.'],
-      ['to do', 'Countdown is tentative: a canal-side bar on Pingjiang Road by the hotel, or stay on Shantang. Bars post 跨年 events on Dianping / Xiaohongshu from ~Dec 10. Reminder set for Dec 12.'],
+      ['to do', 'Evening is open. If you pick a sit-down New Year\'s Eve dinner, reserve it early on Dianping; tables go fast that night.'],
+      ['to do', 'Countdown is tentative: a canal-side bar on Pingjiang Road by the hotel is the easy option. Bars post 跨年 events on Dianping / Xiaohongshu from ~Dec 10. Reminder set for Dec 12.'],
       ['note', 'Several Chinese cities curbed public countdowns for 2025-26 (SCMP), so a bar\'s own party is a safer bet than a public square.'],
     ],
-    map:'https://www.google.com/maps/dir/?api=1&origin=Movietel+Hangzhou+West+Lake+Mansion+1937&destination=Shantang+Street+Suzhou&waypoints=Wuzhen+Xizha&travelmode=driving',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Movietel+Hangzhou+West+Lake+Mansion+1937&destination=SCHOLARS+BOUTIQUE+Suzhou+Pingjiangfu&waypoints=Wuzhen+Xizha&travelmode=driving',
     events:[
       {
         time:'09:00', title:'Movietel breakfast', meal:'breakfast',
@@ -1961,27 +1961,16 @@ const DAY_TEMPLATES = [
         ],
       },
       {
-        time:'17:00', title:'Shantang Street at dusk (山塘街)', idea:'walk',
-        note:'Didi ~15 min. Walk the restored stretch near Changmen (阊门) as the lanterns come on. Best views from Tonggui Bridge (通贵桥) and Xingqiao (星桥). Snack on 海棠糕 and 梅花糕.',
-        image:'img/shantang-river-day.jpg',
-      },
-      {
-        time:'18:30', title:'Canal-view dinner on Shantang', idea:'dinner',
-        note:'Ask for a window table (靠窗) over the canal.',
+        time:'17:00', title:'Open evening', idea:'walk',
+        note:'No fixed plan. Pingjiang Road starts at the hotel door, so a lantern walk and a canal-side dinner there need no taxi. Shantang Street is saved for the Jan 1 boat banquet, but anywhere in town works.',
         facts:[
-          ['book', 'Search 山塘街 临河 餐厅 on Dianping and reserve; New Year\'s Eve tables go fast.'],
-          ['backup', 'Songhelou (松鹤楼) on Guanqian Street for squirrel-shaped mandarin fish (松鼠鳜鱼), ~10 min by Didi; no canal view.'],
+          ['idea', 'Songhelou (松鹤楼) on Guanqian Street for squirrel-shaped mandarin fish (松鼠鳜鱼), ~10 min by Didi.'],
         ],
-        image:'img/squirrel-mandarin-fish.jpg',
-      },
-      {
-        time:'20:00', title:'Shantang Street at night',
-        note:'Walk the rest of the lantern-lit street at your own pace.',
-        image:'img/shantang-canal-night.jpg',
+        image:'img/pingjiang-stone-bridge.jpg',
       },
       {
         time:'21:30', title:'New Year countdown (tentative)',
-        note:'Not booked yet. Option A: Didi back to Pingjiang Road and count down at a canal-side bar (清吧) by the hotel, then walk home. Option B: stay on Shantang; expect heavy crowds and possible entry limits, and walk home ~40 min or queue for a taxi.',
+        note:'Not booked yet. Easiest: count down at a canal-side bar (清吧) on Pingjiang Road by the hotel, then walk home. Anywhere farther means queueing for a taxi after midnight.',
         facts:[
           ['to do', 'Pick and book a place. Search 平江路 清吧 跨年 on Dianping from ~Dec 10.'],
           ['upgrade', 'Hanshan Temple 108-bell ceremony at midnight is ticketed (one listing showed ¥380). Taxi ~25 min each way; pre-book the ride back, because taxis are scarce after midnight.'],
@@ -1991,42 +1980,81 @@ const DAY_TEMPLATES = [
     ],
   },
   {
-    id:'suzhou-garden-museum-pingjiang', short:'Hanfu', icon:'🌿', title:'Humble Administrator\'s Garden + Suzhou noodles + Hanfu photoshoot on Pingjiang Road', city:'suzhou', date:'2027-01-01',
-    summary:'A later start after the countdown: the Humble Administrator\'s Garden at 09:00, Suzhou noodles for brunch, then a Hanfu photoshoot on the Pingjiang Road bridges. The afternoon is open.',
-    pois:['Humble Administrator\'s Garden', 'Pingjiang Road'],
+    id:'suzhou-garden-museum-pingjiang', short:'Boat', icon:'🚣', title:'Hanfu photoshoot in the Humble Administrator\'s Garden + Shantang sunset boat banquet → evening train to Shanghai', city:'suzhou', date:'2027-01-01',
+    summary:'A late start: Suzhou noodles, Hanfu styling, a photoshoot in the Humble Administrator\'s Garden, an afternoon on Shantang Street in Hanfu, the 17:00 Gusu boat banquet through sunset, then an evening train back to Shanghai.',
+    pois:['Humble Administrator\'s Garden', 'Shantang Street', 'Suzhou Station'],
     brief:[
-      ['book', 'Humble Administrator\'s Garden, 09:00 slot, real-name with passports, ¥70 each (off-peak). Slots open ~7 days ahead (~Dec 25); New Year\'s Day sells out.'],
-      ['book', 'Hanfu studio on Pingjiang Road, ~11:30-12:00 start. Search 平江路 汉服 旅拍 on Xiaohongshu or Dianping and book a few days ahead.'],
-      ['to do', 'Afternoon from 14:30 and the move to Shanghai are not planned yet. Shanghai hotel for Jan 1-3 is not booked.'],
+      ['book', 'Humble Administrator\'s Garden, 12:00 slot, real-name with passports, ¥70 each (off-peak). Slots open ~7 days ahead (~Dec 25); New Year\'s Day sells out. The photographer needs a ticket too.'],
+      ['book', 'Hanfu studio near the garden with a photographer who shoots inside it. Search 拙政园 汉服 旅拍 on Dianping. Ask: 拙政园里面可以跟拍吗？ (can you shoot inside?), 衣服可以租到晚上七点吗？ (can we keep the outfits until 7 pm?), 摄影师的门票谁付？ (who pays the photographer\'s ticket?).'],
+      ['book', 'Gusu boat banquet (姑苏船宴), 17:00 boat. Buy the 游船观景单人餐 deal twice on Dianping (¥298 each, refundable), then reserve the boat in the app or by phone (+86 133 3801 4524). Ask whether the boat is private or shared (包船还是拼船).'],
+      ['book', 'Train Suzhou (苏州站) → Shanghai (上海站), ~20:00-20:30, on 12306 when Jan 1 sales open (~Dec 17). Holiday evening trains sell out. Not Suzhou North.'],
+      ['to do', 'Re-register at the Heping Park home within 24 h of getting back.'],
     ],
-    map:'https://www.google.com/maps/dir/?api=1&origin=SCHOLARS+BOUTIQUE+Suzhou+Pingjiangfu&destination=Pingjiang+Road+Suzhou&waypoints=Humble+Administrator%27s+Garden&travelmode=walking',
+    map:'https://www.google.com/maps/dir/?api=1&origin=SCHOLARS+BOUTIQUE+Suzhou+Pingjiangfu&destination=Suzhou+Railway+Station&waypoints=Humble+Administrator%27s+Garden%7CShantang+Street+Suzhou&travelmode=driving',
     events:[
       {
-        time:'08:45', title:'Check out, leave bags at the desk',
-        note:'Sleep in after the countdown. Check-out is before 12:00 and you will be out until the afternoon, so settle up now.',
+        time:'10:30', title:'Check out, leave bags at the desk',
+        note:'Sleep in after the countdown. The bags stay at the hotel until the evening.',
       },
       {
-        time:'09:00', title:'Humble Administrator\'s Garden (拙政园)',
-        note:'Head to the central pond first: Hall of Distant Fragrance and Small Flying Rainbow bridge. Then the western courtyards. ~1.5-2 h.',
+        time:'10:30', title:'Suzhou noodles', idea:'breakfast',
+        note:'The local brunch: 苏式汤面. Order 焖肉面 (braised pork) or 爆鱼面 (fried fish) near the hotel.',
+        image:'img/suzhou-noodles.jpg',
+      },
+      {
+        time:'11:00', title:'Hanfu styling near the garden', idea:'activity',
+        note:'Outfit, hair and makeup at the studio, ~1 h. Keep the outfits on for the rest of the day.',
+      },
+      {
+        time:'12:00', title:'Humble Administrator\'s Garden (拙政园) photoshoot', idea:'activity',
+        note:'The photographer shoots you around the central pond, the Hall of Distant Fragrance and the Small Flying Rainbow bridge. ~2 h. Expect holiday crowds in the background.',
         facts:[
-          ['be at', 'Gate by 08:55 with passports. 东北街178号, ~10 min walk from the hotel.'],
+          ['be at', 'Gate by 11:55 with passports. 东北街178号, ~10 min walk from the hotel.'],
+          ['unverified', 'Garden rules for paid photographers and gear (tripods, lights) are not confirmed. Check with the studio.'],
         ],
         source:'https://www.wanderinchina.com/destinations/suzhou/humble-administrators-garden/',
         image:'img/humble-administrators-garden.jpg',
       },
       {
-        time:'11:00', title:'Suzhou noodles', idea:'lunch',
-        note:'Brunch the local way: 苏式汤面. Order 焖肉面 (braised pork) or 爆鱼面 (fried fish) at a noodle shop near the garden.',
-        image:'img/suzhou-noodles.jpg',
+        time:'14:00', title:'Didi to Shantang Street (山塘街)',
+        note:'~15 min to Changmen (阊门).',
       },
       {
-        time:'11:45', title:'Hanfu photoshoot on Pingjiang Road', idea:'activity',
-        note:'Rent Hanfu with hair and makeup at a studio on Pingjiang Road, then a photographer shoots you on the bridges and canal lanes. ~2.5 h including makeup.',
+        time:'14:15', title:'Shantang Street in Hanfu', idea:'walk',
+        note:'Walk west from Changmen along the restored stretch. Photo spots: Tonggui Bridge (通贵桥) and Xingqiao (星桥). Light snacks only (海棠糕, 梅花糕); the banquet is 9 courses. Turn back by 16:15.',
+        image:'img/shantang-river-day.jpg',
+      },
+      {
+        time:'16:45', title:'Check in at Gusu boat banquet',
         facts:[
-          ['book', 'Search 平江路 汉服 旅拍 on Xiaohongshu or Dianping; New Year\'s Day is busy. Check whether edited photos and the photographer are included.'],
-          ['ask', 'Whether you can keep the outfit on after the shoot. Some studios rent by the half day.'],
+          ['address', '山塘街白公祠方基上65号, next to the Shantang boat pier. 700 m from Shantang Street station (Line 2), exit 3.'],
+          ['bring', 'The two Dianping voucher QR codes.'],
         ],
-        image:'img/pingjiang-stone-bridge.jpg',
+      },
+      {
+        time:'17:00', title:'Gusu boat banquet (姑苏船宴)', idea:'dinner',
+        note:'A 1.5-hour painted-boat cruise on the Shantang River and moat with a Suzhou set menu: squirrel mandarin fish, braised pork, crab roe noodles. Sunset is ~17:05, so you get sunset, the lanterns coming on and full dark.',
+        facts:[
+          ['price', '¥298 per person on Dianping ( sells it for ~US$64.52).'],
+        ],
+        image:'img/squirrel-mandarin-fish.jpg',
+      },
+      {
+        time:'18:30', title:'Shantang Street at night', idea:'walk',
+        note:'A short walk along the lantern-lit street.',
+        image:'img/shantang-canal-night.jpg',
+      },
+      {
+        time:'19:00', title:'Didi back to Pingjiang',
+        note:'~15 min. Return the outfits at the studio and collect the bags from Scholars.',
+      },
+      {
+        time:'19:45', title:'Didi to Suzhou Station (苏州站)',
+        note:'~15 min. Allow extra time for New Year\'s Day queues at security.',
+      },
+      {
+        time:'20:15', title:'Train to Shanghai Station (上海站)',
+        note:'~30 min, then a taxi to Heping Park, ~20 min (estimate). Home around 21:45.',
       },
     ],
   },
