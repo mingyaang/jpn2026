@@ -35,3 +35,7 @@ img/shantang-canal-night.jpg: "Shantang Canal at Night.jpg" by Chinatravelsavvy,
 img/humble-administrators-garden.jpg: "Humble Administrator's Garden Suzhou November 2017 008.jpg" by King of Hearts, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Humble_Administrator%27s_Garden_Suzhou_November_2017_008.jpg
 img/suzhou-noodles.jpg: "苏式汤面.JPG" by Shwangtianyuan, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:%E8%8B%8F%E5%BC%8F%E6%B1%A4%E9%9D%A2.JPG
 img/pingjiang-stone-bridge.jpg: "A stone arch bridge in Pingjiang Road, Suzhou.jpg" by kevinmcgill from Den Bosch, Netherlands, CC BY-SA 2.0, https://commons.wikimedia.org/wiki/File:A_stone_arch_bridge_in_Pingjiang_Road,_Suzhou.jpg
+
+img/china-art-museum-night.jpg: "China Pavilion Night Shot.jpg" by Flying19880517, CC BY-SA 3.0, https://commons.wikimedia.org/wiki/File:China_Pavilion_Night_Shot.jpg
+img/huanghe-road-neon.jpg: "20240120 Night view of Huanghe Road, Shanghai 03.jpg" by Windmemories, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:20240120_Night_view_of_Huanghe_Road,_Shanghai_03.jpg
+img/nanjing-road-east-night.jpg: "East Nanjing Road at night, Shanghai.jpg" by EditQ, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:East_Nanjing_Road_at_night,_Shanghai.jpg

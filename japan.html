@@ -1724,16 +1724,17 @@ const DAY_TEMPLATES = [
     ],
   },
   {
-    id:'shanghai-romance-huanghe', short:'Romance', icon:'🎭', title:'Heping Park bag drop → Shanghai Romance Park → Huanghe Road dinner', city:'shanghai', date:'2026-12-27',
-    summary:'Check out of the Rezen, drop the big bags and rest at home near Heping Park, spend the afternoon at the Shanghai Romance park and show at the old Expo site, then Line 8 to People’s Square for dinner on neon-lit Huanghe Road and Line 8 straight home.',
-    pois:['Heping Park', 'Shanghai Romance Park', 'People’s Square', 'Huanghe Road', 'Nanjing Road East'],
+    id:'shanghai-romance-huanghe', short:'Romance', icon:'🎭', title:'Heping Park bag drop → Shanghai Romance Park → China Art Museum → Huanghe Road dinner', city:'shanghai', date:'2026-12-27',
+    summary:'Check out of the Rezen, drop the big bags and rest at home near Heping Park, spend the afternoon at the Shanghai Romance park and show at the old Expo site, walk to the red China Pavilion (China Art Museum) as it lights up, then Line 8 to People’s Square for dinner on neon-lit Huanghe Road and Line 8 straight home.',
+    pois:['Heping Park', 'Shanghai Romance Park', 'China Art Museum', 'People’s Square', 'Huanghe Road', 'Nanjing Road East'],
     brief:[
       ['base', 'Staying with family near Heping Park. Home station: Siping Road (四平路), Lines 8 and 10.'],
       ['register', 'Foreigners staying in a private home must register at the local police station (派出所) within 24 h of arrival. Bring both passports and do it today.'],
       ['tickets', 'Shanghai Romance park + show (上海千古情), 世博大道1750号. Book ahead; check the main show times for Dec 27 when booking.'],
       ['pace', 'First day after a 01:20 landing. Keep the evening to dinner and a short walk.'],
     ],
-    map:'https://www.google.com/maps/dir/?api=1&origin=Heping+Park+Shanghai&destination=Siping+Road+Station+Shanghai&waypoints=Shanghai+Romance+Park+1750+Shibo+Avenue%7CHuanghe+Road+Shanghai%7CNanjing+Road+East+Shanghai&travelmode=transit',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Heping+Park+Shanghai&destination=Siping+Road+Station+Shanghai&waypoints=Shanghai+Romance+Park+1750+Shibo+Avenue%7CChina+Art+Museum+Shanghai%7CHuanghe+Road+Shanghai%7CNanjing+Road+East+Shanghai&travelmode=transit',
+    routeMap:'img/shanghai-dec27-route.svg',
     events:[
       {
         time:'10:30', title:'Check out of the Rezen → home near Heping Park',
@@ -1759,33 +1760,50 @@ const DAY_TEMPLATES = [
       },
       {
         time:'13:00', title:'Shanghai Romance park + main show (上海千古情)',
-        note:'Main show ~1 h, with dance, acrobatics and big stage effects. Pick the 14:00, 15:00 or 16:00 performance, then walk the old-Shanghai themed streets and catch the small free shows. Costume rental is available.',
+        note:'Main show ~1 h, with dance, acrobatics and big stage effects. Pick the 14:00 or 15:00 performance so you leave by 16:00 for the museum, then walk the old-Shanghai themed streets and catch the small free shows. Costume rental is available.',
         facts:[
           ['hours', 'Park 10:30-19:00 (ticket listing, Nov 2026). Recheck closer to the date.'],
           ['names', 'Also listed as “The Romance of Shanghai”, “Songcheng Romance” or “Shanghai Eternal Love”. Show taxi drivers 上海千古情景区.'],
-          ['visit', 'Typical visit 4-5 h.'],
+          ['leave', 'By 16:00. The museum stops entry at 17:00.'],
         ],
       },
       {
-        time:'17:00', title:'Park → People’s Square on Line 8',
-        note:'Walk or short taxi to Yaohua Road station, Line 8 toward Shiguang Road (市光路), ~15 min to People’s Square (人民广场). Huanghe Road is a 5-min walk north.',
+        time:'16:00', title:'Walk to the China Art Museum',
+        note:'~1.2 km east along the old Expo site, ~15 min (estimate). A short taxi if it is cold.',
       },
       {
-        time:'17:45', title:'Dinner on Huanghe Road (黄河路)', meal:'dinner',
+        time:'16:15', title:'China Art Museum (中华艺术宫), the red China Pavilion',
+        note:'The giant red Expo 2010 China Pavilion, now a free art museum. Browse the galleries for ~1 h, then step outside after sunset (~16:55) when the pavilion is lit red.',
+        facts:[
+          ['hours', 'Tue-Sun 10:00-18:00, last entry 17:00. Closed Mondays.'],
+          ['ticket', 'Free; special exhibitions cost extra. Bring both passports. Check its WeChat account (中华艺术宫) for whether a timed reservation is needed.'],
+          ['address', '上南路205号, by China Art Museum station (中华艺术宫站), Line 8.'],
+        ],
+        source:'https://japanese.pudong.gov.cn/2024-10/29/c_213681.htm',
+        image:'img/china-art-museum-night.jpg',
+      },
+      {
+        time:'17:30', title:'China Art Museum → People’s Square on Line 8',
+        note:'China Art Museum station, Line 8 toward Shiguang Road (市光路), ~15 min to People’s Square (人民广场), no transfer. Huanghe Road is a 5-min walk north.',
+      },
+      {
+        time:'17:50', title:'Dinner on Huanghe Road (黄河路)', meal:'dinner',
         note:'The neon-signed restaurant street from the drama Blossoms Shanghai (繁花). It is dark by now, so the signs are lit.',
         facts:[
           ['pick', '苔圣园 for Shanghainese classics (红烧肉 braised pork, 醉鸡 drunken chicken) · 佳家汤包 for soup dumplings · 小杨生煎 for pan-fried pork buns.'],
           ['to do', 'Check queue times on Dianping before leaving the park; Sunday evenings are busy.'],
           ['photo', 'Shoot down the street with the signs stacked on both sides.'],
-          ['backup', 'Too tired after the park: eat at Expo Axis mall (世博源) next door and take Line 8 home from Yaohua Road.'],
+          ['backup', 'Too tired after the museum: eat at Expo Axis mall (世博源) nearby and take Line 8 home from Yaohua Road.'],
         ],
+        image:'img/huanghe-road-neon.jpg',
       },
       {
         time:'19:15', title:'Nanjing Road East neon walk', optional:true,
         note:'20-30 min on the pedestrian street a few minutes away. Mostly for the lights, not shopping.',
+        image:'img/nanjing-road-east-night.jpg',
       },
       {
-        time:'20:00', title:'Line 8 home',
+        time:'20:15', title:'Line 8 home',
         note:'People’s Square → Siping Road, ~20 min, no transfer. Early night.',
       },
     ],
