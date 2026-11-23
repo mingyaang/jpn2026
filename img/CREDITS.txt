@@ -39,3 +39,8 @@ img/pingjiang-stone-bridge.jpg: "A stone arch bridge in Pingjiang Road, Suzhou.j
 img/china-art-museum-night.jpg: "China Pavilion Night Shot.jpg" by Flying19880517, CC BY-SA 3.0, https://commons.wikimedia.org/wiki/File:China_Pavilion_Night_Shot.jpg
 img/huanghe-road-neon.jpg: "20240120 Night view of Huanghe Road, Shanghai 03.jpg" by Windmemories, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:20240120_Night_view_of_Huanghe_Road,_Shanghai_03.jpg
 img/nanjing-road-east-night.jpg: "East Nanjing Road at night, Shanghai.jpg" by EditQ, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:East_Nanjing_Road_at_night,_Shanghai.jpg
+
+img/wukang-mansion.jpg: "Wukang Mansion (20191114161507).jpg" by N509FZ, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Wukang_Mansion_(20191114161507).jpg
+img/anfu-road-brunch.jpg: "A brunch spot at Anfu Rd.jpg" by RunningTurtle8964, CC0, https://commons.wikimedia.org/wiki/File:A_brunch_spot_at_Anfu_Rd.jpg
+img/the-louis-lv-ship.jpg: "The Louis in Shanghai 2, 2026-06-06.jpg" by Perimeter Chou, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:The_Louis_in_Shanghai_2,_2026-06-06.jpg
+img/xintiandi-lanes.jpg: "Fountain with Sculptures in Xintiandi Shanghai 20210329.jpg" by Leynadmar, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Fountain_with_Sculptures_in_Xintiandi_Shanghai_20210329.jpg

@@ -1818,6 +1818,84 @@ const DAY_TEMPLATES = [
     ],
   },
   {
+    id:'shanghai-wukang-xintiandi', short:'Wukang', icon:'🛍', title:'Wukang Mansion → Anfu Road → 人和馆 lunch → The Louis → Changle + Xinle boutiques → Gentle Monster → Xintiandi night', city:'shanghai', date:'2026-12-28',
+    summary:'One loop through the Former French Concession with almost no backtracking: Wukang Mansion and Wukang Road in the quiet Monday morning, indie shops on Anfu Road, Shanghainese lunch at 人和馆 by Jing’an Temple, Louis Vuitton’s ship on West Nanjing Road, boutiques on Changle and Xinle Roads, Gentle Monster’s Haus Nowhere, then dinner, a walk and cocktails in Xintiandi and Line 10 home.',
+    pois:['Wukang Mansion', 'Wukang Road', 'Anfu Road', 'Ren He Guan', 'The Louis', 'Changle Road', 'Xinle Road', 'Gentle Monster Haus Nowhere', 'Xintiandi'],
+    brief:[
+      ['book', '人和馆 (静安寺店) on Dianping: lunch service 11:00-14:00 and there is usually a queue.'],
+      ['pace', 'Almost all walking. Only the Anfu Road → lunch hop is worth a 5-min taxi.'],
+      ['season', 'Late December: many plane trees on Wukang and Anfu Roads may be bare.'],
+    ],
+    map:'https://www.google.com/maps/dir/?api=1&origin=Wukang+Mansion+Shanghai&destination=Xintiandi+Shanghai&waypoints=Anfu+Road+Shanghai%7CYuyuan+Road+142+Jingan+Shanghai%7CXingye+Taikoo+Hui+Shanghai%7CChangle+Road+Shaanxi+South+Road+Shanghai%7CHaus+Nowhere+Shanghai&travelmode=walking',
+    routeMap:'img/shanghai-dec28-route.svg',
+    events:[
+      {
+        time:'09:45', title:'Home → Jiaotong University station on Line 10',
+        note:'Siping Road (四平路) → Jiaotong University (交通大学), ~30 min, no transfer.',
+      },
+      {
+        time:'10:15', title:'Wukang Mansion (武康大楼) + Wukang Road (武康路)',
+        note:'The flatiron-shaped 1924 apartment block at the Huaihai Road junction. Monday morning is the quietest time for the photo spot. Then walk north up tree-lined Wukang Road past the old villas.',
+        image:'img/wukang-mansion.jpg',
+      },
+      {
+        time:'11:00', title:'Anfu Road (安福路): indie shops and coffee',
+        note:'Shanghai’s best-known indie street: small fashion shops, concept stores and cafés. Grab a coffee here; lunch is next.',
+        facts:[
+          ['go', 'Walk ~15 min from Wukang Mansion.'],
+        ],
+        image:'img/anfu-road-brunch.jpg',
+      },
+      {
+        time:'12:15', title:'Lunch at 人和馆·上海菜 (静安寺店)', meal:'lunch',
+        note:'Classic Shanghainese, same menu style as the Michelin-starred Xuhui branch. Dianping 4.8 for taste, setting and service; ~¥170 per person.',
+        facts:[
+          ['address', '静安区愚园路142-146号3楼, 140 m from exit 2 of Jing’an Temple station (静安寺站, Line 2).'],
+          ['hours', '11:00-14:00, 17:00-21:30 (Dianping, Nov 2026). Lunch service ends at 14:00.'],
+          ['order', '蟹粉捞饭 crab-roe rice (small ¥199 / large ¥397, dine-in only) · 金牌红烧肉 braised pork (limited) · 本帮熏鱼 smoked fish · 茭白响油鳝丝 eel with water bamboo (limited) · 松鼠桂鱼 squirrel fish.'],
+          ['go', 'Taxi ~5 min from Anfu Road, or walk ~20 min (estimate).'],
+        ],
+      },
+      {
+        time:'14:00', title:'The Louis (路易号), Louis Vuitton’s ship',
+        note:'A 30 m silver ship-shaped building at Xingye Taikoo Hui (兴业太古汇) on West Nanjing Road, opened June 2025, with a shop, exhibition and café inside.',
+        facts:[
+          ['go', 'Walk ~20 min east along West Nanjing Road, or Line 2 one stop to West Nanjing Road station.'],
+          ['to do', 'Check it is still open in late December and whether the exhibition needs a booking.'],
+        ],
+        image:'img/the-louis-lv-ship.jpg',
+      },
+      {
+        time:'15:15', title:'Changle Road (长乐路) + Xinle Road (新乐路) boutiques',
+        note:'The densest strip of small designer and streetwear boutiques, around the Shaanxi South Road junction. Take your time here.',
+        facts:[
+          ['go', 'Walk ~15 min south from The Louis down Shaanxi North/South Road.'],
+        ],
+      },
+      {
+        time:'17:30', title:'Gentle Monster Haus Nowhere',
+        note:'Gentle Monster’s Shanghai flagship, with art installations and the Nudake café (giant croissants and cakes).',
+        facts:[
+          ['address', '淮海中路798-812号.'],
+          ['to do', 'Opening hours not checked.'],
+        ],
+      },
+      {
+        time:'18:45', title:'Xintiandi (新天地): dinner, a walk, cocktails', meal:'dinner',
+        note:'Restored stone-gate (石库门) lanes full of restaurants and date-night bars. Pick a cocktail bar after dinner.',
+        facts:[
+          ['go', 'Walk ~15 min east along Huaihai Road.'],
+          ['dinner', 'Polux by Paul Pairet (太仓路181弄5号): French bistro, good for a date night and wine.'],
+        ],
+        image:'img/xintiandi-lanes.jpg',
+      },
+      {
+        time:'21:30', title:'Line 10 home',
+        note:'Xintiandi station → Siping Road, ~20 min, no transfer.',
+      },
+    ],
+  },
+  {
     id:'hangzhou-lingyin-longjing-westlake', short:'Longjing', icon:'🍵', title:'Shanghai → Hangzhou: lakeside café → boat to Three Pools Mirroring the Moon → Lingyin → farmhouse lunch + pick and roast your own tea in Meijiawu → Leifeng sunset → Wulin Night Market', city:'hangzhou', date:'2026-12-30',
     summary:'Morning train to Hangzhou, a light breakfast at a lakeside café in Hubin, a boat to the Three Pools Mirroring the Moon island and on to Huagang pier, Lingyin Temple and the Feilai Feng carvings, a farmhouse lunch in Meijiawu tea village, then picking, wok-roasting and tasting your own Longjing tea, Leifeng Pagoda at sunset, then a snack dinner at Wulin Night Market near the hotel.',
     pois:['Hubin Pier', 'Three Pools Mirroring the Moon', 'Huagang Guanyu Pier', 'Lingyin Temple', 'Meijiawu Tea Village', 'Leifeng Pagoda', 'Wulin Night Market'],

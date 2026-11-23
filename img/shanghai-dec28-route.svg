@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 580" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif">
+  <title>Dec 28 Shanghai route: Wukang Mansion, Anfu Road, Ren He Guan Jing'an Temple lunch, The Louis on West Nanjing Road, Changle and Xinle Road boutiques, Gentle Monster Haus Nowhere, Xintiandi, Line 10 home</title>
+  <rect width="640" height="580" fill="#16161b"/>
+  <text x="40" y="470" font-size="12" fill="#898781" font-weight="600" letter-spacing="2">FORMER FRENCH CONCESSION</text>
+  <!-- roads for orientation -->
+  <path d="M120 190 L193 166 L370 99 L620 52" fill="none" stroke="#898781" stroke-opacity="0.35" stroke-width="7" stroke-linecap="round"/>
+  <text x="470" y="70" font-size="10.5" fill="#898781" transform="rotate(-11 470 70)">Nanjing W Rd 南京西路</text>
+  <path d="M122 387 C 200 330, 280 280, 340 250 C 352 245, 362 241, 375 239 C 430 230, 500 218, 610 200" fill="none" stroke="#898781" stroke-opacity="0.35" stroke-width="7" stroke-linecap="round"/>
+  <text x="228" y="338" font-size="10.5" fill="#898781" transform="rotate(-32 228 338)">Huaihai Rd 淮海路</text>
+  <!-- legs -->
+  <path d="M122 387 C 135 340, 160 305, 180 278" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
+  <path d="M180 278 C 185 240, 200 205, 215 180" fill="none" stroke="#e8a87c" stroke-width="3"/>
+  <path d="M215 180 C 260 160, 320 120, 370 99" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
+  <path d="M370 99 C 360 140, 345 175, 336 199" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
+  <path d="M336 199 L295 233 L340 250 L375 239" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
+  <line x1="375" y1="239" x2="525" y2="222" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
+  <!-- leg times -->
+  <g font-size="10.5" font-weight="600" text-anchor="middle">
+    <rect x="62" y="322" width="80" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="102" y="335" fill="#c9c7c1">walk ~15 min</text>
+    <rect x="60" y="215" width="116" height="18" rx="9" fill="#16161b" stroke="#e8a87c"/><text x="118" y="228" fill="#e8a87c">taxi ~5 / walk ~20</text>
+    <rect x="246" y="122" width="80" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="286" y="135" fill="#c9c7c1">walk ~20 min</text>
+    <rect x="370" y="146" width="80" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="410" y="159" fill="#c9c7c1">walk ~15 min</text>
+    <rect x="410" y="250" width="80" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="450" y="263" fill="#c9c7c1">walk ~15 min</text>
+  </g>
+  <!-- stops -->
+  <g font-size="13" font-weight="700" text-anchor="middle">
+    <circle cx="122" cy="387" r="13" fill="#e8a87c"/><text x="122" y="392" fill="#16161b">1</text>
+    <circle cx="180" cy="278" r="13" fill="#e8a87c"/><text x="180" y="283" fill="#16161b">2</text>
+    <circle cx="215" cy="180" r="13" fill="#e8a87c"/><text x="215" y="185" fill="#16161b">3</text>
+    <circle cx="370" cy="99" r="13" fill="#e8a87c"/><text x="370" y="104" fill="#16161b">4</text>
+    <circle cx="316" cy="216" r="13" fill="#e8a87c"/><text x="316" y="221" fill="#16161b">5</text>
+    <circle cx="375" cy="239" r="13" fill="#e8a87c"/><text x="375" y="244" fill="#16161b">6</text>
+    <circle cx="525" cy="222" r="13" fill="#e8a87c"/><text x="525" y="227" fill="#16161b">7</text>
+  </g>
+  <g font-size="12" fill="#ffffff">
+    <text x="140" y="392">Wukang Mansion 武康大楼</text>
+    <text x="140" y="406" font-size="11" fill="#c9c7c1">Jiaotong Univ Stn (Line 10)</text>
+    <text x="162" y="283" text-anchor="end">Anfu Rd 安福路</text>
+    <text x="196" y="160" text-anchor="end">人和馆 Jing’an Temple</text>
+    <text x="196" y="174" text-anchor="end" font-size="11" fill="#c9c7c1">愚园路142-146号3楼 · lunch</text>
+    <text x="370" y="78" text-anchor="middle">The Louis 路易号 (LV ship)</text>
+    <text x="300" y="250" font-size="11" text-anchor="end">Changle Rd 长乐路</text>
+    <text x="300" y="264" font-size="11" text-anchor="end">+ Xinle Rd 新乐路</text>
+    <text x="300" y="277" font-size="10.5" fill="#c9c7c1" text-anchor="end">boutiques</text>
+    <text x="375" y="290" text-anchor="middle" font-size="11">Gentle Monster</text>
+    <text x="375" y="303" text-anchor="middle" font-size="10.5" fill="#c9c7c1">Haus Nowhere</text>
+    <text x="525" y="198" text-anchor="middle">Xintiandi 新天地</text>
+    <text x="525" y="184" text-anchor="middle" font-size="11" fill="#c9c7c1">dinner, walk, cocktails</text>
+  </g>
+  <!-- legend -->
+  <g font-size="11" fill="#898781">
+    <line x1="40" y1="502" x2="70" y2="502" stroke="#e8a87c" stroke-width="3"/><text x="78" y="506">taxi / Didi</text>
+    <line x1="40" y1="524" x2="70" y2="524" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/><text x="78" y="528">walk</text>
+    <text x="250" y="506" fill="#b48ce0">09:45 Line 10 Siping Rd → Jiaotong Univ, ~30 min</text>
+    <text x="250" y="524" fill="#b48ce0">night: Line 10 Xintiandi → Siping Rd, ~20 min</text>
+    <text x="250" y="548">positions approximate</text>
+    <text x="250" y="564">show drivers the Chinese names</text>
+  </g>
+</svg>
