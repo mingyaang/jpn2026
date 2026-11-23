@@ -50,3 +50,4 @@ img/ifc-mall-shanghai.jpg: "Shanghai IFC Shopping Arcade Void 201005.jpg" by WiN
 img/shanghai-tower.jpg: "Shanghai IFC and Apple Store Pudong 20251126.jpg" by Supanut Arunoprayote, CC BY 4.0, https://commons.wikimedia.org/wiki/File:Shanghai_IFC_and_Apple_Store_Pudong_20251126.jpg
 img/the-bund-night.jpg: "The Bund, Shanghai at night.jpg" by Lloyd Tudor, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:The_Bund,_Shanghai_at_night.jpg
 img/oriental-pearl-night.jpg: "2014.11.15.193354 Oriental Pearl Tower at night Pudong Shanghai.jpg" by Hermann Luyken, CC0, https://commons.wikimedia.org/wiki/File:2014.11.15.193354_Oriental_Pearl_Tower_at_night_Pudong_Shanghai.jpg
+img/jingan-temple-night.jpg: "20240120 Night view of Jing'an Temple.jpg" by Windmemories, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:20240120_Night_view_of_Jing%27an_Temple.jpg
