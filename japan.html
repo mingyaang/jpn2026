@@ -1724,6 +1724,73 @@ const DAY_TEMPLATES = [
     ],
   },
   {
+    id:'shanghai-romance-huanghe', short:'Romance', icon:'🎭', title:'Heping Park bag drop → Shanghai Romance Park → Huanghe Road dinner', city:'shanghai', date:'2026-12-27',
+    summary:'Check out of the Rezen, drop the big bags and rest at home near Heping Park, spend the afternoon at the Shanghai Romance park and show at the old Expo site, then Line 8 to People’s Square for dinner on neon-lit Huanghe Road and Line 8 straight home.',
+    pois:['Heping Park', 'Shanghai Romance Park', 'People’s Square', 'Huanghe Road', 'Nanjing Road East'],
+    brief:[
+      ['base', 'Staying with family near Heping Park. Home station: Siping Road (四平路), Lines 8 and 10.'],
+      ['register', 'Foreigners staying in a private home must register at the local police station (派出所) within 24 h of arrival. Bring both passports and do it today.'],
+      ['tickets', 'Shanghai Romance park + show (上海千古情), 世博大道1750号. Book ahead; check the main show times for Dec 27 when booking.'],
+      ['pace', 'First day after a 01:20 landing. Keep the evening to dinner and a short walk.'],
+    ],
+    map:'https://www.google.com/maps/dir/?api=1&origin=Heping+Park+Shanghai&destination=Siping+Road+Station+Shanghai&waypoints=Shanghai+Romance+Park+1750+Shibo+Avenue%7CHuanghe+Road+Shanghai%7CNanjing+Road+East+Shanghai&travelmode=transit',
+    events:[
+      {
+        time:'10:30', title:'Check out of the Rezen → home near Heping Park',
+        note:'Taxi with all the luggage, ~20 min through the Dalian Road tunnel (estimate; check in Didi).',
+        facts:[
+          ['go', 'Didi or taxi. Destination: 和平公园 (Heping Park).'],
+        ],
+      },
+      {
+        time:'10:50', title:'Drop bags and rest at home',
+        note:'Pack a small bag for the day.',
+      },
+      {
+        time:'11:30', title:'Home → Shanghai Romance Park',
+        note:'Taxi ~35-45 min (estimate).',
+        facts:[
+          ['metro', 'Backup: Line 8 Siping Road → Yaohua Road (耀华路), ~35 min, no transfer, then a short taxi or ~1.5 km walk. Shibo Avenue station (世博大道, Line 13) exit 1 is 330 m from the gate.'],
+        ],
+      },
+      {
+        time:'12:15', title:'Lunch inside the park', meal:'lunch',
+        note:'Food streets inside the park. Check the posted show schedule while you eat.',
+      },
+      {
+        time:'13:00', title:'Shanghai Romance park + main show (上海千古情)',
+        note:'Main show ~1 h, with dance, acrobatics and big stage effects. Pick the 14:00, 15:00 or 16:00 performance, then walk the old-Shanghai themed streets and catch the small free shows. Costume rental is available.',
+        facts:[
+          ['hours', 'Park 10:30-19:00 (ticket listing, Nov 2026). Recheck closer to the date.'],
+          ['names', 'Also listed as “The Romance of Shanghai”, “Songcheng Romance” or “Shanghai Eternal Love”. Show taxi drivers 上海千古情景区.'],
+          ['visit', 'Typical visit 4-5 h.'],
+        ],
+      },
+      {
+        time:'17:00', title:'Park → People’s Square on Line 8',
+        note:'Walk or short taxi to Yaohua Road station, Line 8 toward Shiguang Road (市光路), ~15 min to People’s Square (人民广场). Huanghe Road is a 5-min walk north.',
+      },
+      {
+        time:'17:45', title:'Dinner on Huanghe Road (黄河路)', meal:'dinner',
+        note:'The neon-signed restaurant street from the drama Blossoms Shanghai (繁花). It is dark by now, so the signs are lit.',
+        facts:[
+          ['pick', '苔圣园 for Shanghainese classics (红烧肉 braised pork, 醉鸡 drunken chicken) · 佳家汤包 for soup dumplings · 小杨生煎 for pan-fried pork buns.'],
+          ['to do', 'Check queue times on Dianping before leaving the park; Sunday evenings are busy.'],
+          ['photo', 'Shoot down the street with the signs stacked on both sides.'],
+          ['backup', 'Too tired after the park: eat at Expo Axis mall (世博源) next door and take Line 8 home from Yaohua Road.'],
+        ],
+      },
+      {
+        time:'19:15', title:'Nanjing Road East neon walk', optional:true,
+        note:'20-30 min on the pedestrian street a few minutes away. Mostly for the lights, not shopping.',
+      },
+      {
+        time:'20:00', title:'Line 8 home',
+        note:'People’s Square → Siping Road, ~20 min, no transfer. Early night.',
+      },
+    ],
+  },
+  {
     id:'hangzhou-lingyin-longjing-westlake', short:'Longjing', icon:'🍵', title:'Shanghai → Hangzhou: lakeside café → boat to Three Pools Mirroring the Moon → Lingyin → farmhouse lunch + pick and roast your own tea in Meijiawu → Leifeng sunset → Wulin Night Market', city:'hangzhou', date:'2026-12-30',
     summary:'Morning train to Hangzhou, a light breakfast at a lakeside café in Hubin, a boat to the Three Pools Mirroring the Moon island and on to Huagang pier, Lingyin Temple and the Feilai Feng carvings, a farmhouse lunch in Meijiawu tea village, then picking, wok-roasting and tasting your own Longjing tea, Leifeng Pagoda at sunset, then a snack dinner at Wulin Night Market near the hotel.',
     pois:['Hubin Pier', 'Three Pools Mirroring the Moon', 'Huagang Guanyu Pier', 'Lingyin Temple', 'Meijiawu Tea Village', 'Leifeng Pagoda', 'Wulin Night Market'],
