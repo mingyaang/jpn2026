@@ -1724,16 +1724,16 @@ const DAY_TEMPLATES = [
     ],
   },
   {
-    id:'shanghai-romance-huanghe', short:'Romance', icon:'🎭', title:'Heping Park bag drop → Shanghai Romance Park → China Art Museum → Huanghe Road dinner', city:'shanghai', date:'2026-12-27',
-    summary:'Check out of the Rezen, drop the big bags and rest at home near Heping Park, spend the afternoon at the Shanghai Romance park and show at the old Expo site, walk to the red China Pavilion (China Art Museum) as it lights up, then Line 8 to People’s Square for dinner on neon-lit Huanghe Road and Line 8 straight home.',
-    pois:['Heping Park', 'Shanghai Romance Park', 'China Art Museum', 'People’s Square', 'Huanghe Road', 'Nanjing Road East'],
+    id:'shanghai-romance-huanghe', short:'Romance', icon:'🎭', title:'Heping Park bag drop → Shanghai Romance Park → China Art Museum → Huanghe Road dinner → Nanjing Road East → the Bund', city:'shanghai', date:'2026-12-27',
+    summary:'Check out of the Rezen, drop the big bags and rest at home near Heping Park, spend the afternoon at the Shanghai Romance park and show at the old Expo site, walk to the red China Pavilion (China Art Museum) as it lights up, then Line 8 to People’s Square for dinner on neon-lit Huanghe Road, shop east along Nanjing Road East to the Bund, and Line 10 or Didi home.',
+    pois:['Heping Park', 'Shanghai Romance Park', 'China Art Museum', 'People’s Square', 'Huanghe Road', 'Nanjing Road East', 'The Bund'],
     brief:[
       ['base', 'Staying with family near Heping Park. Home station: Siping Road (四平路), Lines 8 and 10.'],
       ['register', 'Foreigners staying in a private home must register at the local police station (派出所) within 24 h of arrival. Bring both passports and do it today.'],
       ['tickets', 'Shanghai Romance park + show (上海千古情), 世博大道1750号. Book ahead; check the main show times for Dec 27 when booking.'],
-      ['pace', 'First day after a 01:20 landing. Keep the evening to dinner and a short walk.'],
+      ['pace', 'First day after a 01:20 landing. The evening is flexible: get a ride home from anywhere along Nanjing Road if you run out of energy.'],
     ],
-    map:'https://www.google.com/maps/dir/?api=1&origin=Heping+Park+Shanghai&destination=Siping+Road+Station+Shanghai&waypoints=Shanghai+Romance+Park+1750+Shibo+Avenue%7CChina+Art+Museum+Shanghai%7CHuanghe+Road+Shanghai%7CNanjing+Road+East+Shanghai&travelmode=transit',
+    map:'https://www.google.com/maps/dir/?api=1&origin=Heping+Park+Shanghai&destination=Siping+Road+Station+Shanghai&waypoints=Shanghai+Romance+Park+1750+Shibo+Avenue%7CChina+Art+Museum+Shanghai%7CHuanghe+Road+Shanghai%7CNanjing+Road+East+Shanghai%7CThe+Bund+Shanghai&travelmode=transit',
     routeMap:'img/shanghai-dec27-route.svg',
     events:[
       {
@@ -1799,13 +1799,21 @@ const DAY_TEMPLATES = [
         image:'img/huanghe-road-neon.jpg',
       },
       {
-        time:'19:15', title:'Nanjing Road East neon walk', optional:true,
-        note:'20-30 min on the pedestrian street a few minutes away. Mostly for the lights, not shopping.',
+        time:'19:00', title:'Nanjing Road East: shop east toward the Bund',
+        note:'Walk the 1.2 km pedestrian street east from People’s Square, shopping on the way. Most shops close ~20:00-22:00.',
+        facts:[
+          ['stops', 'Shanghai No.1 Food Store (第一食品商店) for White Rabbit candy and local snacks, near the People’s Square end · the former New World Daimaru (新世界大丸) by Henan Road for its spiral escalators and B2 desserts.'],
+          ['careful', 'Food counters close first: Harbin Food Factory (哈尔滨食品厂) on Daimaru B2 shuts at 20:00. Do the snacks before the clothes shops.'],
+        ],
         image:'img/nanjing-road-east-night.jpg',
       },
       {
-        time:'20:15', title:'Line 8 home',
-        note:'People’s Square → Siping Road, ~20 min, no transfer. Early night.',
+        time:'21:15', title:'The Bund (外滩) at night',
+        note:'End of Nanjing Road East. Walk the waterfront facing the lit Lujiazui skyline. The lights usually go off around 22:00, so get here by ~21:30.',
+      },
+      {
+        time:'22:00', title:'Home: Line 10 or Didi',
+        note:'Line 10 from Nanjing Road East station (南京东路站) straight to Siping Road, ~15 min, no transfer. Or Didi home from any point along the way, ~15-20 min (estimate). Tired earlier: cut the walk short and leave from wherever you are.',
       },
     ],
   },

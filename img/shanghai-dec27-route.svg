@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif">
-  <title>Dec 27 Shanghai route: Rezen, home near Heping Park, Line 8 to China Art Museum station, walk to Shanghai Romance Park, back to China Art Museum, Line 8 to People's Square, Huanghe Road, Nanjing Road East, Line 8 home</title>
+  <title>Dec 27 Shanghai route: Rezen, home near Heping Park, Line 8 to China Art Museum station, walk to Shanghai Romance Park, back to China Art Museum, Line 8 to People's Square, Huanghe Road, Nanjing Road East, the Bund, Line 10 or Didi home</title>
   <rect width="640" height="700" fill="#16161b"/>
   <!-- Huangpu River -->
   <path d="M100 700 C 115 650, 125 615, 130 605 C 160 560, 195 535, 215 517 C 245 480, 262 455, 265 430 C 272 395, 278 370, 275 353 C 268 320, 255 300, 255 283 C 262 250, 275 232, 290 225 C 320 214, 345 213, 365 213 C 405 205, 440 160, 465 137 C 510 110, 555 92, 640 66" fill="none" stroke="#68b6d6" stroke-opacity="0.35" stroke-width="16" stroke-linecap="round"/>
@@ -9,20 +9,20 @@
     <text x="430" y="420">PUDONG</text>
   </g>
   <text x="318" y="262" font-size="10.5" fill="#898781">Lujiazui</text>
-  <text x="243" y="250" font-size="10.5" fill="#898781" text-anchor="end">the Bund</text>
   <!-- legs -->
   <path d="M490 178 C 420 170, 320 150, 290 90" fill="none" stroke="#e8a87c" stroke-width="3"/>
   <line x1="190" y1="617" x2="240" y2="596" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
   <path d="M240 596 C 230 480, 170 400, 150 322" fill="none" stroke="#3fa9f5" stroke-width="3" stroke-dasharray="9 6"/>
   <line x1="150" y1="322" x2="120" y2="295" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
   <line x1="120" y1="295" x2="195" y2="300" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
-  <path d="M150 322 C 180 230, 240 140, 290 90" fill="none" stroke="#3fa9f5" stroke-width="3" stroke-dasharray="9 6"/>
+  <line x1="195" y1="300" x2="240" y2="283" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
+  <path d="M240 283 C 250 210, 265 140, 290 90" fill="none" stroke="#b48ce0" stroke-width="3" stroke-dasharray="9 6"/>
   <!-- leg times -->
   <g font-size="10.5" font-weight="600" text-anchor="middle">
     <rect x="372" y="146" width="76" height="18" rx="9" fill="#16161b" stroke="#e8a87c"/><text x="410" y="159" fill="#e8a87c">taxi ~20 min</text>
     <rect x="186" y="634" width="80" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="226" y="647" fill="#c9c7c1">walk ~15 min</text>
     <rect x="160" y="460" width="88" height="18" rx="9" fill="#16161b" stroke="#3fa9f5"/><text x="204" y="473" fill="#3fa9f5">Line 8 ~15 min</text>
-    <rect x="176" y="176" width="104" height="18" rx="9" fill="#16161b" stroke="#3fa9f5"/><text x="228" y="189" fill="#3fa9f5">Line 8 ~15-20 min</text>
+    <rect x="150" y="176" width="112" height="18" rx="9" fill="#16161b" stroke="#b48ce0"/><text x="206" y="189" fill="#b48ce0">Line 10 / Didi ~15 min</text>
   </g>
   <!-- stops -->
   <circle cx="150" cy="322" r="6" fill="#3fa9f5"/>
@@ -33,6 +33,7 @@
     <circle cx="240" cy="596" r="13" fill="#e8a87c"/><text x="240" y="601" fill="#16161b">2</text>
     <circle cx="120" cy="295" r="13" fill="#e8a87c"/><text x="120" y="300" fill="#16161b">3</text>
     <circle cx="195" cy="300" r="13" fill="#e8a87c"/><text x="195" y="305" fill="#16161b">4</text>
+    <circle cx="240" cy="283" r="13" fill="#e8a87c"/><text x="240" y="288" fill="#16161b">5</text>
   </g>
   <g font-size="12" fill="#ffffff">
     <text x="505" y="183">Rezen (check out)</text>
@@ -43,13 +44,15 @@
     <text x="258" y="594">China Art Museum</text>
     <text x="258" y="609" font-size="11" fill="#c9c7c1">中华艺术宫 · Line 8 stn</text>
     <text x="40" y="272">Huanghe Rd 黄河路</text>
-    <text x="212" y="318" font-size="11">Nanjing Rd E 南京东路</text>
-    <text x="160" y="346" font-size="11" fill="#c9c7c1">People’s Sq Stn 人民广场</text>
+    <text x="206" y="324" font-size="11">Nanjing Rd E 南京东路</text>
+    <text x="258" y="278" font-size="11">the Bund 外滩</text>
+    <text x="140" y="346" font-size="11" fill="#c9c7c1" text-anchor="middle">People’s Sq Stn 人民广场</text>
   </g>
   <!-- legend -->
   <g font-size="11" fill="#898781">
     <line x1="440" y1="560" x2="470" y2="560" stroke="#e8a87c" stroke-width="3"/><text x="478" y="564">taxi / Didi</text>
     <line x1="440" y1="582" x2="470" y2="582" stroke="#3fa9f5" stroke-width="3" stroke-dasharray="9 6"/><text x="478" y="586">Metro Line 8</text>
+    <line x1="440" y1="540" x2="470" y2="540" stroke="#b48ce0" stroke-width="3" stroke-dasharray="9 6"/><text x="478" y="544">Line 10 or Didi home</text>
     <line x1="440" y1="604" x2="470" y2="604" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/><text x="478" y="608">walk</text>
     <text x="440" y="626" fill="#3fa9f5">11:30 Line 8 H → 2, ~30 min</text>
     <text x="440" y="640" fill="#3fa9f5">17:30 Line 8 2 → People’s Sq</text>
