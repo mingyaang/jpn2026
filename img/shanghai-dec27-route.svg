@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 700" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif">
-  <title>Dec 27 Shanghai route: Rezen, home near Heping Park, Shanghai Romance Park, China Art Museum, Line 8 to People's Square, Huanghe Road, Nanjing Road East, Line 8 home</title>
+  <title>Dec 27 Shanghai route: Rezen, home near Heping Park, Line 8 to China Art Museum station, walk to Shanghai Romance Park, back to China Art Museum, Line 8 to People's Square, Huanghe Road, Nanjing Road East, Line 8 home</title>
   <rect width="640" height="700" fill="#16161b"/>
   <!-- Huangpu River -->
   <path d="M100 700 C 115 650, 125 615, 130 605 C 160 560, 195 535, 215 517 C 245 480, 262 455, 265 430 C 272 395, 278 370, 275 353 C 268 320, 255 300, 255 283 C 262 250, 275 232, 290 225 C 320 214, 345 213, 365 213 C 405 205, 440 160, 465 137 C 510 110, 555 92, 640 66" fill="none" stroke="#68b6d6" stroke-opacity="0.35" stroke-width="16" stroke-linecap="round"/>
@@ -12,7 +12,6 @@
   <text x="243" y="250" font-size="10.5" fill="#898781" text-anchor="end">the Bund</text>
   <!-- legs -->
   <path d="M490 178 C 420 170, 320 150, 290 90" fill="none" stroke="#e8a87c" stroke-width="3"/>
-  <path d="M290 90 C 400 300, 340 520, 190 617" fill="none" stroke="#e8a87c" stroke-width="3"/>
   <line x1="190" y1="617" x2="240" y2="596" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
   <path d="M240 596 C 230 480, 170 400, 150 322" fill="none" stroke="#3fa9f5" stroke-width="3" stroke-dasharray="9 6"/>
   <line x1="150" y1="322" x2="120" y2="295" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
@@ -21,7 +20,6 @@
   <!-- leg times -->
   <g font-size="10.5" font-weight="600" text-anchor="middle">
     <rect x="372" y="146" width="76" height="18" rx="9" fill="#16161b" stroke="#e8a87c"/><text x="410" y="159" fill="#e8a87c">taxi ~20 min</text>
-    <rect x="318" y="372" width="96" height="18" rx="9" fill="#16161b" stroke="#e8a87c"/><text x="366" y="385" fill="#e8a87c">taxi ~35-45 min</text>
     <rect x="186" y="634" width="80" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="226" y="647" fill="#c9c7c1">walk ~15 min</text>
     <rect x="160" y="460" width="88" height="18" rx="9" fill="#16161b" stroke="#3fa9f5"/><text x="204" y="473" fill="#3fa9f5">Line 8 ~15 min</text>
     <rect x="176" y="176" width="104" height="18" rx="9" fill="#16161b" stroke="#3fa9f5"/><text x="228" y="189" fill="#3fa9f5">Line 8 ~15-20 min</text>
@@ -53,7 +51,9 @@
     <line x1="440" y1="560" x2="470" y2="560" stroke="#e8a87c" stroke-width="3"/><text x="478" y="564">taxi / Didi</text>
     <line x1="440" y1="582" x2="470" y2="582" stroke="#3fa9f5" stroke-width="3" stroke-dasharray="9 6"/><text x="478" y="586">Metro Line 8</text>
     <line x1="440" y1="604" x2="470" y2="604" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/><text x="478" y="608">walk</text>
-    <text x="440" y="632">positions approximate</text>
-    <text x="440" y="650">show drivers the Chinese names</text>
+    <text x="440" y="626" fill="#3fa9f5">11:30 Line 8 H → 2, ~30 min</text>
+    <text x="440" y="640" fill="#3fa9f5">17:30 Line 8 2 → People’s Sq</text>
+    <text x="440" y="660">positions approximate</text>
+    <text x="440" y="676">show drivers the Chinese names</text>
   </g>
 </svg>
