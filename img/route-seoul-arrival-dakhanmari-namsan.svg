@@ -1,38 +1,47 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 740" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif">
 <title>Dec 24 Seoul route: Incheon to K-Grand Myeongdong, Jinokhwa dakhanmari, Gwangjang Market, Namsan cable car, N Seoul Tower, Myeongdong Cathedral</title>
 <rect width="640" height="740" fill="#16161b"/>
-<path d="M191.4 269.3 Q234.6 246.5 262.7 206.6" fill="none" stroke="#5cc0ad" stroke-width="3" stroke-linecap="round" stroke-dasharray="9 5"/>
-<path d="M262.7 206.6 Q320.1 115.7 412.6 60.8" fill="none" stroke="#5cc0ad" stroke-width="6" stroke-linecap="round"/>
-<path d="M262.7 206.6 Q320.1 115.7 412.6 60.8" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
-<path d="M412.6 60.8 Q393.1 74.2 381.8 94.9" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
-<path d="M381.8 94.9 Q331.6 207.4 235.7 284.8" fill="none" stroke="#5cc0ad" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 0"/>
-<path d="M235.7 284.8 Q212.2 414.1 249.9 540.0" fill="none" stroke="#5cc0ad" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="1 5"/>
-<path d="M249.9 540.0 Q212.2 414.1 235.7 284.8" fill="none" stroke="#5cc0ad" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="1 5"/>
-<path d="M235.7 284.8 Q256.2 225.4 247.5 163.2" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
-<path d="M247.5 163.2 Q260.3 183.0 262.7 206.6" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
-<rect x="66.6" y="233.2" width="150.2" height="18" rx="9" fill="#16161b" stroke="#5cc0ad"/><text x="141.7" y="246.2" fill="#5cc0ad" font-size="10.5" font-weight="600" text-anchor="middle">🚌 limousine bus or AREX</text>
-<rect x="255.1" y="115.7" width="147.5" height="18" rx="9" fill="#16161b" stroke="#5cc0ad"/><text x="328.9" y="128.7" fill="#5cc0ad" font-size="10.5" font-weight="600" text-anchor="middle">🚆 Line 4 + walk ~20 min</text>
-<rect x="373.5" y="27.4" width="63.4" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="405.2" y="40.4" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~5 min</text>
-<rect x="278.0" y="186.3" width="112.7" height="18" rx="9" fill="#16161b" stroke="#5cc0ad"/><text x="334.3" y="199.3" fill="#5cc0ad" font-size="10.5" font-weight="600" text-anchor="middle">🚕 taxi ~15-25 min</text>
-<rect x="151.5" y="404.3" width="151.9" height="18" rx="9" fill="#16161b" stroke="#5cc0ad"/><text x="227.5" y="417.3" fill="#5cc0ad" font-size="10.5" font-weight="600" text-anchor="middle">🚡 cable car + 5 min walk</text>
-<rect x="249.4" y="239.9" width="69.2" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="283.9" y="252.9" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~10 min</text>
-<circle cx="262.7" cy="206.6" r="13" fill="#ffffff" stroke="#16161b" stroke-width="2"/><text x="262.7" y="210.6" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">H</text>
-<circle cx="412.6" cy="60.8" r="13" fill="#5cc0ad" stroke="#16161b" stroke-width="2"/><text x="412.6" y="64.8" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">1</text>
-<circle cx="381.8" cy="94.9" r="13" fill="#5cc0ad" stroke="#16161b" stroke-width="2"/><text x="381.8" y="98.9" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">2</text>
-<circle cx="235.7" cy="284.8" r="6" fill="#16161b" stroke="#5cc0ad" stroke-width="3"/>
-<circle cx="249.9" cy="540.0" r="13" fill="#5cc0ad" stroke="#16161b" stroke-width="2"/><text x="249.9" y="544.0" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">3</text>
-<circle cx="247.5" cy="163.2" r="13" fill="#5cc0ad" stroke="#16161b" stroke-width="2"/><text x="247.5" y="167.2" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">4</text>
-<text x="181.4" y="276.8" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end">from Incheon T2 ←</text>
-<text x="243.7" y="214.1" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end">K-Grand Myeongdong</text>
-<text x="431.6" y="60.8" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start">Jinokhwa dakhanmari</text>
-<text x="431.6" y="75.8" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="start">17:30 dinner</text>
-<text x="400.8" y="94.9" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start">Gwangjang Market</text>
-<text x="400.8" y="109.9" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="start">Garlic Boy bread</text>
-<text x="247.7" y="292.3" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start">Namsan Cable Car</text>
-<text x="268.9" y="540.0" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start">N Seoul Tower</text>
-<text x="268.9" y="555.0" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="start">night views</text>
-<text x="228.5" y="163.2" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end">Myeongdong Cathedral</text>
-<text x="228.5" y="178.2" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="end">Shinsegae lights</text>
+<defs><linearGradient id="fade" gradientUnits="userSpaceOnUse" x1="0" y1="548" x2="0" y2="584"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient><mask id="m" maskUnits="userSpaceOnUse" x="0" y="0" width="640" height="740"><rect width="640" height="584" fill="url(#fade)"/></mask></defs>
+<g mask="url(#m)">
+<path d="M123.5 499.9L116.2 513.1L116.6 515.6L115.3 519.5L138.4 552.2L142.3 561.3L146.8 590.3L155.6 601.7L157.0 605.9L157.7 614.0L476.2 614.0L451.5 589.2L444.6 580.5L441.4 573.7L441.3 565.7L444.9 555.8L457.9 543.0L458.1 540.6L454.7 533.3L454.7 529.2L450.3 528.0L440.5 531.2L430.4 521.7L434.5 517.4L424.8 508.7L446.4 485.5L446.6 484.4L441.1 483.3L443.3 475.0L448.2 476.0L450.4 473.0L461.2 466.2L474.1 468.3L470.3 501.3L467.8 504.6L482.7 516.4L488.9 509.8L493.3 494.8L484.8 492.0L477.5 492.3L475.9 488.8L477.4 482.6L485.9 463.6L493.3 465.5L490.4 451.8L495.6 450.8L494.4 445.6L514.9 441.6L521.7 438.6L528.4 429.4L525.2 432.9L520.6 435.4L514.1 435.4L511.8 417.5L506.1 417.0L502.3 416.8L501.7 419.6L494.9 430.8L476.7 433.2L443.7 422.9L447.0 411.7L436.4 407.5L424.3 388.9L403.2 376.6L400.3 382.1L391.8 391.2L390.9 408.0L397.2 418.3L400.0 426.1L397.7 429.4L382.4 426.4L383.4 453.8L384.7 458.0L386.6 457.9L386.0 462.8L388.1 466.6L396.0 471.3L394.8 480.2L396.9 486.8L395.7 495.8L391.8 511.6L375.8 517.4L374.7 507.8L378.9 501.7L377.1 497.0L380.8 496.5L386.5 499.9L388.6 482.4L386.1 477.3L379.3 477.7L373.1 466.9L355.9 489.9L348.3 482.5L353.7 468.2L354.6 460.9L349.2 457.3L346.5 457.8L335.5 445.4L324.7 436.6L329.7 448.0L329.2 449.3L327.1 449.9L323.1 445.0L324.3 451.5L322.4 453.5L319.9 454.0L315.2 444.7L308.4 416.5L303.3 404.6L300.1 373.6L296.3 361.4L290.3 351.8L285.8 347.4L273.7 339.7L265.3 336.7L256.9 356.1L255.8 372.4L250.7 383.3L238.0 381.9L230.4 384.3L233.9 396.3L231.0 412.2L233.6 418.6L230.3 428.0L227.6 430.7L222.8 429.7L220.4 424.6L203.2 425.1L198.4 422.3L194.9 413.2L189.6 407.4L194.1 400.7L190.2 403.1L185.0 411.5L178.8 414.3L172.0 413.0L168.3 415.2L163.2 423.0L160.7 425.0L159.3 424.4L151.1 408.7L145.5 403.3L140.7 404.4L135.1 432.3L130.7 432.6L129.0 442.0L131.5 450.8L124.5 453.1L122.7 445.7L127.6 444.2L126.5 423.9L126.0 426.4L115.6 425.1L116.4 418.1L114.2 417.1L112.7 435.5L110.2 444.7L107.4 446.6L104.3 451.4L112.5 454.3L115.8 456.6L108.9 458.9L104.5 467.8L134.5 482.8L128.6 493.6Z" fill="#18261b" fill-rule="evenodd"/>
+<path d="M46.3 114.0L76.3 115.7L138.0 121.9L171.6 130.3L199.0 138.7L237.4 139.3L265.5 137.7L390.3 124.9L414.5 121.1L485.2 103.7L574.2 102.0L627.4 98.5" fill="none" stroke="#163045" stroke-width="8.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M627.4 98.5L685.1 99.6" fill="none" stroke="#163045" stroke-width="8.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M530.6 412.5L532.5 412.5L532.5 409.3L534.8 403.1L539.7 395.6L540.1 392.8L545.9 381.7L545.4 380.3L547.4 375.2L552.2 368.3L553.6 362.6L551.0 362.2L550.0 363.3L547.4 374.6L544.1 380.3L543.4 384.7L534.2 402.9ZM532.7 129.0L531.4 134.3L534.3 136.8L540.6 135.4L540.7 132.9L539.3 131.0L536.5 130.3L535.0 127.7L533.6 127.5ZM338.3 341.0L338.1 347.4L323.3 350.0L320.1 354.2L322.9 349.4L329.3 348.6L331.3 347.2L333.6 340.9L336.6 339.9ZM5.8 191.4L3.9 193.8L3.8 196.9L9.8 199.7L10.8 196.0L8.1 192.3ZM641.1 98.9L670.0 98.5L670.0 100.8L641.1 100.5ZM627.5 99.5L574.5 102.6L492.9 104.2L461.2 110.5L408.5 123.0L348.5 130.5L239.1 140.2L199.0 139.1L172.9 131.5L138.0 123.3L75.1 116.5L45.2 115.0L45.5 111.9L94.9 118.0L118.8 118.9L137.6 120.9L199.3 137.3L239.1 138.2L348.2 129.4L408.1 121.9L448.5 110.9L485.6 102.3L574.6 101.1L625.9 97.8L627.5 97.8Z" fill="#163045" fill-rule="evenodd" stroke="#22506c" stroke-width="0.8"/>
+<text x="267.9" y="363.7" font-size="10.5" fill="#7f9f78" font-style="italic" font-weight="600" text-anchor="middle" letter-spacing="0.3">Namsan Park</text>
+<text x="205.4" y="142.8" font-size="11.5" fill="#5d9ec2" font-style="italic" font-weight="600" text-anchor="middle" letter-spacing="0.3">Cheonggye Stream 청계천</text>
+</g>
+<path d="M153.3 366.3 Q196.5 343.5 224.6 303.6" fill="none" stroke="#5cc0ad" stroke-width="3" stroke-linecap="round" stroke-dasharray="9 5"/>
+<path d="M224.6 303.6 Q330.0 153.4 492.0 67.3" fill="none" stroke="#5cc0ad" stroke-width="6" stroke-linecap="round"/>
+<path d="M224.6 303.6 Q330.0 153.4 492.0 67.3" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
+<path d="M492.0 67.3 Q472.5 80.7 461.3 101.5" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<path d="M461.3 101.5 Q343.0 293.6 150.4 411.1" fill="none" stroke="#5cc0ad" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 0"/>
+<path d="M150.4 411.1 Q173.7 484.9 228.0 540.0" fill="none" stroke="#5cc0ad" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="1 5"/>
+<path d="M228.0 540.0 Q173.7 484.9 150.4 411.1" fill="none" stroke="#5cc0ad" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="1 5"/>
+<path d="M150.4 411.1 Q197.8 340.9 208.2 256.9" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<path d="M208.2 256.9 Q222.0 278.3 224.6 303.6" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<rect x="28.5" y="330.3" width="150.2" height="18" rx="9" fill="#16161b" stroke="#5cc0ad"/><text x="103.6" y="343.3" fill="#5cc0ad" font-size="10.5" font-weight="600" text-anchor="middle">🚌 limousine bus or AREX</text>
+<rect x="244.2" y="184.7" width="147.5" height="18" rx="9" fill="#16161b" stroke="#5cc0ad"/><text x="318.0" y="197.7" fill="#5cc0ad" font-size="10.5" font-weight="600" text-anchor="middle">🚆 Line 4 + walk ~20 min</text>
+<rect x="407.2" y="63.9" width="63.4" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="438.9" y="76.9" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~5 min</text>
+<rect x="268.0" y="265.9" width="112.7" height="18" rx="9" fill="#16161b" stroke="#5cc0ad"/><text x="324.4" y="278.9" fill="#5cc0ad" font-size="10.5" font-weight="600" text-anchor="middle">🚕 taxi ~15-25 min</text>
+<rect x="195.5" y="471.2" width="151.9" height="18" rx="9" fill="#16161b" stroke="#5cc0ad"/><text x="271.4" y="484.2" fill="#5cc0ad" font-size="10.5" font-weight="600" text-anchor="middle">🚡 cable car + 5 min walk</text>
+<rect x="129.4" y="280.9" width="69.2" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="164.0" y="293.9" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~10 min</text>
+<circle cx="224.6" cy="303.6" r="13" fill="#ffffff" stroke="#16161b" stroke-width="2"/><text x="224.6" y="307.6" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">H</text>
+<circle cx="492.0" cy="67.3" r="13" fill="#5cc0ad" stroke="#16161b" stroke-width="2"/><text x="492.0" y="71.3" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">1</text>
+<circle cx="461.3" cy="101.5" r="13" fill="#5cc0ad" stroke="#16161b" stroke-width="2"/><text x="461.3" y="105.5" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">2</text>
+<circle cx="150.4" cy="411.1" r="6" fill="#16161b" stroke="#5cc0ad" stroke-width="3"/>
+<circle cx="228.0" cy="540.0" r="13" fill="#5cc0ad" stroke="#16161b" stroke-width="2"/><text x="228.0" y="544.0" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">3</text>
+<circle cx="208.2" cy="256.9" r="13" fill="#5cc0ad" stroke="#16161b" stroke-width="2"/><text x="208.2" y="260.9" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">4</text>
+<text x="143.3" y="373.8" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">from Incheon T2 ←</text>
+<text x="243.6" y="311.1" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">K-Grand Myeongdong</text>
+<text x="492.0" y="33.3" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="middle" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Jinokhwa dakhanmari</text>
+<text x="492.0" y="48.3" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="middle" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">17:30 dinner</text>
+<text x="480.3" y="101.5" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Gwangjang Market</text>
+<text x="480.3" y="116.5" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="start" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Garlic Boy bread</text>
+<text x="162.4" y="418.6" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Namsan Cable Car</text>
+<text x="247.0" y="540.0" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">N Seoul Tower</text>
+<text x="247.0" y="555.0" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="start" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">night views</text>
+<text x="189.2" y="256.9" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Myeongdong Cathedral</text>
+<text x="189.2" y="271.9" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="end" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Shinsegae lights</text>
 <text x="40" y="602" font-size="11.5" fill="#898781" font-weight="700" letter-spacing="2">SEOUL · ARRIVAL NIGHT</text>
 <line x1="40" y1="622" x2="70" y2="622" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
 <text x="80" y="626" font-size="11" fill="#898781">walk</text>
@@ -45,6 +54,7 @@
 <text x="80" y="686" font-size="11" fill="#898781">bus</text>
 <line x1="40" y1="702" x2="70" y2="702" stroke="#5cc0ad" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="1 5"/>
 <text x="80" y="706" font-size="11" fill="#898781">cable car / lift</text>
-<text x="230" y="632" font-size="11" fill="#898781">stops placed from OpenStreetMap; spread out to fit, not exactly to scale</text>
-<line x1="541.4" y1="596" x2="600" y2="596" stroke="#898781" stroke-width="2"/><line x1="541.4" y1="592" x2="541.4" y2="600" stroke="#898781" stroke-width="2"/><line x1="600" y1="592" x2="600" y2="600" stroke="#898781" stroke-width="2"/><text x="570.7" y="589" font-size="10.5" fill="#898781" text-anchor="middle">0.5 km</text><text x="535.4" y="600" font-size="10.5" fill="#898781" text-anchor="end">N ↑</text>
+<text x="230" y="632" font-size="11" fill="#898781">map data © OpenStreetMap contributors</text>
+<text x="230" y="648" font-size="11" fill="#898781">stops spread out to fit; not exactly to scale</text>
+<line x1="492.8" y1="596" x2="600" y2="596" stroke="#898781" stroke-width="2"/><line x1="492.8" y1="592" x2="492.8" y2="600" stroke="#898781" stroke-width="2"/><line x1="600" y1="592" x2="600" y2="600" stroke="#898781" stroke-width="2"/><text x="546.4" y="589" font-size="10.5" fill="#898781" text-anchor="middle">0.5 km</text><text x="486.8" y="600" font-size="10.5" fill="#898781" text-anchor="end">N ↑</text>
 </svg>

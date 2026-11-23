@@ -1,33 +1,136 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 573" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 617" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif">
 <title>Dec 16 Kyoto route: Hotel Musse, Fushimi Inari, Uzumasa Kyoto Village, teamLab Biovortex by Kyoto Station</title>
-<rect width="640" height="573" fill="#16161b"/>
-<path d="M481.4 167.6 Q479.8 314.4 545.0 446.0" fill="none" stroke="#e4a76b" stroke-width="6" stroke-linecap="round"/>
-<path d="M481.4 167.6 Q479.8 314.4 545.0 446.0" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
-<path d="M545.0 446.0 Q432.8 123.0 95.0 70.0" fill="none" stroke="#e4a76b" stroke-width="6" stroke-linecap="round"/>
-<path d="M545.0 446.0 Q432.8 123.0 95.0 70.0" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
-<path d="M95.0 70.0 Q244.9 238.9 455.1 321.3" fill="none" stroke="#e4a76b" stroke-width="6" stroke-linecap="round"/>
-<path d="M95.0 70.0 Q244.9 238.9 455.1 321.3" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
-<path d="M455.1 321.3 Q449.8 241.3 481.4 167.6" fill="none" stroke="#e4a76b" stroke-width="6" stroke-linecap="round"/>
-<path d="M455.1 321.3 Q449.8 241.3 481.4 167.6" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
-<rect x="457.7" y="356.7" width="108.3" height="18" rx="9" fill="#16161b" stroke="#e4a76b"/><text x="511.9" y="369.7" fill="#e4a76b" font-size="10.5" font-weight="600" text-anchor="middle">🚆 Keihan ~10 min</text>
-<rect x="224.5" y="146.6" width="209.3" height="18" rx="9" fill="#16161b" stroke="#e4a76b"/><text x="329.1" y="159.6" fill="#e4a76b" font-size="10.5" font-weight="600" text-anchor="middle">🚆 JR via Kyoto Stn ~30 min + walk</text>
-<rect x="169.1" y="208.3" width="181.7" height="18" rx="9" fill="#16161b" stroke="#e4a76b"/><text x="259.9" y="221.3" fill="#e4a76b" font-size="10.5" font-weight="600" text-anchor="middle">🚆 JR Hanazono ~10 min + walk</text>
-<rect x="463.0" y="233.9" width="116.7" height="18" rx="9" fill="#16161b" stroke="#e4a76b"/><text x="521.4" y="246.9" fill="#e4a76b" font-size="10.5" font-weight="600" text-anchor="middle">🚆 subway to Shijo</text>
-<circle cx="481.4" cy="167.6" r="13" fill="#ffffff" stroke="#16161b" stroke-width="2"/><text x="481.4" y="171.6" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">H</text>
-<circle cx="545.0" cy="446.0" r="13" fill="#e4a76b" stroke="#16161b" stroke-width="2"/><text x="545.0" y="450.0" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">1</text>
+<rect width="640" height="617" fill="#16161b"/>
+<defs><linearGradient id="fade" gradientUnits="userSpaceOnUse" x1="0" y1="498.439083240007" x2="0" y2="534.439083240007"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient><mask id="m" maskUnits="userSpaceOnUse" x="0" y="0" width="640" height="617"><rect width="640" height="534.439083240007" fill="url(#fade)"/></mask></defs>
+<g mask="url(#m)">
+<path d="M401.2 504.4L400.5 542.8L397.1 549.1L381.4 565.8" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M260.9 397.3L290.6 443.9L304.1 454.9L313.0 472.1L324.6 525.8L320.0 566.9" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M513.7 322.6L517.6 355.0L516.5 362.8L522.6 381.9L521.6 394.6L517.5 402.9L515.8 410.9" fill="none" stroke="#163045" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M507.5 248.2L503.4 256.8L497.0 262.7L494.9 266.3L494.8 300.6" fill="none" stroke="#163045" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M508.4 409.9L484.7 447.4L459.4 483.8" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M611.5 107.8L597.2 107.7L596.8 95.2" fill="none" stroke="#163045" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M494.7 302.5L492.6 313.6L493.9 323.1L493.0 329.0L501.2 330.2L503.6 332.4" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M155.6 139.4L155.4 177.1" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M191.5 477.5L190.8 502.2" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-30.2 215.8L-19.1 226.2L-9.6 230.9L-4.7 231.8" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-31.2 96.6L-21.2 98.2" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M459.4 483.8L425.6 529.8L383.5 571.6" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M644.6 107.8L611.5 107.8" fill="none" stroke="#163045" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M137.1 55.3L151.4 82.1" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M570.6 77.5L570.6 72.7L560.7 72.7L560.0 74.7" fill="none" stroke="#163045" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-31.6 250.1L-25.3 247.9L-12.7 246.2L-5.5 238.7L-3.3 235.0L-3.1 231.8" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-4.7 231.8L4.7 231.4L22.1 228.1L38.1 222.6L47.3 218.2" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M175.7 128.7L185.8 128.1L206.2 129.1" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M170.8 505.9L181.8 501.6L190.8 502.2" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M151.4 82.1L154.8 96.4L155.9 115.0" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M155.9 115.0L155.6 139.4" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M155.2 180.0L155.2 190.0" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34.6 276.5L37.2 277.5L43.2 277.4L47.0 279.9" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M269.6 -30.9L265.8 -19.5L267.0 -14.1L266.4 8.1L268.2 17.1L265.8 33.1L269.5 54.6L265.4 62.7L263.9 70.3L261.9 73.4" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M238.0 356.4L252.4 370.5L260.9 397.3" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M499.0 450.0L491.5 458.3L487.9 465.4L488.2 478.9L486.3 482.4L481.6 486.5L481.3 488.6L482.7 492.0L481.8 496.3L477.2 501.5L472.6 509.5" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M154.8 245.3L155.4 260.7L167.3 350.8L171.6 375.8L178.0 394.9L197.3 426.4L200.7 437.9L198.6 466.7L191.5 477.5" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M75.6 -36.3L89.3 -20.5L90.3 -15.9L89.1 -5.4L92.6 1.3L99.4 8.0L103.5 23.4L113.3 29.7L117.0 41.3L119.2 44.3L131.6 49.9" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M190.8 502.2L192.1 510.9L201.3 534.6L217.8 560.7L224.8 566.7" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M170.8 505.9L176.6 509.8L177.7 513.6" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-20.1 98.2L-17.1 98.9L-13.3 102.5L-2.4 102.0L3.4 105.1L11.7 105.2L14.7 104.3L21.0 106.5L29.7 106.8L33.0 108.5L37.3 114.2L47.7 119.5L52.8 119.4L59.9 121.1L72.0 121.0L76.0 122.4" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M206.2 129.1L216.3 132.6L221.4 136.6L246.7 137.7" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M55.0 440.6L54.5 480.4L47.2 495.3L46.3 502.1" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-35.0 230.4L-28.1 230.4L-23.0 233.8L-14.1 235.8L-7.2 239.0" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-20.7 98.5L-20.2 103.2L-10.8 121.9L6.8 126.0L9.5 127.8L23.5 144.6L31.5 149.9L44.9 153.3L50.8 157.3L62.1 173.7L67.4 204.9L69.0 207.6L74.5 211.3L76.8 215.2L77.8 220.4" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M75.8 220.0L77.8 220.4L92.6 232.2L98.9 239.1L100.6 242.7L102.2 250.0L105.6 257.7L104.1 268.7L104.6 281.2L108.3 307.9L121.5 328.1L129.9 355.2L139.2 372.5L143.2 386.6L180.5 421.9L186.4 433.0L193.6 454.7L191.3 470.3L191.5 477.5" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M564.3 77.3L543.5 77.6" fill="none" stroke="#163045" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M183.8 531.2L195.8 546.7L204.2 560.4L203.6 561.7L205.1 565.5" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M61.8 440.1L118.1 440.8L120.1 448.9L134.1 452.6L147.8 462.5L149.5 471.2L144.4 484.7L145.6 490.3L147.8 494.2L152.6 495.7L170.8 505.9" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M524.7 448.7L526.2 454.7L529.2 501.6L530.1 569.2" fill="none" stroke="#163045" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M47.3 218.2L54.6 217.0L65.3 217.7L75.8 220.0" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M188.3 43.4L187.8 48.8L185.7 51.5L173.6 52.7L164.9 59.2L163.4 63.7L155.8 65.1L152.0 72.4L151.4 82.1" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M257.9 78.5L254.3 82.4L248.7 84.8L164.8 105.8L158.8 110.1L155.9 115.0" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M537.3 -31.2L535.9 -8.4L537.4 -3.4L537.1 85.2L539.0 160.4L535.8 183.1L533.1 191.1L523.5 210.6L512.6 242.3L508.8 258.3L506.1 289.7L506.8 308.7L507.3 316.9L512.8 338.0L513.2 350.2L512.2 357.6L512.8 361.4L509.1 374.9L510.6 399.5L508.4 409.9" fill="none" stroke="#163045" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M265.1 137.7L265.9 138.5L313.8 138.6" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M298.1 183.7L290.7 188.3L292.3 196.4L290.5 200.6L290.6 205.4L289.6 208.6L291.9 214.9L291.5 221.6L289.4 229.9L290.8 234.2L290.9 241.5" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M541.8 124.0L542.9 149.2L542.4 164.2L539.8 179.6L533.5 200.0L516.2 243.0L513.2 256.6L510.5 279.7L513.7 322.6" fill="none" stroke="#163045" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M541.9 99.3L541.7 114.5" fill="none" stroke="#163045" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M541.5 80.7L541.8 96.0" fill="none" stroke="#163045" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M635.9 178.6L632.5 175.8L625.7 173.5" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M178.7 517.4L183.8 531.2" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M596.8 93.2L596.7 77.5L570.6 77.5" fill="none" stroke="#163045" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M261.8 266.1L240.5 266.6L237.8 268.7L238.5 310.4L236.0 316.5L237.0 352.1L238.0 356.4" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M163.7 503.8L170.7 507.9L170.5 513.2" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M529.4 179.0L529.3 188.0L523.0 196.6L511.3 224.6L508.4 241.4" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M529.3 118.8L528.4 130.3L529.5 176.5" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M529.0 103.9L529.2 115.0" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M290.9 245.4L291.1 265.2L264.0 266.0" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M654.8 128.5L648.9 124.1L641.2 114.4" fill="none" stroke="#163045" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34.4 384.3L34.2 398.7" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M51.9 388.3L51.6 396.0L52.8 403.4L54.3 403.6" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M56.7 416.0L55.6 417.1L55.0 440.6" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M60.8 418.1L60.6 426.2L60.3 432.6" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M46.4 516.7L47.0 528.5L44.4 535.7" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0.2 256.4L13.6 254.5L16.7 262.5L17.0 267.4" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M112.6 382.7L116.8 380.2L128.5 395.2L141.3 423.8" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-30.3 37.7L-21.9 39.7L-17.9 51.4L-18.7 81.8L-20.7 98.5" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M498.6 379.6L500.1 393.5L504.7 402.2L505.2 405.1L503.7 409.6L497.4 420.4" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M614.0 266.6L611.4 264.6L599.2 267.5L595.5 271.7L590.1 273.3" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M627.6 295.4L614.6 285.0" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M45.8 332.0L48.7 336.6L53.8 353.7L52.1 380.6" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M171.0 518.0L173.1 523.7L173.0 528.6L179.5 528.6L184.3 531.9" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-30.5 422.4L-28.9 420.1L-23.7 417.3L-17.1 404.8" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M670.9 76.1L668.2 80.9L667.8 85.7L665.7 91.1L655.2 102.6L649.9 102.6" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M187.8 31.8L188.4 41.8" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M198.7 8.6L193.9 22.0L190.2 25.4L188.0 31.0" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M141.8 424.9L150.7 443.8L153.1 444.8L159.3 455.5L163.3 457.8" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M515.8 410.9L512.8 417.4L512.5 429.1L514.8 435.3L521.1 442.2L524.0 446.9" fill="none" stroke="#163045" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M47.4 290.3L44.3 298.0" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M44.3 298.0L42.6 303.3L43.2 323.5" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M76.1 278.0L77.8 281.7L79.3 291.4" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M78.3 291.9L80.6 300.5L84.9 305.2L90.3 318.2L94.1 316.1" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M464.7 515.5L456.4 526.6L458.2 539.2L457.7 543.3L450.2 566.7" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M42.6 546.4L43.4 560.0" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M43.6 561.1L47.1 563.2L57.8 562.2L64.6 564.5" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M104.4 136.4L115.1 137.4L151.5 137.2L153.8 138.0" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M92.3 131.6L99.4 135.9L104.4 136.4" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M76.8 122.4L83.3 122.1L86.3 123.4" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M155.2 190.0L154.8 240.5" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M660.8 125.1L654.7 114.5" fill="none" stroke="#163045" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.0 267.4L18.2 271.3L33.3 276.0" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M47.7 281.3L50.2 286.9L47.4 288.9L47.4 290.3" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M504.3 334.5L505.4 341.3L497.3 352.9L498.7 363.9L498.5 377.2" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M155.7 137.4L161.9 132.9L173.0 131.9" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M46.3 502.1L46.7 512.8" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-5.0 243.3L-3.5 244.8L-1.9 255.4" fill="none" stroke="#163045" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M387.2 564.4L424.4 528.1L429.8 521.7L457.1 481.5L473.9 462.4L476.2 455.9L478.3 458.8L433.7 524.5L394.3 564.4ZM535.4 178.7L537.0 165.7L537.7 144.3L534.7 60.6L534.8 7.3L539.2 7.5L539.2 8.4L538.4 27.2L540.0 77.5L539.0 78.1L538.0 83.6L539.2 86.5L540.5 149.8L538.6 176.8L535.1 189.5L529.1 203.4L524.1 211.4L511.7 253.2L508.9 281.4L509.3 295.5L503.8 295.7L503.7 290.4L507.0 259.4L509.2 248.1L513.9 237.4L516.8 225.8L521.8 212.9L533.3 187.0ZM510.0 337.8L509.1 328.8L507.1 321.7L510.7 322.1L512.8 330.4L514.0 337.8ZM510.8 360.4L511.7 355.5L510.0 337.8L514.0 337.8L515.7 354.4L514.5 359.4ZM508.3 368.1L510.8 360.4L514.5 359.4L511.6 369.3L510.8 378.6L506.6 379.1ZM509.0 396.6L506.6 379.1L510.8 378.6L512.2 396.9ZM502.4 416.4L507.0 407.7L509.0 396.6L512.2 396.9L510.3 410.2L511.1 410.9L510.1 410.7L506.5 417.2ZM493.4 430.4L502.4 416.4L506.5 417.2L497.0 431.9ZM483.9 445.0L493.4 430.4L497.0 431.9L487.1 447.0ZM476.2 455.9L483.7 445.1L487.1 447.0L478.3 458.8ZM504.1 301.7L503.8 295.7L509.3 295.5L509.5 303.7L509.1 307.5L508.5 305.4L509.5 313.8L508.6 318.2L510.7 322.1L507.1 321.7L505.2 314.7ZM189.9 519.8L187.6 515.4L188.5 514.0L186.3 503.1L183.1 502.3L179.8 503.0L179.3 501.8L185.8 500.7L186.7 492.6L185.9 487.4L190.0 487.1L189.8 485.6L196.1 485.1L194.0 487.0L196.1 487.0L198.1 489.2L197.4 503.4L201.2 526.6L192.0 528.3ZM199.8 464.9L198.4 464.7L200.5 441.1L198.6 429.6L179.9 399.9L175.2 389.3L172.3 378.4L170.6 378.2L171.9 377.6L166.9 351.1L155.9 267.6L154.3 246.5L155.6 113.5L156.9 113.6L154.9 246.5L155.7 260.5L171.8 375.7L177.2 392.2L183.6 404.7L193.9 419.5L199.4 429.8L201.5 441.1ZM-30.0 -30.0L-21.6 -30.0L-18.9 -26.0L-19.2 -22.3L-17.4 -17.6L-17.7 -11.6L-16.6 -6.7L-21.4 -5.4L-30.0 -5.1ZM651.2 106.7L651.7 109.6L649.7 106.3L652.7 112.4L649.8 108.4L649.7 109.2L629.6 107.8L629.6 107.1L644.2 107.1L645.9 103.9L646.9 104.2L646.0 106.4L647.2 104.6L649.8 104.5ZM47.3 219.8L39.9 225.1L23.2 229.9L-2.4 234.2L-17.7 229.7L-25.8 224.2L-30.0 218.2L-30.0 214.4L-24.7 220.6L-17.1 225.3L-9.6 228.8L1.2 229.7L9.8 229.3L30.8 223.2L37.5 220.5L40.4 217.0L47.2 216.2ZM513.4 322.7L514.2 322.8L517.0 342.8L518.2 357.0L516.9 362.6L523.1 381.9L522.2 394.1L518.1 402.6L516.5 410.8L513.1 418.2L512.7 427.7L515.6 435.7L523.8 445.6L526.0 451.0L526.3 452.7L525.4 452.8L522.2 444.6L514.0 434.9L511.8 427.7L512.3 417.1L515.5 410.5L517.0 403.0L521.5 393.4L522.1 381.6L516.1 363.1L517.1 355.1ZM529.5 564.4L528.9 504.5L525.4 452.8L526.3 452.7L529.8 504.7L530.5 564.4ZM563.2 77.2L562.7 78.2L543.5 78.1L543.5 77.3L562.5 76.3ZM597.4 83.4L597.2 76.8L574.2 76.8L574.1 71.8L559.7 71.9L559.6 74.7L561.3 73.4L567.5 73.3L567.5 76.1L565.3 76.1L564.3 78.1L596.1 78.2L596.2 107.5L597.1 108.4L614.1 108.5L614.0 107.1L597.7 107.0ZM534.6 178.7L531.4 189.5L518.7 218.2L510.2 245.3L518.1 218.6ZM381.8 564.4L395.8 550.1L399.4 545.1L401.6 504.4L400.3 544.3L397.5 549.3L382.8 564.4ZM659.8 167.2L665.1 172.0L667.6 169.2L662.3 164.5ZM362.1 98.3L377.4 98.6L378.3 83.7L363.4 82.8ZM364.1 87.7L365.0 87.7L365.1 84.7L376.3 85.4L376.0 91.2L376.9 92.1L375.9 92.1L375.7 96.8L364.1 96.5L364.9 89.9L364.0 89.8ZM623.2 76.3L621.6 75.6L621.7 72.4L620.1 69.2L625.7 71.8L624.9 76.8L626.4 79.4L625.1 79.6L623.0 77.4L622.5 78.1ZM184.0 443.3L177.5 427.7L173.1 420.6L159.2 404.4L155.1 401.1L155.0 399.7L151.1 397.2L147.3 393.3L146.5 390.6L142.4 387.4L138.7 380.4L138.3 374.7L136.6 371.7L135.5 370.6L134.7 372.0L132.8 371.8L122.7 350.5L121.6 344.8L120.0 343.1L116.6 332.8L112.9 333.4L115.1 332.3L115.5 330.9L111.7 322.3L113.4 324.6L113.8 323.1L108.3 316.3L104.0 303.4L109.8 301.6L110.2 304.8L115.7 311.9L116.3 316.8L117.6 317.8L117.0 309.7L114.8 306.4L116.8 304.8L117.4 306.3L118.5 306.2L118.4 313.2L119.7 316.6L121.5 316.8L123.8 320.6L126.6 333.5L127.5 335.1L128.2 334.7L127.4 330.7L129.0 331.5L131.8 346.0L136.8 357.0L139.1 359.1L143.4 367.0L143.0 368.2L140.9 366.8L141.0 368.0L145.6 372.8L149.3 374.9L157.7 386.9L172.7 404.6L175.2 405.2L181.3 413.6L182.9 420.0L187.9 422.8L190.9 427.1L193.5 433.0L195.6 443.0ZM139.8 368.2L153.2 384.6L155.1 393.3L153.0 392.8L149.1 385.3L145.8 385.4L152.0 393.8L143.5 385.7L139.6 372.5L140.9 372.4L141.0 370.9ZM232.9 564.4L220.1 552.1L210.4 535.4L208.9 530.5L207.2 529.4L203.9 523.9L205.6 530.3L204.7 533.0L201.2 526.6L192.0 528.3L203.8 550.5L213.3 564.4ZM104.0 303.4L101.7 282.9L102.7 274.0L101.9 269.1L96.8 255.9L94.8 253.8L94.2 251.7L95.4 251.0L93.5 250.8L91.1 246.8L94.7 250.1L94.4 244.4L96.3 251.9L97.1 251.7L98.6 248.4L97.3 240.8L95.2 238.2L80.4 227.9L71.8 224.7L69.9 221.6L53.7 218.8L47.3 219.8L47.2 216.2L58.0 215.4L75.2 216.5L81.3 219.1L84.8 221.9L86.8 225.2L89.8 226.4L86.8 221.7L89.0 221.1L93.7 226.9L103.1 245.0L104.9 249.8L103.7 250.2L104.4 252.4L105.9 252.0L107.2 255.8L109.2 257.7L106.4 259.4L105.6 264.6L106.3 273.9L107.8 273.5L108.0 275.6L107.0 287.9L109.7 290.8L109.8 301.6ZM100.4 253.7L100.1 258.9L103.2 265.2L105.0 256.9ZM539.9 -7.5L538.6 7.4L534.8 7.3L535.1 -26.7L540.2 -26.9ZM104.7 341.9L100.1 338.2L99.9 339.1L106.6 343.1L107.8 344.8L106.7 346.7L107.4 348.5L106.3 348.4L106.7 349.7L104.3 351.6L106.4 352.5L110.5 351.3L113.9 355.3L112.0 352.3L112.8 349.2L110.6 346.1L113.8 346.5L113.5 345.3L112.7 345.8L111.0 343.2L111.1 345.0L109.2 344.9L108.6 343.4L106.6 342.6L107.1 341.1L106.2 342.3ZM503.0 31.2L502.6 32.8L501.2 32.5L502.3 35.1L500.6 34.5L499.6 29.1L498.0 27.6L499.5 26.7L499.3 24.5L495.8 23.8L496.0 22.2L498.0 20.8L497.5 19.9L500.6 19.9L502.2 22.8L504.4 23.8L499.9 24.8L500.1 26.4L501.9 26.9L502.9 29.1L503.9 27.8L503.9 30.6ZM484.4 290.1L478.4 291.3L479.4 290.2L478.1 289.6L478.2 287.1L480.3 285.1L480.2 283.2L482.4 282.6L482.1 283.3L483.8 283.6L484.5 282.2ZM198.4 464.7L199.8 464.9L197.5 476.1L198.4 485.0L184.8 486.0L184.9 452.1L184.0 443.3L195.6 443.0L196.1 464.0L197.4 466.4ZM387.6 76.6L356.2 76.0L356.5 85.4L355.7 85.3L354.8 104.5L368.9 105.3L368.9 106.6L395.1 107.7L395.3 101.2L394.5 101.2L394.3 106.4L370.4 105.1L370.4 103.8L356.4 103.1L357.9 77.9L371.6 78.5L371.6 76.6L387.6 77.4Z" fill="#163045" fill-rule="evenodd" stroke="#22506c" stroke-width="0.8"/>
+<text x="537.2" y="94.6" font-size="11.5" fill="#5d9ec2" font-style="italic" font-weight="600" text-anchor="middle" letter-spacing="0.3" transform="rotate(89 537.2 90.6)">Kamo River 鴨川</text>
+<text x="243.5" y="90.2" font-size="11.5" fill="#5d9ec2" font-style="italic" font-weight="600" text-anchor="middle" letter-spacing="0.3" transform="rotate(-14 243.5 86.1)">Tenjin River 天神川</text>
+<text x="76.8" y="224.2" font-size="11.5" fill="#5d9ec2" font-style="italic" font-weight="600" text-anchor="middle" letter-spacing="0.3" transform="rotate(10 76.8 220.2)">Katsura River 桂川</text>
+</g>
+<path d="M523.4 178.2 Q496.7 336.9 545.0 490.4" fill="none" stroke="#e4a76b" stroke-width="6" stroke-linecap="round"/>
+<path d="M523.4 178.2 Q496.7 336.9 545.0 490.4" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
+<path d="M545.0 490.4 Q446.1 145.2 95.0 70.0" fill="none" stroke="#e4a76b" stroke-width="6" stroke-linecap="round"/>
+<path d="M545.0 490.4 Q446.1 145.2 95.0 70.0" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
+<path d="M95.0 70.0 Q261.2 257.2 494.2 348.7" fill="none" stroke="#e4a76b" stroke-width="6" stroke-linecap="round"/>
+<path d="M95.0 70.0 Q261.2 257.2 494.2 348.7" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
+<path d="M494.2 348.7 Q488.3 259.9 523.4 178.2" fill="none" stroke="#e4a76b" stroke-width="6" stroke-linecap="round"/>
+<path d="M494.2 348.7 Q488.3 259.9 523.4 178.2" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
+<rect x="474.5" y="403.8" width="108.3" height="18" rx="9" fill="#16161b" stroke="#e4a76b"/><text x="528.7" y="416.8" fill="#e4a76b" font-size="10.5" font-weight="600" text-anchor="middle">🚆 Keihan ~10 min</text>
+<rect x="278.4" y="203.7" width="209.3" height="18" rx="9" fill="#16161b" stroke="#e4a76b"/><text x="383.1" y="216.7" fill="#e4a76b" font-size="10.5" font-weight="600" text-anchor="middle">🚆 JR via Kyoto Stn ~30 min + walk</text>
+<rect x="187.0" y="224.3" width="181.7" height="18" rx="9" fill="#16161b" stroke="#e4a76b"/><text x="277.9" y="237.3" fill="#e4a76b" font-size="10.5" font-weight="600" text-anchor="middle">🚆 JR Hanazono ~10 min + walk</text>
+<rect x="440.2" y="252.7" width="116.7" height="18" rx="9" fill="#16161b" stroke="#e4a76b"/><text x="498.6" y="265.7" fill="#e4a76b" font-size="10.5" font-weight="600" text-anchor="middle">🚆 subway to Shijo</text>
+<circle cx="523.4" cy="178.2" r="13" fill="#ffffff" stroke="#16161b" stroke-width="2"/><text x="523.4" y="182.2" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">H</text>
+<circle cx="545.0" cy="490.4" r="13" fill="#e4a76b" stroke="#16161b" stroke-width="2"/><text x="545.0" y="494.4" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">1</text>
 <circle cx="95.0" cy="70.0" r="13" fill="#e4a76b" stroke="#16161b" stroke-width="2"/><text x="95.0" y="74.0" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">2</text>
-<circle cx="455.1" cy="321.3" r="13" fill="#e4a76b" stroke="#16161b" stroke-width="2"/><text x="455.1" y="325.3" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">3</text>
-<text x="500.4" y="175.1" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start">Hotel Musse Kyoto</text>
-<text x="526.0" y="446.0" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end">Fushimi Inari</text>
-<text x="526.0" y="461.0" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="end">torii to Yotsutsuji · lunch</text>
-<text x="95.0" y="36.0" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="middle">Uzumasa Kyoto Village</text>
-<text x="95.0" y="51.0" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="middle">film-set town</text>
-<text x="442.1" y="351.3" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end">teamLab Biovortex</text>
-<text x="442.1" y="366.3" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="end">18:00 slot · Kyoto Stn</text>
-<text x="40" y="508.0002803407749" font-size="11.5" fill="#898781" font-weight="700" letter-spacing="2">KYOTO</text>
-<line x1="40" y1="528.0002803407749" x2="70" y2="528.0002803407749" stroke="#e4a76b" stroke-width="6" stroke-linecap="round"/>
-<line x1="40" y1="528.0002803407749" x2="70" y2="528.0002803407749" stroke="#16161b" stroke-width="2"/>
-<text x="80" y="532.0002803407749" font-size="11" fill="#898781">train / metro</text>
-<text x="230" y="538.0002803407749" font-size="11" fill="#898781">stops placed from OpenStreetMap</text>
-<line x1="531.0" y1="502.00028034077496" x2="600" y2="502.00028034077496" stroke="#898781" stroke-width="2"/><line x1="531.0" y1="498.00028034077496" x2="531.0" y2="506.00028034077496" stroke="#898781" stroke-width="2"/><line x1="600" y1="498.00028034077496" x2="600" y2="506.00028034077496" stroke="#898781" stroke-width="2"/><text x="565.5" y="495.00028034077496" font-size="10.5" fill="#898781" text-anchor="middle">1 km</text><text x="525.0" y="506.00028034077496" font-size="10.5" fill="#898781" text-anchor="end">N ↑</text>
+<circle cx="494.2" cy="348.7" r="13" fill="#e4a76b" stroke="#16161b" stroke-width="2"/><text x="494.2" y="352.7" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">3</text>
+<text x="504.4" y="185.7" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Hotel Musse Kyoto</text>
+<text x="526.0" y="490.4" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Fushimi Inari</text>
+<text x="526.0" y="505.4" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="end" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">torii to Yotsutsuji · lunch</text>
+<text x="95.0" y="36.0" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="middle" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Uzumasa Kyoto Village</text>
+<text x="95.0" y="51.0" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="middle" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">film-set town</text>
+<text x="481.2" y="378.7" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">teamLab Biovortex</text>
+<text x="481.2" y="393.7" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="end" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">18:00 slot · Kyoto Stn</text>
+<text x="40" y="552.439083240007" font-size="11.5" fill="#898781" font-weight="700" letter-spacing="2">KYOTO</text>
+<line x1="40" y1="572.439083240007" x2="70" y2="572.439083240007" stroke="#e4a76b" stroke-width="6" stroke-linecap="round"/>
+<line x1="40" y1="572.439083240007" x2="70" y2="572.439083240007" stroke="#16161b" stroke-width="2"/>
+<text x="80" y="576.439083240007" font-size="11" fill="#898781">train / metro</text>
+<text x="230" y="582.439083240007" font-size="11" fill="#898781">map data © OpenStreetMap contributors</text>
+<line x1="523.5" y1="546.439083240007" x2="600" y2="546.439083240007" stroke="#898781" stroke-width="2"/><line x1="523.5" y1="542.439083240007" x2="523.5" y2="550.439083240007" stroke="#898781" stroke-width="2"/><line x1="600" y1="542.439083240007" x2="600" y2="550.439083240007" stroke="#898781" stroke-width="2"/><text x="561.7" y="539.439083240007" font-size="10.5" fill="#898781" text-anchor="middle">1 km</text><text x="517.5" y="550.439083240007" font-size="10.5" fill="#898781" text-anchor="end">N ↑</text>
 </svg>

@@ -1,51 +1,120 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 585" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif">
 <title>Dec 28 Shanghai route: Wukang Mansion, Anfu Road, Ren He Guan lunch by Jing'an Temple, The Louis, Changle and Xinle Road boutiques, Gentle Monster Haus Nowhere, Xintiandi, Line 10 home</title>
 <rect width="640" height="585" fill="#16161b"/>
+<defs><linearGradient id="fade" gradientUnits="userSpaceOnUse" x1="0" y1="432.43792288057114" x2="0" y2="468.43792288057114"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient><mask id="m" maskUnits="userSpaceOnUse" x="0" y="0" width="640" height="585"><rect width="640" height="468.43792288057114" fill="url(#fade)"/></mask></defs>
+<g mask="url(#m)">
+<path d="M546.7 125.7L542.5 131.0L538.7 130.2L537.0 127.7L545.5 124.7L547.0 121.9L548.0 122.4L546.7 123.6L547.5 124.8ZM508.0 33.3L507.3 35.4L505.2 36.3L505.6 38.7L506.8 38.5L508.1 40.2L505.9 41.8L503.0 37.7L505.5 33.4L506.9 33.4L508.5 31.7L510.8 33.1L512.2 31.9L514.7 34.5L511.3 36.1L510.9 34.3ZM558.2 196.7L561.3 193.1L566.8 196.3L567.6 198.1L570.1 198.0L573.9 200.6L583.0 203.1L585.0 201.7L588.6 201.5L589.8 203.3L588.2 205.4L588.1 203.9L585.6 204.7L586.3 206.2L587.8 205.7L583.8 208.1L580.7 207.8L578.8 203.7L569.7 205.5L567.3 201.7L563.9 202.5L561.9 206.1L560.8 206.4L559.6 205.1L561.0 203.3L560.9 201.1L558.9 198.4L559.8 196.9ZM418.5 114.6L417.4 110.9L417.9 109.2L419.5 108.4L428.4 107.8L433.3 109.4L433.4 113.8L427.3 113.9L426.3 112.4Z" fill="#163045" fill-rule="evenodd" stroke="#22506c" stroke-width="0.8"/>
+<path d="M550.2 148.0L576.2 135.6" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M448.4 44.0L445.5 44.1" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M477.3 183.7L409.6 216.7" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M57.4 456.2L59.0 455.1" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M70.4 444.9L67.9 445.8L57.5 453.4" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M125.8 208.7L124.1 205.7" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M89.3 430.6L74.8 441.7" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M506.9 9.1L503.9 11.3L499.2 17.5L492.1 35.1L486.9 40.3" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M526.3 -5.8L519.0 -2.4L506.9 9.1" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M242.8 124.5L217.8 137.0L214.8 140.6" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M203.1 148.9L180.2 162.2" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M300.8 95.3L289.6 96.8L280.4 100.3L275.5 103.7" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M151.4 180.0L145.7 183.1" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M145.7 183.1L136.3 193.3L131.6 198.1" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M59.0 455.1L68.8 446.8L70.4 444.9" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M57.5 453.4L56.0 454.5" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M179.3 162.9L163.2 174.0L151.4 180.0" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M420.7 44.4L387.0 42.8" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M213.0 337.4L210.9 339.9L157.2 380.1" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M319.4 82.0L315.1 86.0L300.8 95.3" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M387.0 42.8L378.3 45.1L352.8 56.1L350.0 57.9L342.6 67.1" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M524.7 160.4L523.5 161.0L512.2 166.6" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M486.9 40.3L489.9 39.0L492.4 36.4L500.0 18.1" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M486.9 40.3L482.1 41.6L450.0 43.9" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M500.0 18.1L505.9 10.8" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M180.2 162.2L179.3 162.9" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M118.0 211.5L114.9 217.2" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M124.1 205.7L119.8 209.6L118.0 211.5" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M311.9 265.3L239.3 301.2" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M591.0 128.5L597.2 125.5L602.2 123.1" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M503.2 171.0L501.9 171.6" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M237.7 302.3L233.4 306.9" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M505.9 10.8L506.9 9.1" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M342.6 67.1L319.4 82.0" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M275.5 103.7L269.7 108.6L242.8 124.5" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M233.4 306.9L232.7 308.2" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M377.0 233.1L349.5 246.7" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M232.7 308.2L213.0 337.4" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M499.8 172.6L498.3 173.3" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M214.8 140.6L203.1 148.9" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M321.4 260.7L311.9 265.3" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M524.7 160.4L538.1 153.9" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M239.3 301.2L237.7 302.3" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M131.6 198.1L126.7 203.0L126.1 203.8" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M444.5 44.1L420.7 44.4" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M445.5 44.1L444.5 44.1" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M450.0 43.9L448.4 44.0" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M501.9 171.6L499.8 172.6" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M74.8 441.7L70.4 444.9" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M100.2 422.9L89.3 430.6" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M610.4 119.2L612.1 118.4" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M538.1 153.9L550.2 148.0" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M157.2 380.1L136.7 395.5" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M136.7 395.5L100.2 422.9" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M512.2 166.6L503.2 171.0" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M530.7 -7.2L526.3 -5.8" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M539.0 -9.5L535.7 -8.5L530.7 -7.2" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M349.5 246.7L321.4 260.7" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M126.1 203.8L124.1 205.7" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M409.6 216.7L377.0 233.1" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M498.3 173.3L477.3 183.7" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M576.2 135.6L591.0 128.5" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M602.2 123.1L605.4 121.6L610.4 119.2" fill="none" stroke="#898781" stroke-opacity="0.3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="321.5" y="276.6" font-size="10.5" fill="#898781" font-style="normal" font-weight="600" text-anchor="middle" letter-spacing="0.3" transform="rotate(-26 321.5 272.9)">Huaihai Rd</text>
+<text x="438.6" y="47.9" font-size="10.5" fill="#898781" font-style="normal" font-weight="600" text-anchor="middle" letter-spacing="0.3">Nanjing W Rd 南京西路</text>
+</g>
 <path d="M95.0 454.4 Q98.6 439.4 95.0 424.4" fill="none" stroke="#e8a87c" stroke-width="6" stroke-linecap="round"/>
 <path d="M95.0 454.4 Q98.6 439.4 95.0 424.4" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
 <path d="M95.0 424.4 Q105.3 351.0 147.8 290.2" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
 <path d="M147.8 290.2 Q181.2 225.5 181.6 152.7" fill="none" stroke="#e8a87c" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 0"/>
 <path d="M181.6 152.7 Q280.3 85.3 398.9 70.0" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
-<path d="M398.9 70.0 Q357.6 152.4 358.2 244.6" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
-<path d="M358.2 244.6 Q446.2 199.8 545.0 199.7" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<path d="M398.9 70.0 Q362.8 130.9 358.2 201.6" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<path d="M358.2 201.6 Q451.4 178.3 545.0 199.7" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
 <path d="M545.0 199.7 Q588.1 176.9 616.2 137.0" fill="none" stroke="#e8a87c" stroke-width="6" stroke-linecap="round"/>
 <path d="M545.0 199.7 Q588.1 176.9 616.2 137.0" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
 <rect x="110.8" y="430.4" width="114.1" height="18" rx="9" fill="#16161b" stroke="#e8a87c"/><text x="167.9" y="443.4" fill="#e8a87c" font-size="10.5" font-weight="600" text-anchor="middle">🚆 Line 10 ~30 min</text>
 <rect x="30.2" y="345.2" width="69.2" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="64.8" y="358.2" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~15 min</text>
 <rect x="107.9" y="214.5" width="130.1" height="18" rx="9" fill="#16161b" stroke="#e8a87c"/><text x="172.9" y="227.5" fill="#e8a87c" font-size="10.5" font-weight="600" text-anchor="middle">🚕 taxi ~5 / walk ~20</text>
 <rect x="250.7" y="59.3" width="69.2" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="285.3" y="72.3" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~20 min</text>
-<rect x="294.9" y="145.9" width="69.2" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="329.5" y="158.9" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~15 min</text>
-<rect x="433.1" y="181.9" width="69.2" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="467.7" y="194.9" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~15 min</text>
-<rect x="456.3" y="163.7" width="114.1" height="18" rx="9" fill="#16161b" stroke="#e8a87c"/><text x="513.3" y="176.7" fill="#e8a87c" font-size="10.5" font-weight="600" text-anchor="middle">🚆 Line 10 ~20 min</text>
+<rect x="297.5" y="124.4" width="69.2" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="332.1" y="137.4" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~15 min</text>
+<rect x="416.9" y="164.5" width="69.2" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="451.5" y="177.5" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~15 min</text>
+<rect x="476.3" y="143.3" width="114.1" height="18" rx="9" fill="#16161b" stroke="#e8a87c"/><text x="533.4" y="156.3" fill="#e8a87c" font-size="10.5" font-weight="600" text-anchor="middle">🚆 Line 10 ~20 min</text>
 <circle cx="95.0" cy="424.4" r="13" fill="#e8a87c" stroke="#16161b" stroke-width="2"/><text x="95.0" y="428.4" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">1</text>
 <circle cx="147.8" cy="290.2" r="13" fill="#e8a87c" stroke="#16161b" stroke-width="2"/><text x="147.8" y="294.2" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">2</text>
 <circle cx="181.6" cy="152.7" r="13" fill="#e8a87c" stroke="#16161b" stroke-width="2"/><text x="181.6" y="156.7" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">3</text>
 <circle cx="398.9" cy="70.0" r="13" fill="#e8a87c" stroke="#16161b" stroke-width="2"/><text x="398.9" y="74.0" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">4</text>
-<circle cx="358.2" cy="244.6" r="13" fill="#e8a87c" stroke="#16161b" stroke-width="2"/><text x="358.2" y="248.6" font-size="10" font-weight="700" fill="#16161b" text-anchor="middle">5·6</text>
+<circle cx="358.2" cy="201.6" r="13" fill="#e8a87c" stroke="#16161b" stroke-width="2"/><text x="358.2" y="205.6" font-size="10" font-weight="700" fill="#16161b" text-anchor="middle">5·6</text>
 <circle cx="545.0" cy="199.7" r="13" fill="#e8a87c" stroke="#16161b" stroke-width="2"/><text x="545.0" y="203.7" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">7</text>
-<text x="121.0" y="424.4" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start">from home</text>
-<text x="130.0" y="370.4" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start">Wukang Mansion 武康大楼</text>
-<text x="130.0" y="385.4" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="start">Jiaotong Univ Stn (Line 10)</text>
-<text x="166.8" y="290.2" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start">Anfu Rd 安福路</text>
-<text x="166.8" y="305.2" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="start">coffee + indie shops</text>
-<text x="162.6" y="152.7" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end">人和馆 Ren He Guan</text>
-<text x="162.6" y="167.7" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="end">愚园路142号 · lunch</text>
-<text x="417.9" y="70.0" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start">The Louis 路易号</text>
-<text x="417.9" y="85.0" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="start">LV ship · Xingye Taikoo Hui</text>
-<text x="371.2" y="274.6" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start">Changle + Xinle Rd 长乐路·新乐路</text>
-<text x="371.2" y="289.6" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="start">boutiques · Gentle Monster, 淮海中路798号</text>
-<text x="545.0" y="231.7" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="middle">Xintiandi 新天地</text>
-<text x="545.0" y="246.7" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="middle">dinner, walk, cocktails</text>
-<text x="616.2" y="127.0" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="middle">home</text>
-<text x="40" y="486.4360481855694" font-size="11.5" fill="#898781" font-weight="700" letter-spacing="2">FORMER FRENCH CONCESSION</text>
-<line x1="40" y1="506.4360481855694" x2="70" y2="506.4360481855694" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
-<text x="80" y="510.4360481855694" font-size="11" fill="#898781">walk</text>
-<line x1="40" y1="526.4360481855695" x2="70" y2="526.4360481855695" stroke="#e8a87c" stroke-width="6" stroke-linecap="round"/>
-<line x1="40" y1="526.4360481855695" x2="70" y2="526.4360481855695" stroke="#16161b" stroke-width="2"/>
-<text x="80" y="530.4360481855695" font-size="11" fill="#898781">train / metro</text>
-<line x1="40" y1="546.4360481855695" x2="70" y2="546.4360481855695" stroke="#e8a87c" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 0"/>
-<text x="80" y="550.4360481855695" font-size="11" fill="#898781">taxi / car</text>
-<text x="230" y="516.4360481855695" font-size="11" fill="#898781">stops placed from OpenStreetMap</text>
-<text x="230" y="532.4360481855695" font-size="11" fill="#898781">show drivers the Chinese names</text>
-<line x1="535.6" y1="480.4360481855694" x2="600" y2="480.4360481855694" stroke="#898781" stroke-width="2"/><line x1="535.6" y1="476.4360481855694" x2="535.6" y2="484.4360481855694" stroke="#898781" stroke-width="2"/><line x1="600" y1="476.4360481855694" x2="600" y2="484.4360481855694" stroke="#898781" stroke-width="2"/><text x="567.8" y="473.4360481855694" font-size="10.5" fill="#898781" text-anchor="middle">0.5 km</text><text x="529.6" y="484.4360481855694" font-size="10.5" fill="#898781" text-anchor="end">N ↑</text>
+<text x="121.0" y="424.4" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">from home</text>
+<text x="130.0" y="370.4" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Wukang Mansion 武康大楼</text>
+<text x="130.0" y="385.4" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="start" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Jiaotong Univ Stn (Line 10)</text>
+<text x="166.8" y="290.2" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Anfu Rd 安福路</text>
+<text x="166.8" y="305.2" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="start" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">coffee + indie shops</text>
+<text x="162.6" y="152.7" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">人和馆 Ren He Guan</text>
+<text x="162.6" y="167.7" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="end" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">愚园路142号 · lunch</text>
+<text x="417.9" y="70.0" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">The Louis 路易号</text>
+<text x="417.9" y="85.0" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="start" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">LV ship · Xingye Taikoo Hui</text>
+<text x="358.2" y="233.6" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="middle" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Changle + Xinle Rd 长乐路·新乐路</text>
+<text x="358.2" y="248.6" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="middle" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">boutiques · Gentle Monster, 淮海中路798号</text>
+<text x="545.0" y="231.7" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="middle" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Xintiandi 新天地</text>
+<text x="545.0" y="246.7" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="middle" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">dinner, walk, cocktails</text>
+<text x="616.2" y="127.0" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="middle" stroke="#16161b" stroke-width="3" stroke-linejoin="round" paint-order="stroke">home</text>
+<text x="40" y="486.43792288057114" font-size="11.5" fill="#898781" font-weight="700" letter-spacing="2">FORMER FRENCH CONCESSION</text>
+<line x1="40" y1="506.43792288057114" x2="70" y2="506.43792288057114" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<text x="80" y="510.43792288057114" font-size="11" fill="#898781">walk</text>
+<line x1="40" y1="526.4379228805711" x2="70" y2="526.4379228805711" stroke="#e8a87c" stroke-width="6" stroke-linecap="round"/>
+<line x1="40" y1="526.4379228805711" x2="70" y2="526.4379228805711" stroke="#16161b" stroke-width="2"/>
+<text x="80" y="530.4379228805711" font-size="11" fill="#898781">train / metro</text>
+<line x1="40" y1="546.4379228805711" x2="70" y2="546.4379228805711" stroke="#e8a87c" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 0"/>
+<text x="80" y="550.4379228805711" font-size="11" fill="#898781">taxi / car</text>
+<text x="230" y="516.4379228805711" font-size="11" fill="#898781">map data © OpenStreetMap contributors</text>
+<text x="230" y="532.4379228805711" font-size="11" fill="#898781">show drivers the Chinese names</text>
+<line x1="535.6" y1="480.43792288057114" x2="600" y2="480.43792288057114" stroke="#898781" stroke-width="2"/><line x1="535.6" y1="476.43792288057114" x2="535.6" y2="484.43792288057114" stroke="#898781" stroke-width="2"/><line x1="600" y1="476.43792288057114" x2="600" y2="484.43792288057114" stroke="#898781" stroke-width="2"/><text x="567.8" y="473.43792288057114" font-size="10.5" fill="#898781" text-anchor="middle">0.5 km</text><text x="529.6" y="484.43792288057114" font-size="10.5" fill="#898781" text-anchor="end">N ↑</text>
 </svg>
