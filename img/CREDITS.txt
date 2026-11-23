@@ -44,3 +44,4 @@ img/wukang-mansion.jpg: "Wukang Mansion (20191114161507).jpg" by N509FZ, CC BY-S
 img/anfu-road-brunch.jpg: "A brunch spot at Anfu Rd.jpg" by RunningTurtle8964, CC0, https://commons.wikimedia.org/wiki/File:A_brunch_spot_at_Anfu_Rd.jpg
 img/the-louis-lv-ship.jpg: "The Louis in Shanghai 2, 2026-06-06.jpg" by Perimeter Chou, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:The_Louis_in_Shanghai_2,_2026-06-06.jpg
 img/xintiandi-lanes.jpg: "Fountain with Sculptures in Xintiandi Shanghai 20210329.jpg" by Leynadmar, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Fountain_with_Sculptures_in_Xintiandi_Shanghai_20210329.jpg
+img/yu-garden-night.jpg: "20191026 Yu Garden at night 02.jpg" by Windmemories, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:20191026_Yu_Garden_at_night_02.jpg
