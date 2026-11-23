@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 666" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif">
+<title>Dec 22 Tokyo route: Meiji Jingu (optional), Takeshita Street, Shibuya crossing and Hachiko, SHIBUYA109, Shibuya Sushiki</title>
+<rect width="640" height="666" fill="#16161b"/>
+<path d="M271.6 70.0 Q318.4 134.2 389.3 170.1" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<path d="M389.3 170.1 Q381.2 346.2 294.0 499.3" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<path d="M294.0 499.3 Q274.0 486.7 250.4 484.5" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<path d="M250.4 484.5 Q262.7 510.9 261.7 540.0" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<rect x="247.1" y="118.1" width="63.4" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="278.8" y="131.1" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~5 min</text>
+<rect x="286.3" y="331.5" width="150.1" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="361.4" y="344.5" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~20 min, or JR 1 stop</text>
+<rect x="241.4" y="450.3" width="63.4" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="273.1" y="463.3" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~2 min</text>
+<rect x="182.0" y="502.6" width="63.4" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="213.7" y="515.6" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~3 min</text>
+<circle cx="271.6" cy="70.0" r="6" fill="#16161b" stroke="#aa9df0" stroke-width="3"/>
+<circle cx="389.3" cy="170.1" r="13" fill="#aa9df0" stroke="#16161b" stroke-width="2"/><text x="389.3" y="174.1" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">1</text>
+<circle cx="294.0" cy="499.3" r="13" fill="#aa9df0" stroke="#16161b" stroke-width="2"/><text x="294.0" y="503.3" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">2</text>
+<circle cx="250.4" cy="484.5" r="13" fill="#aa9df0" stroke="#16161b" stroke-width="2"/><text x="250.4" y="488.5" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">3</text>
+<circle cx="261.7" cy="540.0" r="13" fill="#aa9df0" stroke="#16161b" stroke-width="2"/><text x="261.7" y="544.0" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">4</text>
+<text x="259.6" y="70.0" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end">Meiji Jingu (optional)</text>
+<text x="259.6" y="85.0" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="end">closes 16:00</text>
+<text x="408.3" y="170.1" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start">Takeshita Street</text>
+<text x="408.3" y="185.1" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="start">+ Ura-Harajuku lanes</text>
+<text x="313.0" y="506.8" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start">Hachikō + Scramble Crossing</text>
+<text x="231.4" y="492.0" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end">SHIBUYA109</text>
+<text x="280.7" y="540.0" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start">Shibuya Sushiki</text>
+<text x="280.7" y="555.0" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="start">20:30 omakase</text>
+<text x="40" y="602" font-size="11.5" fill="#898781" font-weight="700" letter-spacing="2">TOKYO · HARAJUKU + SHIBUYA</text>
+<line x1="40" y1="622" x2="70" y2="622" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<text x="80" y="626" font-size="11" fill="#898781">walk</text>
+<text x="230" y="632" font-size="11" fill="#898781">stops placed from OpenStreetMap; spread out to fit, not exactly to scale</text>
+<line x1="477.8" y1="596" x2="600" y2="596" stroke="#898781" stroke-width="2"/><line x1="477.8" y1="592" x2="477.8" y2="600" stroke="#898781" stroke-width="2"/><line x1="600" y1="592" x2="600" y2="600" stroke="#898781" stroke-width="2"/><text x="538.9" y="589" font-size="10.5" fill="#898781" text-anchor="middle">0.5 km</text><text x="471.8" y="600" font-size="10.5" fill="#898781" text-anchor="end">N ↑</text>
+</svg>

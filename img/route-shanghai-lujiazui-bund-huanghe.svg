@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 518" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif">
+<title>Dec 29 Shanghai route: IFC mall, Duoyun Books in Shanghai Tower or the Oriental Pearl, Line 2 to the Bund, Nanjing Road East, Huanghe Road, Line 8 home</title>
+<rect width="640" height="518" fill="#16161b"/>
+<path d="M522.0 24.0 Q480.9 38.5 450.8 70.0" fill="none" stroke="#e8a87c" stroke-width="6" stroke-linecap="round"/>
+<path d="M522.0 24.0 Q480.9 38.5 450.8 70.0" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
+<path d="M450.8 70.0 Q534.6 211.5 545.0 375.6" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<path d="M545.0 375.6 Q483.7 329.0 407.9 315.2" fill="none" stroke="#e8a87c" stroke-width="6" stroke-linecap="round"/>
+<path d="M545.0 375.6 Q483.7 329.0 407.9 315.2" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
+<path d="M407.9 315.2 Q314.6 353.5 214.1 345.3" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<path d="M214.1 345.3 Q153.2 336.7 95.0 356.7" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<path d="M95.0 356.7 Q83.6 309.2 95.0 261.7" fill="none" stroke="#e8a87c" stroke-width="6" stroke-linecap="round"/>
+<path d="M95.0 356.7 Q83.6 309.2 95.0 261.7" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
+<rect x="490.6" y="38.5" width="137.2" height="18" rx="9" fill="#16161b" stroke="#e8a87c"/><text x="559.2" y="51.5" fill="#e8a87c" font-size="10.5" font-weight="600" text-anchor="middle">🚆 Line 10 + 2 ~25 min</text>
+<rect x="481.6" y="208.2" width="69.2" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="516.2" y="221.2" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~10 min</text>
+<rect x="364.6" y="343.0" width="146.1" height="18" rx="9" fill="#16161b" stroke="#e8a87c"/><text x="437.6" y="356.0" fill="#e8a87c" font-size="10.5" font-weight="600" text-anchor="middle">🚆 Line 2, 1 stop + walk</text>
+<rect x="258.8" y="335.4" width="69.2" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="293.4" y="348.4" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~1.2 km</text>
+<rect x="98.5" y="322.3" width="63.4" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="130.2" y="335.3" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~5 min</text>
+<rect x="35.4" y="274.7" width="108.3" height="18" rx="9" fill="#16161b" stroke="#e8a87c"/><text x="89.5" y="287.7" fill="#e8a87c" font-size="10.5" font-weight="600" text-anchor="middle">🚆 Line 8 ~15 min</text>
+<circle cx="450.8" cy="70.0" r="13" fill="#e8a87c" stroke="#16161b" stroke-width="2"/><text x="450.8" y="74.0" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">1</text>
+<circle cx="545.0" cy="375.6" r="13" fill="#e8a87c" stroke="#16161b" stroke-width="2"/><text x="545.0" y="379.6" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">2</text>
+<circle cx="468.6" cy="281.7" r="6" fill="#16161b" stroke="#e8a87c" stroke-width="3"/>
+<circle cx="407.9" cy="315.2" r="13" fill="#e8a87c" stroke="#16161b" stroke-width="2"/><text x="407.9" y="319.2" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">3</text>
+<circle cx="214.1" cy="345.3" r="13" fill="#e8a87c" stroke="#16161b" stroke-width="2"/><text x="214.1" y="349.3" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">4</text>
+<circle cx="95.0" cy="356.7" r="13" fill="#e8a87c" stroke="#16161b" stroke-width="2"/><text x="95.0" y="360.7" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">5</text>
+<text x="490.0" y="31.5" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end">from home · Siping Rd</text>
+<text x="431.8" y="70.0" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end">IFC mall 国金中心</text>
+<text x="431.8" y="85.0" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="end">shopping + lunch</text>
+<text x="526.0" y="375.6" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end">Shanghai Tower 上海中心</text>
+<text x="526.0" y="390.6" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="end">Duoyun Books, 52F</text>
+<text x="456.6" y="289.2" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end">or: Oriental Pearl 东方明珠</text>
+<text x="388.9" y="315.2" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end">The Bund 外滩</text>
+<text x="388.9" y="330.2" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="end">lights ~18:00</text>
+<text x="214.1" y="377.3" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="middle">Nanjing Rd East 南京东路</text>
+<text x="214.1" y="392.3" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="middle">dinner + shopping</text>
+<text x="130.0" y="302.7" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start">Huanghe Rd 黄河路</text>
+<text x="130.0" y="317.7" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="start">neon · People’s Sq Stn</text>
+<text x="105.0" y="269.2" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start">home · Siping Rd</text>
+<text x="40" y="437.619423137476" font-size="11.5" fill="#898781" font-weight="700" letter-spacing="2">LUJIAZUI → THE BUND → PEOPLE’S SQUARE</text>
+<line x1="40" y1="457.619423137476" x2="70" y2="457.619423137476" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<text x="80" y="461.619423137476" font-size="11" fill="#898781">walk</text>
+<line x1="40" y1="477.619423137476" x2="70" y2="477.619423137476" stroke="#e8a87c" stroke-width="6" stroke-linecap="round"/>
+<line x1="40" y1="477.619423137476" x2="70" y2="477.619423137476" stroke="#16161b" stroke-width="2"/>
+<text x="80" y="481.619423137476" font-size="11" fill="#898781">train / metro</text>
+<text x="230" y="467.619423137476" font-size="11" fill="#898781">stops placed from OpenStreetMap</text>
+<text x="230" y="483.619423137476" font-size="11" fill="#898781">show drivers the Chinese names</text>
+<line x1="533.0" y1="431.619423137476" x2="600" y2="431.619423137476" stroke="#898781" stroke-width="2"/><line x1="533.0" y1="427.619423137476" x2="533.0" y2="435.619423137476" stroke="#898781" stroke-width="2"/><line x1="600" y1="427.619423137476" x2="600" y2="435.619423137476" stroke="#898781" stroke-width="2"/><text x="566.5" y="424.619423137476" font-size="10.5" fill="#898781" text-anchor="middle">0.5 km</text><text x="527.0" y="435.619423137476" font-size="10.5" fill="#898781" text-anchor="end">N ↑</text>
+</svg>

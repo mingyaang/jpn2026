@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 510" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif">
+<title>Jan 1 Suzhou route: Scholars, Hanfu shoot in the Humble Administrator's Garden, Shantang Street, Gusu boat banquet, back for bags, Suzhou Station, train to Shanghai</title>
+<rect width="640" height="510" fill="#16161b"/>
+<path d="M545.0 294.3 Q515.6 231.9 461.0 189.6" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<path d="M461.0 189.6 Q295.3 305.5 95.0 333.6" fill="none" stroke="#d68fb8" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 0"/>
+<path d="M95.0 333.6 Q128.6 350.3 166.2 350.0" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<path d="M166.2 350.0 Q348.9 276.7 545.0 294.3" fill="none" stroke="#d68fb8" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 0"/>
+<path d="M545.0 294.3 Q404.8 142.1 210.8 70.0" fill="none" stroke="#d68fb8" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 0"/>
+<path d="M210.8 70.0 Q258.3 58.6 305.8 70.0" fill="none" stroke="#d68fb8" stroke-width="6" stroke-linecap="round"/>
+<path d="M210.8 70.0 Q258.3 58.6 305.8 70.0" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
+<rect x="523.3" y="227.9" width="69.2" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="557.9" y="240.9" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~10 min</text>
+<rect x="239.6" y="244.6" width="94.2" height="18" rx="9" fill="#16161b" stroke="#d68fb8"/><text x="286.6" y="257.6" fill="#d68fb8" font-size="10.5" font-weight="600" text-anchor="middle">🚕 Didi ~15 min</text>
+<rect x="343.2" y="269.8" width="94.2" height="18" rx="9" fill="#16161b" stroke="#d68fb8"/><text x="390.3" y="282.8" fill="#d68fb8" font-size="10.5" font-weight="600" text-anchor="middle">🚕 Didi ~15 min</text>
+<rect x="344.3" y="153.1" width="94.2" height="18" rx="9" fill="#16161b" stroke="#d68fb8"/><text x="391.3" y="166.1" fill="#d68fb8" font-size="10.5" font-weight="600" text-anchor="middle">🚕 Didi ~15 min</text>
+<rect x="233.2" y="39.5" width="69.2" height="18" rx="9" fill="#16161b" stroke="#d68fb8"/><text x="267.8" y="52.5" fill="#d68fb8" font-size="10.5" font-weight="600" text-anchor="middle">🚆 ~30 min</text>
+<circle cx="545.0" cy="294.3" r="13" fill="#ffffff" stroke="#16161b" stroke-width="2"/><text x="545.0" y="298.3" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">H</text>
+<circle cx="461.0" cy="189.6" r="13" fill="#d68fb8" stroke="#16161b" stroke-width="2"/><text x="461.0" y="193.6" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">1</text>
+<circle cx="95.0" cy="333.6" r="13" fill="#d68fb8" stroke="#16161b" stroke-width="2"/><text x="95.0" y="337.6" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">2</text>
+<circle cx="166.2" cy="350.0" r="13" fill="#d68fb8" stroke="#16161b" stroke-width="2"/><text x="166.2" y="354.0" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">3</text>
+<circle cx="210.8" cy="70.0" r="13" fill="#d68fb8" stroke="#16161b" stroke-width="2"/><text x="210.8" y="74.0" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">4</text>
+<text x="545.0" y="326.3" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="middle">Scholars Pingjiangfu</text>
+<text x="545.0" y="341.3" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="middle">bags at the desk</text>
+<text x="442.0" y="189.6" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end">Humble Administrator's Garden 拙政园</text>
+<text x="442.0" y="204.6" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="end">Hanfu styling + shoot</text>
+<text x="95.0" y="299.6" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="middle">Shantang St 山塘街</text>
+<text x="95.0" y="314.6" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="middle">walk in Hanfu · Tonggui Bridge</text>
+<text x="185.2" y="350.0" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start">Gusu boat banquet 姑苏船宴</text>
+<text x="185.2" y="365.0" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="start">17:00 boat</text>
+<text x="191.8" y="70.0" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end">Suzhou Station 苏州站</text>
+<text x="191.8" y="85.0" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="end">~20:15 train</text>
+<text x="315.8" y="77.5" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start">to Shanghai Station →</text>
+<text x="40" y="412.0" font-size="11.5" fill="#898781" font-weight="700" letter-spacing="2">SUZHOU · NEW YEAR’S DAY</text>
+<line x1="40" y1="432.0" x2="70" y2="432.0" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<text x="80" y="436.0" font-size="11" fill="#898781">walk</text>
+<line x1="40" y1="452.0" x2="70" y2="452.0" stroke="#d68fb8" stroke-width="6" stroke-linecap="round"/>
+<line x1="40" y1="452.0" x2="70" y2="452.0" stroke="#16161b" stroke-width="2"/>
+<text x="80" y="456.0" font-size="11" fill="#898781">train / metro</text>
+<line x1="40" y1="472.0" x2="70" y2="472.0" stroke="#d68fb8" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 0"/>
+<text x="80" y="476.0" font-size="11" fill="#898781">taxi / car</text>
+<text x="230" y="442.0" font-size="11" fill="#898781">stops placed from OpenStreetMap; spread out to fit, not exactly to scale</text>
+<text x="230" y="458.0" font-size="11" fill="#898781">boat pier position approximate</text>
+<text x="230" y="474.0" font-size="11" fill="#898781">show drivers the Chinese names</text>
+<line x1="528.6" y1="406.0" x2="600" y2="406.0" stroke="#898781" stroke-width="2"/><line x1="528.6" y1="402.0" x2="528.6" y2="410.0" stroke="#898781" stroke-width="2"/><line x1="600" y1="402.0" x2="600" y2="410.0" stroke="#898781" stroke-width="2"/><text x="564.3" y="399.0" font-size="10.5" fill="#898781" text-anchor="middle">0.5 km</text><text x="522.6" y="410.0" font-size="10.5" fill="#898781" text-anchor="end">N ↑</text>
+</svg>

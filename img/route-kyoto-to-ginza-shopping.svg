@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 559" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif">
+<title>Dec 18 route: Nozomi from Kyoto to Tokyo, the square hotel GINZA, GINZA SIX, Hanayama Udon, Roppongi Hills, Don Quijote Roppongi, Tokyo Tower</title>
+<rect width="640" height="559" fill="#16161b"/>
+<path d="M593.8 24.0 Q552.7 38.5 522.6 70.0" fill="none" stroke="#aa9df0" stroke-width="6" stroke-linecap="round"/>
+<path d="M593.8 24.0 Q552.7 38.5 522.6 70.0" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
+<path d="M522.6 70.0 Q505.7 120.7 467.7 158.3" fill="none" stroke="#aa9df0" stroke-width="6" stroke-linecap="round"/>
+<path d="M522.6 70.0 Q505.7 120.7 467.7 158.3" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
+<path d="M467.7 158.3 Q471.1 210.8 497.9 256.2" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<path d="M497.9 256.2 Q521.3 249.6 545.0 254.4" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<path d="M545.0 254.4 Q302.5 267.5 92.3 389.3" fill="none" stroke="#aa9df0" stroke-width="6" stroke-linecap="round"/>
+<path d="M545.0 254.4 Q302.5 267.5 92.3 389.3" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
+<path d="M92.3 389.3 Q101.5 367.5 119.6 352.3" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<path d="M119.6 352.3 Q194.1 402.9 283.4 414.3" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<rect x="416.7" y="43.6" width="111.0" height="18" rx="9" fill="#16161b" stroke="#aa9df0"/><text x="472.2" y="56.6" fill="#aa9df0" font-size="10.5" font-weight="600" text-anchor="middle">🚆 Nozomi ~2 h 15</text>
+<rect x="421.8" y="92.4" width="157.3" height="18" rx="9" fill="#16161b" stroke="#aa9df0"/><text x="500.4" y="105.4" fill="#aa9df0" font-size="10.5" font-weight="600" text-anchor="middle">🚆 JR 1 stop + 8 min walk</text>
+<rect x="410.7" y="228.8" width="63.4" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="442.4" y="241.8" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~5 min</text>
+<rect x="503.8" y="213.9" width="63.4" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="535.5" y="226.9" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~5 min</text>
+<rect x="257.7" y="255.7" width="105.7" height="18" rx="9" fill="#16161b" stroke="#aa9df0"/><text x="310.5" y="268.7" fill="#aa9df0" font-size="10.5" font-weight="600" text-anchor="middle">🚆 Hibiya ~10 min</text>
+<rect x="32.2" y="353.0" width="63.4" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="63.8" y="366.0" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~5 min</text>
+<rect x="154.5" y="414.1" width="86.5" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="197.8" y="427.1" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~15-20 min</text>
+<circle cx="522.6" cy="70.0" r="6" fill="#16161b" stroke="#aa9df0" stroke-width="3"/>
+<circle cx="467.7" cy="158.3" r="13" fill="#ffffff" stroke="#16161b" stroke-width="2"/><text x="467.7" y="162.3" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">H</text>
+<circle cx="497.9" cy="256.2" r="13" fill="#aa9df0" stroke="#16161b" stroke-width="2"/><text x="497.9" y="260.2" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">1</text>
+<circle cx="545.0" cy="254.4" r="13" fill="#aa9df0" stroke="#16161b" stroke-width="2"/><text x="545.0" y="258.4" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">2</text>
+<circle cx="92.3" cy="389.3" r="13" fill="#aa9df0" stroke="#16161b" stroke-width="2"/><text x="92.3" y="393.3" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">3</text>
+<circle cx="119.6" cy="352.3" r="13" fill="#aa9df0" stroke="#16161b" stroke-width="2"/><text x="119.6" y="356.3" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">4</text>
+<circle cx="283.4" cy="414.3" r="13" fill="#aa9df0" stroke="#16161b" stroke-width="2"/><text x="283.4" y="418.3" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">5</text>
+<text x="561.8" y="31.5" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end">from Kyoto</text>
+<text x="534.6" y="77.5" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start">Tokyo Station</text>
+<text x="448.7" y="158.3" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end">the square hotel GINZA</text>
+<text x="448.7" y="173.3" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="end">via JR Yurakucho</text>
+<text x="497.9" y="288.2" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="middle">GINZA SIX</text>
+<text x="497.9" y="303.2" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="middle">Chuo-dori shopping</text>
+<text x="510.0" y="200.4" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end">Hanayama Udon</text>
+<text x="510.0" y="215.4" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="end">17:30 dinner · behind Kabuki-za</text>
+<text x="92.3" y="421.3" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="middle">Roppongi Hills</text>
+<text x="92.3" y="436.3" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="middle">Keyakizaka lights</text>
+<text x="119.6" y="333.3" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="middle">Don Quijote Roppongi</text>
+<text x="302.4" y="414.3" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start">Tokyo Tower</text>
+<text x="302.4" y="429.3" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="start">lit at night</text>
+<text x="40" y="476.26291677097345" font-size="11.5" fill="#898781" font-weight="700" letter-spacing="2">TOKYO · GINZA + ROPPONGI</text>
+<line x1="40" y1="496.26291677097345" x2="70" y2="496.26291677097345" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<text x="80" y="500.26291677097345" font-size="11" fill="#898781">walk</text>
+<line x1="40" y1="516.2629167709734" x2="70" y2="516.2629167709734" stroke="#aa9df0" stroke-width="6" stroke-linecap="round"/>
+<line x1="40" y1="516.2629167709734" x2="70" y2="516.2629167709734" stroke="#16161b" stroke-width="2"/>
+<text x="80" y="520.2629167709734" font-size="11" fill="#898781">train / metro</text>
+<text x="230" y="500.26291677097345" font-size="11" fill="#b48ce0">back: Hibiya line Kamiyacho → Higashi-ginza</text>
+<text x="230" y="524.2629167709734" font-size="11" fill="#898781">stops placed from OpenStreetMap; spread out to fit, not exactly to scale</text>
+<line x1="535.9" y1="470.26291677097345" x2="600" y2="470.26291677097345" stroke="#898781" stroke-width="2"/><line x1="535.9" y1="466.26291677097345" x2="535.9" y2="474.26291677097345" stroke="#898781" stroke-width="2"/><line x1="600" y1="466.26291677097345" x2="600" y2="474.26291677097345" stroke="#898781" stroke-width="2"/><text x="568.0" y="463.26291677097345" font-size="10.5" fill="#898781" text-anchor="middle">0.5 km</text><text x="529.9" y="474.26291677097345" font-size="10.5" fill="#898781" text-anchor="end">N ↑</text>
+</svg>

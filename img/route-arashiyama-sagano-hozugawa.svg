@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 452" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif">
+<title>Dec 17 Kyoto route: Hotel Musse, Horin-ji Daruma-dera, Sagano train from Kameoka to Arashiyama, bamboo grove, Togetsukyo, back for bags, Saka Hotel and Kiyomizu-dera</title>
+<rect width="640" height="452" fill="#16161b"/>
+<path d="M507.4 203.8 Q473.8 125.0 408.0 70.0" fill="none" stroke="#e4a76b" stroke-width="6" stroke-linecap="round"/>
+<path d="M507.4 203.8 Q473.8 125.0 408.0 70.0" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
+<path d="M408.0 70.0 Q257.1 131.0 95.0 116.8" fill="none" stroke="#e4a76b" stroke-width="6" stroke-linecap="round"/>
+<path d="M408.0 70.0 Q257.1 131.0 95.0 116.8" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
+<path d="M95.0 116.8 Q179.2 115.5 253.6 76.1" fill="none" stroke="#e4a76b" stroke-width="6" stroke-linecap="round"/>
+<path d="M95.0 116.8 Q179.2 115.5 253.6 76.1" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
+<path d="M253.6 76.1 Q270.1 93.0 277.2 115.6" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<path d="M277.2 115.6 Q381.7 187.3 507.4 203.8" fill="none" stroke="#e4a76b" stroke-width="6" stroke-linecap="round"/>
+<path d="M277.2 115.6 Q381.7 187.3 507.4 203.8" fill="none" stroke="#16161b" stroke-width="2" stroke-linecap="round"/>
+<path d="M507.4 203.8 Q536.7 243.2 545.0 291.6" fill="none" stroke="#e4a76b" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 0"/>
+<rect x="379.8" y="121.9" width="172.0" height="18" rx="9" fill="#16161b" stroke="#e4a76b"/><text x="465.7" y="134.9" fill="#e4a76b" font-size="10.5" font-weight="600" text-anchor="middle">🚆 subway + JR local ~40 min</text>
+<rect x="320.5" y="90.8" width="182.2" height="18" rx="9" fill="#16161b" stroke="#e4a76b"/><text x="411.6" y="103.8" fill="#e4a76b" font-size="10.5" font-weight="600" text-anchor="middle">🚆 JR local to Umahori ~20 min</text>
+<rect x="121.0" y="108.5" width="143.0" height="18" rx="9" fill="#16161b" stroke="#e4a76b"/><text x="192.5" y="121.5" fill="#e4a76b" font-size="10.5" font-weight="600" text-anchor="middle">🚆 Sagano train ~25 min</text>
+<rect x="273.8" y="74.1" width="69.2" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="308.4" y="87.1" fill="#c9c7c1" font-size="10.5" font-weight="600" text-anchor="middle">🚶 ~15 min</text>
+<rect x="331.5" y="194.5" width="111.0" height="18" rx="9" fill="#16161b" stroke="#e4a76b"/><text x="387.0" y="207.5" fill="#e4a76b" font-size="10.5" font-weight="600" text-anchor="middle">🚆 Hankyu ~25 min</text>
+<rect x="404.7" y="236.4" width="112.7" height="18" rx="9" fill="#16161b" stroke="#e4a76b"/><text x="461.1" y="249.4" fill="#e4a76b" font-size="10.5" font-weight="600" text-anchor="middle">🚕 taxi ~10-15 min</text>
+<circle cx="507.4" cy="203.8" r="13" fill="#ffffff" stroke="#16161b" stroke-width="2"/><text x="507.4" y="207.8" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">H</text>
+<circle cx="408.0" cy="70.0" r="13" fill="#e4a76b" stroke="#16161b" stroke-width="2"/><text x="408.0" y="74.0" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">1</text>
+<circle cx="95.0" cy="116.8" r="13" fill="#e4a76b" stroke="#16161b" stroke-width="2"/><text x="95.0" y="120.8" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">2</text>
+<circle cx="253.6" cy="76.1" r="13" fill="#e4a76b" stroke="#16161b" stroke-width="2"/><text x="253.6" y="80.1" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">3</text>
+<circle cx="277.2" cy="115.6" r="13" fill="#e4a76b" stroke="#16161b" stroke-width="2"/><text x="277.2" y="119.6" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">4</text>
+<circle cx="545.0" cy="291.6" r="13" fill="#e4a76b" stroke="#16161b" stroke-width="2"/><text x="545.0" y="295.6" font-size="13" font-weight="700" fill="#16161b" text-anchor="middle">5</text>
+<text x="526.4" y="203.8" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="start">Hotel Musse</text>
+<text x="526.4" y="218.8" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="start">bags at the desk</text>
+<text x="408.0" y="36.0" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="middle">Hōrin-ji (Daruma-dera)</text>
+<text x="408.0" y="51.0" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="middle">by Enmachi Stn</text>
+<text x="95.0" y="82.8" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="middle">Torokko Kameoka</text>
+<text x="95.0" y="97.8" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="middle">12:30 Sagano train</text>
+<text x="253.6" y="42.1" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="middle">Torokko Arashiyama</text>
+<text x="253.6" y="57.1" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="middle">bamboo grove</text>
+<text x="264.2" y="145.6" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end">Togetsukyo Bridge</text>
+<text x="264.2" y="160.6" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="end">shops · Hankyu Arashiyama</text>
+<text x="526.0" y="291.6" font-size="12.5" fill="#ffffff" font-weight="600" text-anchor="end">Kiyomizu-dera</text>
+<text x="526.0" y="306.6" font-size="11" fill="#c9c7c1" font-weight="400" text-anchor="end">sunset ~16:45 · Saka Hotel</text>
+<text x="40" y="353.5579443566345" font-size="11.5" fill="#898781" font-weight="700" letter-spacing="2">KYOTO · SAGANO + ARASHIYAMA</text>
+<line x1="40" y1="373.5579443566345" x2="70" y2="373.5579443566345" stroke="#c9c7c1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 6"/>
+<text x="80" y="377.5579443566345" font-size="11" fill="#898781">walk</text>
+<line x1="40" y1="393.5579443566345" x2="70" y2="393.5579443566345" stroke="#e4a76b" stroke-width="6" stroke-linecap="round"/>
+<line x1="40" y1="393.5579443566345" x2="70" y2="393.5579443566345" stroke="#16161b" stroke-width="2"/>
+<text x="80" y="397.5579443566345" font-size="11" fill="#898781">train / metro</text>
+<line x1="40" y1="413.5579443566345" x2="70" y2="413.5579443566345" stroke="#e4a76b" stroke-width="3" stroke-linecap="round" stroke-dasharray="10 0"/>
+<text x="80" y="417.5579443566345" font-size="11" fill="#898781">taxi / car</text>
+<text x="230" y="383.5579443566345" font-size="11" fill="#898781">stops placed from OpenStreetMap; spread out to fit, not exactly to scale</text>
+<text x="230" y="399.5579443566345" font-size="11" fill="#898781">Saka Hotel is a 5-min walk below the temple</text>
+<line x1="544.4" y1="347.5579443566345" x2="600" y2="347.5579443566345" stroke="#898781" stroke-width="2"/><line x1="544.4" y1="343.5579443566345" x2="544.4" y2="351.5579443566345" stroke="#898781" stroke-width="2"/><line x1="600" y1="343.5579443566345" x2="600" y2="351.5579443566345" stroke="#898781" stroke-width="2"/><text x="572.2" y="340.5579443566345" font-size="10.5" fill="#898781" text-anchor="middle">2 km</text><text x="538.4" y="351.5579443566345" font-size="10.5" fill="#898781" text-anchor="end">N ↑</text>
+</svg>

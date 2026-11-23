@@ -915,6 +915,7 @@ const DAY_TEMPLATES = [
       ['activate', 'Tap “Start Using” after 3:00 am on the day; 0:00-2:59 counts as the previous day. Valid for the calendar day, not 24 h.'],
     ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Umeda+Sky+Building&destination=Tsutenkaku&waypoints=HEP+FIVE%7COsaka+Castle%7CGlico+Sign+Dotonbori&travelmode=transit',
+    routeMap:'img/route-osaka-amazing-pass-day.svg',
     events:[
       {
         time:'09:00', title:'AMANEK breakfast', meal:'breakfast',
@@ -967,10 +968,10 @@ const DAY_TEMPLATES = [
       },
       {
         time:'19:00', title:'Shinsekai + Tsutenkaku',
-        note:'Retro neon streets around Tsutenkaku tower. Tower first, so the slider’s 20:00 last entry isn’t lost to dinner.',
+        note:'Retro neon streets around Tsutenkaku tower. Tower first, so the slider’s 19:30 last entry isn’t lost to dinner.',
         facts:[
           ['go', 'Cruise ends ~18:20. Walk ~10 min to Namba Station, Midosuji line 2 stops to Dobutsuen-mae, ~5 min on foot. ~30-40 min in all.'],
-          ['tower', 'Tower Slider (last entry 20:00), then the observation deck (last entry 21:15). Both on the pass; book time slots at the tower on arrival.'],
+          ['tower', 'Tower Slider first (10:00-20:00, last entry 19:30), then the observation deck (last entry 21:15). Both on the pass; book time slots at the tower on arrival.'],
         ],
         image:'img/shinsekai-tsutenkaku.webp',
         source:'https://osaka-amazing-pass.com/en/service_free.html'
@@ -981,6 +982,7 @@ const DAY_TEMPLATES = [
         facts:[
           ['hours', '11:30-21:30, last order 21:00, open daily.'],
         ],
+        image:'img/kushikatsu.webp',
         map:'https://www.google.com/maps/place/Shodai+Ebisu+Bekkan/@34.6511102,135.506836,17z/data=!4m6!3m5!1s0x6000dd0022a1e013:0xeea22ad1b6bf7c17!8m2!3d34.6511102!4d135.506836!16s%2Fg%2F11w2clvtph',
       },
     ],
@@ -995,6 +997,7 @@ const DAY_TEMPLATES = [
       ['tour', 'Chinese / English guide. The tour LINE group link arrives by email ~18:00 the day before. Meals not included.'],
     ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Kintetsu+Nippombashi+Station&destination=Kintetsu+Nippombashi+Station&waypoints=Ine+Funaya+Observatory%7CINE+CAFE%7CAmanohashidate+View+Land%7CChion-ji+Temple+Miyazu%7CKaisen-kyo+Bridge&travelmode=driving',
+    routeMap:'img/route-amanohashidate-ine-tour.svg',
     events:[
       {
         time:'07:00', title:'AMANEK breakfast', meal:'breakfast',
@@ -1023,6 +1026,7 @@ const DAY_TEMPLATES = [
           ['see', 'Glico sign, Ebisubashi, the giant crab and pufferfish signs, Hozenji Yokocho’s lantern alley.'],
           ['eat', 'Street food: takoyaki, okonomiyaki.'],
         ],
+        image:'img/hozenji-yokocho.webp',
       },
       {
         time:'21:00', title:'Round1 Sennichimae',
@@ -1045,6 +1049,7 @@ const DAY_TEMPLATES = [
       ['shopping', 'Chuo-dori only closes to cars on weekends, so Friday is ordinary street shopping.'],
     ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Kyoto+Station&destination=Tokyo+Tower&waypoints=Tokyo+Station%7Cthe+square+hotel+GINZA%7CGodaime+Hanayama+Udon+Ginza%7CGINZA+SIX%7CRoppongi+Hills%7CDon+Quijote+Roppongi&travelmode=transit',
+    routeMap:'img/route-kyoto-to-ginza-shopping.svg',
     events:[
       {
         time:'09:00', title:'Saka Hotel breakfast', meal:'breakfast',
@@ -1060,6 +1065,7 @@ const DAY_TEMPLATES = [
           ['bags', 'Any suitcase over 160 cm (L+W+H) needs a “seat with oversized baggage area” (last row of the car), or it costs ¥1,000 extra on board.'],
           ['arrive', 'JR one stop to Yurakucho, then 8 min on foot. Check-in from 15:00; the front desk holds bags.'],
         ],
+        image:'img/shinkansen-mount-fuji.webp',
       },
       {
         time:'14:00', title:'Ginza',
@@ -1114,6 +1120,7 @@ const DAY_TEMPLATES = [
       ['end', 'Head back by ~21:30; DisneySea is the next day.'],
     ],
     map:'https://www.google.com/maps/dir/?api=1&origin=the+square+hotel+GINZA&destination=GASHAPON+BANDAI+Official+Shop+Akihabara&waypoints=Koami+Shrine%7CSenso-ji+Temple%7CAsakusa+Sumo+Club+ANNEX%7CShibamata+Taishakuten&travelmode=transit',
+    routeMap:'img/route-asakusa-sumo-lunch-akihabara.svg',
     events:[
       {
         time:'09:00', title:'Koami Shrine (Nihonbashi)',
@@ -1123,6 +1130,7 @@ const DAY_TEMPLATES = [
           ['arrive', 'At opening. Amulet office 9:00-17:00; Saturday queues build 9:00-12:00. ~30-45 min here.'],
           ['next', 'Same line from Ningyocho to Asakusa, ~10 min.'],
         ],
+        image:'img/koami-shrine.webp',
         source:'https://www.gltjp.com/en/directory/item/13972/'
       },
       {
@@ -1213,6 +1221,7 @@ const DAY_TEMPLATES = [
       ['bags', 'Check out first and leave them in the Ginza hotel’s self-service cloakroom.'],
     ],
     map:'https://www.google.com/maps/dir/?api=1&origin=the+square+hotel+GINZA&destination=Shimokitazawa+Station&waypoints=Tsukiji+Outer+Market%7CHotel+Gracery+Shinjuku%7CJojoen+Tokyo+Opera+City+53%7CIsetan+Shinjuku&travelmode=transit',
+    routeMap:'img/route-tsukiji-jojoen-shinjuku.svg',
     events:[
       {
         time:'09:30', title:'Tsukiji Outer Market',
@@ -1267,6 +1276,7 @@ const DAY_TEMPLATES = [
       ['open', 'Wed Dec 23. The museum is closed Tuesdays, so not Dec 22.'],
     ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Koenji+Tokyo&destination=Ginza+Happo+Shinjuku&waypoints=Inokashira+Park%7CGhibli+Museum+Mitaka%7CGodzilla+Head+Shinjuku%7COmoide+Yokocho',
+    routeMap:'img/route-ghibli-museum-kichijoji.svg',
     events:[
       {
         time:'11:00', title:'Koenji',
@@ -1314,6 +1324,7 @@ const DAY_TEMPLATES = [
       ['blue cave', 'Possible winter finale, but unconfirmed: the official site shows only the 2025 run. Check again closer to the trip.'],
     ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Meiji+Jingu&destination=Yoyogi+Park+Keyaki+Namiki&waypoints=Takeshita+Street%7CHachiko+Memorial+Statue%7CShibuya+Scramble+Crossing%7CSHIBUYA109&travelmode=walking',
+    routeMap:'img/route-meiji-jingu-harajuku-shibuya.svg',
     events:[
       {
         time:'11:00', title:'Harajuku',
@@ -1359,6 +1370,7 @@ const DAY_TEMPLATES = [
       ['deer', 'Cracker (shika senbei) stalls run ~9:00-16:30, shorter in winter. Don’t tease the deer with food; hand crackers over promptly or they nip and headbutt.'],
     ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Kintetsu+Nara+Station&destination=Yasaka+Shrine&waypoints=Kofuku-ji+Temple%7CTodai-ji+Temple%7CKasuga+Taisha%7CKintetsu+Nara+Station%7CKyoto+Station%7CPontocho%7CGion+Shirakawa',
+    routeMap:'img/route-nara-deer-park.svg',
     events:[
       {
         time:'09:00', title:'AMANEK breakfast', meal:'breakfast',
@@ -1413,6 +1425,7 @@ const DAY_TEMPLATES = [
       ['food', 'A snack at Kyoto Station before the 18:00 teamLab slot; real dinner after.'],
     ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Fushimi+Inari+Taisha&destination=teamLab+Biovortex+Kyoto&waypoints=Yotsutsuji+Intersection+Fushimi+Inari%7CUzumasa+Kyoto+Village&travelmode=transit',
+    routeMap:'img/route-fushimi-inari-uzumasa.svg',
     events:[
       {
         time:'09:00', title:'Fushimi Inari',
@@ -1430,7 +1443,7 @@ const DAY_TEMPLATES = [
         facts:[
           ['go', 'JR Inari to Kyoto Station, JR Sagano line to Hanazono (~30 min), then 15 min on foot.'],
           ['hours', '~10:00-21:00, last entry 1 h before close.'],
-          ['cost', '¥2,800 each; some attractions ¥400-800 extra.'],
+          ['cost', '¥2,800 each, or ¥2,000 if you enter after 14:00 (Japan Cheapo, 2026). Some attractions ¥400-800 extra.'],
           ['leave', '~16:30.'],
         ],
         image:'img/uzumasa-kyoto-village.webp',
@@ -1459,6 +1472,7 @@ const DAY_TEMPLATES = [
       ['closed', 'The Sagano train doesn’t run on Wednesdays.'],
     ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Hotel+Musse+Kyoto+Shijo+Kawaramachi+Meitetsu&destination=Kiyomizu-dera&waypoints=Horinji+Darumadera+Temple+Kyoto%7CTorokko+Kameoka+Station%7CTorokko+Arashiyama+Station%7CArashiyama+Bamboo+Grove%7CTogetsukyo+Bridge%7CHotel+Musse+Kyoto+Shijo+Kawaramachi+Meitetsu%7CSaka+Hotel+Kyoto&travelmode=transit',
+    routeMap:'img/route-arashiyama-sagano-hozugawa.svg',
     events:[
       {
         time:'10:00', title:'Hōrin-ji (Daruma-dera)',
@@ -1468,6 +1482,7 @@ const DAY_TEMPLATES = [
           ['go', 'Subway Shijo to Kyoto Station, JR Sagano line LOCAL to Enmachi, then 10 min on foot.'],
           ['leave', 'The temple by 11:25 (arrive ~10:45).'],
         ],
+        image:'img/horin-ji-daruma.webp',
         source:'https://www.darumadera.kyoto.jp/access/'
       },
       {
@@ -1479,6 +1494,7 @@ const DAY_TEMPLATES = [
           ['book', 'Seats ahead, with Torokko Kameoka as the boarding station.'],
           ['if missed', 'The 13:30 train, or JR from Umahori to Saga-Arashiyama.'],
         ],
+        image:'img/sagano-romantic-train.webp',
         source:'https://www.sagano-kanko.co.jp/en/train-info/'
       },
       {
@@ -1496,8 +1512,10 @@ const DAY_TEMPLATES = [
         note:'Drop the bags at Saka Hotel, then ~5 min up the slope to the temple.',
         facts:[
           ['sunset', '~16:45 from the main stage.'],
-          ['to do', 'Confirm the December closing time.'],
+          ['hours', '6:00-18:00 in mid-December (no night viewing then), ¥500 each.'],
         ],
+        image:'img/kiyomizu-dera.webp',
+        source:'https://www.kiyomizudera.or.jp/en/location/',
       },
       {
         time:'19:00', title:'Saka Hotel kaiseki dinner', meal:'dinner',
@@ -1515,6 +1533,7 @@ const DAY_TEMPLATES = [
       ['to do', 'Christmas Eve: check holiday hours for the cable car and the tower.'],
     ],
     map:'https://www.google.com/maps/dir/?api=1&origin=K-Grand+Hotel+Myeongdong&destination=K-Grand+Hotel+Myeongdong&waypoints=Jinokhwa+Halmae+Wonjo+Dakhanmari%7CGwangjang+Market%7CNamsan+Cable+Car%7CN+Seoul+Tower%7CMyeongdong+Cathedral&travelmode=transit',
+    routeMap:'img/route-seoul-arrival-dakhanmari-namsan.svg',
     events:[
       {
         time:'14:00', title:'Incheon → Myeongdong',
@@ -1539,6 +1558,7 @@ const DAY_TEMPLATES = [
           ['go', '~5 min walk from the dakhanmari restaurant.'],
           ['hours', 'Garlic Boy (Gwangjang branch) 10:00-19:30. Get the bread first.'],
         ],
+        image:'img/gwangjang-market-jeon.webp',
       },
       {
         time:'19:30', title:'N Seoul Tower night views',
@@ -1555,6 +1575,7 @@ const DAY_TEMPLATES = [
       {
         time:'22:00', title:'Myeongdong Christmas lights',
         note:'Walk down from the lower cable car station (~10 min) to the Shinsegae main store’s light display and Myeongdong Cathedral, then back to the hotel. Free.',
+        image:'img/myeongdong-cathedral.webp',
       },
       {
         time:'22:30', title:'Late-night chicken at the hotel', idea:'snack',
@@ -1575,6 +1596,7 @@ const DAY_TEMPLATES = [
       ['holiday', 'Christmas Day is a public holiday in Korea. Expect crowds and check each stop’s holiday hours.'],
     ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Anguk+Station&destination=Jongno+3-ga+Station&waypoints=Bukchon+Hanok+Village%7CInsadong%7CSeongsu+Station%7CIkseon-dong+Hanok+Street&travelmode=transit',
+    routeMap:'img/route-seoul-bukchon-insadong-seongsu.svg',
     events:[
       {
         time:'09:30', title:'Myeongdong → Anguk',
@@ -1656,6 +1678,7 @@ const DAY_TEMPLATES = [
       ['to do', 'Recheck the Dec 26 timetable and confirm the departure terminal when booking.'],
     ],
     map:'https://www.google.com/maps/dir/?api=1&origin=K-Grand+Hotel+Myeongdong&destination=Cheongju+International+Airport&waypoints=Olive+Young+Myeongdong+Town%7CWangbijib+Myeongdong+Main+Store%7CLotte+Mart+Seoul+Station%7CSeoul+Express+Bus+Terminal&travelmode=transit',
+    routeMap:'img/route-seoul-hongdae-myeongdong-cheongju.svg',
     events:[
       {
         time:'09:30', title:'Check out of K-Grand',
@@ -1681,6 +1704,7 @@ const DAY_TEMPLATES = [
           ['arrive', 'At the 11:30 opening to skip the queue.'],
           ['smoke', 'BBQ smoke clings to clothes. Change when you collect your bags.'],
         ],
+        image:'img/korean-bbq.webp',
         source:'https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=83635',
       },
       {
@@ -1734,7 +1758,7 @@ const DAY_TEMPLATES = [
       ['pace', 'First day after a 01:20 landing. The evening is compact: Yu Garden is one Line 10 ride from home.'],
     ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Heping+Park+Shanghai&destination=Siping+Road+Station+Shanghai&waypoints=Shanghai+Romance+Park+1750+Shibo+Avenue%7CChina+Art+Museum+Shanghai%7CYu+Garden+Shanghai&travelmode=transit',
-    routeMap:'img/shanghai-dec27-route.svg',
+    routeMap:'img/route-shanghai-romance-huanghe.svg',
     events:[
       {
         time:'10:30', title:'Check out of the Rezen → home near Heping Park',
@@ -1821,7 +1845,7 @@ const DAY_TEMPLATES = [
       ['season', 'Late December: many plane trees on Wukang and Anfu Roads may be bare.'],
     ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Wukang+Mansion+Shanghai&destination=Xintiandi+Shanghai&waypoints=Anfu+Road+Shanghai%7CYuyuan+Road+142+Jingan+Shanghai%7CXingye+Taikoo+Hui+Shanghai%7CChangle+Road+Shaanxi+South+Road+Shanghai%7CHaus+Nowhere+Shanghai&travelmode=walking',
-    routeMap:'img/shanghai-dec28-route.svg',
+    routeMap:'img/route-shanghai-wukang-xintiandi.svg',
     events:[
       {
         time:'09:45', title:'Home → Jiaotong University station on Line 10',
@@ -1871,8 +1895,9 @@ const DAY_TEMPLATES = [
         note:'Gentle Monster’s Shanghai flagship, with art installations and the Nudake café (giant croissants and cakes).',
         facts:[
           ['address', '淮海中路798-812号.'],
-          ['to do', 'Opening hours not checked.'],
+          ['hours', 'Daily 10:00-22:00 (Gentle Monster store page).'],
         ],
+        source:'https://www.gentlemonster.com/us/stories/haus-shanghai',
       },
       {
         time:'18:45', title:'Xintiandi (新天地): dinner, a walk, cocktails', meal:'dinner',
@@ -1899,7 +1924,7 @@ const DAY_TEMPLATES = [
       ['pace', 'Early night: the Dec 30 train means leaving home ~06:45. Pack the small Hangzhou/Suzhou bags this morning.'],
     ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Shanghai+IFC+Mall&destination=Peoples+Square+Station+Shanghai&waypoints=Shanghai+Tower%7CThe+Bund+Shanghai%7CNanjing+Road+East+Shanghai%7CHuanghe+Road+Shanghai&travelmode=walking',
-    routeMap:'img/shanghai-dec29-route.svg',
+    routeMap:'img/route-shanghai-lujiazui-bund-huanghe.svg',
     events:[
       {
         time:'10:30', title:'Home → Lujiazui on Line 10 + Line 2',
@@ -1983,7 +2008,7 @@ const DAY_TEMPLATES = [
       ['route', 'Hubin and the island in the morning, Lingyin and the tea hills at midday, south shore at sunset, back to the Wulin area near the hotel at night.'],
     ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Movietel+Hangzhou+West+Lake+Mansion+1937&destination=Wulin+Night+Market+Hangzhou&waypoints=Hubin+Pier+Hangzhou%7CHuagang+Guanyu+Hangzhou%7CLingyin+Temple+Hangzhou%7CMeijiawu+Tea+Village+Hangzhou%7CLeifeng+Pagoda&travelmode=driving',
-    routeMap:'img/hangzhou-dec30-route.svg',
+    routeMap:'img/route-hangzhou-lingyin-longjing-westlake.svg',
     events:[
       {
         time:'08:00', title:'Train Shanghai → Hangzhou',
@@ -2029,6 +2054,7 @@ const DAY_TEMPLATES = [
       {
         time:'13:20', title:'Farmhouse lunch in Meijiawu (梅家坞)', idea:'lunch',
         note:'Didi ~20 min from Lingyin. Longjing shrimp (龙井虾仁), tea-smoked dishes and local greens at a family restaurant in the tea village.',
+        image:'img/longjing-shrimp.webp',
       },
       {
         time:'14:15', title:'Pick, roast and taste your own Longjing tea', idea:'activity',
@@ -2075,6 +2101,7 @@ const DAY_TEMPLATES = [
       ['note', 'Several Chinese cities curbed public countdowns for 2025-26 (SCMP), so a bar\'s own party is a safer bet than a public square.'],
     ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Movietel+Hangzhou+West+Lake+Mansion+1937&destination=SCHOLARS+BOUTIQUE+Suzhou+Pingjiangfu&waypoints=Wuzhen+Xizha&travelmode=driving',
+    routeMap:'img/route-hangzhou-westlake-suzhou-nye.svg',
     events:[
       {
         time:'09:00', title:'Movietel breakfast', meal:'breakfast',
@@ -2152,6 +2179,7 @@ const DAY_TEMPLATES = [
       ['to do', 'Re-register at the Heping Park home within 24 h of getting back.'],
     ],
     map:'https://www.google.com/maps/dir/?api=1&origin=SCHOLARS+BOUTIQUE+Suzhou+Pingjiangfu&destination=Suzhou+Railway+Station&waypoints=Humble+Administrator%27s+Garden%7CShantang+Street+Suzhou&travelmode=driving',
+    routeMap:'img/route-suzhou-garden-museum-pingjiang.svg',
     events:[
       {
         time:'10:30', title:'Check out, leave bags at the desk',
@@ -2228,7 +2256,7 @@ const DAY_TEMPLATES = [
       ['to do', 'Tentative: the daytime is unplanned. Zhujiajiao (朱家角) is deferred.'],
     ],
     map:'https://www.google.com/maps/dir/?api=1&origin=Siping+Road+Station+Shanghai&destination=Jing%27an+Temple+Station+Shanghai&travelmode=transit',
-    routeMap:'img/shanghai-jan2-route.svg',
+    routeMap:'img/route-shanghai-gongyan-jan2.svg',
     events:[
       {
         time:'10:00', title:'Open daytime', optional:true,
