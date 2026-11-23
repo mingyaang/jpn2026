@@ -45,3 +45,7 @@ img/anfu-road-brunch.jpg: "A brunch spot at Anfu Rd.jpg" by RunningTurtle8964, C
 img/the-louis-lv-ship.jpg: "The Louis in Shanghai 2, 2026-06-06.jpg" by Perimeter Chou, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:The_Louis_in_Shanghai_2,_2026-06-06.jpg
 img/xintiandi-lanes.jpg: "Fountain with Sculptures in Xintiandi Shanghai 20210329.jpg" by Leynadmar, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:Fountain_with_Sculptures_in_Xintiandi_Shanghai_20210329.jpg
 img/yu-garden-night.jpg: "20191026 Yu Garden at night 02.jpg" by Windmemories, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:20191026_Yu_Garden_at_night_02.jpg
+
+img/ifc-mall-shanghai.jpg: "Shanghai IFC Shopping Arcade Void 201005.jpg" by WiNG, CC BY-SA 3.0, https://commons.wikimedia.org/wiki/File:Shanghai_IFC_Shopping_Arcade_Void_201005.jpg
+img/shanghai-tower.jpg: "Shanghai IFC and Apple Store Pudong 20251126.jpg" by Supanut Arunoprayote, CC BY 4.0, https://commons.wikimedia.org/wiki/File:Shanghai_IFC_and_Apple_Store_Pudong_20251126.jpg
+img/the-bund-night.jpg: "The Bund, Shanghai at night.jpg" by Lloyd Tudor, CC BY-SA 4.0, https://commons.wikimedia.org/wiki/File:The_Bund,_Shanghai_at_night.jpg

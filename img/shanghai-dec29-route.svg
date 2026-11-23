@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 450" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif">
+  <title>Dec 29 Shanghai route: IFC mall, Duoyun Books café on the 52nd floor of Shanghai Tower, Line 2 to Nanjing Road East, the Bund, Nanjing Road East shopping, Huanghe Road, Line 8 home from People's Square</title>
+  <rect width="640" height="450" fill="#16161b"/>
+  <!-- Huangpu River -->
+  <path d="M330 340 C 318 250, 300 170, 305 115 C 310 70, 350 35, 430 12" fill="none" stroke="#68b6d6" stroke-opacity="0.35" stroke-width="16" stroke-linecap="round"/>
+  <text x="318" y="300" font-size="11" fill="#68b6d6" transform="rotate(-82 318 300)">Huangpu River</text>
+  <g font-size="12" fill="#898781" font-weight="600" letter-spacing="2">
+    <text x="40" y="300">PUXI</text>
+    <text x="520" y="40">PUDONG</text>
+  </g>
+    <!-- legs -->
+  <path d="M345 150 C 360 160, 375 168, 388 176" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
+  <path d="M388 176 C 380 155, 370 140, 360 128" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
+  <path d="M360 128 C 320 152, 260 152, 216 134" fill="none" stroke="#9fcf5f" stroke-width="3" stroke-dasharray="9 6"/>
+  <line x1="216" y1="134" x2="268" y2="115" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
+  <path d="M268 115 C 230 135, 190 150, 152 162" fill="none" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
+  <line x1="152" y1="162" x2="72" y2="134" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
+  <line x1="72" y1="134" x2="120" y2="180" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/>
+  <!-- leg times -->
+  <g font-size="10.5" font-weight="600" text-anchor="middle">
+    <rect x="410" y="142" width="80" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="450" y="155" fill="#c9c7c1">walk ~10 min</text>
+    <rect x="246" y="158" width="88" height="18" rx="9" fill="#16161b" stroke="#9fcf5f"/><text x="290" y="171" fill="#9fcf5f">Line 2, 1 stop</text>
+    <rect x="155" y="133" width="100" height="18" rx="9" fill="#16161b" stroke="#c9c7c1"/><text x="205" y="146" fill="#c9c7c1">walk + shop ~1 h</text>
+  </g>
+  <!-- stations -->
+  <circle cx="360" cy="128" r="5" fill="#9fcf5f"/>
+  <circle cx="216" cy="134" r="5" fill="#9fcf5f"/>
+  <circle cx="120" cy="180" r="5" fill="#3fa9f5"/>
+  <!-- stops -->
+  <g font-size="13" font-weight="700" text-anchor="middle">
+    <circle cx="345" cy="150" r="13" fill="#e8a87c"/><text x="345" y="155" fill="#16161b">1</text>
+    <circle cx="388" cy="176" r="13" fill="#e8a87c"/><text x="388" y="181" fill="#16161b">2</text>
+    <circle cx="268" cy="115" r="13" fill="#e8a87c"/><text x="268" y="120" fill="#16161b">3</text>
+    <circle cx="152" cy="162" r="13" fill="#e8a87c"/><text x="152" y="167" fill="#16161b">4</text>
+    <circle cx="72" cy="134" r="13" fill="#e8a87c"/><text x="72" y="139" fill="#16161b">5</text>
+  </g>
+  <g font-size="12" fill="#ffffff">
+    <text x="402" y="102">IFC mall 国金中心</text>
+    <text x="402" y="88" font-size="11" fill="#c9c7c1">~11:00 shopping + lunch</text>
+    <text x="406" y="181">Duoyun Books 52F 朵云书院</text>
+    <text x="406" y="195" font-size="11" fill="#c9c7c1">Shanghai Tower 上海中心 · ~14:00-15:00</text>
+    <text x="402" y="124" font-size="10.5" fill="#c9c7c1">Lujiazui Stn (IFC is above it)</text>
+    <text x="268" y="92" text-anchor="middle">the Bund 外滩 · ~17:00</text>
+    <text x="172" y="196">Nanjing Rd E 南京东路</text>
+    <text x="172" y="210" font-size="11" fill="#c9c7c1">dinner + shopping, shops close ~22:00</text>
+    <text x="72" y="112" text-anchor="middle">Huanghe Rd 黄河路</text>
+    <text x="40" y="226" font-size="11" fill="#c9c7c1">People’s Sq Stn</text>
+    <text x="40" y="240" font-size="11" fill="#c9c7c1">Line 8 home</text>
+  </g>
+  <!-- legend -->
+  <g font-size="11" fill="#898781">
+    <line x1="40" y1="374" x2="70" y2="374" stroke="#9fcf5f" stroke-width="3" stroke-dasharray="9 6"/><text x="78" y="378">Metro Line 2</text>
+    <line x1="40" y1="396" x2="70" y2="396" stroke="#c9c7c1" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"/><text x="78" y="400">walk</text>
+    <text x="250" y="356" fill="#b48ce0">10:30 Line 10 + Line 2 home → Lujiazui, ~25 min</text>
+    <text x="250" y="374" fill="#3fa9f5">~21:15 Line 8 People’s Sq → Siping Rd, ~15 min</text>
+    <text x="250" y="400">positions approximate</text>
+    <text x="250" y="416">show drivers the Chinese names</text>
+  </g>
+</svg>

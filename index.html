@@ -1890,6 +1890,75 @@ const DAY_TEMPLATES = [
     ],
   },
   {
+    id:'shanghai-lujiazui-bund-huanghe', short:'Lujiazui', icon:'🌃', title:'IFC mall → Duoyun Books café in Shanghai Tower → the Bund → Nanjing Road East → Huanghe Road', city:'shanghai', date:'2026-12-29',
+    summary:'An easy shopping-and-vibes day that runs east to west: the IFC mall in Lujiazui, coffee with a skyscraper view at Duoyun Books on the 52nd floor of Shanghai Tower, Line 2 across the river to the Bund as the lights come on, dinner and shopping along Nanjing Road East, then the neon on Huanghe Road and Line 8 home.',
+    pois:['IFC mall', 'Duoyun Books', 'Shanghai Tower', 'The Bund', 'Nanjing Road East', 'Huanghe Road'],
+    brief:[
+      ['book', 'Duoyun Books (朵云书院): reserve a free entry slot on its WeChat mini-program for ~14:00.'],
+      ['pace', 'Early night: the Dec 30 train means leaving home ~06:45. Pack the small Hangzhou/Suzhou bags this morning.'],
+    ],
+    map:'https://www.google.com/maps/dir/?api=1&origin=Shanghai+IFC+Mall&destination=Peoples+Square+Station+Shanghai&waypoints=Shanghai+Tower%7CThe+Bund+Shanghai%7CNanjing+Road+East+Shanghai%7CHuanghe+Road+Shanghai&travelmode=walking',
+    routeMap:'img/shanghai-dec29-route.svg',
+    events:[
+      {
+        time:'10:30', title:'Home → Lujiazui on Line 10 + Line 2',
+        note:'Line 10 Siping Road → Nanjing Road East, then Line 2 one stop to Lujiazui (陆家嘴站). ~25 min.',
+      },
+      {
+        time:'11:00', title:'IFC mall (国金中心): shopping + lunch',
+        note:'Lujiazui’s big luxury mall, connected to Lujiazui station. Lots of restaurants for lunch. The glass-cylinder Apple Store sits in the plaza outside.',
+        facts:[
+          ['address', '世纪大道8号, above Lujiazui station (Lines 2, 14).'],
+        ],
+        image:'img/ifc-mall-shanghai.jpg',
+      },
+      {
+        time:'14:00', title:'Duoyun Books café, 52F Shanghai Tower (朵云书院)',
+        note:'A bookstore café with floor-to-ceiling windows high above Lujiazui. The north side looks at Jin Mao and the World Financial Center; the south side looks down the river bend.',
+        facts:[
+          ['book', 'Free entry slot on the 朵云书院 WeChat mini-program.'],
+          ['cost', 'Window seats have a minimum spend of ~¥40-50 per person (a coffee or cake).'],
+          ['go', 'Walk ~10 min from IFC to Shanghai Tower (上海中心大厦).'],
+        ],
+        image:'img/shanghai-tower.jpg',
+      },
+      {
+        time:'15:30', title:'Free time in Lujiazui', optional:true,
+        note:'More shopping, or the riverside walk (滨江大道) facing the Bund. Sunset is ~16:55.',
+      },
+      {
+        time:'17:00', title:'Line 2 one stop → the Bund (外滩)',
+        note:'Lujiazui → Nanjing Road East station, then a 5-min walk to the waterfront. Walk the Bund as the lights come on facing the Lujiazui skyline.',
+        facts:[
+          ['lights', 'Usually on ~18:00-22:00.'],
+        ],
+        image:'img/the-bund-night.jpg',
+      },
+      {
+        time:'18:30', title:'Dinner + Nanjing Road East (南京东路)', meal:'dinner',
+        note:'Eat along the street or in one of its malls, then shop west along the 1.2 km pedestrian street toward People’s Square. Most shops close ~20:00-22:00.',
+        facts:[
+          ['stops', 'The former New World Daimaru (新世界大丸) by Henan Road for its spiral escalators and B2 desserts · Shanghai No.1 Food Store (第一食品商店) near the People’s Square end for White Rabbit candy and local snacks.'],
+          ['careful', 'Food counters close first: Harbin Food Factory (哈尔滨食品厂) on Daimaru B2 shuts at 20:00.'],
+        ],
+        image:'img/nanjing-road-east-night.jpg',
+      },
+      {
+        time:'20:30', title:'Huanghe Road (黄河路) for the neon',
+        note:'The neon-signed restaurant street from the drama Blossoms Shanghai (繁花), a 5-min walk north of People’s Square. Come for the signs and the vibe; no dinner needed.',
+        facts:[
+          ['snack', '佳家汤包 (黄河路店) soup dumplings are open until 20:30 (Dianping, Nov 2026) if you want a quick plate.'],
+          ['photo', 'Shoot down the street with the signs stacked on both sides.'],
+        ],
+        image:'img/huanghe-road-neon.jpg',
+      },
+      {
+        time:'21:15', title:'Line 8 home',
+        note:'People’s Square (人民广场) → Siping Road, ~15 min, no transfer. Early night before the 06:45 start.',
+      },
+    ],
+  },
+  {
     id:'hangzhou-lingyin-longjing-westlake', short:'Longjing', icon:'🍵', title:'Shanghai → Hangzhou: lakeside café → boat to Three Pools Mirroring the Moon → Lingyin → farmhouse lunch + pick and roast your own tea in Meijiawu → Leifeng sunset → Wulin Night Market', city:'hangzhou', date:'2026-12-30',
     summary:'Morning train to Hangzhou, a light breakfast at a lakeside café in Hubin, a boat to the Three Pools Mirroring the Moon island and on to Huagang pier, Lingyin Temple and the Feilai Feng carvings, a farmhouse lunch in Meijiawu tea village, then picking, wok-roasting and tasting your own Longjing tea, Leifeng Pagoda at sunset, then a snack dinner at Wulin Night Market near the hotel.',
     pois:['Hubin Pier', 'Three Pools Mirroring the Moon', 'Huagang Guanyu Pier', 'Lingyin Temple', 'Meijiawu Tea Village', 'Leifeng Pagoda', 'Wulin Night Market'],
